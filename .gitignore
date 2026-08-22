@@ -1,0 +1,36 @@
+﻿# Sistema operativo
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editores
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporales
+*.tmp
+*.temp
+*.bak
+
+# Secretos
+.env
+.env.*
+!.env.example
+
+# Credenciales
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Dependencias de proyectos temporales
+node_modules/
+vendor/
+
+# Artefactos
+dist/
+build/
+coverage/
