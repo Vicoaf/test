@@ -1,0 +1,27 @@
+﻿{
+    "website": [
+        "auditor-web",
+        "maestro-frontend",
+        "estratega-seo"
+    ],
+    "landing-page": [
+        "auditor-web",
+        "maestro-frontend",
+        "estratega-seo"
+    ],
+    "laravel": [
+        "auditor-web",
+        "maestro-frontend",
+        "estratega-seo"
+    ],
+    "crm": [
+        "auditor-web",
+        "maestro-frontend",
+        "estratega-seo"
+    ],
+    "saas": [
+        "auditor-web",
+        "maestro-frontend",
+        "estratega-seo"
+    ]
+}
