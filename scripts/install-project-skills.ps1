@@ -116,7 +116,7 @@ function Test-Skill {
 
     if (-not $content.StartsWith("---")) {
 
-        throw "Frontmatter YAML inexistente o invÃ¡lido en: $skillFile"
+        throw "Frontmatter YAML inexistente o invalido en: $skillFile"
     }
 
     if ($content -notmatch "(?m)^name:\s*\S+") {
@@ -410,7 +410,7 @@ foreach ($skillName in $selectedSkills) {
             $sourceFingerprint
         ) {
 
-            throw "FallÃ³ la validaciÃ³n posterior a la instalaciÃ³n."
+            throw "Fallo la validacion posterior a la instalacion."
         }
 
         Write-Host "RESULTADO: INSTALADA CORRECTAMENTE" `
@@ -450,7 +450,7 @@ Write-Host ""
 
 if ($Mode -eq "Check") {
 
-    Write-Host "No se modificÃ³ ningÃºn archivo." `
+    Write-Host "No se modifico ningun archivo." `
         -ForegroundColor Green
 
     if (
@@ -483,12 +483,12 @@ if ($Mode -eq "Install") {
 
     if ($errors -eq 0) {
 
-        Write-Host "InstalaciÃ³n terminada correctamente." `
+        Write-Host "Instalacion terminada correctamente." `
             -ForegroundColor Green
     }
     else {
 
-        Write-Host "La instalaciÃ³n terminÃ³ con errores." `
+        Write-Host "La instalacion termino con errores." `
             -ForegroundColor Red
 
         exit 1

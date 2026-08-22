@@ -71,7 +71,7 @@ function Test-Skill {
     $content = Get-Content $skillFile -Raw -Encoding UTF8
 
     if (-not $content.StartsWith("---")) {
-        throw "Frontmatter YAML inexistente o inválido en: $skillFile"
+        throw "Frontmatter YAML inexistente o invalido en: $skillFile"
     }
 
     if ($content -notmatch "(?m)^name:\s*\S+") {
@@ -179,7 +179,7 @@ foreach ($skill in $skills) {
         $installedFingerprint = Get-FolderFingerprint -Path $targetFolder
 
         if ($installedFingerprint -ne $sourceFingerprint) {
-            throw "La validación posterior a la copia falló."
+            throw "La validacion posterior a la copia fallo."
         }
 
         Write-Host "RESULTADO: INSTALADA CORRECTAMENTE" -ForegroundColor Green
@@ -208,23 +208,23 @@ Write-Host ""
 if ($Mode -eq "Check") {
 
     if ($changes -gt 0) {
-        Write-Host "No se modificó ningún archivo." -ForegroundColor Green
+        Write-Host "No se modifico ningun archivo." -ForegroundColor Green
         Write-Host ""
         Write-Host "Para instalar:" -ForegroundColor Yellow
         Write-Host ".\scripts\sync-skills.ps1 -Mode Install"
     }
     else {
-        Write-Host "Todas las Skills están sincronizadas." -ForegroundColor Green
+        Write-Host "Todas las Skills estan sincronizadas." -ForegroundColor Green
     }
 }
 
 if ($Mode -eq "Install") {
 
     if ($errors -eq 0) {
-        Write-Host "Sincronización terminada correctamente." -ForegroundColor Green
+        Write-Host "Sincronizacion terminada correctamente." -ForegroundColor Green
     }
     else {
-        Write-Host "La sincronización terminó con errores." -ForegroundColor Red
+        Write-Host "La sincronizacion termino con errores." -ForegroundColor Red
         exit 1
     }
 }
