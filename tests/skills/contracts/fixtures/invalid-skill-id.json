@@ -1,0 +1,112 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill",
+    "id":  "PROXTEL_Invalid_ID",
+    "display_name":  "PROXTEL Contract Fixture",
+    "area":  "core",
+    "lifecycle":  {
+                      "state":  "candidate",
+                      "version":  "0.1.0"
+                  },
+    "scope":  {
+                  "level":  "core",
+                  "provider_specific":  false,
+                  "providers":  [
+                                    "claude",
+                                    "codex",
+                                    "antigravity"
+                                ]
+              },
+    "purpose":  {
+                    "summary":  "Fixture used to validate the PROXTEL Skill contract.",
+                    "use_when":  [
+                                     "Running automated contract tests."
+                                 ],
+                    "do_not_use_when":  [
+                                            "Performing real production work."
+                                        ]
+                },
+    "capabilities":  {
+                         "responsibilities":  [
+                                                  "Provide a deterministic contract fixture."
+                                              ],
+                         "limits":  [
+                                        "Must not perform external actions."
+                                    ],
+                         "completion_criteria":  [
+                                                     "Schema validation succeeds."
+                                                 ]
+                     },
+    "dependencies":  [
+
+                     ],
+    "resources":  {
+                      "skill_md":  "SKILL.md",
+                      "scripts":  [
+
+                                  ],
+                      "references":  [
+
+                                     ],
+                      "assets":  [
+
+                                 ]
+                  },
+    "security":  {
+                     "network":  {
+                                     "level":  "none",
+                                     "description":  "No behavior required."
+                                 },
+                     "filesystem_write":  {
+                                              "level":  "none",
+                                              "description":  "No behavior required."
+                                          },
+                     "filesystem_delete":  {
+                                               "level":  "none",
+                                               "description":  "No behavior required."
+                                           },
+                     "subprocess":  {
+                                        "level":  "none",
+                                        "description":  "No behavior required."
+                                    },
+                     "environment_access":  {
+                                                "level":  "none",
+                                                "description":  "No behavior required."
+                                            },
+                     "secret_access":  {
+                                           "level":  "none",
+                                           "description":  "No behavior required."
+                                       },
+                     "privilege_required":  false
+                 },
+    "compatibility":  {
+                          "platforms":  [
+                                            "windows",
+                                            "macos",
+                                            "linux"
+                                        ],
+                          "providers":  [
+                                            "claude",
+                                            "codex",
+                                            "antigravity"
+                                        ]
+                      },
+    "testing":  {
+                    "required":  true,
+                    "trigger_tests":  true,
+                    "task_evals":  true,
+                    "baseline_comparison":  true
+                },
+    "provenance":  {
+                       "origin_type":  "proxtel-internal",
+                       "sources":  [
+                                       {
+                                           "type":  "internal",
+                                           "name":  "PROXTEL AI Agency",
+                                           "url":  null,
+                                           "commit":  null,
+                                           "license":  null
+                                       }
+                                   ]
+                   }
+}

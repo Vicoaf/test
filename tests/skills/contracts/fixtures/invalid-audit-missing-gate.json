@@ -1,0 +1,106 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill-audit",
+    "audit_id":  "fixture-audit-001",
+    "subject":  {
+                    "skill_id":  "proxtel-contract-fixture",
+                    "path":  "tests/fixtures/proxtel-contract-fixture",
+                    "origin":  "proxtel",
+                    "commit":  null
+                },
+    "timestamps":  {
+                       "started_utc":  "2026-09-15T00:00:00Z",
+                       "completed_utc":  null
+                   },
+    "gates":  {
+                  "identity":  {
+                                   "status":  "NOT-RUN",
+                                   "evidence_ids":  [
+
+                                                    ]
+                               },
+                  "integrity":  {
+                                    "status":  "NOT-RUN",
+                                    "evidence_ids":  [
+
+                                                     ]
+                                },
+                  "license":  {
+                                  "status":  "NOT-RUN",
+                                  "evidence_ids":  [
+
+                                                   ]
+                              },
+                  "static_security":  {
+                                          "status":  "NOT-RUN",
+                                          "evidence_ids":  [
+
+                                                           ]
+                                      },
+                  "dependencies":  {
+                                       "status":  "NOT-RUN",
+                                       "evidence_ids":  [
+
+                                                        ]
+                                   },
+                  "semantic":  {
+                                   "status":  "NOT-RUN",
+                                   "evidence_ids":  [
+
+                                                    ]
+                               },
+                  "safe_to_execute":  {
+                                          "status":  "NOT-RUN",
+                                          "evidence_ids":  [
+
+                                                           ]
+                                      },
+                  "sandbox":  {
+                                  "status":  "NOT-RUN",
+                                  "evidence_ids":  [
+
+                                                   ]
+                              },
+                  "evaluation":  {
+                                     "status":  "NOT-RUN",
+                                     "evidence_ids":  [
+
+                                                      ]
+                                 },
+                  "baseline":  {
+                                   "status":  "NOT-RUN",
+                                   "evidence_ids":  [
+
+                                                    ]
+                               },
+                  "independent_review":  {
+                                             "status":  "NOT-RUN",
+                                             "evidence_ids":  [
+
+                                                              ]
+                                         }
+              },
+    "evidence":  [
+
+                 ],
+    "metrics":  {
+                    "trigger_precision":  null,
+                    "trigger_recall":  null,
+                    "trigger_accuracy":  null,
+                    "assertion_pass_rate":  null,
+                    "runtime_seconds":  null,
+                    "actual_tokens":  null,
+                    "tool_calls":  null,
+                    "errors":  null,
+                    "token_measurement":  "not-measured"
+                },
+    "decision":  {
+                     "status":  "PENDING",
+                     "reasons":  [
+                                     "Contract fixture has not been audited."
+                                 ],
+                     "required_actions":  [
+
+                                          ]
+                 }
+}

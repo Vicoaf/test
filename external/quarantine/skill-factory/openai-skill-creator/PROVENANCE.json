@@ -1,0 +1,20 @@
+{
+    "schema_version":  "1.0",
+    "intake_id":  "openai-skill-creator",
+    "provider":  "OpenAI",
+    "source_type":  "github",
+    "repository_url":  "https://github.com/openai/skills.git",
+    "source_skill_path":  "skills/.system/skill-creator",
+    "source_branch":  "main",
+    "source_commit":  "49f948faa9258a0c61caceaf225e179651397431",
+    "captured_utc":  "2026-09-15T19:05:44.0808844Z",
+    "quarantine_state":  "UNTRUSTED",
+    "audit_status":  "NOT_AUDITED",
+    "scripts_present":  true,
+    "scripts_executed":  false,
+    "dependencies_run":  false,
+    "installed_to_agent":  false,
+    "installed_to_project":  false,
+    "snapshot_file_count":  7,
+    "license_file_count":  0
+}

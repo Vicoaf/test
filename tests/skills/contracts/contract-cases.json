@@ -1,0 +1,50 @@
+[
+    {
+        "id":  "valid-skill",
+        "file":  "fixtures/valid-skill.json",
+        "schema":  "skill",
+        "expect_valid":  true
+    },
+    {
+        "id":  "invalid-skill-id",
+        "file":  "fixtures/invalid-skill-id.json",
+        "schema":  "skill",
+        "expect_valid":  false
+    },
+    {
+        "id":  "invalid-skill-area",
+        "file":  "fixtures/invalid-skill-area.json",
+        "schema":  "skill",
+        "expect_valid":  false
+    },
+    {
+        "id":  "invalid-skill-extra-property",
+        "file":  "fixtures/invalid-skill-extra-property.json",
+        "schema":  "skill",
+        "expect_valid":  false
+    },
+    {
+        "id":  "valid-audit",
+        "file":  "fixtures/valid-audit.json",
+        "schema":  "audit",
+        "expect_valid":  true
+    },
+    {
+        "id":  "invalid-audit-missing-gate",
+        "file":  "fixtures/invalid-audit-missing-gate.json",
+        "schema":  "audit",
+        "expect_valid":  false
+    },
+    {
+        "id":  "invalid-audit-token-mode",
+        "file":  "fixtures/invalid-audit-token-mode.json",
+        "schema":  "audit",
+        "expect_valid":  false
+    },
+    {
+        "id":  "invalid-audit-token-consistency",
+        "file":  "fixtures/invalid-audit-token-consistency.json",
+        "schema":  "audit",
+        "expect_valid":  false
+    }
+]

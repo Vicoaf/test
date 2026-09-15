@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0",
+    "purpose":  "PROXTEL Skill Factory reference intake",
+    "state":  "QUARANTINE",
+    "execution_policy":  "STATIC_REVIEW_ONLY",
+    "created_utc":  "2026-09-15T19:05:44.0909043Z",
+    "sources":  [
+                    {
+                        "id":  "anthropic-skill-creator",
+                        "provider":  "Anthropic",
+                        "repository_url":  "https://github.com/anthropics/skills.git",
+                        "source_skill_path":  "skills/skill-creator",
+                        "source_commit":  "34040c9c568585f6929bedeaad110ad08f079624",
+                        "source_branch":  "main",
+                        "snapshot_path":  "external/quarantine/skill-factory/anthropic-skill-creator",
+                        "audit_status":  "NOT_AUDITED",
+                        "scripts_executed":  false
+                    },
+                    {
+                        "id":  "openai-skill-creator",
+                        "provider":  "OpenAI",
+                        "repository_url":  "https://github.com/openai/skills.git",
+                        "source_skill_path":  "skills/.system/skill-creator",
+                        "source_commit":  "49f948faa9258a0c61caceaf225e179651397431",
+                        "source_branch":  "main",
+                        "snapshot_path":  "external/quarantine/skill-factory/openai-skill-creator",
+                        "audit_status":  "NOT_AUDITED",
+                        "scripts_executed":  false
+                    }
+                ]
+}

@@ -1,0 +1,4 @@
+# PROXTEL quarantine byte-preservation policy.
+# Captured upstream artifacts must not be modified by Git EOL normalization.
+* -text
+**/* -text

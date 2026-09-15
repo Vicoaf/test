@@ -1,0 +1,317 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://proxtel.local/schemas/proxtel-skill-audit.schema.json",
+  "title": "PROXTEL Skill Audit Report",
+  "description": "Machine-readable audit report for an internal or external Skill.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "kind",
+    "audit_id",
+    "subject",
+    "timestamps",
+    "gates",
+    "evidence",
+    "metrics",
+    "decision"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "kind": {
+      "const": "proxtel-skill-audit"
+    },
+    "audit_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "skill_id",
+        "path",
+        "origin",
+        "commit"
+      ],
+      "properties": {
+        "skill_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "origin": {
+          "type": "string",
+          "enum": [
+            "proxtel",
+            "external"
+          ]
+        },
+        "commit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "timestamps": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "started_utc",
+        "completed_utc"
+      ],
+      "properties": {
+        "started_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "completed_utc": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "gates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identity",
+        "integrity",
+        "license",
+        "static_security",
+        "dependencies",
+        "semantic",
+        "safe_to_execute",
+        "sandbox",
+        "evaluation",
+        "baseline",
+        "holdout",
+        "independent_review"
+      ],
+      "properties": {
+        "identity": {
+          "$ref": "#/$defs/gate"
+        },
+        "integrity": {
+          "$ref": "#/$defs/gate"
+        },
+        "license": {
+          "$ref": "#/$defs/gate"
+        },
+        "static_security": {
+          "$ref": "#/$defs/gate"
+        },
+        "dependencies": {
+          "$ref": "#/$defs/gate"
+        },
+        "semantic": {
+          "$ref": "#/$defs/gate"
+        },
+        "safe_to_execute": {
+          "$ref": "#/$defs/gate"
+        },
+        "sandbox": {
+          "$ref": "#/$defs/gate"
+        },
+        "evaluation": {
+          "$ref": "#/$defs/gate"
+        },
+        "baseline": {
+          "$ref": "#/$defs/gate"
+        },
+        "holdout": {
+          "$ref": "#/$defs/gate"
+        },
+        "independent_review": {
+          "$ref": "#/$defs/gate"
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "token_measurement"
+      ],
+      "properties": {
+        "trigger_precision": {
+          "$ref": "#/$defs/fraction"
+        },
+        "trigger_recall": {
+          "$ref": "#/$defs/fraction"
+        },
+        "trigger_accuracy": {
+          "$ref": "#/$defs/fraction"
+        },
+        "assertion_pass_rate": {
+          "$ref": "#/$defs/fraction"
+        },
+        "runtime_seconds": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "actual_tokens": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "tool_calls": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "errors": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "token_measurement": {
+          "type": "string",
+          "enum": [
+            "actual",
+            "not-measured"
+          ]
+        }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "reasons",
+        "required_actions"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "PENDING",
+            "APPROVED",
+            "ADAPT",
+            "REFERENCE-ONLY",
+            "REJECTED"
+          ]
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required_actions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "evidence_ids"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "NOT-RUN",
+            "NOT-APPLICABLE",
+            "PASS",
+            "WARN",
+            "FAIL",
+            "CRITICAL"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "category",
+        "severity",
+        "summary"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "type": "string",
+          "enum": [
+            "INFO",
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "CRITICAL"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "fraction": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}
