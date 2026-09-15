@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "agency": {
+    "id": "proxtel-ai-agency",
+    "name": "PROXTEL AI Agency",
+    "core_version": "2.0.0-dev",
+    "status": "development",
+    "provider_neutral": true
+  },
+  "source_of_truth": {
+    "type": "git-repository",
+    "repository": "PROXTEL-AI-AGENCY",
+    "paths_are_relative": true
+  },
+  "areas": [
+    {
+      "id": "development",
+      "name": "Development / Web / Software",
+      "order": 1,
+      "status": "next"
+    },
+    {
+      "id": "documentation",
+      "name": "Documentation",
+      "order": 2,
+      "status": "planned"
+    },
+    {
+      "id": "crm",
+      "name": "CRM",
+      "order": 3,
+      "status": "planned"
+    },
+    {
+      "id": "sales",
+      "name": "Sales",
+      "order": 4,
+      "status": "planned"
+    },
+    {
+      "id": "customer-service",
+      "name": "Customer Service",
+      "order": 5,
+      "status": "planned"
+    },
+    {
+      "id": "finance",
+      "name": "Finance",
+      "order": 6,
+      "status": "planned"
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing",
+      "order": 7,
+      "status": "planned"
+    },
+    {
+      "id": "pbx",
+      "name": "PBX",
+      "order": 8,
+      "status": "planned"
+    }
+  ],
+  "providers": [
+    {
+      "id": "claude",
+      "adapter": "adapters/claude",
+      "status": "planned"
+    },
+    {
+      "id": "codex",
+      "adapter": "adapters/codex",
+      "status": "planned"
+    },
+    {
+      "id": "antigravity",
+      "adapter": "adapters/antigravity",
+      "status": "planned"
+    }
+  ],
+  "core_paths": {
+    "agents": "agents",
+    "skills": "skills",
+    "external": "external",
+    "workflows": "workflows",
+    "standards": "standards",
+    "tools": "tools",
+    "adapters": "adapters",
+    "tests": "tests",
+    "documentation": "docs",
+    "config": "config",
+    "templates": "templates",
+    "scripts": "scripts"
+  },
+  "external_skill_flow": [
+    "source",
+    "quarantine",
+    "audit",
+    "test",
+    "decision"
+  ],
+  "external_skill_decisions": [
+    "APPROVED",
+    "ADAPT",
+    "REFERENCE-ONLY",
+    "REJECTED"
+  ],
+  "safety": {
+    "default_audit_mode": "read-only",
+    "production_requires_explicit_authorization": true,
+    "secrets_allowed_in_repository": false
+  }
+}
