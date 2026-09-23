@@ -1,0 +1,168 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-development-runtime-bindings",
+    "id":  "development-runtime-bindings",
+    "area":  "development",
+    "status":  "design-validated",
+    "provider_neutral":  true,
+    "orchestrator":  {
+                         "id":  "proxtel-development-orchestrator",
+                         "source":  "agents/development/proxtel-development-orchestrator/agent.json"
+                     },
+    "capability_map":  {
+                           "source":  "config/development-capability-map.json",
+                           "lane_count":  11
+                       },
+    "workflow":  {
+                     "id":  "development-software-delivery",
+                     "source":  "workflows/development/software-delivery/workflow.json"
+                 },
+    "provider_routing":  {
+                             "source":  "standards/core/provider-routing.md",
+                             "adapter_schema":  "config/schemas/proxtel-provider-adapter.schema.json",
+                             "providers":  [
+                                               "claude",
+                                               "codex",
+                                               "antigravity"
+                                           ]
+                         },
+    "bindings":  [
+                     {
+                         "lane":  "architecture",
+                         "executor_type":  "subagent",
+                         "executor_id":  "architecture-specialist",
+                         "preferred_provider":  "claude",
+                         "fallback_providers":  [
+                                                    "codex",
+                                                    "antigravity"
+                                                ]
+                     },
+                     {
+                         "lane":  "backend-laravel-php",
+                         "executor_type":  "subagent",
+                         "executor_id":  "backend-specialist",
+                         "preferred_provider":  "codex",
+                         "fallback_providers":  [
+                                                    "claude"
+                                                ]
+                     },
+                     {
+                         "lane":  "frontend-web",
+                         "executor_type":  "subagent",
+                         "executor_id":  "frontend-specialist",
+                         "preferred_provider":  "codex",
+                         "fallback_providers":  [
+                                                    "claude",
+                                                    "antigravity"
+                                                ]
+                     },
+                     {
+                         "lane":  "database-mysql",
+                         "executor_type":  "subagent",
+                         "executor_id":  "database-specialist",
+                         "preferred_provider":  "codex",
+                         "fallback_providers":  [
+                                                    "claude"
+                                                ]
+                     },
+                     {
+                         "lane":  "api-integrations",
+                         "executor_type":  "orchestrator",
+                         "executor_id":  "proxtel-development-orchestrator",
+                         "preferred_provider":  "codex",
+                         "fallback_providers":  [
+                                                    "claude"
+                                                ]
+                     },
+                     {
+                         "lane":  "qa-browser",
+                         "executor_type":  "subagent",
+                         "executor_id":  "qa-browser-specialist",
+                         "preferred_provider":  "antigravity",
+                         "fallback_providers":  [
+                                                    "codex",
+                                                    "claude"
+                                                ]
+                     },
+                     {
+                         "lane":  "accessibility",
+                         "executor_type":  "subagent",
+                         "executor_id":  "qa-browser-specialist",
+                         "preferred_provider":  "antigravity",
+                         "fallback_providers":  [
+                                                    "codex"
+                                                ]
+                     },
+                     {
+                         "lane":  "performance",
+                         "executor_type":  "subagent",
+                         "executor_id":  "qa-browser-specialist",
+                         "preferred_provider":  "antigravity",
+                         "fallback_providers":  [
+                                                    "codex"
+                                                ]
+                     },
+                     {
+                         "lane":  "seo-web-quality",
+                         "executor_type":  "orchestrator",
+                         "executor_id":  "proxtel-development-orchestrator",
+                         "preferred_provider":  "antigravity",
+                         "fallback_providers":  [
+                                                    "claude",
+                                                    "codex"
+                                                ]
+                     },
+                     {
+                         "lane":  "security",
+                         "executor_type":  "subagent",
+                         "executor_id":  "security-reviewer",
+                         "preferred_provider":  "claude",
+                         "fallback_providers":  [
+                                                    "antigravity",
+                                                    "codex"
+                                                ]
+                     },
+                     {
+                         "lane":  "documentation-release",
+                         "executor_type":  "orchestrator",
+                         "executor_id":  "proxtel-development-orchestrator",
+                         "preferred_provider":  "claude",
+                         "fallback_providers":  [
+                                                    "codex"
+                                                ]
+                     }
+                 ],
+    "approved_skill_pool":  [
+                                {
+                                    "id":  "auditor-web",
+                                    "state":  "approved",
+                                    "source_path":  "skills/development/auditor-web"
+                                },
+                                {
+                                    "id":  "estratega-seo",
+                                    "state":  "approved",
+                                    "source_path":  "skills/development/estratega-seo"
+                                },
+                                {
+                                    "id":  "maestro-frontend",
+                                    "state":  "approved",
+                                    "source_path":  "skills/development/maestro-frontend"
+                                }
+                            ],
+    "governance":  {
+                       "provider_selected_by_task":  true,
+                       "local_first":  true,
+                       "no_automatic_commit":  true,
+                       "no_automatic_push":  true,
+                       "no_automatic_deploy":  true,
+                       "no_automatic_live_retry":  true,
+                       "no_silent_paid_api":  true,
+                       "dangerous_provider_bypass_forbidden":  true,
+                       "subagent_authority_bounded_by_parent":  true
+                   },
+    "adapter_metadata_policy":  {
+                                    "preserve_existing_lifecycle":  true,
+                                    "do_not_rewrite_historical_execution_status":  true,
+                                    "runtime_certification_evidence_is_separate":  true
+                                }
+}

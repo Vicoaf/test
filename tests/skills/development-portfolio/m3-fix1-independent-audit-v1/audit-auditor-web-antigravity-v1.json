@@ -1,0 +1,188 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill-audit",
+    "audit_id":  "PROXTEL-AREA-1.7-M3-FIX1-AUDITOR-WEB-INDEPENDENT-AUDIT-V1",
+    "subject":  {
+                    "skill_id":  "auditor-web",
+                    "path":  "skills/development/auditor-web",
+                    "origin":  "proxtel",
+                    "commit":  "3364e2c"
+                },
+    "timestamps":  {
+                       "started_utc":  "2026-09-19T00:45:35.2914433Z",
+                       "completed_utc":  "2026-09-19T00:46:21.6985844Z"
+                   },
+    "gates":  {
+                  "identity":  {
+                                   "status":  "PASS",
+                                   "evidence_ids":  [
+                                                        "auditor_web-identity"
+                                                    ]
+                               },
+                  "integrity":  {
+                                    "status":  "PASS",
+                                    "evidence_ids":  [
+                                                         "auditor_web-integrity"
+                                                     ]
+                                },
+                  "license":  {
+                                  "status":  "PASS",
+                                  "evidence_ids":  [
+                                                       "auditor_web-provenance"
+                                                   ]
+                              },
+                  "static_security":  {
+                                          "status":  "PASS",
+                                          "evidence_ids":  [
+                                                               "auditor_web-security"
+                                                           ]
+                                      },
+                  "dependencies":  {
+                                       "status":  "PASS",
+                                       "evidence_ids":  [
+                                                            "auditor_web-dependencies"
+                                                        ]
+                                   },
+                  "semantic":  {
+                                   "status":  "PASS",
+                                   "evidence_ids":  [
+                                                        "auditor_web-semantic"
+                                                    ]
+                               },
+                  "safe_to_execute":  {
+                                          "status":  "PASS",
+                                          "evidence_ids":  [
+                                                               "auditor_web-execution"
+                                                           ]
+                                      },
+                  "sandbox":  {
+                                  "status":  "PASS",
+                                  "evidence_ids":  [
+                                                       "auditor_web-execution"
+                                                   ]
+                              },
+                  "evaluation":  {
+                                     "status":  "PASS",
+                                     "evidence_ids":  [
+                                                          "auditor_web-evaluation"
+                                                      ]
+                                 },
+                  "baseline":  {
+                                   "status":  "PASS",
+                                   "evidence_ids":  [
+                                                        "auditor_web-baseline"
+                                                    ]
+                               },
+                  "holdout":  {
+                                  "status":  "PASS",
+                                  "evidence_ids":  [
+                                                       "auditor_web-holdout"
+                                                   ]
+                              },
+                  "independent_review":  {
+                                             "status":  "PASS",
+                                             "evidence_ids":  [
+                                                                  "auditor_web-independent-review"
+                                                              ]
+                                         }
+              },
+    "evidence":  [
+                     {
+                         "id":  "auditor_web-identity",
+                         "category":  "identity",
+                         "severity":  "INFO",
+                         "summary":  "Canonical Skill id/path/version and Registry entry were deterministically verified before independent review.",
+                         "source":  "C:\\DEV\\PROXTEL-AI-AGENCY\\tests\\skills\\development-portfolio\\area-1.7-m2-candidate-build-v1.json"
+                     },
+                     {
+                         "id":  "auditor_web-integrity",
+                         "category":  "integrity",
+                         "severity":  "INFO",
+                         "summary":  "Candidate SKILL.md, skill.json and preserved legacy hashes matched the immutable M2 baseline.",
+                         "source":  "C:\\DEV\\PROXTEL-AI-AGENCY\\tests\\skills\\development-portfolio\\area-1.7-m2-candidate-build-v1.json"
+                     },
+                     {
+                         "id":  "auditor_web-provenance",
+                         "category":  "provenance",
+                         "severity":  "INFO",
+                         "summary":  "Skill is PROXTEL-internal and preserves a byte-exact legacy baseline reference.",
+                         "source":  "skills/development/auditor-web/references/legacy-baseline.md"
+                     },
+                     {
+                         "id":  "auditor_web-security",
+                         "category":  "static-security",
+                         "severity":  "INFO",
+                         "summary":  "Canonical contract declares bounded security behaviors, no privilege requirement and no secret access.",
+                         "source":  "skills/development/auditor-web/skill.json"
+                     },
+                     {
+                         "id":  "auditor_web-dependencies",
+                         "category":  "dependencies",
+                         "severity":  "INFO",
+                         "summary":  "Direct dependency count and direct script count were both verified as zero.",
+                         "source":  "skills/development/auditor-web/skill.json"
+                     },
+                     {
+                         "id":  "auditor_web-semantic",
+                         "category":  "semantic",
+                         "severity":  "INFO",
+                         "summary":  "Fresh portfolio candidate semantic assertions passed 78/78.",
+                         "source":  "C:\\DEV\\PROXTEL-AI-AGENCY\\tests\\skills\\development-portfolio\\run-candidate-tests.ps1"
+                     },
+                     {
+                         "id":  "auditor_web-execution",
+                         "category":  "execution",
+                         "severity":  "INFO",
+                         "summary":  "Candidate has no direct scripts or dependencies; review did not execute candidate code.",
+                         "source":  "skills/development/auditor-web/skill.json"
+                     },
+                     {
+                         "id":  "auditor_web-evaluation",
+                         "category":  "evaluation",
+                         "severity":  "INFO",
+                         "summary":  "Fresh official Skill contract validation passed 8/8 and distribution bridge passed 10/10.",
+                         "source":  "C:\\DEV\\PROXTEL-AI-AGENCY\\tests\\skills\\development-portfolio\\area-1.7-m2-candidate-build-v1.json"
+                     },
+                     {
+                         "id":  "auditor_web-baseline",
+                         "category":  "baseline",
+                         "severity":  "INFO",
+                         "summary":  "Legacy source and candidate legacy-baseline reference retained the same locked SHA-256.",
+                         "source":  "skills/development/auditor-web/references/legacy-baseline.md"
+                     },
+                     {
+                         "id":  "auditor_web-holdout",
+                         "category":  "holdout",
+                         "severity":  "INFO",
+                         "summary":  "Holdout applicability was independently classified by the final reviewer using the supplied deterministic evidence.",
+                         "source":  "C:\\DEV\\PROXTEL-AI-AGENCY\\tests\\skills\\development-portfolio\\m3-fix1-independent-audit-v1\\independent-review-antigravity-v1.json"
+                     },
+                     {
+                         "id":  "auditor_web-independent-review",
+                         "category":  "independent-review",
+                         "severity":  "INFO",
+                         "summary":  "Antigravity independent final decision: APPROVED",
+                         "source":  "C:\\DEV\\PROXTEL-AI-AGENCY\\tests\\skills\\development-portfolio\\m3-fix1-independent-audit-v1\\independent-review-antigravity-v1.json"
+                     }
+                 ],
+    "metrics":  {
+                    "assertion_pass_rate":  1,
+                    "runtime_seconds":  null,
+                    "actual_tokens":  null,
+                    "tool_calls":  null,
+                    "errors":  0,
+                    "token_measurement":  "not-measured"
+                },
+    "decision":  {
+                     "status":  "APPROVED",
+                     "reasons":  [
+                                     "Strict read-only default audit posture requiring verifiable evidence before any modification.",
+                                     "Explicit prohibitions against file edits, dependency installs, and automatic commits or pushes during audits.",
+                                     "Zero direct dependencies and zero direct scripts with read-only subprocess and filesystem declarations.",
+                                     "Clear boundary conditions that forbid inventing metrics and protect against secret exposure."
+                                 ],
+                     "required_actions":  [
+
+                                          ]
+                 }
+}

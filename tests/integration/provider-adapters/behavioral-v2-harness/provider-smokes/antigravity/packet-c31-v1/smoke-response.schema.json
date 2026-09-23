@@ -1,0 +1,57 @@
+{
+    "type":  "object",
+    "additionalProperties":  false,
+    "required":  [
+                     "smoke_kind",
+                     "provider",
+                     "adapter_id",
+                     "transport",
+                     "result",
+                     "nonce",
+                     "message"
+                 ],
+    "properties":  {
+                       "smoke_kind":  {
+                                          "type":  "string",
+                                          "enum":  [
+                                                       "proxtel-provider-adapter-live-smoke"
+                                                   ]
+                                      },
+                       "provider":  {
+                                        "type":  "string",
+                                        "enum":  [
+                                                     "antigravity"
+                                                 ]
+                                    },
+                       "adapter_id":  {
+                                          "type":  "string",
+                                          "enum":  [
+                                                       "antigravity"
+                                                   ]
+                                      },
+                       "transport":  {
+                                         "type":  "string",
+                                         "enum":  [
+                                                      "agy-direct-sandbox-schema-file"
+                                                  ]
+                                     },
+                       "result":  {
+                                      "type":  "string",
+                                      "enum":  [
+                                                   "PASS"
+                                               ]
+                                  },
+                       "nonce":  {
+                                     "type":  "string",
+                                     "enum":  [
+                                                  "PROXTEL-C31-ANTIGRAVITY-1.2.6-ADAPTER-SMOKE-V1"
+                                              ]
+                                 },
+                       "message":  {
+                                       "type":  "string",
+                                       "enum":  [
+                                                    "antigravity 1.2.6 structured-output transport operational"
+                                                ]
+                                   }
+                   }
+}

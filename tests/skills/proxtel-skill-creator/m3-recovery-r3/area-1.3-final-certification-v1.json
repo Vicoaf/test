@@ -1,0 +1,65 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-final-certification",
+    "certification_id":  "PROXTEL-AREA-1.3-SKILL-CREATOR-FINAL-CERTIFICATION-V1",
+    "area":  "1.3",
+    "component":  "proxtel-skill-creator",
+    "version":  "0.1.0",
+    "status":  "CERTIFIED",
+    "lifecycle":  {
+                      "skill_state":  "approved",
+                      "registry_state":  "approved",
+                      "governance_transition_applied":  true
+                  },
+    "independent_audit":  {
+                              "audit_id":  "PROXTEL-AREA-1.3-CREATOR-INDEPENDENT-AUDIT-R3-V1",
+                              "reviewer_provider":  "antigravity",
+                              "model_selection":  "provider-default",
+                              "final_decision":  "APPROVED",
+                              "promotion_eligible":  true,
+                              "blocking_issue_count":  0,
+                              "audit_report_sha256":  "86E1209B96CD556DB723823DF858E3F2AE2F3CD01F18DA36E1DBF7A39BF9B9D5",
+                              "stdout_sha256":  "8613473EC1699D97845ADB467917FF16024EDB3CA9A2ED4223BE9EDF323AA1C8",
+                              "provider_result_sha256":  "536E5CC1C5782A7F4721BF322FDC22B19DF5693F4746161765B298A148B90B34"
+                          },
+    "source":  {
+                   "skill_md_sha256":  "3F2AFE99189D949B998DFBEAA39ADF7E92E5692E5B11C5104450CF96FADA3BE2",
+                   "skill_json_sha256":  "6D90B7A43A4EF35EA0D79B09114CA5213F0FD6F8891D803BB7FF990DB2AEB98F",
+                   "methodology_sha256":  "AD104D94E666B8D55C7B702279654E297E6736005805D46D6999AF8F2C78510B",
+                   "semantic_cases_sha256":  "076229CF2CD041F1E4494BEF2406407C2B536D1BA084BC83B26DA41650F8DCAF",
+                   "semantic_runner_sha256":  "6A9CF4BFBB7CB952F6BF39CB0CAE3CA0FCD8405D34E207D3423942BEA492DD2D",
+                   "registry_sha256":  "F147940A716C5AD3D97A6D33D6FBF20B27E9647844240D94B6A52D2918869D26"
+               },
+    "regression":  {
+                       "pre_review_creator_semantic":  "18/18",
+                       "pre_review_core_contracts":  "8/8",
+                       "post_promotion_creator_semantic":  "18/18",
+                       "post_promotion_core_contracts":  "8/8"
+                   },
+    "provider":  {
+                     "provider_process_starts":  1,
+                     "model_calls_requested":  1,
+                     "automatic_retry_performed":  false,
+                     "zero_extra_cost_route_classification":  "default-account-based-auth",
+                     "subscription_tier_machine_verified":  false,
+                     "remaining_quota_machine_verified":  false,
+                     "actual_total_tokens":  49544,
+                     "billing_interpretation":  "not-inferred"
+                 },
+    "integrity":  {
+                      "legacy_creator_preserved":  true,
+                      "approved_auditor_preserved":  true,
+                      "creator_skill_md_preserved_during_promotion":  true,
+                      "creator_methodology_preserved_during_promotion":  true,
+                      "creator_semantic_cases_preserved_during_promotion":  true,
+                      "no_settings_change":  true,
+                      "no_commit":  true
+                  },
+    "closure":  {
+                    "area_closed":  true,
+                    "additional_area_1_3_steps_required":  false,
+                    "execution_policy":  "macro-steps",
+                    "next_program_stage":  "AREA-1.4-SKILL-FACTORY-OPERATIONAL-WORKFLOW"
+                },
+    "documented_utc":  "2026-09-18T22:51:35.8963720Z"
+}

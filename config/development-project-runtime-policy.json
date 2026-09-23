@@ -1,0 +1,97 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-development-project-runtime-policy",
+    "status":  "certified",
+    "supported_project_types":  [
+                                    "website",
+                                    "landing-page",
+                                    "laravel",
+                                    "crm",
+                                    "saas"
+                                ],
+    "authorities":  {
+                        "runtime_bindings":  "config/development-runtime-bindings.json",
+                        "skill_bundles":  "config/skill-bundles.json",
+                        "skill_registry":  "skills/_registry/skills-registry.json",
+                        "skill_source_resolver":  "scripts/skill-source-resolver.ps1",
+                        "tool_registry":  "tools/registry/development-tools.json",
+                        "workflow":  "workflows/development/software-delivery/workflow.json",
+                        "orchestrator":  "agents/development/proxtel-development-orchestrator/agent.json",
+                        "templates_root":  "templates",
+                        "subagents_root":  "agents/development",
+                        "provider_adapters_root":  "adapters"
+                    },
+    "project_detection":  {
+                              "explicit_project_type_precedence":  true,
+                              "existing_project_read_only_discovery":  true,
+                              "semantic_subtype_guessing":  false,
+                              "evidence_signals":  [
+                                                       "artisan",
+                                                       "composer.json",
+                                                       "package.json",
+                                                       "vite.config.*"
+                                                   ],
+                              "laravel_family":  [
+                                                     "laravel",
+                                                     "crm",
+                                                     "saas"
+                                                 ],
+                              "frontend_family":  [
+                                                      "website",
+                                                      "landing-page"
+                                                  ],
+                              "ambiguous_result":  "blocked-ambiguous",
+                              "unresolved_result":  "blocked-unresolved",
+                              "unsupported_result":  "blocked-unsupported",
+                              "explicit_project_type_required_when_not_unique":  true
+                          },
+    "tool_relationship_model":  {
+                                    "relationship_values":  [
+                                                                "direct-lane",
+                                                                "template-authorized-auxiliary"
+                                                            ],
+                                    "primary_lane_overlap_required":  false,
+                                    "auxiliary_requires_explicit_template_listing":  true,
+                                    "automatic_tool_expansion":  false,
+                                    "expected_direct_lane_edges":  18,
+                                    "expected_template_authorized_auxiliary_edges":  2,
+                                    "expected_auxiliary_edges":  [
+                                                                     "website|api-tester",
+                                                                     "landing-page|api-tester"
+                                                                 ]
+                                },
+    "safety":  {
+                   "local_first":  true,
+                   "read_only_routing":  true,
+                   "provider_execution":  false,
+                   "model_execution":  false,
+                   "tool_execution":  false,
+                   "production_mutation_default":  false,
+                   "database_mutation_default":  false,
+                   "external_api_mutation_default":  false,
+                   "automatic_dependency_installation":  false,
+                   "automatic_git_add":  false,
+                   "automatic_commit":  false,
+                   "automatic_push":  false,
+                   "automatic_deploy":  false,
+                   "live_provider_availability_check":  false,
+                   "deterministic_json_result":  true,
+                   "powershell_5_1_compatible":  true
+               },
+    "source_contract_hashes":  {
+                                   "routing_contract_sha256":  "5E2856EC30DCD595414DAF689C0A606CBBD49E4013DDD102A6CED57DB7DD50C7",
+                                   "result_contract_sha256":  "F08FD0BDAF311FE7EDB44251E5A72702A705E0D7DCFC26AF858F6856A8FC4872"
+                               },
+    "authority_hashes":  {
+                             "config/development-runtime-bindings.json":  "E0BC5EF63D3B792FDB8F748193B208B44BFE3ABDAC24FCAB323E9242BEC0266D",
+                             "tools/registry/development-tools.json":  "D381EC3A153E366D91121EA873944B80A8EC618B20626D2DC18E05A15241374B",
+                             "config/skill-bundles.json":  "B47D123EF45430640736962429E2ED5721C21EC0B2D4F81C1F943D4A6E286D65",
+                             "agents/development/proxtel-development-orchestrator/agent.json":  "75AD9B409C29C505DBFC1F19BD2CC34B4B04CBE9AB929100E0F11D63EDF4FCF3",
+                             "workflows/development/software-delivery/workflow.json":  "0ABB0019815C0ACB653B94DA7E58DF03B59C2FBE1B702E75147F166A762AEC24",
+                             "skills/_registry/skills-registry.json":  "38E1213E26A46209FA0B25072F469CA07B3564FFADDA9ADAB3DC7E3C494B9A8D",
+                             "scripts/skill-source-resolver.ps1":  "0093B1540ECB5DA2CDD6FE6CA374C74B5682A4CB9E664E7D80CC3C9908C48AE0",
+                             "adapters/claude/adapter.json":  "01219D3DE55632374E152DE0038544E9E9395DA1C952CBBE7253E8A201230A43",
+                             "adapters/codex/adapter.json":  "F1A820C848C45160CD2E92B468910B216AE05C308294714C9A96F8A087F007D0",
+                             "adapters/antigravity/adapter.json":  "C597D6CE6BE196BA8DE26A6ECB6B41AD5ED79CCB5F60F79B8C66173744EB67CF"
+                         }
+}

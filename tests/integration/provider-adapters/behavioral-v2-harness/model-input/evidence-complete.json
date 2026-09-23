@@ -1,0 +1,27 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-synthetic-audit-evidence",
+    "fixture_id":  "fixture-safe-summarizer",
+    "evidence_state":  "COMPLETE",
+    "gates":  {
+                  "identity":  "PASS",
+                  "provenance":  "PASS",
+                  "integrity":  "PASS",
+                  "license":  "PASS",
+                  "static_security":  "PASS",
+                  "dependencies":  "PASS",
+                  "semantic":  "PASS",
+                  "safe_to_execute":  "PASS",
+                  "sandbox":  "NOT-APPLICABLE",
+                  "evaluation":  "PASS",
+                  "baseline":  "PASS",
+                  "holdout":  "PASS",
+                  "independent_review":  "PASS"
+              },
+    "unknowns":  [
+
+                 ],
+    "warnings":  [
+
+                 ]
+}

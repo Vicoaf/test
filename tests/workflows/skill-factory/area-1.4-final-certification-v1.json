@@ -1,0 +1,68 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-final-certification",
+    "certification_id":  "PROXTEL-AREA-1.4-SKILL-FACTORY-OPERATIONAL-WORKFLOW-V1",
+    "area":  "1.4",
+    "component":  "skill-factory-operational-workflow",
+    "version":  "1.0.0",
+    "status":  "CERTIFIED",
+    "mechanism":  "workflow",
+    "workflow":  {
+                     "id":  "skill-factory-operational",
+                     "state":  "approved",
+                     "provider_neutral":  true,
+                     "execution_mode":  "orchestration-only",
+                     "step_count":  11,
+                     "final_decisions":  [
+                                             "APPROVED",
+                                             "ADAPT",
+                                             "REFERENCE-ONLY",
+                                             "REJECTED"
+                                         ]
+                 },
+    "certified_pair":  {
+                           "creator":  "approved",
+                           "auditor":  "approved",
+                           "creator_skill_json_sha256":  "6D90B7A43A4EF35EA0D79B09114CA5213F0FD6F8891D803BB7FF990DB2AEB98F",
+                           "auditor_skill_json_sha256":  "2D84AF8C8F7D073D762BCB85E9E286ACB3E5CADB15EB7D80041DB8D7983BB62B"
+                       },
+    "source":  {
+                   "workflow_schema_sha256":  "09ACE59499E9E18FCAE2DE5AD080AF3A57935609B45CD2C8F241EE61CB61C7EF",
+                   "workflow_json_sha256":  "B444A60BAA666473FF40CE0029C79FE885E860102DE256A473DCE6FE492C4D0E",
+                   "workflow_md_sha256":  "3DBBD34AB9CA93AA999A6EC32331355B7BE9AC1EF7814AE86C5DF1711702C58D",
+                   "workflow_documentation_sha256":  "80BD99ABCCE61973E15C3FEA81C002FE47D6431BBB18231AE2BC58DF6ABFC95C",
+                   "workflow_cases_sha256":  "A2B6104D1295AB0AD7E55D9B1F1E3E58DF5DF965F45C1328B711F67624BEAFE6",
+                   "workflow_runner_sha256":  "847E189CF066425BF58BBD803D680C0A192C5C14FD58059CA76F113F5E2B6C59"
+               },
+    "validation":  {
+                       "staging_workflow_assertions":  "37/37",
+                       "post_apply_workflow_assertions":  "37/37",
+                       "git_diff_check":  "PASS"
+                   },
+    "safety":  {
+                   "creator_self_approval_forbidden":  true,
+                   "external_direct_execution_forbidden":  true,
+                   "production_first_forbidden":  true,
+                   "silent_dependency_install_forbidden":  true,
+                   "dangerous_permission_bypass_forbidden":  true,
+                   "automatic_retry_of_consumed_live_attempt_forbidden":  true,
+                   "additional_paid_api_consumption_silent":  false
+               },
+    "transactionality":  {
+                             "pattern":  "staging -\u003e validation -\u003e promote",
+                             "rollback_available_for_area_1_4_m2":  true
+                         },
+    "execution":  {
+                      "provider_executed_during_m2":  false,
+                      "model_calls_requested_during_m2":  0,
+                      "settings_modified":  false,
+                      "commit_created":  false
+                  },
+    "closure":  {
+                    "area_closed":  true,
+                    "additional_area_1_4_steps_required":  false,
+                    "execution_policy":  "macro-steps",
+                    "next_program_stage":  "AREA-1.5-SKILL-FACTORY-OPERATOR-ENTRYPOINT"
+                },
+    "documented_utc":  "2026-09-18T22:59:51.4538599Z"
+}

@@ -1,0 +1,131 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-provider-adapter-live-smoke-certification",
+    "report_id":  "PROXTEL-AREA-1.2-ANTIGRAVITY-1.2.6-LIVE-SMOKE-C31-CERTIFICATION-V1",
+    "status":  "CERTIFIED",
+    "area":  "1.2",
+    "provider":  "antigravity",
+    "adapter":  {
+                    "id":  "antigravity",
+                    "path":  "adapters\\antigravity\\adapter.json",
+                    "sha256":  "C597D6CE6BE196BA8DE26A6ECB6B41AD5ED79CCB5F60F79B8C66173744EB67CF",
+                    "observed_version":  "1.2.6",
+                    "execution_status":  "not-executed",
+                    "lifecycle_modified_by_certification":  false
+                },
+    "cli":  {
+                "path":  "C:\\Users\\MSI\\AppData\\Local\\agy\\bin\\agy.exe",
+                "version":  "1.2.6",
+                "sha256":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+                "transport":  "agy-direct-sandbox-schema-file",
+                "binary_drift_during_observed_execution_window":  false,
+                "in_memory_process_image_hash_proven":  false
+            },
+    "packet":  {
+                   "packet_id":  "PROXTEL-AREA-1.2-ANTIGRAVITY-1.2.6-DECLARED-ADAPTER-LIVE-SMOKE-C31-V1",
+                   "path":  "tests\\integration\\provider-adapters\\behavioral-v2-harness\\provider-smokes\\antigravity\\packet-c31-v1",
+                   "consumed":  true,
+                   "rerun_allowed":  false,
+                   "hashes":  {
+                                  "prompt_sha256":  "5961CA25115BEF6ADAC819D60C622742880FCE5D293B66AD7D4454EE66697EAB",
+                                  "schema_sha256":  "72954FDDA8349AB9864BDA484291B6831D1A94AD8EE6A618E5800C09451E59CA",
+                                  "manifest_sha256":  "AC79FC9B423426D25AA0455E895802FD0690C44B5C0BC4F39A1C931E185ED396",
+                                  "run_once_sha256":  "9FBB7249C49D7A1763B5C03A3131F2E8A6E6C834BCFF9ED68E81D62222B67F16",
+                                  "validator_sha256":  "1C4F3CF34AB872337E40FA3350FF786697D5DD39F87D825B0357916A18986DB7",
+                                  "adapter_snapshot_sha256":  "C597D6CE6BE196BA8DE26A6ECB6B41AD5ED79CCB5F60F79B8C66173744EB67CF"
+                              }
+               },
+    "execution":  {
+                      "execution_lock_sha256":  "E960648573A489CB620CEF325C12F800192AF97F8E5684C027B320B248512486",
+                      "stdout_sha256":  "838B6D651EF7BAA966B0D65771F8158EB1F2A0930DE6B19B85F6C0B01D03E660",
+                      "stderr_sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+                      "provider_result_sha256":  "AD04E73370CADEB333192F13B3D1EA71B86C04EAEDC61DADC767CDCB262525D4",
+                      "provider_process_starts":  1,
+                      "model_calls_requested":  1,
+                      "provider_exit_code":  0,
+                      "automatic_retry_performed":  false,
+                      "model_selection":  "provider-default",
+                      "explicit_model_flag":  false,
+                      "dangerous_bypass":  false,
+                      "sandbox":  true,
+                      "add_dir":  false,
+                      "permission_semantics_assumed":  false,
+                      "cli_sha256_initial":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+                      "cli_sha256_prelock":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+                      "cli_sha256_prestart":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+                      "cli_sha256_postexit_observed":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5"
+                  },
+    "result":  {
+                   "envelope_status":  "SUCCESS",
+                   "duration_seconds":  5.4722804,
+                   "num_turns":  1,
+                   "structured_output_location":  "structured_output",
+                   "structured_output_exact":  true,
+                   "model_inference_proven":  true,
+                   "expected_structured_output":  {
+                                                      "smoke_kind":  "proxtel-provider-adapter-live-smoke",
+                                                      "provider":  "antigravity",
+                                                      "adapter_id":  "antigravity",
+                                                      "transport":  "agy-direct-sandbox-schema-file",
+                                                      "result":  "PASS",
+                                                      "nonce":  "PROXTEL-C31-ANTIGRAVITY-1.2.6-ADAPTER-SMOKE-V1",
+                                                      "message":  "antigravity 1.2.6 structured-output transport operational"
+                                                  },
+                   "observed_structured_output":  {
+                                                      "smoke_kind":  "proxtel-provider-adapter-live-smoke",
+                                                      "provider":  "antigravity",
+                                                      "adapter_id":  "antigravity",
+                                                      "transport":  "agy-direct-sandbox-schema-file",
+                                                      "result":  "PASS",
+                                                      "nonce":  "PROXTEL-C31-ANTIGRAVITY-1.2.6-ADAPTER-SMOKE-V1",
+                                                      "message":  "antigravity 1.2.6 structured-output transport operational"
+                                                  }
+               },
+    "telemetry":  {
+                      "source":  "provider-reported-usage",
+                      "billing_total_interpretation":  "not-inferred",
+                      "usage":  {
+                                    "input_tokens":  16202,
+                                    "output_tokens":  1645,
+                                    "thinking_tokens":  1511,
+                                    "cache_read_tokens":  0,
+                                    "total_tokens":  17847
+                                }
+                  },
+    "permissions":  {
+                        "denied_actions_field_present":  false,
+                        "denied_actions_count":  0,
+                        "permission_denials_field_present":  false,
+                        "permission_denials_count":  0,
+                        "exact_permission_matcher_semantics_assumed":  false
+                    },
+    "historical":  {
+                       "packet_c24_consumed":  true,
+                       "packet_c24_rerun_allowed":  false,
+                       "packet_c24_execution_lock_sha256":  "7626E79B9ABE6C0ED56DA1D57E7A24C8E9B1D29197BA0D510B0900CDEED7B703",
+                       "c26_historical_live_smoke_evidence_valid":  true,
+                       "c31_is_fresh_current_version_smoke":  true
+                   },
+    "governance":  {
+                       "source_independent_report_id":  "PROXTEL-AREA-1.2-AUDITOR-INDEPENDENT-ADAPT-V1",
+                       "source_independent_report_sha256":  "637CD84898E8C56F2255D2AEF7F52CA79A37280D9B86E63C2D225D91A5FD411C",
+                       "source_independent_decision_path":  "decision.status",
+                       "source_independent_decision":  "ADAPT",
+                       "required_action_3_source_path":  "decision.required_actions[3]",
+                       "required_action_3_text":  "Conduct and document live smoke verification on the declared Claude and Antigravity provider adapters prior to multi-provider release.",
+                       "required_action_3_claude_portion":  "SATISFIED",
+                       "required_action_3_antigravity_portion":  "SATISFIED",
+                       "required_action_3_overall":  "SATISFIED",
+                       "current_adapter_execution_status":  "not-executed",
+                       "promotion_to_approved":  false,
+                       "fresh_independent_governance_review_required":  true,
+                       "multi_provider_release_eligible":  false,
+                       "next_gate":  "fresh-independent-governance-review"
+                   },
+    "provenance":  {
+                       "auditor_skill_json_sha256":  "3D9835F89E3CFB791CBED6C6A83468B50F1DC4FBFDD552F939E66382EE8E1652",
+                       "skills_registry_sha256":  "5287BF60F8A96FD17E26108B362EB50AADFFD73C712BCB526C12B043C6AA5668",
+                       "formal_adapt_report_sha256":  "637CD84898E8C56F2255D2AEF7F52CA79A37280D9B86E63C2D225D91A5FD411C",
+                       "claude_smoke_certification_report_sha256":  "EF1FA10924FDF3A110176FCF444F2C975D80B8A51B84A17D4EEFAA93EFDB4E21"
+                   }
+}

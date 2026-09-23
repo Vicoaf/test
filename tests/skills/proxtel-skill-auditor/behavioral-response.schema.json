@@ -1,0 +1,108 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "PROXTEL Skill Auditor Behavioral Response",
+    "type":  "object",
+    "additionalProperties":  false,
+    "required":  [
+                     "case_id",
+                     "auditor_should_engage",
+                     "primary_action",
+                     "execute_allowed",
+                     "safe_to_execute",
+                     "decision",
+                     "evidence_required",
+                     "facts",
+                     "inferences",
+                     "unknowns",
+                     "required_actions",
+                     "token_measurement",
+                     "actual_tokens"
+                 ],
+    "properties":  {
+                       "case_id":  {
+                                       "type":  "string",
+                                       "minLength":  1
+                                   },
+                       "auditor_should_engage":  {
+                                                     "type":  "boolean"
+                                                 },
+                       "primary_action":  {
+                                              "type":  "string",
+                                              "enum":  [
+                                                           "AUDIT",
+                                                           "REQUEST-EVIDENCE",
+                                                           "BLOCK",
+                                                           "ROUTE-CREATOR",
+                                                           "ROUTE-IMPLEMENTATION",
+                                                           "NOT-APPLICABLE"
+                                                       ]
+                                          },
+                       "execute_allowed":  {
+                                               "type":  "boolean"
+                                           },
+                       "safe_to_execute":  {
+                                               "type":  "string",
+                                               "enum":  [
+                                                            "NOT-RUN",
+                                                            "NOT-APPLICABLE",
+                                                            "PASS",
+                                                            "WARN",
+                                                            "FAIL",
+                                                            "CRITICAL"
+                                                        ]
+                                           },
+                       "decision":  {
+                                        "type":  "string",
+                                        "enum":  [
+                                                     "PENDING",
+                                                     "APPROVED",
+                                                     "ADAPT",
+                                                     "REFERENCE-ONLY",
+                                                     "REJECTED",
+                                                     "NOT-APPLICABLE"
+                                                 ]
+                                    },
+                       "evidence_required":  {
+                                                 "type":  "boolean"
+                                             },
+                       "facts":  {
+                                     "type":  "array",
+                                     "items":  {
+                                                   "type":  "string"
+                                               }
+                                 },
+                       "inferences":  {
+                                          "type":  "array",
+                                          "items":  {
+                                                        "type":  "string"
+                                                    }
+                                      },
+                       "unknowns":  {
+                                        "type":  "array",
+                                        "items":  {
+                                                      "type":  "string"
+                                                  }
+                                    },
+                       "required_actions":  {
+                                                "type":  "array",
+                                                "items":  {
+                                                              "type":  "string"
+                                                          }
+                                            },
+                       "token_measurement":  {
+                                                 "type":  "string",
+                                                 "enum":  [
+                                                              "actual",
+                                                              "not-measured",
+                                                              "not-applicable"
+                                                          ]
+                                             },
+                       "actual_tokens":  {
+                                             "type":  [
+                                                          "integer",
+                                                          "null"
+                                                      ],
+                                             "minimum":  0
+                                         }
+                   }
+}

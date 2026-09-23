@@ -1,0 +1,110 @@
+{
+    "schema_version":  "1.0",
+    "report_id":  "PROXTEL-AREA-1.2-CLAUDE-NATIVE-LIVE-SMOKE-C18-CERTIFICATION-V1",
+    "area":  "1.2",
+    "provider":  "claude",
+    "adapter_id":  "claude",
+    "report_type":  "provider-adapter-live-smoke-certification",
+    "status":  "CERTIFIED",
+    "certification_scope":  "declared-claude-provider-adapter-live-smoke",
+    "documented_utc":  "2026-09-18T17:58:27.3722745Z",
+    "adapter":  {
+                    "sha256":  "01219D3DE55632374E152DE0038544E9E9395DA1C952CBBE7253E8A201230A43",
+                    "source":  "C:\\Users\\MSI\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe",
+                    "source_sha256":  "1E472BCFD49449E73EF76698C87F6583055AEB88DC41CA190A9C12C6791B5EEA",
+                    "observed_version":  "2.1.268 (Claude Code)",
+                    "execution_status_at_documentation":  "not-executed",
+                    "execution_status_modified_by_this_step":  false
+                },
+    "route":  {
+                  "transport":  "native-executable-direct",
+                  "account_route":  "claude.ai-pro",
+                  "auth_method":  "claude.ai",
+                  "api_provider":  "firstParty",
+                  "subscription_type":  "pro",
+                  "explicit_model_flag":  false,
+                  "model_selection":  "provider-default",
+                  "automatic_retry":  false,
+                  "dangerous_bypass":  false
+              },
+    "packet":  {
+                   "packet_id":  "PROXTEL-AREA-1.2-CLAUDE-NATIVE-ADAPTER-LIVE-SMOKE-C18-V1",
+                   "lifecycle":  "consumed",
+                   "retry_allowed":  false,
+                   "prompt_sha256":  "DD7FFAC27C453F8597B6DAB5BBA2B71BE95C054B332EB39B90AF80FD82E76D1A",
+                   "schema_sha256":  "3415BC4426C028D941EDB3623E4A67E352C94B51DC2B972BEE52CB10A04ABBEA",
+                   "manifest_sha256":  "BF46A25C85FFDC587259FB9784B1A4C64256BCE4B598EB001A4D6B92782D42F6",
+                   "run_once_sha256":  "62F020A26B9789723FB0AFC8DFC35A3C7AC9BCBA461CFC5F6CCB771202088BAE",
+                   "validator_sha256":  "C8503DD481F22F6B2279FD7B6BBB3EC7597318F7464B3B993D87393A9C5FC4DE",
+                   "adapter_snapshot_sha256":  "01219D3DE55632374E152DE0038544E9E9395DA1C952CBBE7253E8A201230A43"
+               },
+    "execution":  {
+                      "execution_lock_sha256":  "49016F9DABCD433FC3EDED0D663B903E739E9CA029376B61F4D044D74494A265",
+                      "provider_result_sha256":  "0E9AA15072B19B17E5535CBB16C356704CC1D0B2E361581B478EA97C1004483A",
+                      "stdout_sha256":  "68BAA49B15291291BC9C261A6070C0A0C09F13E1BAE0A3F5988C8AB81B01A8C8",
+                      "stderr_sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+                      "provider_process_starts":  1,
+                      "model_calls_requested":  1,
+                      "provider_exit_code":  0,
+                      "automatic_retry_performed":  false,
+                      "stderr_empty":  true,
+                      "stdout_nonempty":  true
+                  },
+    "structured_output":  {
+                              "location":  "structured_output",
+                              "exact_property_set":  true,
+                              "exact_semantics":  true,
+                              "smoke_kind":  "proxtel-provider-adapter-live-smoke",
+                              "provider":  "claude",
+                              "adapter_id":  "claude",
+                              "transport":  "native-executable-direct",
+                              "result":  "PASS",
+                              "nonce":  "PROXTEL-C18-NATIVE-CLAUDE-ADAPTER-SMOKE-V1",
+                              "message":  "native structured-output transport operational"
+                          },
+    "inference_evidence":  {
+                               "proven":  true,
+                               "type":  "result",
+                               "subtype":  "success",
+                               "is_error":  false,
+                               "num_turns":  2,
+                               "duration_api_ms":  14561,
+                               "top_level_usage":  {
+                                                       "input_tokens":  2,
+                                                       "output_tokens":  1092,
+                                                       "cache_read_input_tokens":  0,
+                                                       "cache_creation_input_tokens":  27894
+                                                   },
+                               "model_usage":  {
+                                                   "claude-haiku-4-5-20251001":  {
+                                                                                     "inputTokens":  1045,
+                                                                                     "outputTokens":  16,
+                                                                                     "cacheReadInputTokens":  0,
+                                                                                     "cacheCreationInputTokens":  0
+                                                                                 },
+                                                   "claude-sonnet-5":  {
+                                                                           "inputTokens":  2,
+                                                                           "outputTokens":  1092,
+                                                                           "cacheReadInputTokens":  0,
+                                                                           "cacheCreationInputTokens":  27894
+                                                                       }
+                                               },
+                               "token_accounting_note":  "Top-level usage and modelUsage are recorded separately and are not summed as a billing total because the two provider telemetry views may overlap."
+                           },
+    "historical_failed_packet":  {
+                                     "packet":  "C9-FIX2",
+                                     "consumed":  true,
+                                     "retry_allowed":  false,
+                                     "execution_lock_sha256":  "E1E525F15FF8B5311F01DABCAA4B3D2775D4E48B2A2AE4E0044D8FCDCB454D4A",
+                                     "stdout_sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+                                     "stderr_sha256":  "900738B9CEB89FDE6AFCF656AB7937BCDB4DD092A8AA836FA5698AF4EACF4594"
+                                 },
+    "governance":  {
+                       "required_action_3_claude_portion":  "SATISFIED",
+                       "required_action_3_overall":  "NOT-YET-SATISFIED",
+                       "remaining_provider_smoke":  "antigravity",
+                       "skill_promotion_to_approved":  false,
+                       "adapter_lifecycle_modified":  false,
+                       "commit_created":  false
+                   }
+}

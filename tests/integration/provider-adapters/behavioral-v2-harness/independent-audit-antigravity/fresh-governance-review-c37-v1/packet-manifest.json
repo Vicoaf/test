@@ -1,0 +1,53 @@
+{
+    "schema_version":  "1.0",
+    "packet_id":  "PROXTEL-AREA-1.2-AUDITOR-FRESH-INDEPENDENT-GOVERNANCE-REVIEW-C37-V1",
+    "purpose":  "Fresh independent governance review of proxtel-skill-auditor after ADAPT remediation",
+    "subject_id":  "proxtel-skill-auditor",
+    "reviewer_provider":  "antigravity",
+    "review_nonce":  "PROXTEL-C37-AUDITOR-FRESH-INDEPENDENT-GOVERNANCE-REVIEW-V1",
+    "lifecycle":  "fresh-unconsumed",
+    "input_mode":  "self-contained-evidence-prompt",
+    "tools_required":  false,
+    "read_file_required":  false,
+    "mcp_required":  false,
+    "web_required":  false,
+    "transport":  "agy-direct-sandbox-schema-file",
+    "schema_transport":  "file",
+    "model_selection":  "provider-default",
+    "explicit_model_flag":  false,
+    "one_model_call":  true,
+    "automatic_retry":  false,
+    "dangerous_bypass":  false,
+    "sandbox":  true,
+    "add_dir":  false,
+    "permission_semantics_assumed":  false,
+    "isolated_temp_workdir":  true,
+    "zero_extra_cost_route_gate_required_before_live":  true,
+    "zero_extra_cost_gate_filename":  "zero-extra-cost-gate.json",
+    "zero_extra_cost_gate_status_at_build":  "PENDING",
+    "promotion_to_approved_at_build":  false,
+    "cli_source":  {
+                       "path":  "C:\\Users\\MSI\\AppData\\Local\\agy\\bin\\agy.exe",
+                       "sha256":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+                       "version":  "1.2.6"
+                   },
+    "authoritative_hashes":  {
+                                 "auditor_skill_json_sha256":  "3D9835F89E3CFB791CBED6C6A83468B50F1DC4FBFDD552F939E66382EE8E1652",
+                                 "skills_registry_sha256":  "5287BF60F8A96FD17E26108B362EB50AADFFD73C712BCB526C12B043C6AA5668",
+                                 "historical_adapt_report_sha256":  "637CD84898E8C56F2255D2AEF7F52CA79A37280D9B86E63C2D225D91A5FD411C",
+                                 "claude_smoke_report_sha256":  "EF1FA10924FDF3A110176FCF444F2C975D80B8A51B84A17D4EEFAA93EFDB4E21",
+                                 "antigravity_smoke_report_sha256":  "6E8D6A56B408D73A6032C295E5CF2C8C91C491D73D76C32ED1409FAA9E42E112",
+                                 "antigravity_adapter_sha256":  "C597D6CE6BE196BA8DE26A6ECB6B41AD5ED79CCB5F60F79B8C66173744EB67CF"
+                             },
+    "packet_hashes":  {
+                          "evidence_sha256":  "F30EE6D260849D274D123AB12856898573288EB170E134C5237C707AAC479420",
+                          "prompt_sha256":  "DE43C7BF6B85DCCDF1BB0EEA3B35D8E63DD54A95B6CE2EE7330D3595214AE32C",
+                          "schema_sha256":  "772FCB721CAA16E85E70B2E1065553256682EE82184F92768E3518A7070C4058",
+                          "snapshot_auditor_sha256":  "3D9835F89E3CFB791CBED6C6A83468B50F1DC4FBFDD552F939E66382EE8E1652",
+                          "snapshot_registry_sha256":  "5287BF60F8A96FD17E26108B362EB50AADFFD73C712BCB526C12B043C6AA5668",
+                          "snapshot_historical_adapt_sha256":  "637CD84898E8C56F2255D2AEF7F52CA79A37280D9B86E63C2D225D91A5FD411C",
+                          "snapshot_claude_smoke_sha256":  "EF1FA10924FDF3A110176FCF444F2C975D80B8A51B84A17D4EEFAA93EFDB4E21",
+                          "snapshot_antigravity_smoke_sha256":  "6E8D6A56B408D73A6032C295E5CF2C8C91C491D73D76C32ED1409FAA9E42E112",
+                          "snapshot_antigravity_adapter_sha256":  "C597D6CE6BE196BA8DE26A6ECB6B41AD5ED79CCB5F60F79B8C66173744EB67CF"
+                      }
+}

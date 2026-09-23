@@ -1,0 +1,161 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill",
+    "id":  "proxtel-skill-creator",
+    "display_name":  "PROXTEL Skill Creator",
+    "area":  "core",
+    "lifecycle":  {
+                      "state":  "approved",
+                      "version":  "0.1.0"
+                  },
+    "scope":  {
+                  "level":  "core",
+                  "provider_specific":  false,
+                  "providers":  [
+                                    "claude",
+                                    "codex",
+                                    "antigravity"
+                                ]
+              },
+    "purpose":  {
+                    "summary":  "Design and assemble auditable PROXTEL Skill candidates after first routing the requirement to the correct customization mechanism.",
+                    "use_when":  [
+                                     "Creating a new reusable PROXTEL Skill.",
+                                     "Improving an existing Skill while preserving its review boundary.",
+                                     "Deciding whether a requirement belongs in a Skill or another mechanism.",
+                                     "Preparing a Skill candidate and evidence package for proxtel-skill-auditor."
+                                 ],
+                    "do_not_use_when":  [
+                                            "Issuing the final APPROVED decision for a Skill.",
+                                            "Installing dependencies silently.",
+                                            "Executing unaudited external code.",
+                                            "Changing production as the first test.",
+                                            "Implementing a capability that Mechanism Router classifies as another mechanism."
+                                        ]
+                },
+    "capabilities":  {
+                         "responsibilities":  [
+                                                  "Capture structured creation intake.",
+                                                  "Route the requirement across Skill, Rule, Workflow, Agent, Subagent, Tool, MCP, Adapter, Hook, Plugin or project configuration.",
+                                                  "Classify the narrowest appropriate scope.",
+                                                  "Design provider-neutral Skill contracts and operating instructions.",
+                                                  "Use progressive disclosure for references, scripts and assets.",
+                                                  "Declare dependencies and security behavior explicitly.",
+                                                  "Prepare deterministic tests and evaluation inputs.",
+                                                  "Produce candidate lifecycle output only.",
+                                                  "Prepare a complete handoff to proxtel-skill-auditor."
+                                              ],
+                         "limits":  [
+                                        "Cannot self-approve a Skill.",
+                                        "Cannot hide dependencies or secrets.",
+                                        "Cannot execute unaudited upstream code.",
+                                        "Cannot silently replace an existing Skill.",
+                                        "Cannot assume a dependency or tool is installed.",
+                                        "Cannot use production as the first test environment."
+                                    ],
+                         "completion_criteria":  [
+                                                     "Mechanism and scope decisions are explicit.",
+                                                     "Candidate satisfies the canonical PROXTEL Skill contract.",
+                                                     "Dependencies, resources and security declarations are explicit.",
+                                                     "Applicable tests are prepared.",
+                                                     "Candidate lifecycle state remains candidate.",
+                                                     "Auditor handoff contains enough evidence for independent review."
+                                                 ]
+                     },
+    "dependencies":  [
+
+                     ],
+    "resources":  {
+                      "skill_md":  "SKILL.md",
+                      "scripts":  [
+
+                                  ],
+                      "references":  [
+                                         {
+                                             "path":  "references/creator-methodology.md",
+                                             "purpose":  "Detailed mechanism routing, candidate design, testing and Auditor handoff methodology."
+                                         }
+                                     ],
+                      "assets":  [
+
+                                 ]
+                  },
+    "security":  {
+                     "network":  {
+                                     "level":  "none",
+                                     "description":  "No direct executable behavior in approved v0.1.0."
+                                 },
+                     "filesystem_write":  {
+                                              "level":  "none",
+                                              "description":  "No direct executable behavior in approved v0.1.0."
+                                          },
+                     "filesystem_delete":  {
+                                               "level":  "none",
+                                               "description":  "No direct executable behavior in approved v0.1.0."
+                                           },
+                     "subprocess":  {
+                                        "level":  "none",
+                                        "description":  "No direct executable behavior in approved v0.1.0."
+                                    },
+                     "environment_access":  {
+                                                "level":  "none",
+                                                "description":  "No direct executable behavior in approved v0.1.0."
+                                            },
+                     "secret_access":  {
+                                           "level":  "none",
+                                           "description":  "No direct executable behavior in approved v0.1.0."
+                                       },
+                     "privilege_required":  false
+                 },
+    "compatibility":  {
+                          "platforms":  [
+                                            "windows",
+                                            "macos",
+                                            "linux"
+                                        ],
+                          "providers":  [
+                                            "claude",
+                                            "codex",
+                                            "antigravity"
+                                        ]
+                      },
+    "testing":  {
+                    "required":  true,
+                    "trigger_tests":  true,
+                    "task_evals":  true,
+                    "baseline_comparison":  true
+                },
+    "provenance":  {
+                       "origin_type":  "proxtel-internal",
+                       "sources":  [
+                                       {
+                                           "type":  "internal",
+                                           "name":  "PROXTEL Skill Creator specification",
+                                           "url":  null,
+                                           "commit":  null,
+                                           "license":  null
+                                       },
+                                       {
+                                           "type":  "internal",
+                                           "name":  "PROXTEL legacy creador-skills baseline",
+                                           "url":  null,
+                                           "commit":  null,
+                                           "license":  null
+                                       },
+                                       {
+                                           "type":  "github",
+                                           "name":  "Anthropic skill-creator reference snapshot",
+                                           "url":  "https://github.com/anthropics/skills",
+                                           "commit":  "34040c9c568585f6929bedeaad110ad08f079624",
+                                           "license":  "Apache-2.0"
+                                       },
+                                       {
+                                           "type":  "github",
+                                           "name":  "OpenAI skill-creator legacy reference snapshot",
+                                           "url":  "https://github.com/openai/skills",
+                                           "commit":  "49f948faa9258a0c61caceaf225e179651397431",
+                                           "license":  "Apache-2.0"
+                                       }
+                                   ]
+                   }
+}

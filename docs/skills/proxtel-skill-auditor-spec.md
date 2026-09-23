@@ -183,3 +183,30 @@ Las Skills externas permanecen en quarantine hasta que una decisión explícita 
 ## Production
 
 Nunca utilizar producción como entorno inicial de evaluación.
+
+## Behavioral status model v2
+
+The Auditor separates audit progress from final disposition.
+
+### Interim status
+
+- `PENDING`: required evidence or applicable gates are still incomplete.
+
+`PENDING` is never a final approval decision.
+
+### Final decisions
+
+- `APPROVED`
+- `ADAPT`
+- `REFERENCE-ONLY`
+- `REJECTED`
+
+### Behavioral benchmark layers
+
+1. Routing/trigger: tests whether the Auditor should engage.
+2. Evidence-state: tests incomplete evidence and `PENDING` behavior.
+3. Full audit: tests a separate deterministic candidate fixture with sufficient evidence for a final disposition.
+
+The Auditor itself must not silently become the candidate under audit merely because its operating instructions are supplied to the model.
+
+The legacy v1 behavioral benchmark and the first Codex live-smoke evidence remain preserved for historical reproducibility.

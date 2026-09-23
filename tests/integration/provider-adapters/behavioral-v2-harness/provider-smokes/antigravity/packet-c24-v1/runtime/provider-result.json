@@ -1,0 +1,10 @@
+{
+    "packet_id":  "PROXTEL-AREA-1.2-ANTIGRAVITY-DECLARED-ADAPTER-LIVE-SMOKE-C24-V1",
+    "provider_process_starts":  1,
+    "model_calls_requested":  1,
+    "provider_exit_code":  0,
+    "stdout_sha256":  "88ACCD649E43B6A5C303B9D24F633C4107C23A438300214C0BB6D140A78EF23C",
+    "stderr_sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "completed_utc":  "2026-09-18T18:20:34.7375737Z",
+    "automatic_retry_performed":  false
+}

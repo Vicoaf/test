@@ -1,0 +1,227 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-workflow",
+    "id":  "development-software-delivery",
+    "display_name":  "PROXTEL Development Software Delivery Workflow",
+    "area":  "development",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "execution_mode":  "orchestration-with-tools",
+    "purpose":  {
+                    "summary":  "Coordinate safe software/web delivery from evidence-based discovery through local implementation, validation and release readiness.",
+                    "use_when":  [
+                                     "Creating or changing websites.",
+                                     "Laravel/PHP or CRM/SaaS development.",
+                                     "Frontend implementation or refactoring.",
+                                     "Database/API changes.",
+                                     "Web quality remediation."
+                                 ],
+                    "do_not_use_when":  [
+                                            "Only documentation is requested.",
+                                            "The task belongs to PBX.",
+                                            "A single deterministic Tool is sufficient without multi-step coordination."
+                                        ]
+                },
+    "inputs":  [
+                   "request",
+                   "project_path",
+                   "project_rules",
+                   "authorized_scope",
+                   "risk_level",
+                   "available_tools",
+                   "provider_availability"
+               ],
+    "outputs":  [
+                    "discovery_evidence",
+                    "implementation_plan",
+                    "change_set",
+                    "validation_evidence",
+                    "independent_review_if_applicable",
+                    "release_readiness",
+                    "known_limitations"
+                ],
+    "states":  [
+                   "intake",
+                   "read-only-discovery",
+                   "planned",
+                   "implementing-local",
+                   "validating",
+                   "independent-review",
+                   "changes-required",
+                   "blocked",
+                   "release-ready",
+                   "closed"
+               ],
+    "steps":  [
+                  {
+                      "order":  1,
+                      "id":  "intake-and-scope",
+                      "owner":  "proxtel-development-orchestrator",
+                      "action":  "Capture request, project path, explicit scope, constraints and prohibited actions.",
+                      "required_evidence":  [
+                                                "objective",
+                                                "scope",
+                                                "constraints"
+                                            ],
+                      "next":  "read-only-project-discovery"
+                  },
+                  {
+                      "order":  2,
+                      "id":  "read-only-project-discovery",
+                      "owner":  "proxtel-development-orchestrator",
+                      "action":  "Inspect stack, repository rules, current behavior, tests, build system, database and relevant project files before modification.",
+                      "required_evidence":  [
+                                                "stack",
+                                                "project rules",
+                                                "existing behavior",
+                                                "available validation"
+                                            ],
+                      "next":  "risk-and-change-classification"
+                  },
+                  {
+                      "order":  3,
+                      "id":  "risk-and-change-classification",
+                      "owner":  "proxtel-development-orchestrator",
+                      "action":  "Classify change domains, risk, required specialists and whether independent review is needed.",
+                      "required_evidence":  [
+                                                "risk level",
+                                                "affected lanes",
+                                                "review plan"
+                                            ],
+                      "next":  "design-and-plan"
+                  },
+                  {
+                      "order":  4,
+                      "id":  "design-and-plan",
+                      "owner":  "proxtel-development-orchestrator",
+                      "action":  "Produce the smallest coherent implementation plan that preserves existing architecture unless change is justified.",
+                      "required_evidence":  [
+                                                "implementation plan",
+                                                "rollback/recovery considerations"
+                                            ],
+                      "next":  "local-implementation"
+                  },
+                  {
+                      "order":  5,
+                      "id":  "local-implementation",
+                      "owner":  "proxtel-development-orchestrator",
+                      "action":  "Implement authorized changes locally using the appropriate provider/tool lane. Do not commit, push or deploy automatically.",
+                      "required_evidence":  [
+                                                "modified files",
+                                                "implementation notes"
+                                            ],
+                      "next":  "deterministic-validation"
+                  },
+                  {
+                      "order":  6,
+                      "id":  "deterministic-validation",
+                      "owner":  "proxtel-development-orchestrator",
+                      "action":  "Run applicable tests, lint, build, static checks, migration/schema checks and API checks.",
+                      "required_evidence":  [
+                                                "test results",
+                                                "lint/build results",
+                                                "errors"
+                                            ],
+                      "next":  "web-quality-validation"
+                  },
+                  {
+                      "order":  7,
+                      "id":  "web-quality-validation",
+                      "owner":  "qa-browser-specialist",
+                      "action":  "For user-facing web work, perform responsive/browser, accessibility, visual and performance checks; record NOT-APPLICABLE otherwise.",
+                      "required_evidence":  [
+                                                "browser/visual disposition",
+                                                "accessibility disposition",
+                                                "performance disposition"
+                                            ],
+                      "next":  "independent-review-if-needed"
+                  },
+                  {
+                      "order":  8,
+                      "id":  "independent-review-if-needed",
+                      "owner":  "proxtel-development-orchestrator",
+                      "action":  "Use an independent reviewer for important changes, security-sensitive changes or high-risk architecture. Reviewer must not merely repeat implementer conclusions.",
+                      "required_evidence":  [
+                                                "independent review or not-applicable rationale"
+                                            ],
+                      "next":  "documentation-and-handoff"
+                  },
+                  {
+                      "order":  9,
+                      "id":  "documentation-and-handoff",
+                      "owner":  "proxtel-development-orchestrator",
+                      "action":  "Summarize changes, validations, limitations, migration/deployment notes and any manual follow-up.",
+                      "required_evidence":  [
+                                                "change summary",
+                                                "validation summary",
+                                                "known limitations"
+                                            ],
+                      "next":  "release-readiness-gate"
+                  },
+                  {
+                      "order":  10,
+                      "id":  "release-readiness-gate",
+                      "owner":  "proxtel-development-orchestrator",
+                      "action":  "Declare READY only when applicable validation is passing and blockers are resolved; deployment still requires explicit authorization.",
+                      "required_evidence":  [
+                                                "readiness decision",
+                                                "remaining blockers"
+                                            ],
+                      "next":  "closed"
+                  }
+              ],
+    "final_decisions":  [
+                            {
+                                "decision":  "READY",
+                                "promotion_allowed":  true,
+                                "required_condition":  "Applicable validations pass, blockers are zero, and known limitations are documented."
+                            },
+                            {
+                                "decision":  "CHANGES-REQUIRED",
+                                "promotion_allowed":  false,
+                                "required_condition":  "One or more relevant validations fail or reviewer changes are required."
+                            },
+                            {
+                                "decision":  "BLOCKED",
+                                "promotion_allowed":  false,
+                                "required_condition":  "Required evidence, dependency, authorization or environment is unavailable."
+                            },
+                            {
+                                "decision":  "DEFERRED",
+                                "promotion_allowed":  false,
+                                "required_condition":  "The user intentionally postpones the change or release."
+                            }
+                        ],
+    "provider_routing":  {
+                             "canonical_rule":  "Task determines provider; provider does not determine governance.",
+                             "preferred_patterns":  [
+                                                        "Claude for architecture and complex reasoning.",
+                                                        "Codex for implementation, refactoring and deterministic tests.",
+                                                        "Antigravity for research, browser/visual validation and independent audit."
+                                                    ],
+                             "cross_validation":  "Important changes should prefer a reviewer different from the implementer.",
+                             "fallback":  "Fallback must preserve the same PROXTEL safety and validation requirements.",
+                             "additional_cost_policy":  "Prefer included subscription capabilities and do not add paid API consumption silently."
+                         },
+    "safety":  {
+                   "discovery_first":  true,
+                   "local_first":  true,
+                   "production_first_forbidden":  true,
+                   "automatic_commit_forbidden":  true,
+                   "automatic_push_forbidden":  true,
+                   "automatic_deploy_forbidden":  true,
+                   "destructive_production_db_forbidden":  true,
+                   "silent_dependency_install_forbidden":  true,
+                   "secrets_in_artifacts_forbidden":  true,
+                   "automatic_live_retry_forbidden":  true,
+                   "unreviewed_external_code_execution_forbidden":  true
+               },
+    "transactionality":  {
+                             "required":  true,
+                             "pattern":  "discover -\u003e plan -\u003e local change -\u003e validate -\u003e review -\u003e release-ready",
+                             "pre_change":  "Capture baseline and recovery considerations before risky mutation.",
+                             "failure":  "Stop, preserve evidence and restore reversible changes when the change introduced the failure.",
+                             "partial_initialization_valid":  false
+                         }
+}

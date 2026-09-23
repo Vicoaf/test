@@ -1,0 +1,18 @@
+{
+    "schema_version":  "1.0",
+    "provider":  "antigravity",
+    "review_nonce":  "PROXTEL-AREA-1.3-M3-CREATOR-INDEPENDENT-AUDIT-V1",
+    "provider_process_starts":  1,
+    "model_calls_requested":  1,
+    "exit_code":  2,
+    "automatic_retry_performed":  false,
+    "model_selection":  "provider-default",
+    "explicit_model_flag":  false,
+    "sandbox":  true,
+    "add_dir":  false,
+    "dangerous_bypass":  false,
+    "agy_sha256_prestart":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+    "agy_sha256_postexit_observed":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+    "stdout_sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "stderr_sha256":  "E8E77EC0F84E0C3ACA2754BC8ADB8DFB2AD42AB03D023A15EB619363AAE973D4"
+}

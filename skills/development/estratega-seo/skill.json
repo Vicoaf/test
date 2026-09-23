@@ -1,0 +1,133 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill",
+    "id":  "estratega-seo",
+    "display_name":  "PROXTEL Estratega SEO",
+    "area":  "development",
+    "lifecycle":  {
+                      "state":  "approved",
+                      "version":  "1.0.0"
+                  },
+    "scope":  {
+                  "level":  "reusable-project",
+                  "provider_specific":  false,
+                  "providers":  [
+                                    "claude",
+                                    "codex",
+                                    "antigravity"
+                                ]
+              },
+    "purpose":  {
+                    "summary":  "Audita, disena e implementa SEO tecnico y on-page con evidencia, sin inventar datos comerciales ni prometer rankings. Usala para indexabilidad, metadata, canonical, sitemap, Schema.org, Open Graph y calidad SEO.",
+                    "use_when":  [
+                                     "The request matches the specialized responsibility of estratega-seo.",
+                                     "The capability will be reused across more than one project."
+                                 ],
+                    "do_not_use_when":  [
+                                            "A simple deterministic Tool is sufficient.",
+                                            "The task belongs primarily to another PROXTEL area.",
+                                            "The request would require exceeding project or user authorization."
+                                        ]
+                },
+    "capabilities":  {
+                         "responsibilities":  [
+                                                  "Audit technical and on-page SEO with evidence.",
+                                                  "Design SEO changes that preserve product, content and branding.",
+                                                  "Implement authorized metadata, canonical, robots, sitemap, structured data and related changes.",
+                                                  "Validate structured data and rendered metadata when applicable.",
+                                                  "Distinguish implementation facts from hypotheses and future outcomes."
+                                              ],
+                         "limits":  [
+                                        "Do not promise rankings or traffic.",
+                                        "Do not invent business data, profiles, URLs or tracking IDs.",
+                                        "Do not silently rewrite approved commercial content.",
+                                        "Do not install dependencies silently.",
+                                        "Do not perform irreversible external actions without authorization."
+                                    ],
+                         "completion_criteria":  [
+                                                     "SEO diagnosis or requested implementation is complete.",
+                                                     "Applicable metadata/crawl/structured-data checks pass.",
+                                                     "Unverified items are declared.",
+                                                     "No unsupported ranking claims are made."
+                                                 ]
+                     },
+    "dependencies":  [
+
+                     ],
+    "resources":  {
+                      "skill_md":  "SKILL.md",
+                      "scripts":  [
+
+                                  ],
+                      "references":  [
+                                         {
+                                             "path":  "references/legacy-baseline.md",
+                                             "purpose":  "Immutable provenance copy of the legacy PROXTEL baseline used for modernization comparison."
+                                         },
+                                         {
+                                             "path":  "references/modernization-notes.md",
+                                             "purpose":  "Governance and migration notes for the canonical candidate."
+                                         }
+                                     ],
+                      "assets":  [
+
+                                 ]
+                  },
+    "security":  {
+                     "network":  {
+                                     "level":  "controlled",
+                                     "description":  "Network use is limited to authorized project/browser/research activity relevant to the task."
+                                 },
+                     "filesystem_write":  {
+                                              "level":  "controlled",
+                                              "description":  "Writes are limited to explicitly authorized implementation scope; audit-only work remains read-only."
+                                          },
+                     "filesystem_delete":  {
+                                               "level":  "none",
+                                               "description":  "Deletion is never implicit and must remain within authorized reversible project scope."
+                                           },
+                     "subprocess":  {
+                                        "level":  "controlled",
+                                        "description":  "CLI execution is limited to project inspection, tests, lint, build or authorized local implementation."
+                                    },
+                     "environment_access":  {
+                                                "level":  "read-only",
+                                                "description":  "Environment/config may be inspected when necessary without exposing secrets."
+                                            },
+                     "secret_access":  {
+                                           "level":  "none",
+                                           "description":  "The Skill must not request, reveal or persist secrets."
+                                       },
+                     "privilege_required":  false
+                 },
+    "compatibility":  {
+                          "platforms":  [
+                                            "windows",
+                                            "macos",
+                                            "linux"
+                                        ],
+                          "providers":  [
+                                            "claude",
+                                            "codex",
+                                            "antigravity"
+                                        ]
+                      },
+    "testing":  {
+                    "required":  true,
+                    "trigger_tests":  true,
+                    "task_evals":  true,
+                    "baseline_comparison":  true
+                },
+    "provenance":  {
+                       "origin_type":  "proxtel-internal",
+                       "sources":  [
+                                       {
+                                           "type":  "internal",
+                                           "name":  "skills/base/estratega-seo/SKILL.md",
+                                           "url":  null,
+                                           "commit":  null,
+                                           "license":  null
+                                       }
+                                   ]
+                   }
+}

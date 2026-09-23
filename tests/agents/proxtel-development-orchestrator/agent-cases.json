@@ -1,0 +1,52 @@
+[
+    {
+        "id":  "identity",
+        "category":  "contract",
+        "expected":  "proxtel-development-orchestrator"
+    },
+    {
+        "id":  "provider-neutral",
+        "category":  "architecture",
+        "expected":  "true"
+    },
+    {
+        "id":  "legacy-skills-not-active",
+        "category":  "governance",
+        "expected":  "canonical_active empty"
+    },
+    {
+        "id":  "no-auto-commit",
+        "category":  "git",
+        "expected":  "true"
+    },
+    {
+        "id":  "no-auto-push",
+        "category":  "git",
+        "expected":  "true"
+    },
+    {
+        "id":  "no-production-deploy",
+        "category":  "safety",
+        "expected":  "true"
+    },
+    {
+        "id":  "subagent-authority",
+        "category":  "governance",
+        "expected":  "cannot exceed parent"
+    },
+    {
+        "id":  "independent-review",
+        "category":  "qa",
+        "expected":  "preferred"
+    },
+    {
+        "id":  "three-baseline-skills",
+        "category":  "portfolio",
+        "expected":  "3 baseline references"
+    },
+    {
+        "id":  "development-workflow",
+        "category":  "workflow",
+        "expected":  "development-software-delivery"
+    }
+]

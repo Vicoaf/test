@@ -1,0 +1,189 @@
+{
+    "type":  "object",
+    "additionalProperties":  false,
+    "required":  [
+                     "review_kind",
+                     "subject_id",
+                     "reviewer_provider",
+                     "review_nonce",
+                     "audit_status",
+                     "final_decision",
+                     "promotion_eligible",
+                     "identity_status",
+                     "provenance_status",
+                     "integrity_status",
+                     "license_status",
+                     "security_status",
+                     "dependencies_status",
+                     "semantic_status",
+                     "portability_status",
+                     "safe_to_execute_status",
+                     "sandbox_status",
+                     "evaluation_status",
+                     "baseline_status",
+                     "holdout_status",
+                     "independent_review_status",
+                     "blocking_issue_count",
+                     "blocking_issues",
+                     "summary",
+                     "evidence_limitations"
+                 ],
+    "properties":  {
+                       "review_kind":  {
+                                           "type":  "string",
+                                           "const":  "proxtel-skill-independent-audit"
+                                       },
+                       "subject_id":  {
+                                          "type":  "string",
+                                          "const":  "proxtel-skill-creator"
+                                      },
+                       "reviewer_provider":  {
+                                                 "type":  "string",
+                                                 "const":  "antigravity"
+                                             },
+                       "review_nonce":  {
+                                            "type":  "string",
+                                            "const":  "PROXTEL-AREA-1.3-M3-R3-CREATOR-INDEPENDENT-AUDIT-V1"
+                                        },
+                       "audit_status":  {
+                                            "type":  "string",
+                                            "enum":  [
+                                                         "FINAL"
+                                                     ]
+                                        },
+                       "final_decision":  {
+                                              "type":  "string",
+                                              "enum":  [
+                                                           "APPROVED",
+                                                           "ADAPT",
+                                                           "REFERENCE-ONLY",
+                                                           "REJECTED"
+                                                       ]
+                                          },
+                       "promotion_eligible":  {
+                                                  "type":  "boolean"
+                                              },
+                       "identity_status":  {
+                                               "type":  "string",
+                                               "enum":  [
+                                                            "SATISFIED",
+                                                            "UNSATISFIED"
+                                                        ]
+                                           },
+                       "provenance_status":  {
+                                                 "type":  "string",
+                                                 "enum":  [
+                                                              "SATISFIED",
+                                                              "UNSATISFIED"
+                                                          ]
+                                             },
+                       "integrity_status":  {
+                                                "type":  "string",
+                                                "enum":  [
+                                                             "SATISFIED",
+                                                             "UNSATISFIED"
+                                                         ]
+                                            },
+                       "license_status":  {
+                                              "type":  "string",
+                                              "enum":  [
+                                                           "SATISFIED",
+                                                           "NOT-APPLICABLE",
+                                                           "UNSATISFIED"
+                                                       ]
+                                          },
+                       "security_status":  {
+                                               "type":  "string",
+                                               "enum":  [
+                                                            "SATISFIED",
+                                                            "UNSATISFIED"
+                                                        ]
+                                           },
+                       "dependencies_status":  {
+                                                   "type":  "string",
+                                                   "enum":  [
+                                                                "SATISFIED",
+                                                                "UNSATISFIED"
+                                                            ]
+                                               },
+                       "semantic_status":  {
+                                               "type":  "string",
+                                               "enum":  [
+                                                            "SATISFIED",
+                                                            "UNSATISFIED"
+                                                        ]
+                                           },
+                       "portability_status":  {
+                                                  "type":  "string",
+                                                  "enum":  [
+                                                               "SATISFIED",
+                                                               "UNSATISFIED"
+                                                           ]
+                                              },
+                       "safe_to_execute_status":  {
+                                                      "type":  "string",
+                                                      "enum":  [
+                                                                   "SATISFIED",
+                                                                   "NOT-APPLICABLE",
+                                                                   "UNSATISFIED"
+                                                               ]
+                                                  },
+                       "sandbox_status":  {
+                                              "type":  "string",
+                                              "enum":  [
+                                                           "SATISFIED",
+                                                           "NOT-APPLICABLE",
+                                                           "UNSATISFIED"
+                                                       ]
+                                          },
+                       "evaluation_status":  {
+                                                 "type":  "string",
+                                                 "enum":  [
+                                                              "SATISFIED",
+                                                              "UNSATISFIED"
+                                                          ]
+                                             },
+                       "baseline_status":  {
+                                               "type":  "string",
+                                               "enum":  [
+                                                            "SATISFIED",
+                                                            "NOT-APPLICABLE",
+                                                            "UNSATISFIED"
+                                                        ]
+                                           },
+                       "holdout_status":  {
+                                              "type":  "string",
+                                              "enum":  [
+                                                           "SATISFIED",
+                                                           "NOT-APPLICABLE",
+                                                           "UNSATISFIED"
+                                                       ]
+                                          },
+                       "independent_review_status":  {
+                                                         "type":  "string",
+                                                         "enum":  [
+                                                                      "SATISFIED",
+                                                                      "UNSATISFIED"
+                                                                  ]
+                                                     },
+                       "blocking_issue_count":  {
+                                                    "type":  "integer",
+                                                    "minimum":  0
+                                                },
+                       "blocking_issues":  {
+                                               "type":  "string",
+                                               "minLength":  1,
+                                               "maxLength":  2500
+                                           },
+                       "summary":  {
+                                       "type":  "string",
+                                       "minLength":  1,
+                                       "maxLength":  3500
+                                   },
+                       "evidence_limitations":  {
+                                                    "type":  "string",
+                                                    "minLength":  1,
+                                                    "maxLength":  2500
+                                                }
+                   }
+}

@@ -1,0 +1,255 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "$id":  "proxtel-provider-adapter.schema.json",
+    "title":  "PROXTEL Provider Adapter Contract",
+    "type":  "object",
+    "additionalProperties":  false,
+    "required":  [
+                     "schema_version",
+                     "kind",
+                     "id",
+                     "provider",
+                     "lifecycle",
+                     "cli",
+                     "prompt_transport",
+                     "structured_output",
+                     "execution_context",
+                     "safety",
+                     "evidence"
+                 ],
+    "properties":  {
+                       "schema_version":  {
+                                              "const":  "1.0"
+                                          },
+                       "kind":  {
+                                    "const":  "proxtel-provider-adapter"
+                                },
+                       "id":  {
+                                  "type":  "string",
+                                  "pattern":  "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+                              },
+                       "provider":  {
+                                        "type":  "string",
+                                        "enum":  [
+                                                     "claude",
+                                                     "codex",
+                                                     "antigravity"
+                                                 ]
+                                    },
+                       "lifecycle":  {
+                                         "type":  "object",
+                                         "additionalProperties":  false,
+                                         "required":  [
+                                                          "state",
+                                                          "version",
+                                                          "execution_status"
+                                                      ],
+                                         "properties":  {
+                                                            "state":  {
+                                                                          "enum":  [
+                                                                                       "candidate",
+                                                                                       "approved",
+                                                                                       "deprecated"
+                                                                                   ]
+                                                                      },
+                                                            "version":  {
+                                                                            "type":  "string"
+                                                                        },
+                                                            "execution_status":  {
+                                                                                     "enum":  [
+                                                                                                  "not-executed",
+                                                                                                  "dry-run-tested",
+                                                                                                  "live-tested"
+                                                                                              ]
+                                                                                 }
+                                                        }
+                                     },
+                       "cli":  {
+                                   "type":  "object",
+                                   "additionalProperties":  false,
+                                   "required":  [
+                                                    "command",
+                                                    "observed_version",
+                                                    "command_type",
+                                                    "source"
+                                                ],
+                                   "properties":  {
+                                                      "command":  {
+                                                                      "type":  "string"
+                                                                  },
+                                                      "observed_version":  {
+                                                                               "type":  "string"
+                                                                           },
+                                                      "command_type":  {
+                                                                           "type":  "string"
+                                                                       },
+                                                      "source":  {
+                                                                     "type":  "string"
+                                                                 }
+                                                  }
+                               },
+                       "prompt_transport":  {
+                                                "type":  "object",
+                                                "additionalProperties":  false,
+                                                "required":  [
+                                                                 "non_interactive",
+                                                                 "mechanism",
+                                                                 "positional_prompt",
+                                                                 "stdin_prompt"
+                                                             ],
+                                                "properties":  {
+                                                                   "non_interactive":  {
+                                                                                           "type":  "boolean"
+                                                                                       },
+                                                                   "mechanism":  {
+                                                                                     "type":  "string"
+                                                                                 },
+                                                                   "positional_prompt":  {
+                                                                                             "type":  "boolean"
+                                                                                         },
+                                                                   "stdin_prompt":  {
+                                                                                        "type":  "boolean"
+                                                                                    }
+                                                               }
+                                            },
+                       "structured_output":  {
+                                                 "type":  "object",
+                                                 "additionalProperties":  false,
+                                                 "required":  [
+                                                                  "supported",
+                                                                  "format_mechanism",
+                                                                  "schema_mechanism",
+                                                                  "schema_transport",
+                                                                  "final_output_capture"
+                                                              ],
+                                                 "properties":  {
+                                                                    "supported":  {
+                                                                                      "type":  "boolean"
+                                                                                  },
+                                                                    "format_mechanism":  {
+                                                                                             "type":  [
+                                                                                                          "string",
+                                                                                                          "null"
+                                                                                                      ]
+                                                                                         },
+                                                                    "schema_mechanism":  {
+                                                                                             "type":  [
+                                                                                                          "string",
+                                                                                                          "null"
+                                                                                                      ]
+                                                                                         },
+                                                                    "schema_transport":  {
+                                                                                             "enum":  [
+                                                                                                          "inline",
+                                                                                                          "file",
+                                                                                                          "inline-or-file",
+                                                                                                          "none"
+                                                                                                      ]
+                                                                                         },
+                                                                    "final_output_capture":  {
+                                                                                                 "type":  [
+                                                                                                              "string",
+                                                                                                              "null"
+                                                                                                          ]
+                                                                                             }
+                                                                }
+                                             },
+                       "execution_context":  {
+                                                 "type":  "object",
+                                                 "additionalProperties":  false,
+                                                 "required":  [
+                                                                  "model_selection",
+                                                                  "working_directory",
+                                                                  "sandbox",
+                                                                  "agent_selection",
+                                                                  "mode_selection"
+                                                              ],
+                                                 "properties":  {
+                                                                    "model_selection":  {
+                                                                                            "type":  [
+                                                                                                         "string",
+                                                                                                         "null"
+                                                                                                     ]
+                                                                                        },
+                                                                    "working_directory":  {
+                                                                                              "type":  [
+                                                                                                           "string",
+                                                                                                           "null"
+                                                                                                       ]
+                                                                                          },
+                                                                    "sandbox":  {
+                                                                                    "type":  [
+                                                                                                 "string",
+                                                                                                 "null"
+                                                                                             ]
+                                                                                },
+                                                                    "agent_selection":  {
+                                                                                            "type":  [
+                                                                                                         "string",
+                                                                                                         "null"
+                                                                                                     ]
+                                                                                        },
+                                                                    "mode_selection":  {
+                                                                                           "type":  [
+                                                                                                        "string",
+                                                                                                        "null"
+                                                                                                    ]
+                                                                                       }
+                                                                }
+                                             },
+                       "safety":  {
+                                      "type":  "object",
+                                      "additionalProperties":  false,
+                                      "required":  [
+                                                       "permission_control",
+                                                       "dangerous_bypass_flag",
+                                                       "dangerous_bypass_forbidden",
+                                                       "benchmark_default",
+                                                       "production_first_test_allowed"
+                                                   ],
+                                      "properties":  {
+                                                         "permission_control":  {
+                                                                                    "type":  [
+                                                                                                 "string",
+                                                                                                 "null"
+                                                                                             ]
+                                                                                },
+                                                         "dangerous_bypass_flag":  {
+                                                                                       "type":  [
+                                                                                                    "string",
+                                                                                                    "null"
+                                                                                                ]
+                                                                                   },
+                                                         "dangerous_bypass_forbidden":  {
+                                                                                            "type":  "boolean"
+                                                                                        },
+                                                         "benchmark_default":  {
+                                                                                   "type":  "string"
+                                                                               },
+                                                         "production_first_test_allowed":  {
+                                                                                               "type":  "boolean"
+                                                                                           }
+                                                     }
+                                  },
+                       "evidence":  {
+                                        "type":  "array",
+                                        "minItems":  1,
+                                        "items":  {
+                                                      "type":  "object",
+                                                      "additionalProperties":  false,
+                                                      "required":  [
+                                                                       "path",
+                                                                       "claim"
+                                                                   ],
+                                                      "properties":  {
+                                                                         "path":  {
+                                                                                      "type":  "string"
+                                                                                  },
+                                                                         "claim":  {
+                                                                                       "type":  "string"
+                                                                                   }
+                                                                     }
+                                                  }
+                                    }
+                   }
+}

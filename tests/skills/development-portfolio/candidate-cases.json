@@ -1,0 +1,35 @@
+[
+    {
+        "id":  "auditor-web",
+        "canonical_rel":  "skills/development/auditor-web",
+        "legacy_rel":  "skills/base/auditor-web",
+        "legacy_sha256":  "4892236E063BE00BC343FEAE1C01AAE380F274EDD5028E4E662C777770E81623",
+        "required_markers":  [
+                                 "name: auditor-web",
+                                 "## Mision",
+                                 "## Finalizacion"
+                             ]
+    },
+    {
+        "id":  "estratega-seo",
+        "canonical_rel":  "skills/development/estratega-seo",
+        "legacy_rel":  "skills/base/estratega-seo",
+        "legacy_sha256":  "DBE5A79AD9F0BFC00305D8364128EBC6297E97014C2BDEA91B518B72DEAAE256",
+        "required_markers":  [
+                                 "name: estratega-seo",
+                                 "## Mision",
+                                 "## Finalizacion"
+                             ]
+    },
+    {
+        "id":  "maestro-frontend",
+        "canonical_rel":  "skills/development/maestro-frontend",
+        "legacy_rel":  "skills/base/maestro-frontend",
+        "legacy_sha256":  "3D29603DCC294A11A84BC97AAE8201BD3DA1EF4012B6D376F4615BDE099C4337",
+        "required_markers":  [
+                                 "name: maestro-frontend",
+                                 "## Mision",
+                                 "## Finalizacion"
+                             ]
+    }
+]

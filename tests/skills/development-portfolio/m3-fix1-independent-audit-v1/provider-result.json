@@ -1,0 +1,19 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-provider-result",
+    "provider":  "antigravity",
+    "provider_process_exit_code":  0,
+    "envelope_status":  "SUCCESS",
+    "num_turns":  1,
+    "model_inference_proven":  true,
+    "usage":  {
+                  "input_tokens":  20575,
+                  "output_tokens":  15218,
+                  "thinking_tokens":  14041,
+                  "total_tokens":  35793
+              },
+    "stdout_sha256":  "A3161F0F155D36C2A7B1E6902154CF392CD52BC623ABD85C6E66120475EF2BBA",
+    "stderr_sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "independent_review_sha256":  "835A54ADC4109FC6D2EA443F3C7245F9BFA4308D6EA9631820B916E8BFD93647",
+    "completed_utc":  "2026-09-19T00:46:21.6985844Z"
+}

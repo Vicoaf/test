@@ -1,0 +1,21 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-development-subagent",
+    "id":  "qa-browser-specialist",
+    "area":  "development",
+    "status":  "staging-candidate",
+    "source_declaration":  "agents/development/proxtel-development-orchestrator/agent.json",
+    "parent_agent":  "proxtel-development-orchestrator",
+    "purpose":  "Browser, visual, accessibility and performance validation.",
+    "preferred_provider":  "antigravity",
+    "persistent":  false,
+    "bound_lanes":  [
+                        "qa-browser",
+                        "accessibility",
+                        "performance"
+                    ],
+    "authority":  {
+                      "inherited_from_parent":  true,
+                      "cannot_exceed_parent":  true
+                  }
+}

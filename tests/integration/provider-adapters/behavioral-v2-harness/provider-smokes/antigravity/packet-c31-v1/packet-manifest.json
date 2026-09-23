@@ -1,0 +1,85 @@
+{
+    "schema_version":  "1.0",
+    "packet_id":  "PROXTEL-AREA-1.2-ANTIGRAVITY-1.2.6-DECLARED-ADAPTER-LIVE-SMOKE-C31-V1",
+    "purpose":  "Fresh one-shot Antigravity 1.2.6 declared-provider-adapter live smoke",
+    "provider":  "antigravity",
+    "adapter_id":  "antigravity",
+    "transport":  "agy-direct-sandbox-schema-file",
+    "lifecycle":  "fresh-unconsumed",
+    "model_selection":  "provider-default",
+    "explicit_model_flag":  false,
+    "one_model_call":  true,
+    "automatic_retry":  false,
+    "dangerous_bypass":  false,
+    "sandbox":  true,
+    "add_dir":  false,
+    "permission_semantics_assumed":  false,
+    "isolated_temp_workdir":  true,
+    "repository_as_provider_workdir":  false,
+    "structured_output":  true,
+    "schema_transport":  "file",
+    "final_output_capture":  "stdout",
+    "cli_drift_controls":  {
+                               "initial_hash_gate":  true,
+                               "prelock_hash_gate":  true,
+                               "prestart_hash_gate":  true,
+                               "postexit_hash_observation":  true,
+                               "in_memory_process_image_hash_proven":  false
+                           },
+    "route":  {
+                  "known_alternative_route_env_absent":  true,
+                  "known_route_env_list_complete":  false,
+                  "no_explicit_model":  true,
+                  "provider_default":  true
+              },
+    "adapter_binding":  "hash-lock-and-parse-current-adapter-at-runtime",
+    "cli_source":  {
+                       "path":  "C:\\Users\\MSI\\AppData\\Local\\agy\\bin\\agy.exe",
+                       "sha256":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+                       "version":  "1.2.6"
+                   },
+    "declared_adapter_contract":  {
+                                      "prompt_mechanism":  "--print",
+                                      "positional_prompt":  true,
+                                      "stdin_prompt":  false,
+                                      "format_mechanism":  "--output-format json",
+                                      "schema_mechanism":  "--json-schema",
+                                      "schema_transport":  "inline-or-file",
+                                      "final_output_capture":  "stdout",
+                                      "observed_version":  "1.2.6"
+                                  },
+    "declared_argv_shape":  [
+                                "--print",
+                                "\u003cPROMPT\u003e",
+                                "--output-format",
+                                "json",
+                                "--json-schema",
+                                "\u003cSCHEMA_FILE_PATH\u003e",
+                                "--sandbox"
+                            ],
+    "expected_semantics":  {
+                               "smoke_kind":  "proxtel-provider-adapter-live-smoke",
+                               "provider":  "antigravity",
+                               "adapter_id":  "antigravity",
+                               "transport":  "agy-direct-sandbox-schema-file",
+                               "result":  "PASS",
+                               "nonce":  "PROXTEL-C31-ANTIGRAVITY-1.2.6-ADAPTER-SMOKE-V1",
+                               "message":  "antigravity 1.2.6 structured-output transport operational"
+                           },
+    "historical_packet":  {
+                              "packet_id":  "PROXTEL-AREA-1.2-ANTIGRAVITY-DECLARED-ADAPTER-LIVE-SMOKE-C24-V1",
+                              "consumed":  true,
+                              "rerun_allowed":  false,
+                              "execution_lock_sha256":  "7626E79B9ABE6C0ED56DA1D57E7A24C8E9B1D29197BA0D510B0900CDEED7B703",
+                              "stdout_sha256":  "88ACCD649E43B6A5C303B9D24F633C4107C23A438300214C0BB6D140A78EF23C",
+                              "stderr_sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+                              "provider_result_sha256":  "4F4C77C1B296200E6928EFF3E991774FB9A372AB546BDF3E11ACEFADED11FD5C"
+                          },
+    "hashes":  {
+                   "prompt_sha256":  "5961CA25115BEF6ADAC819D60C622742880FCE5D293B66AD7D4454EE66697EAB",
+                   "schema_sha256":  "72954FDDA8349AB9864BDA484291B6831D1A94AD8EE6A618E5800C09451E59CA",
+                   "adapter_sha256":  "C597D6CE6BE196BA8DE26A6ECB6B41AD5ED79CCB5F60F79B8C66173744EB67CF",
+                   "adapter_snapshot_sha256":  "C597D6CE6BE196BA8DE26A6ECB6B41AD5ED79CCB5F60F79B8C66173744EB67CF",
+                   "claude_smoke_certification_report_sha256":  "EF1FA10924FDF3A110176FCF444F2C975D80B8A51B84A17D4EEFAA93EFDB4E21"
+               }
+}

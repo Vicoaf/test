@@ -1,0 +1,57 @@
+{
+    "type":  "object",
+    "additionalProperties":  false,
+    "required":  [
+                     "smoke_kind",
+                     "provider",
+                     "adapter_id",
+                     "transport",
+                     "result",
+                     "nonce",
+                     "message"
+                 ],
+    "properties":  {
+                       "smoke_kind":  {
+                                          "type":  "string",
+                                          "enum":  [
+                                                       "proxtel-provider-adapter-live-smoke"
+                                                   ]
+                                      },
+                       "provider":  {
+                                        "type":  "string",
+                                        "enum":  [
+                                                     "claude"
+                                                 ]
+                                    },
+                       "adapter_id":  {
+                                          "type":  "string",
+                                          "enum":  [
+                                                       "claude"
+                                                   ]
+                                      },
+                       "transport":  {
+                                         "type":  "string",
+                                         "enum":  [
+                                                      "native-executable-direct"
+                                                  ]
+                                     },
+                       "result":  {
+                                      "type":  "string",
+                                      "enum":  [
+                                                   "PASS"
+                                               ]
+                                  },
+                       "nonce":  {
+                                     "type":  "string",
+                                     "enum":  [
+                                                  "PROXTEL-C18-NATIVE-CLAUDE-ADAPTER-SMOKE-V1"
+                                              ]
+                                 },
+                       "message":  {
+                                       "type":  "string",
+                                       "enum":  [
+                                                    "native structured-output transport operational"
+                                                ]
+                                   }
+                   }
+}

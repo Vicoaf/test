@@ -1,0 +1,30 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-operator",
+    "id":  "skill-factory-operator",
+    "display_name":  "PROXTEL Skill Factory Operator",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "runtime":  "powershell-5.1+",
+    "entrypoint":  "scripts/skill-factory.ps1",
+    "workflow":  "workflows/core/skill-factory/workflow.json",
+    "creator":  "skills/core/proxtel-skill-creator/skill.json",
+    "auditor":  "skills/core/proxtel-skill-auditor/skill.json",
+    "modes":  [
+                  "Status",
+                  "Plan",
+                  "Start",
+                  "Show"
+              ],
+    "actions":  [
+                    "Create",
+                    "Update",
+                    "AuditExternal"
+                ],
+    "default_runtime_workspace":  "%LOCALAPPDATA%\\PROXTEL-AI-AGENCY\\skill-factory\\runs",
+    "repository_write_policy":  "Operator runtime must not mutate repository governance artifacts.",
+    "provider_execution":  false,
+    "automatic_live_retry":  false,
+    "external_source_policy":  "Snapshot into runtime quarantine before any later execution.",
+    "transactionality":  "Run packet creation is atomic: build in temporary run directory, validate, then rename to final RunId."
+}

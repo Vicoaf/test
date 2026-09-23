@@ -1,0 +1,281 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "$id":  "https://proxtel.local/schemas/proxtel-development-runtime-bindings.schema.json",
+    "title":  "PROXTEL Development Runtime Bindings",
+    "type":  "object",
+    "additionalProperties":  false,
+    "required":  [
+                     "schema_version",
+                     "kind",
+                     "id",
+                     "area",
+                     "status",
+                     "provider_neutral",
+                     "orchestrator",
+                     "capability_map",
+                     "workflow",
+                     "provider_routing",
+                     "bindings",
+                     "approved_skill_pool",
+                     "governance",
+                     "adapter_metadata_policy"
+                 ],
+    "properties":  {
+                       "schema_version":  {
+                                              "const":  "1.0"
+                                          },
+                       "kind":  {
+                                    "const":  "proxtel-development-runtime-bindings"
+                                },
+                       "id":  {
+                                  "const":  "development-runtime-bindings"
+                              },
+                       "area":  {
+                                    "const":  "development"
+                                },
+                       "status":  {
+                                      "enum":  [
+                                                   "design-validated",
+                                                   "approved",
+                                                   "deprecated"
+                                               ]
+                                  },
+                       "provider_neutral":  {
+                                                "const":  true
+                                            },
+                       "orchestrator":  {
+                                            "type":  "object",
+                                            "additionalProperties":  false,
+                                            "required":  [
+                                                             "id",
+                                                             "source"
+                                                         ],
+                                            "properties":  {
+                                                               "id":  {
+                                                                          "const":  "proxtel-development-orchestrator"
+                                                                      },
+                                                               "source":  {
+                                                                              "const":  "agents/development/proxtel-development-orchestrator/agent.json"
+                                                                          }
+                                                           }
+                                        },
+                       "capability_map":  {
+                                              "type":  "object",
+                                              "additionalProperties":  false,
+                                              "required":  [
+                                                               "source",
+                                                               "lane_count"
+                                                           ],
+                                              "properties":  {
+                                                                 "source":  {
+                                                                                "const":  "config/development-capability-map.json"
+                                                                            },
+                                                                 "lane_count":  {
+                                                                                    "const":  11
+                                                                                }
+                                                             }
+                                          },
+                       "workflow":  {
+                                        "type":  "object",
+                                        "additionalProperties":  false,
+                                        "required":  [
+                                                         "id",
+                                                         "source"
+                                                     ],
+                                        "properties":  {
+                                                           "id":  {
+                                                                      "const":  "development-software-delivery"
+                                                                  },
+                                                           "source":  {
+                                                                          "const":  "workflows/development/software-delivery/workflow.json"
+                                                                      }
+                                                       }
+                                    },
+                       "provider_routing":  {
+                                                "type":  "object",
+                                                "additionalProperties":  false,
+                                                "required":  [
+                                                                 "source",
+                                                                 "adapter_schema",
+                                                                 "providers"
+                                                             ],
+                                                "properties":  {
+                                                                   "source":  {
+                                                                                  "const":  "standards/core/provider-routing.md"
+                                                                              },
+                                                                   "adapter_schema":  {
+                                                                                          "const":  "config/schemas/proxtel-provider-adapter.schema.json"
+                                                                                      },
+                                                                   "providers":  {
+                                                                                     "type":  "array",
+                                                                                     "minItems":  3,
+                                                                                     "maxItems":  3,
+                                                                                     "uniqueItems":  true,
+                                                                                     "items":  {
+                                                                                                   "enum":  [
+                                                                                                                "claude",
+                                                                                                                "codex",
+                                                                                                                "antigravity"
+                                                                                                            ]
+                                                                                               }
+                                                                                 }
+                                                               }
+                                            },
+                       "bindings":  {
+                                        "type":  "array",
+                                        "minItems":  11,
+                                        "maxItems":  11,
+                                        "items":  {
+                                                      "type":  "object",
+                                                      "additionalProperties":  false,
+                                                      "required":  [
+                                                                       "lane",
+                                                                       "executor_type",
+                                                                       "executor_id",
+                                                                       "preferred_provider",
+                                                                       "fallback_providers"
+                                                                   ],
+                                                      "properties":  {
+                                                                         "lane":  {
+                                                                                      "enum":  [
+                                                                                                   "architecture",
+                                                                                                   "backend-laravel-php",
+                                                                                                   "frontend-web",
+                                                                                                   "database-mysql",
+                                                                                                   "api-integrations",
+                                                                                                   "qa-browser",
+                                                                                                   "accessibility",
+                                                                                                   "performance",
+                                                                                                   "seo-web-quality",
+                                                                                                   "security",
+                                                                                                   "documentation-release"
+                                                                                               ]
+                                                                                  },
+                                                                         "executor_type":  {
+                                                                                               "enum":  [
+                                                                                                            "orchestrator",
+                                                                                                            "subagent"
+                                                                                                        ]
+                                                                                           },
+                                                                         "executor_id":  {
+                                                                                             "type":  "string",
+                                                                                             "minLength":  1
+                                                                                         },
+                                                                         "preferred_provider":  {
+                                                                                                    "enum":  [
+                                                                                                                 "claude",
+                                                                                                                 "codex",
+                                                                                                                 "antigravity"
+                                                                                                             ]
+                                                                                                },
+                                                                         "fallback_providers":  {
+                                                                                                    "type":  "array",
+                                                                                                    "minItems":  1,
+                                                                                                    "uniqueItems":  true,
+                                                                                                    "items":  {
+                                                                                                                  "enum":  [
+                                                                                                                               "claude",
+                                                                                                                               "codex",
+                                                                                                                               "antigravity"
+                                                                                                                           ]
+                                                                                                              }
+                                                                                                }
+                                                                     }
+                                                  }
+                                    },
+                       "approved_skill_pool":  {
+                                                   "type":  "array",
+                                                   "minItems":  3,
+                                                   "maxItems":  3,
+                                                   "items":  {
+                                                                 "type":  "object",
+                                                                 "additionalProperties":  false,
+                                                                 "required":  [
+                                                                                  "id",
+                                                                                  "state",
+                                                                                  "source_path"
+                                                                              ],
+                                                                 "properties":  {
+                                                                                    "id":  {
+                                                                                               "enum":  [
+                                                                                                            "auditor-web",
+                                                                                                            "estratega-seo",
+                                                                                                            "maestro-frontend"
+                                                                                                        ]
+                                                                                           },
+                                                                                    "state":  {
+                                                                                                  "const":  "approved"
+                                                                                              },
+                                                                                    "source_path":  {
+                                                                                                        "type":  "string",
+                                                                                                        "minLength":  1
+                                                                                                    }
+                                                                                }
+                                                             }
+                                               },
+                       "governance":  {
+                                          "type":  "object",
+                                          "additionalProperties":  false,
+                                          "required":  [
+                                                           "provider_selected_by_task",
+                                                           "local_first",
+                                                           "no_automatic_commit",
+                                                           "no_automatic_push",
+                                                           "no_automatic_deploy",
+                                                           "no_automatic_live_retry",
+                                                           "no_silent_paid_api",
+                                                           "dangerous_provider_bypass_forbidden",
+                                                           "subagent_authority_bounded_by_parent"
+                                                       ],
+                                          "properties":  {
+                                                             "provider_selected_by_task":  {
+                                                                                               "const":  true
+                                                                                           },
+                                                             "local_first":  {
+                                                                                 "const":  true
+                                                                             },
+                                                             "no_automatic_commit":  {
+                                                                                         "const":  true
+                                                                                     },
+                                                             "no_automatic_push":  {
+                                                                                       "const":  true
+                                                                                   },
+                                                             "no_automatic_deploy":  {
+                                                                                         "const":  true
+                                                                                     },
+                                                             "no_automatic_live_retry":  {
+                                                                                             "const":  true
+                                                                                         },
+                                                             "no_silent_paid_api":  {
+                                                                                        "const":  true
+                                                                                    },
+                                                             "dangerous_provider_bypass_forbidden":  {
+                                                                                                         "const":  true
+                                                                                                     },
+                                                             "subagent_authority_bounded_by_parent":  {
+                                                                                                          "const":  true
+                                                                                                      }
+                                                         }
+                                      },
+                       "adapter_metadata_policy":  {
+                                                       "type":  "object",
+                                                       "additionalProperties":  false,
+                                                       "required":  [
+                                                                        "preserve_existing_lifecycle",
+                                                                        "do_not_rewrite_historical_execution_status",
+                                                                        "runtime_certification_evidence_is_separate"
+                                                                    ],
+                                                       "properties":  {
+                                                                          "preserve_existing_lifecycle":  {
+                                                                                                              "const":  true
+                                                                                                          },
+                                                                          "do_not_rewrite_historical_execution_status":  {
+                                                                                                                             "const":  true
+                                                                                                                         },
+                                                                          "runtime_certification_evidence_is_separate":  {
+                                                                                                                             "const":  true
+                                                                                                                         }
+                                                                      }
+                                                   }
+                   }
+}

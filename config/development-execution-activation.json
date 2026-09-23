@@ -1,0 +1,59 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-development-execution-activation",
+    "id":  "development-execution-activation",
+    "area":  "development",
+    "status":  "active",
+    "activated_by":  "explicit-user-live-authorization",
+    "activated_run_id":  "20260922-172032-41a485e9",
+    "execution":  {
+                      "provider_execution":  true,
+                      "model_execution":  true,
+                      "automatic_tool_execution":  false,
+                      "local_tool_execution":  "explicit-per-task",
+                      "codex_write_mode":  "read-only-model-plus-validated-transactional-application",
+                      "antigravity_context_mode":  "sanitized-local-snapshot"
+                  },
+    "providers":  {
+                      "claude":  {
+                                     "live_smoke":  "pass",
+                                     "mode":  "plan"
+                                 },
+                      "codex":  {
+                                    "live_smoke":  "pass",
+                                    "model_sandbox":  "read-only",
+                                    "controlled_write":  true
+                                },
+                      "antigravity":  {
+                                          "live_smoke":  "pass-snapshot-mode",
+                                          "mode":  "plan",
+                                          "file_tools":  "not-used",
+                                          "actionable_denied_actions":  0,
+                                          "empty_denied_metadata_ignored":  true,
+                                          "context_delivery":  "sanitized-local-snapshot"
+                                      }
+                  },
+    "safety":  {
+                   "known_api_keys_removed_from_child_environment":  true,
+                   "sensitive_snapshot_paths_excluded":  true,
+                   "silent_paid_api":  false,
+                   "dangerous_provider_bypass":  false,
+                   "automatic_live_retry":  false,
+                   "automatic_dependency_install":  false,
+                   "automatic_git_add":  false,
+                   "automatic_commit":  false,
+                   "automatic_push":  false,
+                   "automatic_deploy":  false,
+                   "production_first":  false
+               },
+    "evidence":  {
+                     "original_live_run_id":  "20260922-163524-2673cc37",
+                     "snapshot_run_id":  "20260922-171350-f485562a",
+                     "finalization_run_id":  "20260922-172032-41a485e9",
+                     "live_provider_smoke":  "3/3",
+                     "smoke_project":  "C:\\Users\\MSI\\AppData\\Local\\PROXTEL-AI-AGENCY\\live-activation\\20260922-163524-2673cc37\\projects\\proxtel-live-smoke",
+                     "artifact_sha256":  "A623411FBE0B9AC79AD03C2F58C4C893DEA7FC6A3BD2ED77BBC06F91678BE975",
+                     "antigravity_stdout_sha256":  "DC059DB8314EC120BF493AF715026A203768E7661FC03AE7BA9F4D7111158A3D",
+                     "antigravity_stderr_sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+                 }
+}

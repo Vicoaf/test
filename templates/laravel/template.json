@@ -1,0 +1,37 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-development-template",
+    "id":  "laravel",
+    "area":  "development",
+    "status":  "candidate-staged",
+    "purpose":  "Reusable Laravel application foundation with backend, frontend, database and API operational hooks.",
+    "required_skill_bundle":  "laravel",
+    "primary_lanes":  [
+                          "architecture",
+                          "backend-laravel-php",
+                          "frontend-web",
+                          "database-mysql",
+                          "api-integrations",
+                          "qa-browser",
+                          "accessibility",
+                          "performance",
+                          "seo-web-quality",
+                          "security",
+                          "documentation-release"
+                      ],
+    "compatible_tools":  [
+                             "artisan-runner",
+                             "db-inspector",
+                             "log-parser",
+                             "vite-builder",
+                             "api-tester"
+                         ],
+    "scaffold_policy":  {
+                            "secrets_allowed":  false,
+                            "env_file_with_real_credentials_allowed":  false,
+                            "dependency_installation_during_copy":  false,
+                            "migration_execution_during_copy":  false,
+                            "database_mutation_during_copy":  false,
+                            "production_domain_hardcoding_allowed":  false
+                        }
+}

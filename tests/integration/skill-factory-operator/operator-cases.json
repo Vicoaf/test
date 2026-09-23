@@ -1,0 +1,62 @@
+[
+    {
+        "id":  "status-ready",
+        "category":  "read-only",
+        "expectation":  "certified workflow, creator and auditor are reported ready"
+    },
+    {
+        "id":  "plan-create",
+        "category":  "planning",
+        "expectation":  "routes Create to mechanism-router and Creator without writes"
+    },
+    {
+        "id":  "plan-update-requires-subject",
+        "category":  "validation",
+        "expectation":  "Update without SubjectId fails"
+    },
+    {
+        "id":  "plan-external-requires-source",
+        "category":  "validation",
+        "expectation":  "AuditExternal without SourcePath fails"
+    },
+    {
+        "id":  "start-create",
+        "category":  "runtime",
+        "expectation":  "creates atomic intake run packet outside repo"
+    },
+    {
+        "id":  "show-run",
+        "category":  "runtime",
+        "expectation":  "reads existing run packet without mutation"
+    },
+    {
+        "id":  "duplicate-run-id",
+        "category":  "safety",
+        "expectation":  "existing RunId is not overwritten"
+    },
+    {
+        "id":  "external-quarantine",
+        "category":  "security",
+        "expectation":  "external source is snapshotted and never executed"
+    },
+    {
+        "id":  "no-provider-execution",
+        "category":  "safety",
+        "expectation":  "operator v1 never launches a provider"
+    },
+    {
+        "id":  "no-auto-live-retry",
+        "category":  "safety",
+        "expectation":  "automatic live retry remains disabled"
+    },
+    {
+        "id":  "repository-no-write",
+        "category":  "governance",
+        "expectation":  "operator runtime does not mutate repository governance artifacts"
+    },
+    {
+        "id":  "baseline-hash-capture",
+        "category":  "integrity",
+        "expectation":  "run packet captures workflow, creator and auditor hashes"
+    }
+]

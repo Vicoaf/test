@@ -1,0 +1,41 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-one-shot-attempt-lock",
+    "attempt_id":  "PROXTEL-AREA-1.7-M3-FIX1-DEVELOPMENT-PORTFOLIO-INDEPENDENT-AUDIT-V1",
+    "area":  "1.7",
+    "stage":  "M3-FIX1",
+    "rerun_allowed":  false,
+    "automatic_retry_allowed":  false,
+    "provider":  "antigravity",
+    "model_selection":  "provider-default",
+    "prompt_sha256":  "D8C6719206F89D25772FA681D6AEF29B80BB01799052F2014C8901529DB77CD9",
+    "schema_sha256":  "79EEBA08201BF37753250366D43E7B7F353E3410F264F6000E6FC8EAF3BE3949",
+    "m2_report_sha256":  "DCA5E4E1C5EF301DB70E63DA5C9E1A14A4A66B024FDA30250E320AE828042EC8",
+    "registry_sha256":  "020405674212105EF1C963ED48959938AC34C72D2C094C4BB6FD8A8EED2CED9F",
+    "resolver_sha256":  "0093B1540ECB5DA2CDD6FE6CA374C74B5682A4CB9E664E7D80CC3C9908C48AE0",
+    "sync_skills_sha256":  "446E428C2E8FD03BDDA251095780FB6561778B3DCCEC7B0E2664CD7B7473AE8F",
+    "install_project_skills_sha256":  "E4A30DF8208549A8CE646E259BFED63FA3970CDD4E53088EEB4BC20AE46B7146",
+    "agy_executable_sha256":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+    "antigravity_settings_sha256":  "66DD78DD54FFA37D2E60E2B4F226A7EF47DFD87A5DDBA6D6AE0EED4F5AB1FB6F",
+    "candidate_hashes":  [
+                             {
+                                 "id":  "auditor-web",
+                                 "skill_md_sha256":  "56D08BE7E4F22EA409D6C01A59A95880F1EBE2E976A84C1B5849FD81ED971A53",
+                                 "skill_json_sha256":  "D339FD77B2EC1B1F32DCCC9FDEAA43DC1911FE20AA9DCC78F0119DF4D4352C8F",
+                                 "legacy_sha256":  "4892236E063BE00BC343FEAE1C01AAE380F274EDD5028E4E662C777770E81623"
+                             },
+                             {
+                                 "id":  "estratega-seo",
+                                 "skill_md_sha256":  "C2DF2EB50E48E7105330A8196ADFE9A6A8A2AC89A44909F1AB6BAF56D60E87FD",
+                                 "skill_json_sha256":  "86DEFF24FF3F4A3132B9F05460AB507FB36B1E6579B282BB39BB1B5B923984FF",
+                                 "legacy_sha256":  "DBE5A79AD9F0BFC00305D8364128EBC6297E97014C2BDEA91B518B72DEAAE256"
+                             },
+                             {
+                                 "id":  "maestro-frontend",
+                                 "skill_md_sha256":  "2B649371E87777B239DBE116226AB277FD6681AA706BBD42BE5230C4C0797E77",
+                                 "skill_json_sha256":  "E0F65913467D80789F7482CDA0C7B61BFDF4B2C474C6E6A567A5A69D1F3885A4",
+                                 "legacy_sha256":  "3D29603DCC294A11A84BC97AAE8201BD3DA1EF4012B6D376F4615BDE099C4337"
+                             }
+                         ],
+    "created_utc":  "2026-09-19T00:45:35.0837033Z"
+}

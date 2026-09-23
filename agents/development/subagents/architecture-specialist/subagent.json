@@ -1,0 +1,19 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-development-subagent",
+    "id":  "architecture-specialist",
+    "area":  "development",
+    "status":  "staging-candidate",
+    "source_declaration":  "agents/development/proxtel-development-orchestrator/agent.json",
+    "parent_agent":  "proxtel-development-orchestrator",
+    "purpose":  "Architecture and decomposition.",
+    "preferred_provider":  "claude",
+    "persistent":  false,
+    "bound_lanes":  [
+                        "architecture"
+                    ],
+    "authority":  {
+                      "inherited_from_parent":  true,
+                      "cannot_exceed_parent":  true
+                  }
+}

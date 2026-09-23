@@ -1,4 +1,4 @@
-﻿param(
+param(
     [ValidateSet("Check", "Install")]
     [string]$Mode = "Check"
 )
@@ -7,6 +7,13 @@ $ErrorActionPreference = "Stop"
 
 $AgencyRoot = Split-Path -Parent $PSScriptRoot
 $SourceRoot = Join-Path $AgencyRoot "skills\base"
+$ResolverScript = Join-Path $PSScriptRoot "skill-source-resolver.ps1"
+
+if (-not (Test-Path -LiteralPath $ResolverScript -PathType Leaf)) {
+    throw "No existe el resolver de fuentes de Skills: $ResolverScript"
+}
+
+. $ResolverScript
 $TargetRoot = Join-Path $env:USERPROFILE ".gemini\config\skills"
 
 $Timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
@@ -124,9 +131,14 @@ foreach ($skill in $skills) {
 
     try {
 
-        Test-Skill -SkillFolder $skill.FullName | Out-Null
+        $sourceFolder = Get-ProxtelSkillSource `
+            -AgencyRoot $AgencyRoot `
+            -SkillId $skill.Name `
+            -LegacySourceRoot $SourceRoot
 
-        $sourceFingerprint = Get-FolderFingerprint -Path $skill.FullName
+        Test-Skill -SkillFolder $sourceFolder | Out-Null
+
+        $sourceFingerprint = Get-FolderFingerprint -Path $sourceFolder
 
         $targetFolder = Join-Path $TargetRoot $skill.Name
         $targetFingerprint = Get-FolderFingerprint -Path $targetFolder
@@ -171,7 +183,7 @@ foreach ($skill in $skills) {
         }
 
         Copy-Item `
-            -Path $skill.FullName `
+            -Path $sourceFolder `
             -Destination $TargetRoot `
             -Recurse `
             -Force

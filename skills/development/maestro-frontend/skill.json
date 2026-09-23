@@ -1,0 +1,133 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill",
+    "id":  "maestro-frontend",
+    "display_name":  "PROXTEL Maestro Frontend",
+    "area":  "development",
+    "lifecycle":  {
+                      "state":  "approved",
+                      "version":  "1.0.0"
+                  },
+    "scope":  {
+                  "level":  "reusable-project",
+                  "provider_specific":  false,
+                  "providers":  [
+                                    "claude",
+                                    "codex",
+                                    "antigravity"
+                                ]
+              },
+    "purpose":  {
+                    "summary":  "Disena, implementa y refactoriza frontend profesional respetando branding, contenido, stack y arquitectura existentes. Usala para HTML, CSS, JavaScript, Blade, Bootstrap, Vite, responsive, accesibilidad, motion y 3D justificado.",
+                    "use_when":  [
+                                     "The request matches the specialized responsibility of maestro-frontend.",
+                                     "The capability will be reused across more than one project."
+                                 ],
+                    "do_not_use_when":  [
+                                            "A simple deterministic Tool is sufficient.",
+                                            "The task belongs primarily to another PROXTEL area.",
+                                            "The request would require exceeding project or user authorization."
+                                        ]
+                },
+    "capabilities":  {
+                         "responsibilities":  [
+                                                  "Design and implement professional frontend within the existing stack and branding.",
+                                                  "Preserve approved content and real project assets.",
+                                                  "Build responsive, accessible and maintainable interfaces.",
+                                                  "Use animation and 3D only when justified by product or branding value.",
+                                                  "Run applicable tests, lint, build and browser validation."
+                                              ],
+                         "limits":  [
+                                        "Do not impose a generic visual style.",
+                                        "Do not replace real assets with placeholders silently.",
+                                        "Do not install production dependencies silently.",
+                                        "Do not commit, push or deploy automatically.",
+                                        "Do not perform destructive production operations."
+                                    ],
+                         "completion_criteria":  [
+                                                     "Requested UI is implemented within scope.",
+                                                     "Branding/content constraints are preserved.",
+                                                     "Applicable tests/build/browser checks pass or are explicitly reported.",
+                                                     "No known introduced errors remain unresolved."
+                                                 ]
+                     },
+    "dependencies":  [
+
+                     ],
+    "resources":  {
+                      "skill_md":  "SKILL.md",
+                      "scripts":  [
+
+                                  ],
+                      "references":  [
+                                         {
+                                             "path":  "references/legacy-baseline.md",
+                                             "purpose":  "Immutable provenance copy of the legacy PROXTEL baseline used for modernization comparison."
+                                         },
+                                         {
+                                             "path":  "references/modernization-notes.md",
+                                             "purpose":  "Governance and migration notes for the canonical candidate."
+                                         }
+                                     ],
+                      "assets":  [
+
+                                 ]
+                  },
+    "security":  {
+                     "network":  {
+                                     "level":  "controlled",
+                                     "description":  "Network use is limited to authorized project/browser/research activity relevant to the task."
+                                 },
+                     "filesystem_write":  {
+                                              "level":  "controlled",
+                                              "description":  "Writes are limited to explicitly authorized implementation scope; audit-only work remains read-only."
+                                          },
+                     "filesystem_delete":  {
+                                               "level":  "controlled",
+                                               "description":  "Deletion is never implicit and must remain within authorized reversible project scope."
+                                           },
+                     "subprocess":  {
+                                        "level":  "controlled",
+                                        "description":  "CLI execution is limited to project inspection, tests, lint, build or authorized local implementation."
+                                    },
+                     "environment_access":  {
+                                                "level":  "read-only",
+                                                "description":  "Environment/config may be inspected when necessary without exposing secrets."
+                                            },
+                     "secret_access":  {
+                                           "level":  "none",
+                                           "description":  "The Skill must not request, reveal or persist secrets."
+                                       },
+                     "privilege_required":  false
+                 },
+    "compatibility":  {
+                          "platforms":  [
+                                            "windows",
+                                            "macos",
+                                            "linux"
+                                        ],
+                          "providers":  [
+                                            "claude",
+                                            "codex",
+                                            "antigravity"
+                                        ]
+                      },
+    "testing":  {
+                    "required":  true,
+                    "trigger_tests":  true,
+                    "task_evals":  true,
+                    "baseline_comparison":  true
+                },
+    "provenance":  {
+                       "origin_type":  "proxtel-internal",
+                       "sources":  [
+                                       {
+                                           "type":  "internal",
+                                           "name":  "skills/base/maestro-frontend/SKILL.md",
+                                           "url":  null,
+                                           "commit":  null,
+                                           "license":  null
+                                       }
+                                   ]
+                   }
+}

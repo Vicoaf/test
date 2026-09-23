@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "proxtel-development-project-runtime-result.schema.json",
+  "title": "PROXTEL Development Project Runtime Resolution",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "kind",
+    "status",
+    "project",
+    "template",
+    "lanes",
+    "skills",
+    "tools",
+    "workflow",
+    "safety",
+    "evidence"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "kind": {
+      "const": "proxtel-development-project-runtime-resolution"
+    },
+    "status": {
+      "enum": [
+        "resolved",
+        "blocked-ambiguous",
+        "blocked-unsupported",
+        "blocked-unresolved"
+      ]
+    },
+    "project": {
+      "type": "object",
+      "required": [
+        "root",
+        "project_type",
+        "detection_method"
+      ],
+      "properties": {
+        "root": {
+          "type": "string"
+        },
+        "project_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "detection_method": {
+          "type": "string"
+        }
+      }
+    },
+    "template": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "lanes": {
+      "type": "array"
+    },
+    "skills": {
+      "type": "array"
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "relationship",
+          "capability_lanes",
+          "registry_status",
+          "execution_allowed"
+        ]
+      }
+    },
+    "workflow": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "safety": {
+      "type": "object",
+      "required": [
+        "tool_execution_allowed",
+        "provider_execution_allowed",
+        "model_execution_allowed",
+        "production_mutation_allowed",
+        "database_mutation_allowed",
+        "external_api_mutation_allowed"
+      ]
+    },
+    "evidence": {
+      "type": "object"
+    }
+  }
+}

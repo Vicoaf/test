@@ -1,0 +1,76 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "PROXTEL Development Tools Registry",
+    "description":  "Root authority schema for tools/registry/development-tools.json. Designed in Area 1.9 Lifecycle Promotion Phase A3.",
+    "type":  "object",
+    "required":  [
+                     "schema_version",
+                     "kind",
+                     "id",
+                     "area",
+                     "status",
+                     "repository_local_tool_count",
+                     "tools",
+                     "execution",
+                     "policy"
+                 ],
+    "properties":  {
+                       "schema_version":  {
+                                              "type":  "string"
+                                          },
+                       "kind":  {
+                                    "type":  "string"
+                                },
+                       "id":  {
+                                  "type":  "string"
+                              },
+                       "area":  {
+                                    "type":  "string"
+                                },
+                       "status":  {
+                                      "type":  "string",
+                                      "enum":  [
+                                                   "candidate-staged",
+                                                   "certified"
+                                               ]
+                                  },
+                       "repository_local_tool_count":  {
+                                                           "type":  "integer"
+                                                       },
+                       "tools":  {
+                                     "type":  "array",
+                                     "minItems":  1,
+                                     "items":  {
+                                                   "$ref":  "./proxtel-development-tool.schema.json"
+                                               }
+                                 },
+                       "execution":  {
+                                         "type":  "object",
+                                         "required":  [
+                                                          "enabled",
+                                                          "activation_requires_certification",
+                                                          "provider_execution",
+                                                          "model_execution"
+                                                      ],
+                                         "properties":  {
+                                                            "enabled":  {
+                                                                            "type":  "boolean"
+                                                                        },
+                                                            "activation_requires_certification":  {
+                                                                                                      "type":  "boolean"
+                                                                                                  },
+                                                            "provider_execution":  {
+                                                                                       "type":  "boolean"
+                                                                                   },
+                                                            "model_execution":  {
+                                                                                    "type":  "boolean"
+                                                                                }
+                                                        },
+                                         "additionalProperties":  false
+                                     },
+                       "policy":  {
+                                      "type":  "object"
+                                  }
+                   },
+    "additionalProperties":  false
+}

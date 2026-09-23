@@ -1,0 +1,71 @@
+{
+    "schema_version":  "1.0",
+    "registry":  "proxtel-skills",
+    "source_of_truth":  "PROXTEL-AI-AGENCY",
+    "states":  [
+                   "baseline-existing",
+                   "quarantine",
+                   "under-audit",
+                   "approved",
+                   "adapt",
+                   "reference-only",
+                   "rejected",
+                   "deprecated"
+               ],
+    "skills":  [
+                   {
+                       "id":  "auditor-web",
+                       "source_path":  "skills/base/auditor-web",
+                       "area":  "development",
+                       "state":  "baseline-existing",
+                       "origin":  "proxtel-existing",
+                       "distribution":  "project-capable",
+                       "notes":  "Existing PROXTEL Skill. Must be compared against audited external references before final classification."
+                   },
+                   {
+                       "id":  "creador-skills",
+                       "source_path":  "skills/base/creador-skills",
+                       "area":  "core",
+                       "state":  "baseline-existing",
+                       "origin":  "proxtel-existing",
+                       "distribution":  "core",
+                       "notes":  "Existing PROXTEL Skill. Candidate for evolution into the definitive Skill creation and evaluation capability."
+                   },
+                   {
+                       "id":  "estratega-seo",
+                       "source_path":  "skills/base/estratega-seo",
+                       "area":  "development",
+                       "state":  "baseline-existing",
+                       "origin":  "proxtel-existing",
+                       "distribution":  "project-capable",
+                       "notes":  "Existing PROXTEL Skill. Must be compared with external SEO and web-quality references."
+                   },
+                   {
+                       "id":  "inicializador-proyectos",
+                       "source_path":  "skills/base/inicializador-proyectos",
+                       "area":  "core",
+                       "state":  "baseline-existing",
+                       "origin":  "proxtel-existing",
+                       "distribution":  "core",
+                       "notes":  "Existing PROXTEL Skill. Candidate for integration with project lifecycle workflows."
+                   },
+                   {
+                       "id":  "maestro-frontend",
+                       "source_path":  "skills/base/maestro-frontend",
+                       "area":  "development",
+                       "state":  "baseline-existing",
+                       "origin":  "proxtel-existing",
+                       "distribution":  "project-capable",
+                       "notes":  "Existing PROXTEL Skill. Must be compared with premium frontend, design, motion and accessibility references."
+                   },
+                   {
+                       "id":  "proxtel-skill-auditor",
+                       "source_path":  "skills/core/proxtel-skill-auditor",
+                       "area":  "core",
+                       "state":  "under-audit",
+                       "origin":  "proxtel-internal",
+                       "distribution":  "core",
+                       "notes":  "PROXTEL Skill Auditor v0.2.0. Independent review decision is ADAPT; metadata correction applied in Area 1.2 C2. Remains under-audit pending completion of remaining required actions and a governance-compatible approval decision."
+                   }
+               ]
+}

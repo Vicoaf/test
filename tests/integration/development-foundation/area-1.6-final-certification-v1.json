@@ -1,0 +1,74 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-final-certification",
+    "certification_id":  "PROXTEL-AREA-1.6-DEVELOPMENT-CAPABILITY-FOUNDATION-V1",
+    "area":  "1.6",
+    "component":  "development-capability-foundation",
+    "version":  "1.0.0",
+    "status":  "CERTIFIED",
+    "foundation":  {
+                       "agent_id":  "proxtel-development-orchestrator",
+                       "agent_state":  "approved",
+                       "workflow_id":  "development-software-delivery",
+                       "workflow_state":  "approved",
+                       "provider_neutral":  true,
+                       "capability_lanes":  11
+                   },
+    "legacy_portfolio":  {
+                             "registry_entries":  3,
+                             "state":  "baseline-existing",
+                             "promoted_during_area_1_6":  false,
+                             "next_stage":  "AREA-1.7-DEVELOPMENT-SKILL-PORTFOLIO-MODERNIZATION"
+                         },
+    "source":  {
+                   "agent_schema_sha256":  "E95B50336244B3AFB57B01E613A205C451738C41C39B1C7E30084F7E5D8C0961",
+                   "capability_map_sha256":  "E9C2EA5FC04B0157BE27980AA2EE15B723473E30BFB77DBF17EE626F91500061",
+                   "agent_json_sha256":  "75AD9B409C29C505DBFC1F19BD2CC34B4B04CBE9AB929100E0F11D63EDF4FCF3",
+                   "agent_md_sha256":  "212829EC074ED7E4D4E65102BA2FB0E8B6ED3B0F6E98E168936CC70FFFBFD066",
+                   "workflow_json_sha256":  "0ABB0019815C0ACB653B94DA7E58DF03B59C2FBE1B702E75147F166A762AEC24",
+                   "workflow_md_sha256":  "9FD3AE764E9C59FD38CDCB69AFC17B80E03B2A7D827A3D6C4AE6244CFB12CC17",
+                   "development_standard_sha256":  "D9DDE1B9CD3D04E26BCAE174414375AC63346757F4C4DB785D0A037C360FDFAF",
+                   "qa_standard_sha256":  "E2111DB9EFFC3E5AC7251EC1933691373BFAA3D9AF498C259F54AF3FEAF138DD",
+                   "git_standard_sha256":  "438E0656F62A5B7B976D4EAEE823A8391569E6D0402A592BDA2C8ACD3CBB17FF",
+                   "agent_documentation_sha256":  "0750D47B1F4C1AAFF2639746CEE9CA929B89D23939B34DDE6411C3B67F237DAA",
+                   "workflow_documentation_sha256":  "CD44B79E701C1F6DDAF3C5E61F29AB6E968001ED01CBA49B67CF5B174423B5F6",
+                   "agent_cases_sha256":  "232BF8D000FE35B0745A2E2A34B2E8067D1A4D222D1D6FB14359CD19BCEBD527",
+                   "agent_runner_sha256":  "C35D1A33B922D649FF3379CD4E08CDAB6D18C807A419E177916626C2D1B33B3D",
+                   "workflow_cases_sha256":  "46A4C2A02421D670D55CA431588FEA12AA6A7FA9D06240E45BB9A559FF3CBE14",
+                   "workflow_runner_sha256":  "692AE134C1CE0CD1896452AA3E8BB69CBD174ACCA28886ABA91235016C4F9A21",
+                   "integration_runner_sha256":  "96F95B60391AA04AFCD7E8B88D30A88B52CBBC884E0E352D7FB4DB769023F1D5"
+               },
+    "validation":  {
+                       "agent_assertions":  "36/36",
+                       "workflow_assertions":  "39/39",
+                       "integration_assertions":  "29/29",
+                       "staging":  "PASS",
+                       "post_apply":  "PASS",
+                       "git_diff_check":  "PASS"
+                   },
+    "safety":  {
+                   "no_automatic_commit":  true,
+                   "no_automatic_push":  true,
+                   "no_automatic_deploy":  true,
+                   "no_destructive_production_db":  true,
+                   "no_silent_dependency_install":  true,
+                   "no_silent_paid_api":  true,
+                   "no_unreviewed_external_code_execution":  true,
+                   "no_automatic_live_retry":  true,
+                   "legacy_skill_auto_activation":  false
+               },
+    "execution":  {
+                      "provider_executed_during_m2":  false,
+                      "model_calls_requested_during_m2":  0,
+                      "settings_modified":  false,
+                      "commit_created":  false
+                  },
+    "closure":  {
+                    "area_closed":  true,
+                    "development_foundation_complete":  true,
+                    "additional_area_1_6_steps_required":  false,
+                    "execution_policy":  "macro-steps",
+                    "next_program_stage":  "AREA-1.7-DEVELOPMENT-SKILL-PORTFOLIO-MODERNIZATION"
+                },
+    "documented_utc":  "2026-09-18T23:38:46.6432655Z"
+}

@@ -1,0 +1,58 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-provider-adapter",
+    "id":  "codex",
+    "provider":  "codex",
+    "lifecycle":  {
+                      "state":  "candidate",
+                      "version":  "0.1.0",
+                      "execution_status":  "already-approved"
+                  },
+    "cli":  {
+                "command":  "codex",
+                "observed_version":  "codex-cli 0.154.0",
+                "command_type":  "ExternalScript",
+                "source":  "C:\\Users\\MSI\\AppData\\Roaming\\npm\\codex.ps1"
+            },
+    "prompt_transport":  {
+                             "non_interactive":  true,
+                             "mechanism":  "exec",
+                             "positional_prompt":  true,
+                             "stdin_prompt":  true
+                         },
+    "structured_output":  {
+                              "supported":  true,
+                              "format_mechanism":  "--json",
+                              "schema_mechanism":  "--output-schema",
+                              "schema_transport":  "file",
+                              "final_output_capture":  "--output-last-message"
+                          },
+    "execution_context":  {
+                              "model_selection":  "--model",
+                              "working_directory":  "-C/--cd",
+                              "sandbox":  "--sandbox",
+                              "agent_selection":  null,
+                              "mode_selection":  null
+                          },
+    "safety":  {
+                   "permission_control":  "--ask-for-approval (observed in top-level CLI; exact exec binding not yet live-tested)",
+                   "dangerous_bypass_flag":  "--dangerously-bypass-approvals-and-sandbox",
+                   "dangerous_bypass_forbidden":  true,
+                   "benchmark_default":  "sandbox required; dangerous bypass forbidden",
+                   "production_first_test_allowed":  false
+               },
+    "evidence":  [
+                     {
+                         "path":  "tests/skills/proxtel-skill-auditor/provider-preflight/preflight.json",
+                         "claim":  "Observed Codex CLI version and top-level capabilities."
+                     },
+                     {
+                         "path":  "tests/skills/proxtel-skill-auditor/provider-preflight/codex-exec-help.txt",
+                         "claim":  "Observed codex exec non-interactive interface, stdin, model, sandbox, working directory, output schema, JSON and last-message output."
+                     },
+                     {
+                         "path":  "tests/skills/proxtel-skill-auditor/provider-preflight/adapter-capabilities.json",
+                         "claim":  "Normalized observed Codex adapter capabilities."
+                     }
+                 ]
+}

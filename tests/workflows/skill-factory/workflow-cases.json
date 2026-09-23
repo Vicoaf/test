@@ -1,0 +1,82 @@
+[
+    {
+        "id":  "new-internal-skill",
+        "category":  "happy-path",
+        "expected":  "route -\u003e creator candidate -\u003e auditor -\u003e approved transition"
+    },
+    {
+        "id":  "existing-skill-update",
+        "category":  "happy-path",
+        "expected":  "creator adapts without silent overwrite -\u003e auditor review"
+    },
+    {
+        "id":  "external-source",
+        "category":  "security",
+        "expected":  "quarantine before any execution"
+    },
+    {
+        "id":  "not-a-skill",
+        "category":  "routing",
+        "expected":  "exit to other mechanism"
+    },
+    {
+        "id":  "creator-self-approval",
+        "category":  "governance",
+        "expected":  "forbidden"
+    },
+    {
+        "id":  "static-pass-only",
+        "category":  "governance",
+        "expected":  "not approved"
+    },
+    {
+        "id":  "approved-zero-blockers",
+        "category":  "transition",
+        "expected":  "promotion allowed"
+    },
+    {
+        "id":  "approved-with-blockers",
+        "category":  "transition",
+        "expected":  "promotion forbidden"
+    },
+    {
+        "id":  "adapt-decision",
+        "category":  "transition",
+        "expected":  "return required actions to creator"
+    },
+    {
+        "id":  "reference-only-decision",
+        "category":  "transition",
+        "expected":  "preserve reference; no activation"
+    },
+    {
+        "id":  "rejected-decision",
+        "category":  "transition",
+        "expected":  "no promotion"
+    },
+    {
+        "id":  "consumed-live-failure",
+        "category":  "safety",
+        "expected":  "no automatic retry"
+    },
+    {
+        "id":  "provider-fallback",
+        "category":  "provider-routing",
+        "expected":  "preserve PROXTEL controls"
+    },
+    {
+        "id":  "paid-api-route",
+        "category":  "cost",
+        "expected":  "no silent additional paid consumption"
+    },
+    {
+        "id":  "post-promotion-failure",
+        "category":  "transaction",
+        "expected":  "restore reversible mutation and preserve evidence"
+    },
+    {
+        "id":  "holdout-applicability",
+        "category":  "evaluation",
+        "expected":  "required when optimization history makes it material"
+    }
+]

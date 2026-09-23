@@ -1,4 +1,4 @@
-﻿param(
+param(
     [Parameter(Mandatory = $true)]
     [ValidatePattern("^[A-Za-z0-9][A-Za-z0-9._-]*$")]
     [string]$Name,
@@ -35,6 +35,115 @@ $TemplateRoot = Join-Path `
 $ProjectPath = Join-Path `
     $ParentPath `
     $Name
+
+# PROXTEL M4-B-FIX1 RUNTIME GATE BEGIN
+$ProxtelAgencyRoot = Split-Path -Parent $PSScriptRoot
+
+$ProxtelRuntimeResolverPath = Join-Path `
+    $PSScriptRoot `
+    'development-project-runtime-resolver.ps1'
+
+$ProxtelRuntimePolicyPath = Join-Path `
+    $ProxtelAgencyRoot `
+    'config\development-project-runtime-policy.json'
+
+if (-not (
+    Test-Path `
+        -LiteralPath $ProxtelRuntimeResolverPath `
+        -PathType Leaf
+)) {
+
+    throw 'PROXTEL runtime resolver is missing.'
+}
+
+if (-not (
+    Test-Path `
+        -LiteralPath $ProxtelRuntimePolicyPath `
+        -PathType Leaf
+)) {
+
+    throw 'PROXTEL runtime policy is missing.'
+}
+
+$ProxtelRuntimeOutput = @(
+    & $ProxtelRuntimeResolverPath `
+        -AgencyRoot $ProxtelAgencyRoot `
+        -ProjectRoot $ProjectPath `
+        -PolicyPath $ProxtelRuntimePolicyPath `
+        -ProjectType $Type `
+        -ProjectLifecycle 'New'
+)
+
+$ProxtelRuntimeInvocationSucceeded = $?
+
+$ProxtelRuntimeJson = (
+    $ProxtelRuntimeOutput |
+    ForEach-Object {
+        [string]$_
+    }
+) -join "`n"
+
+if (
+    [string]::IsNullOrWhiteSpace(
+        $ProxtelRuntimeJson
+    )
+) {
+
+    throw 'PROXTEL runtime resolver returned no structured output.'
+}
+
+try {
+
+    $ProxtelRuntimeContext =
+        $ProxtelRuntimeJson |
+        ConvertFrom-Json `
+            -ErrorAction Stop
+}
+catch {
+
+    throw (
+        'PROXTEL runtime resolver returned invalid JSON. ' +
+        [string]$_.Exception.Message
+    )
+}
+
+$ProxtelRuntimeEvidence =
+    $ProxtelRuntimeContext.evidence
+
+$ProxtelPolicyValidation =
+    [string]$ProxtelRuntimeEvidence.policy_validation
+
+$ProxtelAuthorityValidation =
+    [string]$ProxtelRuntimeEvidence.authority_validation
+
+$ProxtelRuntimeAccepted =
+    (
+        $ProxtelRuntimeInvocationSucceeded -and
+        $null -ne $ProxtelRuntimeContext -and
+        $null -ne $ProxtelRuntimeEvidence -and
+        [string]$ProxtelRuntimeContext.status -ceq 'resolved' -and
+        $ProxtelPolicyValidation -ceq 'pass' -and
+        $ProxtelAuthorityValidation -ceq 'pass'
+    )
+
+if (-not $ProxtelRuntimeAccepted) {
+
+    $ProxtelRuntimeStatus =
+        [string]$ProxtelRuntimeContext.status
+
+    throw (
+        'PROXTEL runtime gate blocked lifecycle execution. ' +
+        'status=[' +
+        $ProxtelRuntimeStatus +
+        '] policy_validation=[' +
+        $ProxtelPolicyValidation +
+        '] authority_validation=[' +
+        $ProxtelAuthorityValidation +
+        ']'
+    )
+}
+# PROXTEL M4-B-FIX1 RUNTIME GATE END
+
 
 function Test-CommandExists {
 
@@ -539,6 +648,31 @@ if (Test-Path $TemplateRoot) {
                 Out-Null
         }
 
+        # PROXTEL TEMPLATE PAYLOAD CONTRACT BEGIN
+        # README.md is owned by new-project and template.json is agency metadata.
+        # Preserve both files in templates\<type>\ but never copy either root file
+        # into a generated project.
+        $ProxtelTemplateMetadataRootPaths = @(
+            (Join-Path $TemplateRoot 'README.md'),
+            (Join-Path $TemplateRoot 'template.json')
+        )
+
+        $ProxtelTemplateFileIsMetadata = $false
+
+        foreach ($ProxtelTemplateMetadataRootPath in $ProxtelTemplateMetadataRootPaths) {
+            if (
+                [string]$templateFile.FullName -ieq
+                [string]$ProxtelTemplateMetadataRootPath
+            ) {
+                $ProxtelTemplateFileIsMetadata = $true
+                break
+            }
+        }
+
+        if ($ProxtelTemplateFileIsMetadata) {
+            continue
+        }
+        # PROXTEL TEMPLATE PAYLOAD CONTRACT END
         if (-not (Test-Path $destination)) {
 
             Copy-Item `

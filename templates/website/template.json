@@ -1,0 +1,30 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-development-template",
+    "id":  "website",
+    "area":  "development",
+    "status":  "candidate-staged",
+    "purpose":  "Reusable professional multi-page web project foundation.",
+    "required_skill_bundle":  "website",
+    "primary_lanes":  [
+                          "architecture",
+                          "frontend-web",
+                          "accessibility",
+                          "performance",
+                          "seo-web-quality",
+                          "security",
+                          "documentation-release"
+                      ],
+    "compatible_tools":  [
+                             "vite-builder",
+                             "log-parser",
+                             "api-tester"
+                         ],
+    "scaffold_policy":  {
+                            "framework_lock_in":  false,
+                            "secrets_allowed":  false,
+                            "environment_specific_credentials_allowed":  false,
+                            "production_domain_hardcoding_allowed":  false,
+                            "dependency_installation_during_copy":  false
+                        }
+}

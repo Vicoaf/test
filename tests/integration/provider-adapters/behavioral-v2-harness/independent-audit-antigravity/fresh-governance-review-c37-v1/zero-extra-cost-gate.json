@@ -1,0 +1,187 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-zero-extra-cost-route-gate",
+    "gate_id":  "PROXTEL-AREA-1.2-C39-ZERO-EXTRA-COST-ROUTE-GATE-V1",
+    "packet_id":  "PROXTEL-AREA-1.2-AUDITOR-FRESH-INDEPENDENT-GOVERNANCE-REVIEW-C37-V1",
+    "provider":  "antigravity",
+    "status":  "PASS",
+    "cli_sha256":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+    "cli_version":  "1.2.6",
+    "cli_signature":  "VALID-GOOGLE",
+    "model_selection":  "provider-default",
+    "explicit_model_flag":  false,
+    "one_model_call_authorized":  true,
+    "automatic_retry_authorized":  false,
+    "route_classification":  "DEFAULT-ACCOUNT-BASED-AUTH",
+    "default_account_route_verified":  true,
+    "api_key_route_enabled":  false,
+    "enterprise_adc_route_enabled":  false,
+    "custom_endpoint_route_enabled":  false,
+    "known_api_adc_custom_route_env_present":  false,
+    "expanded_known_route_env_present":  false,
+    "route_env_list_completeness":  "NON-EXHAUSTIVE",
+    "route_environment_evidence":  [
+                                       {
+                                           "name":  "GEMINI_API_KEY",
+                                           "process_present":  false,
+                                           "user_present":  false,
+                                           "machine_present":  false
+                                       },
+                                       {
+                                           "name":  "GOOGLE_API_KEY",
+                                           "process_present":  false,
+                                           "user_present":  false,
+                                           "machine_present":  false
+                                       },
+                                       {
+                                           "name":  "GOOGLE_APPLICATION_CREDENTIALS",
+                                           "process_present":  false,
+                                           "user_present":  false,
+                                           "machine_present":  false
+                                       },
+                                       {
+                                           "name":  "GOOGLE_GENAI_USE_VERTEXAI",
+                                           "process_present":  false,
+                                           "user_present":  false,
+                                           "machine_present":  false
+                                       },
+                                       {
+                                           "name":  "GOOGLE_CLOUD_PROJECT",
+                                           "process_present":  false,
+                                           "user_present":  false,
+                                           "machine_present":  false
+                                       },
+                                       {
+                                           "name":  "GOOGLE_CLOUD_LOCATION",
+                                           "process_present":  false,
+                                           "user_present":  false,
+                                           "machine_present":  false
+                                       },
+                                       {
+                                           "name":  "GOOGLE_CLOUD_QUOTA_PROJECT",
+                                           "process_present":  false,
+                                           "user_present":  false,
+                                           "machine_present":  false
+                                       },
+                                       {
+                                           "name":  "CLOUDSDK_CORE_PROJECT",
+                                           "process_present":  false,
+                                           "user_present":  false,
+                                           "machine_present":  false
+                                       },
+                                       {
+                                           "name":  "CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE",
+                                           "process_present":  false,
+                                           "user_present":  false,
+                                           "machine_present":  false
+                                       },
+                                       {
+                                           "name":  "GOOGLE_GEMINI_BASE_URL",
+                                           "process_present":  false,
+                                           "user_present":  false,
+                                           "machine_present":  false
+                                       },
+                                       {
+                                           "name":  "AGY_ADC_AUTH",
+                                           "process_present":  false,
+                                           "user_present":  false,
+                                           "machine_present":  false
+                                       },
+                                       {
+                                           "name":  "ANTIGRAVITY_API_KEY",
+                                           "process_present":  false,
+                                           "user_present":  false,
+                                           "machine_present":  false
+                                       },
+                                       {
+                                           "name":  "AGY_API_KEY",
+                                           "process_present":  false,
+                                           "user_present":  false,
+                                           "machine_present":  false
+                                       },
+                                       {
+                                           "name":  "AGY_BASE_URL",
+                                           "process_present":  false,
+                                           "user_present":  false,
+                                           "machine_present":  false
+                                       }
+                                   ],
+    "settings":  {
+                     "path":  "C:\\Users\\MSI\\.gemini\\antigravity-cli\\settings.json",
+                     "present":  true,
+                     "sha256":  "66DD78DD54FFA37D2E60E2B4F226A7EF47DFD87A5DDBA6D6AE0EED4F5AB1FB6F",
+                     "model_provider_property_present":  false,
+                     "model_provider_value":  null,
+                     "use_g1_credits_property_present":  false,
+                     "use_g1_credits_effective":  false,
+                     "use_g1_credits_effective_source":  "system-default-false"
+                 },
+    "credit_fallback":  {
+                            "enabled":  false,
+                            "effective_use_g1_credits":  false,
+                            "overage_credit_spend_allowed":  false
+                        },
+    "adc":  {
+                "activation_env_name":  "AGY_ADC_AUTH",
+                "activation_env_present":  false,
+                "windows_adc_file_path":  "C:\\Users\\MSI\\AppData\\Roaming\\gcloud\\application_default_credentials.json",
+                "windows_adc_file_present":  false,
+                "windows_adc_file_content_read":  false,
+                "route_classification_uses_adc":  false
+            },
+    "custom_endpoint":  {
+                            "env_name":  "GOOGLE_GEMINI_BASE_URL",
+                            "present":  false
+                        },
+    "prior_current_version_evidence":  {
+                                           "antigravity_smoke_report_sha256":  "6E8D6A56B408D73A6032C295E5CF2C8C91C491D73D76C32ED1409FAA9E42E112",
+                                           "smoke_status":  "CERTIFIED",
+                                           "provider_exit_code":  0,
+                                           "provider_process_starts":  1,
+                                           "model_calls_requested":  1,
+                                           "automatic_retry_performed":  false,
+                                           "cli_sha256":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+                                           "cli_version":  "1.2.6"
+                                       },
+    "subscription_route_evidence_verified":  true,
+    "subscription_tier_machine_verified":  false,
+    "remaining_quota_amount_verified":  false,
+    "unlimited_quota_claimed":  false,
+    "extra_paid_api_route_required":  false,
+    "interpretation":  {
+                           "scope":  "No incremental API/custom-endpoint/ADC route and no automatic personal-credit fallback are configured for the next review call.",
+                           "does_not_claim":  "Specific subscription tier, remaining quota quantity, unlimited access, or future provider availability.",
+                           "on_plan_quota_exhaustion":  "The gate authorizes no paid fallback; a quota/rate-limit failure must not be retried automatically."
+                       },
+    "official_product_contract_basis":  [
+                                            {
+                                                "claim":  "Antigravity CLI default authentication is account-based via secure sign-in/keyring.",
+                                                "source":  "https://antigravity.google/docs/cli-install"
+                                            },
+                                            {
+                                                "claim":  "Gemini API-key mode requires modelProvider=gemini plus GEMINI_API_KEY.",
+                                                "source":  "https://antigravity.google/docs/cli-install"
+                                            },
+                                            {
+                                                "claim":  "Custom Gemini-compatible endpoint routing uses GOOGLE_GEMINI_BASE_URL.",
+                                                "source":  "https://antigravity.google/docs/cli-install"
+                                            },
+                                            {
+                                                "claim":  "Enterprise ADC routing requires AGY_ADC_AUTH activation.",
+                                                "source":  "https://antigravity.google/docs/enterprise"
+                                            },
+                                            {
+                                                "claim":  "useG1Credits defaults to false; when enabled it permits personal AI-credit fallback after plan quota is exhausted.",
+                                                "source":  "https://antigravity.google/docs/cli/reference/"
+                                            }
+                                        ],
+    "live_execution_requirements":  {
+                                        "c40_expanded_route_env_recheck_required":  true,
+                                        "c40_settings_recheck_required":  true,
+                                        "c40_cli_hash_recheck_required":  true,
+                                        "c40_gate_hash_lock_required":  true,
+                                        "c40_child_environment_sanitization_required":  true,
+                                        "c40_no_retry_required":  true
+                                    },
+    "created_utc":  "2026-09-18T19:33:13.7609668Z"
+}

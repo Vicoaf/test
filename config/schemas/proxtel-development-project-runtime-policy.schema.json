@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "proxtel-development-project-runtime-policy.schema.json",
+  "title": "PROXTEL Development Project Runtime Policy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "kind",
+    "status",
+    "supported_project_types",
+    "authorities",
+    "project_detection",
+    "tool_relationship_model",
+    "safety",
+    "source_contract_hashes",
+    "authority_hashes"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "kind": {
+      "const": "proxtel-development-project-runtime-policy"
+    },
+    "status": {
+      "enum": [
+        "candidate-staged",
+        "certified"
+      ]
+    },
+    "supported_project_types": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "website",
+          "landing-page",
+          "laravel",
+          "crm",
+          "saas"
+        ]
+      }
+    },
+    "authorities": {
+      "type": "object",
+      "required": [
+        "runtime_bindings",
+        "skill_bundles",
+        "skill_registry",
+        "skill_source_resolver",
+        "tool_registry",
+        "workflow",
+        "orchestrator",
+        "templates_root",
+        "subagents_root",
+        "provider_adapters_root"
+      ]
+    },
+    "project_detection": {
+      "type": "object",
+      "required": [
+        "explicit_project_type_precedence",
+        "semantic_subtype_guessing",
+        "ambiguous_result",
+        "unresolved_result",
+        "unsupported_result"
+      ]
+    },
+    "tool_relationship_model": {
+      "type": "object",
+      "required": [
+        "relationship_values",
+        "primary_lane_overlap_required",
+        "auxiliary_requires_explicit_template_listing",
+        "automatic_tool_expansion"
+      ]
+    },
+    "safety": {
+      "type": "object",
+      "required": [
+        "local_first",
+        "read_only_routing",
+        "provider_execution",
+        "model_execution",
+        "tool_execution",
+        "production_mutation_default",
+        "database_mutation_default",
+        "external_api_mutation_default",
+        "automatic_dependency_installation",
+        "automatic_git_add",
+        "automatic_commit",
+        "automatic_push",
+        "automatic_deploy"
+      ]
+    },
+    "source_contract_hashes": {
+      "type": "object",
+      "required": [
+        "routing_contract_sha256",
+        "result_contract_sha256"
+      ]
+    },
+    "authority_hashes": {
+      "type": "object",
+      "minProperties": 10
+    }
+  }
+}

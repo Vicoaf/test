@@ -1,0 +1,13 @@
+PROXTEL AI AGENCY - CLAUDE NATIVE PROVIDER ADAPTER LIVE SMOKE.
+This is only a structured-output transport smoke test.
+Do not use tools, files, shell commands, network access, plugins, connectors, MCP, or external state.
+Do not explain reasoning.
+Return only an object matching the supplied JSON schema.
+Use these exact values:
+smoke_kind=proxtel-provider-adapter-live-smoke
+provider=claude
+adapter_id=claude
+transport=native-executable-direct
+result=PASS
+nonce=PROXTEL-C18-NATIVE-CLAUDE-ADAPTER-SMOKE-V1
+message=native structured-output transport operational

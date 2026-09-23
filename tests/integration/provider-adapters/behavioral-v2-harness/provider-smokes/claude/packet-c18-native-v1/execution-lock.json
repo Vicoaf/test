@@ -1,0 +1,14 @@
+{
+    "packet_id":  "PROXTEL-AREA-1.2-CLAUDE-NATIVE-ADAPTER-LIVE-SMOKE-C18-V1",
+    "provider":  "claude",
+    "adapter_id":  "claude",
+    "transport":  "native-executable-direct",
+    "adapter_sha256":  "01219D3DE55632374E152DE0038544E9E9395DA1C952CBBE7253E8A201230A43",
+    "native_source_sha256":  "1E472BCFD49449E73EF76698C87F6583055AEB88DC41CA190A9C12C6791B5EEA",
+    "model_selection":  "provider-default",
+    "explicit_model_flag":  false,
+    "automatic_retry":  false,
+    "dangerous_bypass":  false,
+    "consumed":  true,
+    "started_utc":  "2026-09-18T17:52:33.4839303Z"
+}

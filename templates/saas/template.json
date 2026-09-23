@@ -1,0 +1,37 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-development-template",
+    "id":  "saas",
+    "area":  "development",
+    "status":  "candidate-staged",
+    "purpose":  "Reusable SaaS foundation with tenant-ready architecture hooks and no embedded production secrets.",
+    "required_skill_bundle":  "saas",
+    "primary_lanes":  [
+                          "architecture",
+                          "backend-laravel-php",
+                          "frontend-web",
+                          "database-mysql",
+                          "api-integrations",
+                          "qa-browser",
+                          "accessibility",
+                          "performance",
+                          "seo-web-quality",
+                          "security",
+                          "documentation-release"
+                      ],
+    "compatible_tools":  [
+                             "artisan-runner",
+                             "db-inspector",
+                             "log-parser",
+                             "vite-builder",
+                             "api-tester"
+                         ],
+    "scaffold_policy":  {
+                            "tenant_specific_data_allowed":  false,
+                            "secrets_allowed":  false,
+                            "billing_provider_credentials_allowed":  false,
+                            "live_external_service_calls_during_copy":  false,
+                            "database_mutation_during_copy":  false,
+                            "deployment_during_copy":  false
+                        }
+}

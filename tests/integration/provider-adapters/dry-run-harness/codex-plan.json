@@ -1,0 +1,37 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-provider-dry-run-plan",
+    "provider":  "codex",
+    "adapter_version":  "0.1.0",
+    "adapter_execution_status":  "not-executed",
+    "executable":  "C:\\Users\\MSI\\AppData\\Roaming\\npm\\codex.ps1",
+    "command":  "codex",
+    "argv_template":  [
+                          "exec",
+                          "\u003cPROMPT\u003e",
+                          "--output-schema",
+                          "\u003cBEHAVIORAL_RESPONSE_SCHEMA_FILE\u003e",
+                          "--output-last-message",
+                          "\u003cFINAL_OUTPUT_FILE\u003e",
+                          "--sandbox",
+                          "read-only",
+                          "-C",
+                          "\u003cISOLATED_TEMP_WORKDIR\u003e"
+                      ],
+    "prompt_transport":  "positional-or-stdin",
+    "schema_transport":  "file",
+    "working_directory":  "\u003cISOLATED_TEMP_WORKDIR\u003e",
+    "final_output":  "\u003cFINAL_OUTPUT_FILE\u003e",
+    "unresolved_runtime_parameters":  [
+
+                                      ],
+    "dangerous_flags_forbidden":  [
+                                      "--dangerously-bypass-approvals-and-sandbox"
+                                  ],
+    "dry_run":  {
+                    "only":  true,
+                    "execute_allowed":  false,
+                    "prompt_sent":  false,
+                    "model_call_requested":  false
+                }
+}

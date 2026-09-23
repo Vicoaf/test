@@ -1,0 +1,84 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-stage-report",
+    "report_id":  "PROXTEL-AREA-1.7-M2-DEVELOPMENT-SKILL-CANDIDATES-V1",
+    "area":  "1.7",
+    "stage":  "M2",
+    "status":  "PASS",
+    "candidates":  [
+                       {
+                           "id":  "auditor-web",
+                           "state":  "candidate",
+                           "registry_state":  "under-audit",
+                           "canonical_path":  "skills/development/auditor-web",
+                           "skill_md_sha256":  "56D08BE7E4F22EA409D6C01A59A95880F1EBE2E976A84C1B5849FD81ED971A53",
+                           "skill_json_sha256":  "D339FD77B2EC1B1F32DCCC9FDEAA43DC1911FE20AA9DCC78F0119DF4D4352C8F",
+                           "legacy_reference_sha256":  "4892236E063BE00BC343FEAE1C01AAE380F274EDD5028E4E662C777770E81623",
+                           "modernization_notes_sha256":  "2EEC398B01C37565A7621B9AF66FB17B61E7337A62FAFFDA65C53FFC65E99CDF",
+                           "legacy_source_sha256":  "4892236E063BE00BC343FEAE1C01AAE380F274EDD5028E4E662C777770E81623",
+                           "distribution_source_while_under_audit":  "legacy"
+                       },
+                       {
+                           "id":  "estratega-seo",
+                           "state":  "candidate",
+                           "registry_state":  "under-audit",
+                           "canonical_path":  "skills/development/estratega-seo",
+                           "skill_md_sha256":  "C2DF2EB50E48E7105330A8196ADFE9A6A8A2AC89A44909F1AB6BAF56D60E87FD",
+                           "skill_json_sha256":  "86DEFF24FF3F4A3132B9F05460AB507FB36B1E6579B282BB39BB1B5B923984FF",
+                           "legacy_reference_sha256":  "DBE5A79AD9F0BFC00305D8364128EBC6297E97014C2BDEA91B518B72DEAAE256",
+                           "modernization_notes_sha256":  "A721FE39AF069875216F2F012E3AC53FAB838A13C6E49AE552292A69169E6868",
+                           "legacy_source_sha256":  "DBE5A79AD9F0BFC00305D8364128EBC6297E97014C2BDEA91B518B72DEAAE256",
+                           "distribution_source_while_under_audit":  "legacy"
+                       },
+                       {
+                           "id":  "maestro-frontend",
+                           "state":  "candidate",
+                           "registry_state":  "under-audit",
+                           "canonical_path":  "skills/development/maestro-frontend",
+                           "skill_md_sha256":  "2B649371E87777B239DBE116226AB277FD6681AA706BBD42BE5230C4C0797E77",
+                           "skill_json_sha256":  "E0F65913467D80789F7482CDA0C7B61BFDF4B2C474C6E6A567A5A69D1F3885A4",
+                           "legacy_reference_sha256":  "3D29603DCC294A11A84BC97AAE8201BD3DA1EF4012B6D376F4615BDE099C4337",
+                           "modernization_notes_sha256":  "562B33F2E3A026AEEE36BE658E41D30B89588270BF0F000F76299277DBBEB1BF",
+                           "legacy_source_sha256":  "3D29603DCC294A11A84BC97AAE8201BD3DA1EF4012B6D376F4615BDE099C4337",
+                           "distribution_source_while_under_audit":  "legacy"
+                       }
+                   ],
+    "registry":  {
+                     "pre_sha256":  "F147940A716C5AD3D97A6D33D6FBF20B27E9647844240D94B6A52D2918869D26",
+                     "post_sha256":  "020405674212105EF1C963ED48959938AC34C72D2C094C4BB6FD8A8EED2CED9F",
+                     "states":  "under-audit",
+                     "skill_count_delta":  0
+                 },
+    "distribution_bridge":  {
+                                "resolver_sha256":  "0093B1540ECB5DA2CDD6FE6CA374C74B5682A4CB9E664E7D80CC3C9908C48AE0",
+                                "sync_skills_sha256":  "446E428C2E8FD03BDDA251095780FB6561778B3DCCEC7B0E2664CD7B7473AE8F",
+                                "install_project_skills_sha256":  "E4A30DF8208549A8CE646E259BFED63FA3970CDD4E53088EEB4BC20AE46B7146",
+                                "bundles_sha256":  "B47D123EF45430640736962429E2ED5721C21EC0B2D4F81C1F943D4A6E286D65",
+                                "routing_rule":  "approved-\u003ecanonical;otherwise-\u003elegacy",
+                                "under_audit_distribution":  "legacy"
+                            },
+    "tests":  {
+                  "official_contracts_per_candidate":  "8/8",
+                  "candidate_semantics":  "PASS",
+                  "distribution_bridge":  "10/10",
+                  "staging":  "PASS",
+                  "post_apply":  "PASS",
+                  "git_diff_check":  "PASS"
+              },
+    "supporting":  {
+                       "candidate_cases_sha256":  "54DB84E697486B481A88136C0580E186C036B0D6F1E9CC37B5C83A7F0ED9CA5D",
+                       "candidate_runner_sha256":  "114ED616BFCA2945DFB2030BBD5910CA7ED0033E58D3741745BD862955FFD5A5",
+                       "bridge_runner_sha256":  "27CEE96BCE97889ABC02FCE4820D5C961429325582A6050E7B74D6A2BF7ABFE1",
+                       "documentation_sha256":  "C0C94E82FBBEEE7C97A2093875B87965C5E6054A6E79A4400A65D76E25ABC344"
+                   },
+    "governance":  {
+                       "candidates_approved_now":  false,
+                       "independent_auditor_required":  true,
+                       "legacy_sources_modified":  false,
+                       "provider_executed":  false,
+                       "model_calls_requested":  0,
+                       "commit_created":  false
+                   },
+    "next_stage":  "AREA-1.7-M3-INDEPENDENT-AUDIT-PROMOTE-AND-CLOSE",
+    "documented_utc":  "2026-09-18T23:54:03.5163803Z"
+}

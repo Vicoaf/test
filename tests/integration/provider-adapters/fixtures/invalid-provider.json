@@ -1,0 +1,54 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-provider-adapter",
+    "id":  "claude",
+    "provider":  "gemini",
+    "lifecycle":  {
+                      "state":  "candidate",
+                      "version":  "0.1.0",
+                      "execution_status":  "not-executed"
+                  },
+    "cli":  {
+                "command":  "claude",
+                "observed_version":  "2.1.268 (Claude Code)",
+                "command_type":  "ExternalScript",
+                "source":  "C:\\Users\\MSI\\AppData\\Roaming\\npm\\claude.ps1"
+            },
+    "prompt_transport":  {
+                             "non_interactive":  true,
+                             "mechanism":  "--print",
+                             "positional_prompt":  true,
+                             "stdin_prompt":  false
+                         },
+    "structured_output":  {
+                              "supported":  true,
+                              "format_mechanism":  "--output-format json",
+                              "schema_mechanism":  "--json-schema",
+                              "schema_transport":  "inline",
+                              "final_output_capture":  "stdout"
+                          },
+    "execution_context":  {
+                              "model_selection":  "--model",
+                              "working_directory":  "process-cwd",
+                              "sandbox":  null,
+                              "agent_selection":  "--agent",
+                              "mode_selection":  "--permission-mode"
+                          },
+    "safety":  {
+                   "permission_control":  "--permission-prompts none",
+                   "dangerous_bypass_flag":  "--dangerously-skip-permissions",
+                   "dangerous_bypass_forbidden":  true,
+                   "benchmark_default":  "deny permission prompts; no bypass permissions",
+                   "production_first_test_allowed":  false
+               },
+    "evidence":  [
+                     {
+                         "path":  "tests/skills/proxtel-skill-auditor/provider-preflight/preflight.json",
+                         "claim":  "Observed Claude CLI version, command source and top-level help."
+                     },
+                     {
+                         "path":  "tests/skills/proxtel-skill-auditor/provider-preflight/adapter-capabilities.json",
+                         "claim":  "Observed non-interactive, structured-output and permission capabilities."
+                     }
+                 ]
+}

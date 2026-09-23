@@ -1,0 +1,34 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-provider-dry-run-plan",
+    "provider":  "antigravity",
+    "adapter_version":  "0.1.0",
+    "adapter_execution_status":  "not-executed",
+    "executable":  "C:\\Users\\MSI\\AppData\\Local\\agy\\bin\\agy.exe",
+    "command":  "agy",
+    "argv_template":  [
+                          "--print",
+                          "\u003cPROMPT\u003e",
+                          "--output-format",
+                          "json",
+                          "--json-schema",
+                          "\u003cBEHAVIORAL_RESPONSE_SCHEMA_FILE\u003e",
+                          "--sandbox"
+                      ],
+    "prompt_transport":  "positional",
+    "schema_transport":  "file",
+    "working_directory":  "\u003cISOLATED_TEMP_WORKDIR\u003e",
+    "final_output":  "stdout",
+    "unresolved_runtime_parameters":  [
+
+                                      ],
+    "dangerous_flags_forbidden":  [
+                                      "--dangerously-skip-permissions"
+                                  ],
+    "dry_run":  {
+                    "only":  true,
+                    "execute_allowed":  false,
+                    "prompt_sent":  false,
+                    "model_call_requested":  false
+                }
+}

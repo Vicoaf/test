@@ -1,0 +1,24 @@
+{
+    "case_id":  "full-audit-complete-safe-candidate",
+    "auditor_should_engage":  true,
+    "primary_action":  "AUDIT",
+    "execute_allowed":  false,
+    "safe_to_execute":  "PASS",
+    "audit_status":  "FINAL",
+    "final_decision":  null,
+    "evidence_required":  false,
+    "facts":  [
+                  "Applicable gates passed."
+              ],
+    "inferences":  [
+
+                   ],
+    "unknowns":  [
+
+                 ],
+    "required_actions":  [
+
+                         ],
+    "token_measurement":  "not-measured",
+    "actual_tokens":  null
+}

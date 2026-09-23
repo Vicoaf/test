@@ -1,0 +1,20 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-independent-governance-review-live-attempt-lock",
+    "attempt_id":  "PROXTEL-AREA-1.2-C40-FRESH-INDEPENDENT-GOVERNANCE-REVIEW-ONE-SHOT-V1",
+    "packet_id":  "PROXTEL-AREA-1.2-AUDITOR-FRESH-INDEPENDENT-GOVERNANCE-REVIEW-C37-V1",
+    "provider":  "antigravity",
+    "one_shot":  true,
+    "rerun_allowed":  false,
+    "automatic_retry_allowed":  false,
+    "model_selection":  "provider-default",
+    "explicit_model_flag":  false,
+    "c37_run_once_sha256":  "6E8A3FE8821BE63EC3BE1338DFC4DCAC51DB4EBE17A6B8433D33B248EFD0B1D8",
+    "zero_extra_cost_gate_sha256":  "71936DFED87A8DD2CFD669493B2FCEAC66956BC9293AE7EF2E58E7B527E52A59",
+    "settings_sha256_prelaunch":  "66DD78DD54FFA37D2E60E2B4F226A7EF47DFD87A5DDBA6D6AE0EED4F5AB1FB6F",
+    "agy_sha256_prelaunch":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+    "expanded_child_environment_sanitization":  true,
+    "consumed":  true,
+    "child_process_start_requested":  true,
+    "created_utc":  "2026-09-18T19:36:29.6068121Z"
+}

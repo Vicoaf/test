@@ -1,4 +1,4 @@
-﻿param(
+param(
     [Parameter(Mandatory = $true)]
     [string]$ProjectPath,
 
@@ -28,6 +28,16 @@ $AgencyRoot = Split-Path -Parent $PSScriptRoot
 $SourceRoot = Join-Path `
     $AgencyRoot `
     "skills\base"
+
+$ResolverScript = Join-Path `
+    $PSScriptRoot `
+    "skill-source-resolver.ps1"
+
+if (-not (Test-Path -LiteralPath $ResolverScript -PathType Leaf)) {
+    throw "No existe el resolver de fuentes de Skills: $ResolverScript"
+}
+
+. $ResolverScript
 
 $BundleFile = Join-Path `
     $AgencyRoot `
@@ -299,9 +309,10 @@ foreach ($skillName in $selectedSkills) {
     try {
 
         $sourceFolder = `
-            Join-Path `
-                $SourceRoot `
-                $skillName
+            Get-ProxtelSkillSource `
+                -AgencyRoot $AgencyRoot `
+                -SkillId $skillName `
+                -LegacySourceRoot $SourceRoot
 
         if (-not (Test-Path $sourceFolder)) {
 

@@ -1,0 +1,70 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-final-certification",
+    "certification_id":  "PROXTEL-AREA-1.2-SKILL-AUDITOR-FINAL-CERTIFICATION-V1",
+    "area":  "1.2",
+    "component":  "proxtel-skill-auditor",
+    "version":  "0.2.0",
+    "status":  "CERTIFIED",
+    "lifecycle":  {
+                      "skill_state":  "approved",
+                      "registry_state":  "approved",
+                      "governance_transition_applied":  true,
+                      "transition_plan_sha256":  "45E83E95487A72563E2BFC32EE9D00CD2FA43A520B6EDF8FF69A9EDB1E2FCABF"
+                  },
+    "governance":  {
+                       "historical_independent_decision":  "ADAPT",
+                       "historical_report_sha256":  "637CD84898E8C56F2255D2AEF7F52CA79A37280D9B86E63C2D225D91A5FD411C",
+                       "fresh_independent_decision":  "APPROVED",
+                       "fresh_approval_report_sha256":  "5CACF343C46EDC5DF5485F2E79E8F137DF9C2F89C25E1EBEB22848B814E5B1AD",
+                       "fresh_audit_id":  "PROXTEL-AREA-1.2-AUDITOR-FRESH-INDEPENDENT-APPROVED-C40-V1",
+                       "promotion_eligible":  true,
+                       "action_2_transition_disposition":  "EXECUTE-TRANSITION",
+                       "blocking_issue_count":  0
+                   },
+    "source":  {
+                   "skill_json_sha256":  "2D84AF8C8F7D073D762BCB85E9E286ACB3E5CADB15EB7D80041DB8D7983BB62B",
+                   "skills_registry_sha256":  "A578F367D9BEB64F94CC45632D05C5A94167E2686EDE0E9CE2627C67EAEC2B62",
+                   "semantic_policy_runner_sha256":  "328ED9B349B18070D776DF998694D0A94618148D6B2A46A5E3DD2DF34663BE4B",
+                   "semantic_runner_state_migration":  "candidate-current-state -\u003e approved-current-state",
+                   "operational_candidate_semantics_preserved":  true
+               },
+    "regression":  {
+                       "fresh_suite_count":  6,
+                       "fresh_pass_count":  6,
+                       "fresh_fail_count":  0,
+                       "core_contracts":  "8/8",
+                       "semantic_policy":  "20/20",
+                       "behavioral_v1_legacy":  "16/16",
+                       "behavioral_v2":  "4/4",
+                       "adapter_contracts":  "9/9",
+                       "provider_dry_run":  "3/3"
+                   },
+    "provider_evidence":  {
+                              "claude_declared_adapter_smoke":  "CERTIFIED",
+                              "claude_report_sha256":  "EF1FA10924FDF3A110176FCF444F2C975D80B8A51B84A17D4EEFAA93EFDB4E21",
+                              "antigravity_declared_adapter_smoke":  "CERTIFIED",
+                              "antigravity_report_sha256":  "6E8D6A56B408D73A6032C295E5CF2C8C91C491D73D76C32ED1409FAA9E42E112",
+                              "provider_executed_during_c45":  false,
+                              "model_calls_requested_during_c45":  0
+                          },
+    "release":  {
+                    "multi_provider_release_gate_satisfied":  true,
+                    "multi_provider_release_eligible":  true,
+                    "multi_provider_release_applied_by_c45":  false
+                },
+    "integrity":  {
+                      "historical_adapt_report_immutable":  true,
+                      "fresh_approval_report_immutable":  true,
+                      "provider_smoke_reports_immutable":  true,
+                      "no_settings_change":  true,
+                      "no_commit":  true
+                  },
+    "closure":  {
+                    "area_closed":  true,
+                    "additional_area_1_2_steps_required":  false,
+                    "next_program_stage":  "AREA-1.3-SKILL-CREATOR-OPERATIONALIZATION",
+                    "execution_policy":  "macro-steps"
+                },
+    "documented_utc":  "2026-09-18T21:21:46.4204294Z"
+}

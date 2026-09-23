@@ -1,0 +1,12 @@
+{
+    "packet_id":  "PROXTEL-AREA-1.2-CLAUDE-ADAPTER-LIVE-SMOKE-C9-FIX2",
+    "provider":  "claude",
+    "adapter_id":  "claude",
+    "adapter_sha256":  "1D88EDD4AAFA858004CB2DFAB7CB1EE5AB41A3F78C489AC60A1B3FF73A8E2A27",
+    "model_selection":  "provider-default",
+    "explicit_model_flag":  false,
+    "automatic_retry":  false,
+    "dangerous_bypass":  false,
+    "consumed":  true,
+    "started_utc":  "2026-09-18T17:04:30.7362993Z"
+}

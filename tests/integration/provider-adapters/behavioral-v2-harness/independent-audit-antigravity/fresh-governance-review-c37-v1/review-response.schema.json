@@ -1,0 +1,112 @@
+{
+    "type":  "object",
+    "additionalProperties":  false,
+    "required":  [
+                     "review_kind",
+                     "subject_id",
+                     "reviewer_provider",
+                     "review_nonce",
+                     "audit_status",
+                     "final_decision",
+                     "promotion_eligible",
+                     "action_0_status",
+                     "action_1_status",
+                     "action_2_transition_disposition",
+                     "action_3_status",
+                     "blocking_issue_count",
+                     "summary",
+                     "blocking_issues",
+                     "evidence_limitations"
+                 ],
+    "properties":  {
+                       "review_kind":  {
+                                           "type":  "string",
+                                           "enum":  [
+                                                        "proxtel-fresh-independent-governance-review"
+                                                    ]
+                                       },
+                       "subject_id":  {
+                                          "type":  "string",
+                                          "enum":  [
+                                                       "proxtel-skill-auditor"
+                                                   ]
+                                      },
+                       "reviewer_provider":  {
+                                                 "type":  "string",
+                                                 "enum":  [
+                                                              "antigravity"
+                                                          ]
+                                             },
+                       "review_nonce":  {
+                                            "type":  "string",
+                                            "enum":  [
+                                                         "PROXTEL-C37-AUDITOR-FRESH-INDEPENDENT-GOVERNANCE-REVIEW-V1"
+                                                     ]
+                                        },
+                       "audit_status":  {
+                                            "type":  "string",
+                                            "enum":  [
+                                                         "FINAL"
+                                                     ]
+                                        },
+                       "final_decision":  {
+                                              "type":  "string",
+                                              "enum":  [
+                                                           "APPROVED",
+                                                           "ADAPT",
+                                                           "REFERENCE-ONLY",
+                                                           "REJECTED"
+                                                       ]
+                                          },
+                       "promotion_eligible":  {
+                                                  "type":  "boolean"
+                                              },
+                       "action_0_status":  {
+                                               "type":  "string",
+                                               "enum":  [
+                                                            "SATISFIED",
+                                                            "NOT-SATISFIED",
+                                                            "UNKNOWN"
+                                                        ]
+                                           },
+                       "action_1_status":  {
+                                               "type":  "string",
+                                               "enum":  [
+                                                            "SATISFIED",
+                                                            "NOT-SATISFIED",
+                                                            "UNKNOWN"
+                                                        ]
+                                           },
+                       "action_2_transition_disposition":  {
+                                                               "type":  "string",
+                                                               "enum":  [
+                                                                            "EXECUTE-TRANSITION",
+                                                                            "KEEP-DEFERRED",
+                                                                            "NOT-APPLICABLE"
+                                                                        ]
+                                                           },
+                       "action_3_status":  {
+                                               "type":  "string",
+                                               "enum":  [
+                                                            "SATISFIED",
+                                                            "NOT-SATISFIED",
+                                                            "UNKNOWN"
+                                                        ]
+                                           },
+                       "blocking_issue_count":  {
+                                                    "type":  "integer",
+                                                    "minimum":  0,
+                                                    "maximum":  50
+                                                },
+                       "summary":  {
+                                       "type":  "string",
+                                       "minLength":  1
+                                   },
+                       "blocking_issues":  {
+                                               "type":  "string"
+                                           },
+                       "evidence_limitations":  {
+                                                    "type":  "string"
+                                                }
+                   }
+}

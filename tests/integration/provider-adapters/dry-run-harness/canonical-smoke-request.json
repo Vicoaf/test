@@ -1,0 +1,37 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-auditor-smoke-request",
+    "case_id":  "audit-internal-candidate",
+    "behavioral_prompt":  "Audita esta nueva Skill interna de PROXTEL y determina si puede aprobarse.",
+    "auditor":  {
+                    "id":  "proxtel-skill-auditor",
+                    "skill_path":  "skills/core/proxtel-skill-auditor/SKILL.md",
+                    "skill_sha256":  "54B2C1F56C42ACCA3CDEF1BCB3056BC337BA333BB2DD62C418B0143A8F75B47C",
+                    "methodology_path":  "skills/core/proxtel-skill-auditor/references/audit-methodology.md",
+                    "methodology_sha256":  "465BB10DDBA81E06729224DD4042AB1363DDCEE8526E1CB2B34159A158C29A9C"
+                },
+    "response_contract":  {
+                              "path":  "tests/skills/proxtel-skill-auditor/behavioral-response.schema.json",
+                              "sha256":  "9C840B8400A7CFBE48C0566D7BB9A05D49BCB0C303903AD01DAEAC8012581886"
+                          },
+    "expected":  {
+                     "auditor_should_engage":  true,
+                     "primary_action":  "AUDIT",
+                     "execute_allowed":  false,
+                     "decision_allowed":  [
+                                              "PENDING"
+                                          ],
+                     "decision_forbidden":  [
+                                                "APPROVED"
+                                            ],
+                     "evidence_required":  true,
+                     "minimum_unknowns":  1
+                 },
+    "safety":  {
+                   "dry_run_only":  true,
+                   "provider_execution_allowed":  false,
+                   "prompt_sent":  false,
+                   "model_call_requested":  false,
+                   "production":  false
+               }
+}

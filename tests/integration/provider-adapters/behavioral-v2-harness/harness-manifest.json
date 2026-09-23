@@ -1,0 +1,62 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-provider-harness-v2",
+    "status":  "candidate",
+    "auditor":  {
+                    "id":  "proxtel-skill-auditor",
+                    "version":  "0.2.0",
+                    "state":  "candidate",
+                    "hashes":  {
+                                   "skill_md":  "DB87C6BD579D8A5E2C20C6ABC2D7C3250635D8764659BA0F159BEA8A5A80A50F",
+                                   "skill_json":  "7724404B6C24B0700390211D6B0C359F956D59C6DE621B36B1B984D9B5D37544",
+                                   "methodology":  "FD98ED1253503B2D9520000A2125AF12AEDD1C01A40EE3CF1979FA560A6BA90D",
+                                   "specification":  "B5C0BAC17B216DC609AF7F929291FD2A34DC3DEDE36493061C80FDC1D21BAD12"
+                               }
+                },
+    "behavioral_suite":  {
+                             "version":  "2",
+                             "cases":  3,
+                             "routing_cases":  1,
+                             "evidence_request_cases":  1,
+                             "full_audit_cases":  1,
+                             "response_schema":  "behavioral-response-v2.schema.json"
+                         },
+    "role_separation":  {
+                            "operating_instructions":  "proxtel-skill-auditor",
+                            "candidate_fixture":  "fixture-safe-summarizer",
+                            "auditor_may_be_candidate_implicitly":  false,
+                            "auditor_skill_json_embedded_in_prompt":  false
+                        },
+    "model_input_policy":  {
+                               "benchmark_expected_values_embedded":  false,
+                               "grading_metadata_embedded":  false,
+                               "synthetic_expected_disposition_embedded":  false,
+                               "final_decision_supported_embedded":  false
+                           },
+    "provider_plans":  {
+                           "providers":  [
+                                             "claude",
+                                             "codex",
+                                             "antigravity"
+                                         ],
+                           "cases_per_provider":  3,
+                           "total_plans":  9
+                       },
+    "safety":  {
+                   "offline_only":  true,
+                   "provider_execution_authorized":  false,
+                   "model_calls_allowed":  0,
+                   "automatic_retry":  false,
+                   "production":  false,
+                   "dangerous_bypass":  false,
+                   "api_key_fallback":  false,
+                   "second_live_call_authorized":  false
+               },
+    "future_live_evaluation":  {
+                                   "requires_separate_user_authorization":  true,
+                                   "requires_auth_recheck":  true,
+                                   "requires_zero_extra_cost_recheck":  true,
+                                   "legacy_smoke_reusable":  false,
+                                   "recommended_first_case":  "evidence-incomplete-candidate"
+                               }
+}

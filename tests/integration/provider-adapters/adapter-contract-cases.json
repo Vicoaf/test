@@ -1,0 +1,47 @@
+[
+    {
+        "id":  "claude-valid",
+        "file":  "fixtures/claude-valid.json",
+        "expected_valid":  true
+    },
+    {
+        "id":  "codex-valid",
+        "file":  "fixtures/codex-valid.json",
+        "expected_valid":  true
+    },
+    {
+        "id":  "antigravity-valid",
+        "file":  "fixtures/antigravity-valid.json",
+        "expected_valid":  true
+    },
+    {
+        "id":  "invalid-provider",
+        "file":  "fixtures/invalid-provider.json",
+        "expected_valid":  false
+    },
+    {
+        "id":  "invalid-execution-status",
+        "file":  "fixtures/invalid-execution-status.json",
+        "expected_valid":  false
+    },
+    {
+        "id":  "invalid-dangerous-bypass",
+        "file":  "fixtures/invalid-dangerous-bypass.json",
+        "expected_valid":  false
+    },
+    {
+        "id":  "invalid-production-first",
+        "file":  "fixtures/invalid-production-first.json",
+        "expected_valid":  false
+    },
+    {
+        "id":  "invalid-extra-property",
+        "file":  "fixtures/invalid-extra-property.json",
+        "expected_valid":  false
+    },
+    {
+        "id":  "invalid-missing-cli",
+        "file":  "fixtures/invalid-missing-cli.json",
+        "expected_valid":  false
+    }
+]

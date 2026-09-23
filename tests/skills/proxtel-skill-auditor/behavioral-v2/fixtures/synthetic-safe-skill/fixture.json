@@ -1,0 +1,30 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-synthetic-skill-fixture",
+    "id":  "fixture-safe-summarizer",
+    "display_name":  "Fixture Safe Summarizer",
+    "purpose":  "Deterministic non-production candidate for Auditor behavioral tests.",
+    "production":  false,
+    "provider_neutral":  true,
+    "candidate_under_test":  true,
+    "auditor_under_test":  false,
+    "scripts":  [
+
+                ],
+    "dependencies":  [
+
+                     ],
+    "capabilities":  [
+                         "summarize-supplied-text"
+                     ],
+    "security":  {
+                     "network":  false,
+                     "filesystem_write":  false,
+                     "shell":  false,
+                     "subprocess":  false,
+                     "mcp":  false,
+                     "api":  false,
+                     "secrets_required":  false,
+                     "dynamic_execution":  false
+                 }
+}

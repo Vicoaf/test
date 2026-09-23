@@ -1,0 +1,38 @@
+[
+    {
+        "case_id":  "routing-internal-skill-audit",
+        "layer":  "routing",
+        "prompt_file":  "prompts/routing-internal-skill-audit.txt",
+        "prompt_sha256":  "32ABDF284B8FE12B7E17AC992D2F40EB9144002E6848DE2CE402F71EC6A8A3D0",
+        "candidate_under_audit":  null,
+        "evidence_input":  null,
+        "auditor_operating_instructions":  true,
+        "auditor_is_candidate":  false,
+        "grading_metadata_embedded":  false,
+        "expected_values_embedded":  false
+    },
+    {
+        "case_id":  "evidence-incomplete-candidate",
+        "layer":  "evidence-request",
+        "prompt_file":  "prompts/evidence-incomplete-candidate.txt",
+        "prompt_sha256":  "9B31AB3B5524F3C41331E28581A1760B895362053A0E7038C9C15B429122F45B",
+        "candidate_under_audit":  "fixture-safe-summarizer",
+        "evidence_input":  "model-input/evidence-incomplete.json",
+        "auditor_operating_instructions":  true,
+        "auditor_is_candidate":  false,
+        "grading_metadata_embedded":  false,
+        "expected_values_embedded":  false
+    },
+    {
+        "case_id":  "full-audit-complete-safe-candidate",
+        "layer":  "full-audit",
+        "prompt_file":  "prompts/full-audit-complete-safe-candidate.txt",
+        "prompt_sha256":  "70E64F398B0719A7344CBE37BE33006FE81B359183BE67C062895A283233E5F7",
+        "candidate_under_audit":  "fixture-safe-summarizer",
+        "evidence_input":  "model-input/evidence-complete.json",
+        "auditor_operating_instructions":  true,
+        "auditor_is_candidate":  false,
+        "grading_metadata_embedded":  false,
+        "expected_values_embedded":  false
+    }
+]

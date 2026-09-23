@@ -1,62 +1,80 @@
 {
-  "schema_version": "1.0",
-  "registry": "proxtel-skills",
-  "source_of_truth": "PROXTEL-AI-AGENCY",
-  "states": [
-    "baseline-existing",
-    "quarantine",
-    "under-audit",
-    "approved",
-    "adapt",
-    "reference-only",
-    "rejected",
-    "deprecated"
-  ],
-  "skills": [
-    {
-      "id": "auditor-web",
-      "source_path": "skills/base/auditor-web",
-      "area": "development",
-      "state": "baseline-existing",
-      "origin": "proxtel-existing",
-      "distribution": "project-capable",
-      "notes": "Existing PROXTEL Skill. Must be compared against audited external references before final classification."
-    },
-    {
-      "id": "creador-skills",
-      "source_path": "skills/base/creador-skills",
-      "area": "core",
-      "state": "baseline-existing",
-      "origin": "proxtel-existing",
-      "distribution": "core",
-      "notes": "Existing PROXTEL Skill. Candidate for evolution into the definitive Skill creation and evaluation capability."
-    },
-    {
-      "id": "estratega-seo",
-      "source_path": "skills/base/estratega-seo",
-      "area": "development",
-      "state": "baseline-existing",
-      "origin": "proxtel-existing",
-      "distribution": "project-capable",
-      "notes": "Existing PROXTEL Skill. Must be compared with external SEO and web-quality references."
-    },
-    {
-      "id": "inicializador-proyectos",
-      "source_path": "skills/base/inicializador-proyectos",
-      "area": "core",
-      "state": "baseline-existing",
-      "origin": "proxtel-existing",
-      "distribution": "core",
-      "notes": "Existing PROXTEL Skill. Candidate for integration with project lifecycle workflows."
-    },
-    {
-      "id": "maestro-frontend",
-      "source_path": "skills/base/maestro-frontend",
-      "area": "development",
-      "state": "baseline-existing",
-      "origin": "proxtel-existing",
-      "distribution": "project-capable",
-      "notes": "Existing PROXTEL Skill. Must be compared with premium frontend, design, motion and accessibility references."
-    }
-  ]
+    "schema_version":  "1.0",
+    "registry":  "proxtel-skills",
+    "source_of_truth":  "PROXTEL-AI-AGENCY",
+    "states":  [
+                   "baseline-existing",
+                   "quarantine",
+                   "under-audit",
+                   "approved",
+                   "adapt",
+                   "reference-only",
+                   "rejected",
+                   "deprecated"
+               ],
+    "skills":  [
+                   {
+                       "id":  "auditor-web",
+                       "source_path":  "skills/development/auditor-web",
+                       "area":  "development",
+                       "state":  "approved",
+                       "origin":  "proxtel-existing",
+                       "distribution":  "project-capable",
+                       "notes":  "Canonical Development Skill v1.0.0 approved by independent Antigravity review in Area 1.7 M3. Formal audit SHA256=1A72100200468DDDF182FAC82BCF2B79FB2406CF807C3342457CFF2E1231A288. Legacy baseline remains preserved for provenance."
+                   },
+                   {
+                       "id":  "creador-skills",
+                       "source_path":  "skills/base/creador-skills",
+                       "area":  "core",
+                       "state":  "baseline-existing",
+                       "origin":  "proxtel-existing",
+                       "distribution":  "core",
+                       "notes":  "Existing PROXTEL Skill. Candidate for evolution into the definitive Skill creation and evaluation capability."
+                   },
+                   {
+                       "id":  "estratega-seo",
+                       "source_path":  "skills/development/estratega-seo",
+                       "area":  "development",
+                       "state":  "approved",
+                       "origin":  "proxtel-existing",
+                       "distribution":  "project-capable",
+                       "notes":  "Canonical Development Skill v1.0.0 approved by independent Antigravity review in Area 1.7 M3. Formal audit SHA256=873280C5F14F2791493A2400BDCC7363B665F35586533BEF39918AF0589431A3. Legacy baseline remains preserved for provenance."
+                   },
+                   {
+                       "id":  "inicializador-proyectos",
+                       "source_path":  "skills/base/inicializador-proyectos",
+                       "area":  "core",
+                       "state":  "baseline-existing",
+                       "origin":  "proxtel-existing",
+                       "distribution":  "core",
+                       "notes":  "Existing PROXTEL Skill. Candidate for integration with project lifecycle workflows."
+                   },
+                   {
+                       "id":  "maestro-frontend",
+                       "source_path":  "skills/development/maestro-frontend",
+                       "area":  "development",
+                       "state":  "approved",
+                       "origin":  "proxtel-existing",
+                       "distribution":  "project-capable",
+                       "notes":  "Canonical Development Skill v1.0.0 approved by independent Antigravity review in Area 1.7 M3. Formal audit SHA256=1428DF08FC7D0D0CF30E4D710D0D6C7023F2798C3BD6D616A279D248A5BC3C2A. Legacy baseline remains preserved for provenance."
+                   },
+                   {
+                       "id":  "proxtel-skill-auditor",
+                       "source_path":  "skills/core/proxtel-skill-auditor",
+                       "area":  "core",
+                       "state":  "approved",
+                       "origin":  "proxtel-internal",
+                       "distribution":  "core",
+                       "notes":  "PROXTEL Skill Auditor v0.2.0. Historical independent review decision was ADAPT. Required Actions 0, 1 and 3 were satisfied; fresh independent governance review decision is APPROVED (PROXTEL-AREA-1.2-AUDITOR-FRESH-INDEPENDENT-APPROVED-C40-V1) with Action 2 disposition EXECUTE-TRANSITION and 0 blocking issues. State approved by governance transition."
+                   },
+                   {
+                       "id":  "proxtel-skill-creator",
+                       "source_path":  "skills/core/proxtel-skill-creator",
+                       "area":  "core",
+                       "state":  "approved",
+                       "origin":  "proxtel-internal",
+                       "distribution":  "core",
+                       "notes":  "PROXTEL Skill Creator v0.1.0 approved after independent Antigravity review (PROXTEL-AREA-1.3-CREATOR-INDEPENDENT-AUDIT-R3-V1). Canonical lifecycle and Registry governance state are approved. Legacy creador-skills remains preserved as baseline; external references remain quarantine-only."
+                   }
+               ]
 }

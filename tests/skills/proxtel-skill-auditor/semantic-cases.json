@@ -1,0 +1,167 @@
+[
+    {
+        "id":  "trigger-internal-skill-audit",
+        "category":  "trigger",
+        "source":  "contract.use_when",
+        "required_terms":  [
+                               "Auditing a new internal Skill."
+                           ]
+    },
+    {
+        "id":  "trigger-external-quarantine-audit",
+        "category":  "trigger",
+        "source":  "contract.use_when",
+        "required_terms":  [
+                               "Auditing an external Skill in quarantine."
+                           ]
+    },
+    {
+        "id":  "trigger-candidate-update-review",
+        "category":  "trigger",
+        "source":  "contract.use_when",
+        "required_terms":  [
+                               "Reviewing a candidate Skill update."
+                           ]
+    },
+    {
+        "id":  "trigger-final-decision-evidence",
+        "category":  "trigger",
+        "source":  "contract.use_when",
+        "required_terms":  [
+                               "APPROVED",
+                               "ADAPT",
+                               "REFERENCE-ONLY",
+                               "REJECTED"
+                           ]
+    },
+    {
+        "id":  "nontrigger-create-skill",
+        "category":  "non-trigger",
+        "source":  "contract.do_not_use_when",
+        "required_terms":  [
+                               "Creating a new Skill from scratch."
+                           ]
+    },
+    {
+        "id":  "nontrigger-silent-modification",
+        "category":  "non-trigger",
+        "source":  "contract.do_not_use_when",
+        "required_terms":  [
+                               "Silently modifying the audited Skill."
+                           ]
+    },
+    {
+        "id":  "nontrigger-execute-unaudited",
+        "category":  "non-trigger",
+        "source":  "contract.do_not_use_when",
+        "required_terms":  [
+                               "Executing unaudited upstream code."
+                           ]
+    },
+    {
+        "id":  "nontrigger-production-first",
+        "category":  "non-trigger",
+        "source":  "contract.do_not_use_when",
+        "required_terms":  [
+                               "Testing directly in production."
+                           ]
+    },
+    {
+        "id":  "adversarial-official-source",
+        "category":  "adversarial",
+        "source":  "skill",
+        "required_terms":  [
+                               "fuente oficial",
+                               "no debe asumir"
+                           ]
+    },
+    {
+        "id":  "adversarial-popularity",
+        "category":  "adversarial",
+        "source":  "skill",
+        "required_terms":  [
+                               "confundir popularidad con seguridad"
+                           ]
+    },
+    {
+        "id":  "adversarial-static-pass",
+        "category":  "adversarial",
+        "source":  "skill",
+        "required_terms":  [
+                               "STATIC PASS != APPROVED"
+                           ]
+    },
+    {
+        "id":  "adversarial-run-upstream-first",
+        "category":  "adversarial",
+        "source":  "skill",
+        "required_terms":  [
+                               "No ejecutar codigo externo antes de completar el gate safe-to-execute."
+                           ]
+    },
+    {
+        "id":  "adversarial-silent-dependencies",
+        "category":  "adversarial",
+        "source":  "skill",
+        "required_terms":  [
+                               "instalar dependencias silenciosamente"
+                           ]
+    },
+    {
+        "id":  "adversarial-unknown-as-fact",
+        "category":  "adversarial",
+        "source":  "skill",
+        "required_terms":  [
+                               "No convertir UNKNOWN en FACT."
+                           ]
+    },
+    {
+        "id":  "adversarial-character-token-estimate",
+        "category":  "adversarial",
+        "source":  "skill",
+        "required_terms":  [
+                               "Nunca usar output characters como sustituto silencioso de tokens."
+                           ]
+    },
+    {
+        "id":  "adversarial-creator-self-approval",
+        "category":  "adversarial",
+        "source":  "skill",
+        "required_terms":  [
+                               "Una Skill no puede quedar APPROVED solamente porque su propio proceso de creacion afirme que esta correcta."
+                           ]
+    },
+    {
+        "id":  "authority-fail-critical-block",
+        "category":  "authority",
+        "source":  "skill",
+        "required_terms":  [
+                               "FAIL o CRITICAL bloquean ejecucion."
+                           ]
+    },
+    {
+        "id":  "authority-warn-justification",
+        "category":  "authority",
+        "source":  "skill",
+        "required_terms":  [
+                               "WARN requiere justificacion explicita antes de continuar."
+                           ]
+    },
+    {
+        "id":  "evaluation-holdout-training",
+        "category":  "evaluation",
+        "source":  "skill",
+        "required_terms":  [
+                               "No declarar exito solo porque training llegue a 100%."
+                           ]
+    },
+    {
+        "id":  "provider-neutrality",
+        "category":  "architecture",
+        "source":  "skill",
+        "required_terms":  [
+                               "El Auditor canonico no pertenece a Claude, Codex ni Antigravity.",
+                               "Las diferencias de proveedor deben implementarse mediante adapters."
+                           ]
+    }
+]

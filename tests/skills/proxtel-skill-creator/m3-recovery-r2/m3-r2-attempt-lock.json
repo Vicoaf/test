@@ -1,0 +1,36 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-one-shot-attempt-lock",
+    "attempt_id":  "PROXTEL-AREA-1.3-M3-R2-CREATOR-INDEPENDENT-AUDIT-V1",
+    "created_utc":  "2026-09-18T22:46:46.7543493Z",
+    "rerun_allowed":  false,
+    "automatic_retry_allowed":  false,
+    "provider":  "antigravity",
+    "model_selection":  "provider-default",
+    "explicit_model_flag":  false,
+    "sandbox":  true,
+    "add_dir":  false,
+    "dangerous_bypass":  false,
+    "provider_process_starts_authorized":  1,
+    "model_calls_authorized":  1,
+    "prompt_sha256":  "B085BA36D87B13316CE35BDE35BFFF1C4C400EDE529E4055A85F0C4A08F5F023",
+    "schema_sha256":  "17B674890E8B07CBDFEB42FB962408FDF973B9A4108B06C58F0F33E063924094",
+    "agy_sha256":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+    "agy_version":  "1.2.6",
+    "settings_sha256":  "66DD78DD54FFA37D2E60E2B4F226A7EF47DFD87A5DDBA6D6AE0EED4F5AB1FB6F",
+    "recovery_lineage":  {
+                             "original_m3_attempt_lock_sha256":  "0CE4271B9362E4926DFA60D8716457EC6217E7E416B2F0D7205DD430597C8159",
+                             "original_m3_exit_code":  2,
+                             "original_m3_failure_classification":  "agy-print-consumed-output-format-as-prompt",
+                             "original_m3_model_inference_proven":  false,
+                             "original_m3_rerun_allowed":  false
+                         },
+    "candidate":  {
+                      "skill_md_sha256":  "3F2AFE99189D949B998DFBEAA39ADF7E92E5692E5B11C5104450CF96FADA3BE2",
+                      "skill_json_sha256":  "83668A0BDBADE178D54D36B9AB77DD67F54CD0C9770C9A91E6CA5315C7B09341",
+                      "methodology_sha256":  "AD104D94E666B8D55C7B702279654E297E6736005805D46D6999AF8F2C78510B",
+                      "semantic_cases_sha256":  "076229CF2CD041F1E4494BEF2406407C2B536D1BA084BC83B26DA41650F8DCAF",
+                      "semantic_runner_sha256":  "ABB56E56877B13A4EA4DD126AF38C3F9D37755069A680A4D32EF76AAB81AB613",
+                      "registry_sha256":  "20FC4DB96DEA15F3903676CEA6A935147933C18667B0984E04E0465FA15DD267"
+                  }
+}

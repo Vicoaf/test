@@ -120,6 +120,69 @@ Una Skill puede:
 
 Los cambios importantes deben probarse antes de distribuirse.
 
+### Versionado funcional
+
+`schema_version` y `lifecycle.version` representan conceptos distintos.
+
+`schema_version` identifica la versión del contrato o estructura machine-readable de PROXTEL.
+
+`lifecycle.version` identifica la versión funcional de una Skill concreta.
+
+Las Skills PROXTEL utilizarán Semantic Versioning con el formato:
+
+`MAJOR.MINOR.PATCH`
+
+#### PATCH
+
+Incrementar PATCH para correcciones compatibles que no amplíen de forma material el alcance, triggers, responsabilidades o capacidades de la Skill.
+
+Ejemplos:
+
+- correcciones de redacción;
+- aclaraciones no funcionales;
+- corrección de una instrucción errónea;
+- ajustes compatibles de validación.
+
+#### MINOR
+
+Incrementar MINOR cuando se agreguen capacidades, procedimientos, reglas, triggers compatibles o criterios de validación sin romper el comportamiento esperado previamente aprobado.
+
+Ejemplos:
+
+- nueva capacidad compatible;
+- nuevo tipo de escenario soportado;
+- nuevas validaciones;
+- ampliación compatible de un procedimiento.
+
+#### MAJOR
+
+Incrementar MAJOR cuando exista un cambio incompatible que modifique de forma material el contrato funcional esperado de la Skill.
+
+Ejemplos:
+
+- eliminar capacidades previamente soportadas;
+- cambiar de forma incompatible sus triggers o non-triggers;
+- cambiar responsabilidades o alcance de manera incompatible;
+- modificar el comportamiento esperado de una forma que requiera adaptación de consumidores existentes.
+
+### Actualización de Skills aprobadas
+
+Una Skill `approved` no debe modificarse silenciosamente como si la nueva revisión conservara la misma identidad de versión.
+
+Toda actualización material debe:
+
+1. partir de la versión aprobada existente;
+2. determinar el incremento MAJOR, MINOR o PATCH;
+3. producir una nueva `candidate`;
+4. preservar la evidencia de la versión aprobada anterior;
+5. ejecutar las pruebas y comparaciones aplicables;
+6. pasar por Auditor independiente;
+7. promoverse solamente mediante la transición de gobernanza correspondiente.
+
+La creación de una candidate no reemplaza ni invalida por sí misma la versión `approved` actualmente distribuida.
+
+Nunca reutilizar un número de versión para contenido funcionalmente diferente.
+
 ## Evidencia
 
 Las Skills que realizan auditorías deben distinguir claramente:

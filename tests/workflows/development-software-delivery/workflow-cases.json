@@ -1,0 +1,62 @@
+[
+    {
+        "id":  "existing-project-readonly-first",
+        "category":  "discovery",
+        "expected":  "inspect before modify"
+    },
+    {
+        "id":  "local-implementation",
+        "category":  "safety",
+        "expected":  "local first"
+    },
+    {
+        "id":  "tests-lint-build",
+        "category":  "qa",
+        "expected":  "applicable deterministic validation"
+    },
+    {
+        "id":  "web-responsive",
+        "category":  "qa",
+        "expected":  "browser responsive checks"
+    },
+    {
+        "id":  "accessibility",
+        "category":  "qa",
+        "expected":  "automated plus manual proportional review"
+    },
+    {
+        "id":  "performance",
+        "category":  "qa",
+        "expected":  "Lighthouse/CWV when material"
+    },
+    {
+        "id":  "independent-review",
+        "category":  "qa",
+        "expected":  "separate reviewer when justified"
+    },
+    {
+        "id":  "no-auto-commit",
+        "category":  "git",
+        "expected":  "forbidden"
+    },
+    {
+        "id":  "no-auto-push",
+        "category":  "git",
+        "expected":  "forbidden"
+    },
+    {
+        "id":  "no-auto-deploy",
+        "category":  "release",
+        "expected":  "forbidden"
+    },
+    {
+        "id":  "ready-zero-blockers",
+        "category":  "decision",
+        "expected":  "READY"
+    },
+    {
+        "id":  "validation-failure",
+        "category":  "decision",
+        "expected":  "CHANGES-REQUIRED"
+    }
+]

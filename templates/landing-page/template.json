@@ -1,0 +1,29 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-development-template",
+    "id":  "landing-page",
+    "area":  "development",
+    "status":  "candidate-staged",
+    "purpose":  "Reusable conversion-oriented landing-page project foundation.",
+    "required_skill_bundle":  "landing-page",
+    "primary_lanes":  [
+                          "architecture",
+                          "frontend-web",
+                          "accessibility",
+                          "performance",
+                          "seo-web-quality",
+                          "security",
+                          "documentation-release"
+                      ],
+    "compatible_tools":  [
+                             "vite-builder",
+                             "api-tester"
+                         ],
+    "scaffold_policy":  {
+                            "framework_lock_in":  false,
+                            "secrets_allowed":  false,
+                            "environment_specific_credentials_allowed":  false,
+                            "production_domain_hardcoding_allowed":  false,
+                            "dependency_installation_during_copy":  false
+                        }
+}

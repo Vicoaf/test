@@ -1,0 +1,157 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill-independent-governance-review",
+    "audit_id":  "PROXTEL-AREA-1.2-AUDITOR-FRESH-INDEPENDENT-APPROVED-C40-V1",
+    "subject":  {
+                    "id":  "proxtel-skill-auditor",
+                    "version":  "0.2.0",
+                    "lifecycle_state_at_review":  "candidate",
+                    "registry_state_at_review":  "under-audit",
+                    "skill_json_sha256":  "3D9835F89E3CFB791CBED6C6A83468B50F1DC4FBFDD552F939E66382EE8E1652",
+                    "skills_registry_sha256":  "5287BF60F8A96FD17E26108B362EB50AADFFD73C712BCB526C12B043C6AA5668"
+                },
+    "timestamps":  {
+                       "documented_utc":  "2026-09-18T19:42:33.9008325Z",
+                       "provider_completed_utc":  "2026-09-18T19:37:03.1301781Z"
+                   },
+    "reviewer":  {
+                     "provider":  "antigravity",
+                     "model_selection":  "provider-default",
+                     "explicit_model_flag":  false,
+                     "packet_id":  "PROXTEL-AREA-1.2-AUDITOR-FRESH-INDEPENDENT-GOVERNANCE-REVIEW-C37-V1",
+                     "review_nonce":  "PROXTEL-C37-AUDITOR-FRESH-INDEPENDENT-GOVERNANCE-REVIEW-V1",
+                     "input_mode":  "self-contained-evidence-prompt",
+                     "tools_required":  false,
+                     "read_file_required":  false,
+                     "mcp_required":  false,
+                     "web_required":  false
+                 },
+    "predecessor_review":  {
+                               "audit_id":  "PROXTEL-AREA-1.2-AUDITOR-INDEPENDENT-ADAPT-V1",
+                               "report_sha256":  "637CD84898E8C56F2255D2AEF7F52CA79A37280D9B86E63C2D225D91A5FD411C",
+                               "decision_path":  "decision.status",
+                               "decision":  "ADAPT",
+                               "historical_decision_binding":  false,
+                               "required_actions":  [
+                                                        "Update auditor-skill.json security behavior descriptions to reference candidate version 0.2.0, eliminating stale v0.1.0 references.",
+                                                        "Add proxtel-skill-auditor to skills-registry.json under the core area with initial state under-audit or candidate.",
+                                                        "Execute the governance lifecycle transition from candidate to approved in the registry only after metadata correction is verified.",
+                                                        "Conduct and document live smoke verification on the declared Claude and Antigravity provider adapters prior to multi-provider release."
+                                                    ]
+                           },
+    "gates":  {
+                  "identity":  {
+                                   "status":  "PASS"
+                               },
+                  "integrity":  {
+                                    "status":  "PASS"
+                                },
+                  "zero_extra_cost_route":  {
+                                                "status":  "PASS",
+                                                "report_sha256":  "71936DFED87A8DD2CFD669493B2FCEAC66956BC9293AE7EF2E58E7B527E52A59",
+                                                "extra_paid_api_route_required":  false,
+                                                "subscription_tier_machine_verified":  false,
+                                                "remaining_quota_amount_verified":  false
+                                            },
+                  "one_shot_execution":  {
+                                             "status":  "PASS",
+                                             "provider_process_starts":  1,
+                                             "model_calls_requested":  1,
+                                             "provider_exit_code":  0,
+                                             "automatic_retry_performed":  false
+                                         },
+                  "model_inference":  {
+                                          "status":  "PASS",
+                                          "proven":  true
+                                      },
+                  "structured_output":  {
+                                            "status":  "PASS",
+                                            "exact":  true
+                                        },
+                  "independent_review":  {
+                                             "status":  "PASS",
+                                             "audit_status":  "FINAL"
+                                         }
+              },
+    "required_actions":  {
+                             "action_0":  {
+                                              "source_text":  "Update auditor-skill.json security behavior descriptions to reference candidate version 0.2.0, eliminating stale v0.1.0 references.",
+                                              "status":  "SATISFIED"
+                                          },
+                             "action_1":  {
+                                              "source_text":  "Add proxtel-skill-auditor to skills-registry.json under the core area with initial state under-audit or candidate.",
+                                              "status":  "SATISFIED"
+                                          },
+                             "action_2":  {
+                                              "source_text":  "Execute the governance lifecycle transition from candidate to approved in the registry only after metadata correction is verified.",
+                                              "status_before_transition":  "DEFERRED",
+                                              "reviewer_transition_disposition":  "EXECUTE-TRANSITION",
+                                              "transition_applied_by_this_report":  false
+                                          },
+                             "action_3":  {
+                                              "source_text":  "Conduct and document live smoke verification on the declared Claude and Antigravity provider adapters prior to multi-provider release.",
+                                              "status":  "SATISFIED",
+                                              "claude_smoke_report_sha256":  "EF1FA10924FDF3A110176FCF444F2C975D80B8A51B84A17D4EEFAA93EFDB4E21",
+                                              "antigravity_smoke_report_sha256":  "6E8D6A56B408D73A6032C295E5CF2C8C91C491D73D76C32ED1409FAA9E42E112"
+                                          }
+                         },
+    "decision":  {
+                     "status":  "APPROVED",
+                     "audit_status":  "FINAL",
+                     "promotion_eligible":  true,
+                     "transition_disposition":  "EXECUTE-TRANSITION",
+                     "blocking_issue_count":  0,
+                     "summary":  "Candidate proxtel-skill-auditor v0.2.0 has successfully resolved all prior audit conditions: stale version references are eliminated (Action 0), the skill is registered under core in under-audit state (Action 1), and provider live smoke certifications for Claude and Antigravity are certified (Action 3). With 0 blocking issues remaining, the candidate is approved and eligible for the Action 2 governance transition to approved.",
+                     "blocking_issues":  "None. All remediation actions (Actions 0, 1, and 3) have been fully satisfied with zero remaining blockers.",
+                     "evidence_limitations":  "Review is based strictly on the provided self-contained evidence packet PROXTEL-AREA-1.2-AUDITOR-FRESH-INDEPENDENT-GOVERNANCE-REVIEW-C37-V1 without external inspection."
+                 },
+    "execution_evidence":  {
+                               "c40_attempt_lock_sha256":  "DC12B9D33AAE0EA6BB1E5870DBC943E0E56D7582ACCF8427866FA56F9ADC9AEF",
+                               "c37_execution_lock_sha256":  "65D78145CDE70A2BBCC88A3071B3C066EA2F0562D2A26FCBDF24A95F1899B54F",
+                               "agy_stdout_sha256":  "64FBFECC4DB0B9853147A09251CA3B9B4A8B2FA9CF37C9ADDCD35F20A56F267D",
+                               "agy_stderr_sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+                               "provider_result_sha256":  "61BAA9C5B5B945F973E4ECEDFFDF018802A53150D54E0D4E4CAF86564E5AC0CF",
+                               "zero_extra_cost_gate_sha256":  "71936DFED87A8DD2CFD669493B2FCEAC66956BC9293AE7EF2E58E7B527E52A59",
+                               "agy_executable_sha256":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+                               "settings_sha256":  "66DD78DD54FFA37D2E60E2B4F226A7EF47DFD87A5DDBA6D6AE0EED4F5AB1FB6F",
+                               "provider_process_starts":  1,
+                               "model_calls_requested":  1,
+                               "provider_exit_code":  0,
+                               "automatic_retry_performed":  false,
+                               "binary_drift_during_observed_execution_window":  false,
+                               "in_memory_process_image_hash_proven":  false
+                           },
+    "metrics":  {
+                    "duration_seconds":  27.9761187,
+                    "num_turns":  1,
+                    "usage":  {
+                                  "input_tokens":  18547,
+                                  "output_tokens":  10946,
+                                  "thinking_tokens":  10575,
+                                  "cache_read_tokens":  0,
+                                  "total_tokens":  29493,
+                                  "billing_total_interpretation":  "NOT-INFERRED"
+                              },
+                    "denied_actions":  0,
+                    "permission_denials":  0
+                },
+    "provenance":  {
+                       "c37_evidence_sha256":  "F30EE6D260849D274D123AB12856898573288EB170E134C5237C707AAC479420",
+                       "c37_prompt_sha256":  "DE43C7BF6B85DCCDF1BB0EEA3B35D8E63DD54A95B6CE2EE7330D3595214AE32C",
+                       "c37_schema_sha256":  "772FCB721CAA16E85E70B2E1065553256682EE82184F92768E3518A7070C4058",
+                       "c37_manifest_sha256":  "959B85F86565959BE51A346A05811302327490DC32976DA5E449BC48F12AB32C",
+                       "c37_run_once_sha256":  "6E8A3FE8821BE63EC3BE1338DFC4DCAC51DB4EBE17A6B8433D33B248EFD0B1D8",
+                       "c37_validator_sha256":  "9E29EDCD71FCDDE534950A2E235920D15CBE0B6B02D704EB2998E448494CEEAF",
+                       "auditor_skill_json_sha256":  "3D9835F89E3CFB791CBED6C6A83468B50F1DC4FBFDD552F939E66382EE8E1652",
+                       "skills_registry_sha256":  "5287BF60F8A96FD17E26108B362EB50AADFFD73C712BCB526C12B043C6AA5668",
+                       "antigravity_adapter_sha256":  "C597D6CE6BE196BA8DE26A6ECB6B41AD5ED79CCB5F60F79B8C66173744EB67CF"
+                   },
+    "governance_transition":  {
+                                  "eligible":  true,
+                                  "authorized_by_fresh_independent_review":  true,
+                                  "transition_applied":  false,
+                                  "current_lifecycle_state":  "candidate",
+                                  "current_registry_state":  "under-audit",
+                                  "required_next_action":  "Perform a separate exact-scope lifecycle/registry transition step and validate it before release."
+                              }
+}

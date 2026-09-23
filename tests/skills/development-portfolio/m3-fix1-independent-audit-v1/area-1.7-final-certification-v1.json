@@ -1,0 +1,120 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-certification",
+    "certification_id":  "PROXTEL-AREA-1.7-DEVELOPMENT-SKILL-PORTFOLIO-V1",
+    "area":  "1.7",
+    "status":  "CERTIFIED-CLOSED",
+    "component":  "development-skill-portfolio",
+    "version":  "1.0.0",
+    "portfolio":  {
+                      "skill_count":  3,
+                      "atomic_promotion":  true,
+                      "independent_audit_provider":  "antigravity",
+                      "final_decision":  "APPROVED",
+                      "promotion_eligible":  true,
+                      "blocking_issue_count":  0,
+                      "lifecycle_state":  "approved",
+                      "registry_state":  "approved",
+                      "distribution_source":  "canonical",
+                      "activation_source_of_truth":  "skills-registry+skill-source-resolver"
+                  },
+    "skills":  [
+                   {
+                       "id":  "auditor-web",
+                       "lifecycle_state":  "approved",
+                       "registry_state":  "approved",
+                       "distribution_source":  "canonical",
+                       "skill_md_sha256":  "56D08BE7E4F22EA409D6C01A59A95880F1EBE2E976A84C1B5849FD81ED971A53",
+                       "skill_json_sha256":  "975071070D0EB7AFF280407F71DA60BD8A54D078DE154B77DC0A86D790C41B08",
+                       "legacy_reference_sha256":  "4892236E063BE00BC343FEAE1C01AAE380F274EDD5028E4E662C777770E81623",
+                       "formal_audit_sha256":  "1A72100200468DDDF182FAC82BCF2B79FB2406CF807C3342457CFF2E1231A288"
+                   },
+                   {
+                       "id":  "estratega-seo",
+                       "lifecycle_state":  "approved",
+                       "registry_state":  "approved",
+                       "distribution_source":  "canonical",
+                       "skill_md_sha256":  "C2DF2EB50E48E7105330A8196ADFE9A6A8A2AC89A44909F1AB6BAF56D60E87FD",
+                       "skill_json_sha256":  "F041FA4A2262B96B79031E3A2B2847D36902348F354CD9B566F862EFE97C8CF2",
+                       "legacy_reference_sha256":  "DBE5A79AD9F0BFC00305D8364128EBC6297E97014C2BDEA91B518B72DEAAE256",
+                       "formal_audit_sha256":  "873280C5F14F2791493A2400BDCC7363B665F35586533BEF39918AF0589431A3"
+                   },
+                   {
+                       "id":  "maestro-frontend",
+                       "lifecycle_state":  "approved",
+                       "registry_state":  "approved",
+                       "distribution_source":  "canonical",
+                       "skill_md_sha256":  "2B649371E87777B239DBE116226AB277FD6681AA706BBD42BE5230C4C0797E77",
+                       "skill_json_sha256":  "C1EB4F040AE79CA5E9A979880DC9053DD7C13F8A1778534BF7382FD023225822",
+                       "legacy_reference_sha256":  "3D29603DCC294A11A84BC97AAE8201BD3DA1EF4012B6D376F4615BDE099C4337",
+                       "formal_audit_sha256":  "1428DF08FC7D0D0CF30E4D710D0D6C7023F2798C3BD6D616A279D248A5BC3C2A"
+                   }
+               ],
+    "evidence":  {
+                     "m2_report_sha256":  "DCA5E4E1C5EF301DB70E63DA5C9E1A14A4A66B024FDA30250E320AE828042EC8",
+                     "attempt_lock_sha256":  "2583BE943406EADABADF103562013C6531529D8639F9472DCC85F0AC38F60A7D",
+                     "review_prompt_sha256":  "D8C6719206F89D25772FA681D6AEF29B80BB01799052F2014C8901529DB77CD9",
+                     "review_schema_sha256":  "79EEBA08201BF37753250366D43E7B7F353E3410F264F6000E6FC8EAF3BE3949",
+                     "provider_result_sha256":  "A48F6E07F70B9FD8A6BC6573429B93692AF0E9469AFAD33D2505396F49918CD0",
+                     "independent_review_sha256":  "835A54ADC4109FC6D2EA443F3C7245F9BFA4308D6EA9631820B916E8BFD93647",
+                     "formal_audits":  [
+                                           {
+                                               "id":  "auditor-web",
+                                               "sha256":  "1A72100200468DDDF182FAC82BCF2B79FB2406CF807C3342457CFF2E1231A288"
+                                           },
+                                           {
+                                               "id":  "estratega-seo",
+                                               "sha256":  "873280C5F14F2791493A2400BDCC7363B665F35586533BEF39918AF0589431A3"
+                                           },
+                                           {
+                                               "id":  "maestro-frontend",
+                                               "sha256":  "1428DF08FC7D0D0CF30E4D710D0D6C7023F2798C3BD6D616A279D248A5BC3C2A"
+                                           }
+                                       ]
+                 },
+    "validation":  {
+                       "pre_review_official_contracts":  "8/8-each",
+                       "pre_review_candidate_semantics":  "78/78",
+                       "pre_review_distribution_bridge":  "10/10",
+                       "staged_promotion_contracts":  "8/8-each",
+                       "post_promotion_contracts":  "8/8-each",
+                       "post_promotion_resolver_activation":  "3/3",
+                       "git_diff_check":  "PASS"
+                   },
+    "immutable_foundations":  {
+                                  "area_1_6_final_certification_sha256":  "2DA1B852F7A47C865338D58CF43A9BBC14F0D8A60382E72FF47CDF0ACE62F697",
+                                  "capability_map_sha256":  "E9C2EA5FC04B0157BE27980AA2EE15B723473E30BFB77DBF17EE626F91500061",
+                                  "development_agent_sha256":  "75AD9B409C29C505DBFC1F19BD2CC34B4B04CBE9AB929100E0F11D63EDF4FCF3",
+                                  "development_workflow_sha256":  "0ABB0019815C0ACB653B94DA7E58DF03B59C2FBE1B702E75147F166A762AEC24",
+                                  "approved_skill_auditor_sha256":  "2D84AF8C8F7D073D762BCB85E9E286ACB3E5CADB15EB7D80041DB8D7983BB62B",
+                                  "area_1_2_final_certification_sha256":  "EA4B88A04860B0D410013EA48E89AC81DBE5B62339D7A165599B377DB9415E68",
+                                  "capability_map_modified":  false,
+                                  "development_agent_modified":  false,
+                                  "development_workflow_modified":  false
+                              },
+    "provider":  {
+                     "process_starts":  1,
+                     "model_calls_requested":  1,
+                     "model_inference_proven":  true,
+                     "automatic_retry_performed":  false,
+                     "model_selection":  "provider-default",
+                     "zero_extra_cost_route_classification":  "DEFAULT-ACCOUNT-BASED-AUTH",
+                     "subscription_tier_machine_verified":  false,
+                     "remaining_quota_machine_verified":  false,
+                     "usage":  {
+                                   "input_tokens":  20575,
+                                   "output_tokens":  15218,
+                                   "thinking_tokens":  14041,
+                                   "total_tokens":  35793
+                               }
+                 },
+    "governance":  {
+                       "legacy_baselines_preserved":  true,
+                       "settings_modified":  false,
+                       "commit_created":  false,
+                       "rerun_m3_allowed":  false,
+                       "area_1_7_additional_steps_required":  false
+                   },
+    "next_stage":  "AREA-1.8-DISCOVERY",
+    "certified_utc":  "2026-09-19T00:46:27.4278034Z"
+}

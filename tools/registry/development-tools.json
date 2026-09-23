@@ -1,0 +1,275 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-development-tool-registry",
+    "id":  "development-tools",
+    "area":  "development",
+    "status":  "certified",
+    "repository_local_tool_count":  5,
+    "tools":  [
+                  {
+                      "id":  "artisan-runner",
+                      "area":  "development",
+                      "status":  "candidate-staged",
+                      "purpose":  "Execute bounded Laravel Artisan commands with explicit project root, dry-run default and deterministic result capture.",
+                      "implementation":  {
+                                             "language":  "powershell-5.1",
+                                             "future_script":  "tools/scripts/development/artisan-runner.ps1",
+                                             "execution_mode":  "local-process"
+                                         },
+                      "capability_lanes":  [
+                                               "backend-laravel-php",
+                                               "api-integrations"
+                                           ],
+                      "required_commands":  [
+                                                "php"
+                                            ],
+                      "project_requirements":  [
+                                                   "artisan"
+                                               ],
+                      "safety":  {
+                                     "explicit_project_root_required":  true,
+                                     "dry_run_default":  true,
+                                     "production_execution_default":  false,
+                                     "destructive_commands_default":  false,
+                                     "automatic_dependency_installation":  false,
+                                     "automatic_git_operations":  false,
+                                     "secrets_in_output_forbidden":  true,
+                                     "timeout_required":  true
+                                 },
+                      "output_contract":  [
+                                              "tool_id",
+                                              "status",
+                                              "project_root",
+                                              "command",
+                                              "exit_code",
+                                              "stdout",
+                                              "stderr",
+                                              "duration_ms"
+                                          ]
+                  },
+                  {
+                      "id":  "db-inspector",
+                      "area":  "development",
+                      "status":  "candidate-staged",
+                      "purpose":  "Inspect MySQL-compatible database metadata and bounded read-only queries without requiring mysql.exe in PATH.",
+                      "implementation":  {
+                                             "language":  "powershell-5.1",
+                                             "helper_language":  "php-pdo",
+                                             "future_script":  "tools/scripts/development/db-inspector.ps1",
+                                             "helper":  "tools/scripts/development/helpers/db-inspector.php",
+                                             "execution_mode":  "local-read-only"
+                                         },
+                      "capability_lanes":  [
+                                               "database-mysql",
+                                               "backend-laravel-php"
+                                           ],
+                      "required_commands":  [
+                                                "php"
+                                            ],
+                      "optional_commands":  [
+                                                "mysql",
+                                                "mysqldump"
+                                            ],
+                      "connection_policy":  {
+                                                "explicit_configuration_required":  true,
+                                                "php_pdo_allowed":  true,
+                                                "mysql_cli_required":  false,
+                                                "password_echo_forbidden":  true,
+                                                "credential_persistence_forbidden":  true
+                                            },
+                      "query_policy":  {
+                                           "read_only":  true,
+                                           "allow_information_schema":  true,
+                                           "allow_select":  true,
+                                           "allow_show":  true,
+                                           "allow_explain":  true,
+                                           "allow_describe":  true,
+                                           "allow_insert":  false,
+                                           "allow_update":  false,
+                                           "allow_delete":  false,
+                                           "allow_drop":  false,
+                                           "allow_alter":  false,
+                                           "allow_create":  false,
+                                           "allow_truncate":  false,
+                                           "allow_grant":  false
+                                       },
+                      "safety":  {
+                                     "explicit_target_required":  true,
+                                     "automatic_schema_changes":  false,
+                                     "automatic_data_changes":  false,
+                                     "automatic_backup_restore":  false,
+                                     "automatic_dependency_installation":  false,
+                                     "secrets_in_output_forbidden":  true,
+                                     "timeout_required":  true
+                                 },
+                      "output_contract":  [
+                                              "tool_id",
+                                              "status",
+                                              "connection_metadata_redacted",
+                                              "operation",
+                                              "row_count",
+                                              "result",
+                                              "warnings",
+                                              "duration_ms"
+                                          ]
+                  },
+                  {
+                      "id":  "log-parser",
+                      "area":  "development",
+                      "status":  "candidate-staged",
+                      "purpose":  "Parse bounded local application logs without modifying, deleting or rotating source logs.",
+                      "implementation":  {
+                                             "language":  "powershell-5.1",
+                                             "future_script":  "tools/scripts/development/log-parser.ps1",
+                                             "execution_mode":  "local-read-only"
+                                         },
+                      "capability_lanes":  [
+                                               "backend-laravel-php",
+                                               "qa-browser",
+                                               "performance"
+                                           ],
+                      "required_commands":  [
+
+                                            ],
+                      "supported_sources":  [
+                                                "laravel-log",
+                                                "php-log",
+                                                "apache-log",
+                                                "generic-text-log"
+                                            ],
+                      "safety":  {
+                                     "source_log_mutation_forbidden":  true,
+                                     "source_log_deletion_forbidden":  true,
+                                     "source_log_rotation_forbidden":  true,
+                                     "bounded_read_required":  true,
+                                     "secret_redaction_required":  true,
+                                     "automatic_external_upload":  false
+                                 },
+                      "output_contract":  [
+                                              "tool_id",
+                                              "status",
+                                              "source",
+                                              "entries_scanned",
+                                              "matches",
+                                              "severity_summary",
+                                              "redactions",
+                                              "warnings"
+                                          ]
+                  },
+                  {
+                      "id":  "vite-builder",
+                      "area":  "development",
+                      "status":  "candidate-staged",
+                      "purpose":  "Perform bounded Vite build preflight and execute an existing project build without silently installing or updating packages.",
+                      "implementation":  {
+                                             "language":  "powershell-5.1",
+                                             "future_script":  "tools/scripts/development/vite-builder.ps1",
+                                             "execution_mode":  "local-process"
+                                         },
+                      "capability_lanes":  [
+                                               "frontend-web",
+                                               "performance"
+                                           ],
+                      "required_commands":  [
+                                                "node",
+                                                "npm"
+                                            ],
+                      "project_requirements":  [
+                                                   "package.json"
+                                               ],
+                      "safety":  {
+                                     "dry_run_default":  true,
+                                     "automatic_npm_install":  false,
+                                     "automatic_npm_update":  false,
+                                     "automatic_dependency_change":  false,
+                                     "package_lock_mutation_default":  false,
+                                     "automatic_git_operations":  false,
+                                     "explicit_project_root_required":  true,
+                                     "timeout_required":  true
+                                 },
+                      "output_contract":  [
+                                              "tool_id",
+                                              "status",
+                                              "project_root",
+                                              "package_manager",
+                                              "build_script",
+                                              "exit_code",
+                                              "stdout",
+                                              "stderr",
+                                              "duration_ms"
+                                          ]
+                  },
+                  {
+                      "id":  "api-tester",
+                      "area":  "development",
+                      "status":  "candidate-staged",
+                      "purpose":  "Execute bounded HTTP API tests using PowerShell-native networking with explicit target, no automatic retry and secret-safe output.",
+                      "implementation":  {
+                                             "language":  "powershell-5.1",
+                                             "future_script":  "tools/scripts/development/api-tester.ps1",
+                                             "execution_mode":  "local-network-client"
+                                         },
+                      "capability_lanes":  [
+                                               "api-integrations",
+                                               "qa-browser"
+                                           ],
+                      "required_commands":  [
+
+                                            ],
+                      "transport":  {
+                                        "primary":  "Invoke-WebRequest",
+                                        "curl_alias_dependency":  false,
+                                        "external_curl_required":  false
+                                    },
+                      "supported_methods":  [
+                                                "GET",
+                                                "HEAD",
+                                                "OPTIONS",
+                                                "POST",
+                                                "PUT",
+                                                "PATCH",
+                                                "DELETE"
+                                            ],
+                      "safety":  {
+                                     "dry_run_default":  true,
+                                     "explicit_url_required":  true,
+                                     "production_mutating_request_default":  false,
+                                     "authorization_header_redaction":  true,
+                                     "cookie_redaction":  true,
+                                     "secret_redaction_required":  true,
+                                     "automatic_retry":  false,
+                                     "timeout_required":  true,
+                                     "tls_verification_bypass_default":  false
+                                 },
+                      "output_contract":  [
+                                              "tool_id",
+                                              "status",
+                                              "method",
+                                              "url_redacted",
+                                              "http_status",
+                                              "headers_redacted",
+                                              "body_summary",
+                                              "duration_ms",
+                                              "warnings"
+                                          ]
+                  }
+              ],
+    "execution":  {
+                      "enabled":  false,
+                      "activation_requires_certification":  true,
+                      "provider_execution":  false,
+                      "model_execution":  false
+                  },
+    "policy":  {
+                   "local_first":  true,
+                   "no_silent_dependency_installation":  true,
+                   "no_silent_paid_api":  true,
+                   "no_unreviewed_external_code_execution":  true,
+                   "no_automatic_git_operations":  true,
+                   "explicit_project_root_required_when_applicable":  true,
+                   "secret_redaction_required":  true,
+                   "production_mutation_default":  false,
+                   "database_mutation_default":  false,
+                   "external_api_mutation_default":  false
+               }
+}

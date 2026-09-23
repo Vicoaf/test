@@ -1,0 +1,22 @@
+{
+    "packet_id":  "PROXTEL-AREA-1.2-AUDITOR-FRESH-INDEPENDENT-GOVERNANCE-REVIEW-C37-V1",
+    "subject_id":  "proxtel-skill-auditor",
+    "reviewer_provider":  "antigravity",
+    "review_nonce":  "PROXTEL-C37-AUDITOR-FRESH-INDEPENDENT-GOVERNANCE-REVIEW-V1",
+    "transport":  "agy-direct-sandbox-schema-file",
+    "evidence_sha256":  "F30EE6D260849D274D123AB12856898573288EB170E134C5237C707AAC479420",
+    "prompt_sha256":  "DE43C7BF6B85DCCDF1BB0EEA3B35D8E63DD54A95B6CE2EE7330D3595214AE32C",
+    "schema_sha256":  "772FCB721CAA16E85E70B2E1065553256682EE82184F92768E3518A7070C4058",
+    "cli_sha256":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+    "cli_version":  "1.2.6",
+    "zero_extra_cost_gate_sha256":  "71936DFED87A8DD2CFD669493B2FCEAC66956BC9293AE7EF2E58E7B527E52A59",
+    "model_selection":  "provider-default",
+    "explicit_model_flag":  false,
+    "automatic_retry":  false,
+    "dangerous_bypass":  false,
+    "sandbox":  true,
+    "add_dir":  false,
+    "permission_semantics_assumed":  false,
+    "consumed":  true,
+    "started_utc":  "2026-09-18T19:36:30.4097196Z"
+}

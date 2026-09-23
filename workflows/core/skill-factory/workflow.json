@@ -1,0 +1,236 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-workflow",
+    "id":  "skill-factory-operational",
+    "display_name":  "PROXTEL Skill Factory Operational Workflow",
+    "area":  "core",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "execution_mode":  "orchestration-only",
+    "purpose":  {
+                    "summary":  "Coordinate the complete PROXTEL Skill lifecycle from intake or external source through Creator, Auditor, evaluation, final decision and governed promotion.",
+                    "use_when":  [
+                                     "Creating a new reusable PROXTEL Skill.",
+                                     "Updating an existing PROXTEL Skill.",
+                                     "Evaluating an external Skill or skill-creator reference.",
+                                     "Promoting a Skill candidate through independent governance."
+                                 ],
+                    "do_not_use_when":  [
+                                            "The Mechanism Router determines the requirement is not a Skill.",
+                                            "A simple deterministic operation belongs in a Tool.",
+                                            "The task is only a project-specific configuration change."
+                                        ]
+                },
+    "inputs":  [
+                   "request",
+                   "source_type",
+                   "source_material_if_any",
+                   "project_or_area_context",
+                   "constraints",
+                   "provider_availability",
+                   "cost_constraints"
+               ],
+    "outputs":  [
+                    "mechanism_decision",
+                    "skill_candidate_or_routing_result",
+                    "audit_report",
+                    "final_decision",
+                    "approved_skill_or_required_actions",
+                    "evidence_bundle"
+                ],
+    "states":  [
+                   "intake",
+                   "routed-other-mechanism",
+                   "quarantine",
+                   "creator-design",
+                   "candidate",
+                   "under-audit",
+                   "adapt-required",
+                   "approved",
+                   "reference-only",
+                   "rejected",
+                   "closed"
+               ],
+    "steps":  [
+                  {
+                      "order":  1,
+                      "id":  "intake-and-classify-source",
+                      "owner":  "workflow",
+                      "action":  "Capture the requirement and classify source_type as internal-new, internal-update, or external-source.",
+                      "required_evidence":  [
+                                                "objective",
+                                                "scope context",
+                                                "constraints"
+                                            ],
+                      "next":  "mechanism-router"
+                  },
+                  {
+                      "order":  2,
+                      "id":  "mechanism-router",
+                      "owner":  "proxtel-skill-creator",
+                      "action":  "Decide whether Skill is the correct mechanism before building anything.",
+                      "required_evidence":  [
+                                                "mechanism decision",
+                                                "scope decision"
+                                            ],
+                      "next":  "external-source-quarantine-or-creator"
+                  },
+                  {
+                      "order":  3,
+                      "id":  "external-source-quarantine-or-creator",
+                      "owner":  "workflow",
+                      "action":  "If source is external, place it in quarantine and collect provenance/integrity/license metadata before any execution; otherwise continue directly to Creator.",
+                      "required_evidence":  [
+                                                "source classification",
+                                                "quarantine provenance when external"
+                                            ],
+                      "next":  "creator-build-candidate"
+                  },
+                  {
+                      "order":  4,
+                      "id":  "creator-build-candidate",
+                      "owner":  "proxtel-skill-creator",
+                      "action":  "Build or adapt a provider-neutral Skill candidate in staging. Creator output remains candidate and cannot self-approve.",
+                      "required_evidence":  [
+                                                "candidate contract",
+                                                "design intent",
+                                                "dependencies",
+                                                "security declaration",
+                                                "tests"
+                                            ],
+                      "next":  "deterministic-candidate-validation"
+                  },
+                  {
+                      "order":  5,
+                      "id":  "deterministic-candidate-validation",
+                      "owner":  "workflow",
+                      "action":  "Validate structure, schema, deterministic tests, secrets policy, links/resources and Git diff before Auditor handoff.",
+                      "required_evidence":  [
+                                                "schema result",
+                                                "test result",
+                                                "integrity result"
+                                            ],
+                      "next":  "auditor-static-review"
+                  },
+                  {
+                      "order":  6,
+                      "id":  "auditor-static-review",
+                      "owner":  "proxtel-skill-auditor",
+                      "action":  "Review provenance, integrity, licensing relevance, dependencies, security, semantics, portability and determine whether execution is safe/applicable.",
+                      "required_evidence":  [
+                                                "static audit",
+                                                "safe-to-execute disposition"
+                                            ],
+                      "next":  "sandbox-and-evaluation-if-applicable"
+                  },
+                  {
+                      "order":  7,
+                      "id":  "sandbox-and-evaluation-if-applicable",
+                      "owner":  "proxtel-skill-auditor",
+                      "action":  "If executable behavior exists and static review allows it, use sandbox before broader evaluation. If not applicable, record NOT-APPLICABLE with rationale.",
+                      "required_evidence":  [
+                                                "sandbox result or not-applicable rationale"
+                                            ],
+                      "next":  "baseline-evaluation-and-holdout"
+                  },
+                  {
+                      "order":  8,
+                      "id":  "baseline-evaluation-and-holdout",
+                      "owner":  "proxtel-skill-auditor",
+                      "action":  "Run applicable evaluation, baseline comparison and holdout when optimization history makes holdout material.",
+                      "required_evidence":  [
+                                                "evaluation result",
+                                                "baseline disposition",
+                                                "holdout disposition"
+                                            ],
+                      "next":  "independent-final-decision"
+                  },
+                  {
+                      "order":  9,
+                      "id":  "independent-final-decision",
+                      "owner":  "proxtel-skill-auditor",
+                      "action":  "Issue exactly one final decision: APPROVED, ADAPT, REFERENCE-ONLY or REJECTED.",
+                      "required_evidence":  [
+                                                "final decision",
+                                                "blocking issues",
+                                                "evidence limitations"
+                                            ],
+                      "next":  "decision-transition"
+                  },
+                  {
+                      "order":  10,
+                      "id":  "decision-transition",
+                      "owner":  "workflow",
+                      "action":  "APPROVED promotes through exact governance transition; ADAPT returns required actions to Creator as a new candidate cycle; REFERENCE-ONLY preserves reference status; REJECTED prevents promotion.",
+                      "required_evidence":  [
+                                                "decision transition",
+                                                "promotion evidence when approved"
+                                            ],
+                      "next":  "final-validation-and-close"
+                  },
+                  {
+                      "order":  11,
+                      "id":  "final-validation-and-close",
+                      "owner":  "workflow",
+                      "action":  "Re-run applicable regressions, validate immutable evidence, update governed state, and close the cycle without automatic live retry.",
+                      "required_evidence":  [
+                                                "post-transition regression",
+                                                "final hashes",
+                                                "closure status"
+                                            ],
+                      "next":  "closed"
+                  }
+              ],
+    "final_decisions":  [
+                            {
+                                "decision":  "APPROVED",
+                                "promotion_allowed":  true,
+                                "required_condition":  "Independent Auditor decision is FINAL, promotion_eligible=true, and blocking_issue_count=0."
+                            },
+                            {
+                                "decision":  "ADAPT",
+                                "promotion_allowed":  false,
+                                "required_condition":  "Return explicit required actions to Creator; produce a new candidate before another audit."
+                            },
+                            {
+                                "decision":  "REFERENCE-ONLY",
+                                "promotion_allowed":  false,
+                                "required_condition":  "Preserve as reference material; do not activate as trusted reusable Skill."
+                            },
+                            {
+                                "decision":  "REJECTED",
+                                "promotion_allowed":  false,
+                                "required_condition":  "Do not promote or execute as trusted Skill."
+                            }
+                        ],
+    "provider_routing":  {
+                             "canonical_rule":  "The task determines the provider; provider does not determine the workflow contract.",
+                             "preferred_patterns":  [
+                                                        "Claude designs or reasons about architecture when useful.",
+                                                        "Codex implements deterministic repository changes and tests when useful.",
+                                                        "Antigravity performs independent audit, browser or parallel verification when useful."
+                                                    ],
+                             "cross_validation":  "For important changes, prefer a reviewer different from the implementer.",
+                             "fallback":  "A fallback provider must preserve the same PROXTEL governance and safety rules.",
+                             "additional_cost_policy":  "Prefer capabilities already included in subscriptions; do not add paid API consumption silently."
+                         },
+    "safety":  {
+                   "creator_self_approval_forbidden":  true,
+                   "external_source_direct_execution_forbidden":  true,
+                   "production_first_forbidden":  true,
+                   "silent_dependency_install_forbidden":  true,
+                   "dangerous_permission_bypass_forbidden":  true,
+                   "live_retry_automatic_forbidden":  true,
+                   "secrets_in_artifacts_forbidden":  true,
+                   "static_pass_not_approved":  true,
+                   "behavioral_pass_not_approved":  true
+               },
+    "transactionality":  {
+                             "required":  true,
+                             "pattern":  "staging -\u003e validation -\u003e promote",
+                             "pre_promote_failure":  "rollback staging",
+                             "post_promote_failure":  "restore exact backups when mutation is reversible and preserve evidence",
+                             "partial_initialization_valid":  false
+                         }
+}

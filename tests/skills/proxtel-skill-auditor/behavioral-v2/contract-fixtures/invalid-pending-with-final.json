@@ -1,0 +1,24 @@
+{
+    "case_id":  "evidence-incomplete-candidate",
+    "auditor_should_engage":  true,
+    "primary_action":  "REQUEST-EVIDENCE",
+    "execute_allowed":  false,
+    "safe_to_execute":  "NOT-RUN",
+    "audit_status":  "PENDING",
+    "final_decision":  "APPROVED",
+    "evidence_required":  true,
+    "facts":  [
+                  "Candidate fixture was supplied."
+              ],
+    "inferences":  [
+
+                   ],
+    "unknowns":  [
+                     "Evaluation evidence is missing."
+                 ],
+    "required_actions":  [
+                             "Supply required evidence."
+                         ],
+    "token_measurement":  "not-measured",
+    "actual_tokens":  null
+}

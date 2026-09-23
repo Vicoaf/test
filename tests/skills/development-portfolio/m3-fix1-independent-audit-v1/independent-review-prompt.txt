@@ -1,0 +1,202 @@
+You are the independent final Skill Auditor for PROXTEL AI AGENCY Area 1.7.
+
+Review exactly three internal Development Skill candidates as one atomic portfolio:
+- auditor-web
+- estratega-seo
+- maestro-frontend
+
+Use only the evidence in this prompt. Do not use tools, files, browser, network, shell, MCP, external memory, or outside facts.
+The canonical contract summary is authoritative structured evidence; the markdown section is a compact semantic excerpt locked to the full file by SHA-256 and deterministic tests.
+Do not assume that deterministic tests alone imply approval.
+Be independent: do not approve merely because the portfolio was created by PROXTEL or because earlier stages passed.
+
+Allowed final decisions: APPROVED, ADAPT, REFERENCE-ONLY, REJECTED.
+There is no PENDING final state in this review.
+
+Atomic promotion rule:
+- portfolio_decision may be APPROVED only if all three Skill decisions are APPROVED;
+- promotion_eligible may be true only if all three are individually promotion-eligible;
+- portfolio blocking_issue_count must equal the total count of per-Skill blocking_issues;
+- APPROVED requires zero blocking issues and zero required_actions for that Skill;
+- portfolio APPROVED requires zero portfolio required_actions.
+
+Approval gate policy:
+- identity, integrity, static_security, dependencies, semantic, evaluation, baseline and independent_review must be PASS;
+- license may be PASS or NOT-APPLICABLE for these internal Skills;
+- safe_to_execute, sandbox and holdout may be PASS or NOT-APPLICABLE when justified by the supplied evidence;
+- WARN, FAIL or CRITICAL on any required gate blocks APPROVED.
+
+Review criteria:
+- clear trigger/use scope and bounded responsibility;
+- provider-neutral canonical design;
+- no silent dependency installation;
+- no secret exposure or privilege requirement;
+- safe filesystem/network/subprocess declarations;
+- alignment with PROXTEL local-first, no-auto-commit, no-auto-push and no-auto-deploy controls where relevant;
+- meaningful validation/completion criteria;
+- baseline continuity without silently preserving obsolete behavior;
+- no unjustified claims or guarantees.
+
+DETERMINISTIC EVIDENCE
+M2_REPORT_SHA256=DCA5E4E1C5EF301DB70E63DA5C9E1A14A4A66B024FDA30250E320AE828042EC8
+M2_STATUS=PASS
+FRESH_OFFICIAL_CONTRACTS=8/8 EACH
+FRESH_CANDIDATE_SEMANTICS=78/78
+FRESH_DISTRIBUTION_BRIDGE=10/10
+CANDIDATE_LIFECYCLE=candidate
+REGISTRY_STATE=under-audit
+CURRENT_DISTRIBUTION=legacy
+PROMOTION_ROUTING=approved->canonical;otherwise->legacy
+DIRECT_DEPENDENCIES=0 FOR ALL THREE
+DIRECT_SCRIPTS=0 FOR ALL THREE
+PRIVILEGE_REQUIRED=false FOR ALL THREE
+PROVIDER_SPECIFIC=false FOR ALL THREE
+LEGACY_BASELINE_FILES=BYTE-EXACT-PRESERVED
+AREA_1_6_FOUNDATION=IMMUTABLE-CERTIFIED
+APPROVED_SKILL_AUDITOR=IMMUTABLE-CERTIFIED
+
+============================================================
+SKILL=auditor-web
+CANONICAL_SKILL_MD_SHA256=56D08BE7E4F22EA409D6C01A59A95880F1EBE2E976A84C1B5849FD81ED971A53
+CANONICAL_SKILL_JSON_SHA256=D339FD77B2EC1B1F32DCCC9FDEAA43DC1911FE20AA9DCC78F0119DF4D4352C8F
+LEGACY_BASELINE_SHA256=4892236E063BE00BC343FEAE1C01AAE380F274EDD5028E4E662C777770E81623
+LEGACY_REFERENCE_PRESENT=YES
+MODERNIZATION_NOTES_PRESENT=YES
+============================================================
+
+CANONICAL MANUAL COMPACT EVIDENCE
+---
+name: auditor-web
+description: Audita sitios web y frontends en modo inicialmente read-only, con evidencia verificable sobre estructura, UX/UI, responsive, accesibilidad, rendimiento, SEO visible, navegador y mantenibilidad. Usala para diagnosticar antes de modificar.
+# PROXTEL Auditor Web
+## Mision
+Auditar primero y modificar despues.
+Esta Skill produce un diagnostico verificable del estado real de un sitio web o frontend antes de cualquier implementacion.
+## Flujo
+- no modificar archivos;
+- no instalar dependencias;
+- no hacer commit o push;
+## Descubrimiento obligatorio
+No asumir Laravel, Bootstrap, Vite, GSAP, Three.js, Playwright u otra tecnologia sin evidencia.
+## Areas de auditoria
+- responsive real;
+- accesibilidad;
+- rendimiento;
+- SEO visible;
+- exposicion frontend de secretos o datos sensibles.
+## Browser QA
+- usar Playwright si el proyecto ya lo soporta o si existe un entorno de prueba apropiado;
+## Accesibilidad
+## Rendimiento
+Cuando exista evidencia de Lighthouse/Core Web Vitals, considerar LCP, INP y CLS.
+## SEO visible
+## Evidencia
+## Severidad
+## Salida
+- alcance;
+## Transicion a implementacion
+2. seleccionar alcance;
+## Limites
+No sustituye una auditoria especializada completa de seguridad, accesibilidad, performance o SEO cuando el alcance requiera profundidad adicional.
+Nunca reproducir secretos encontrados.
+## Finalizacion
+La auditoria termina cuando el alcance disponible fue inspeccionado, los hallazgos estan sustentados, las limitaciones estan declaradas y no se realizaron cambios no autorizados.
+
+CANONICAL CONTRACT SUMMARY
+{"id":"auditor-web","display_name":"PROXTEL Auditor Web","area":"development","lifecycle":{"state":"candidate","version":"1.0.0"},"scope":{"level":"reusable-project","provider_specific":false,"providers":["claude","codex","antigravity"]},"purpose":{"summary":"Audita sitios web y frontends en modo inicialmente read-only, con evidencia verificable sobre estructura, UX/UI, responsive, accesibilidad, rendimiento, SEO visible, navegador y mantenibilidad. Usala para diagnosticar antes de modificar.","use_when":["The request matches the specialized responsibility of auditor-web.","The capability will be reused across more than one project."],"do_not_use_when":["A simple deterministic Tool is sufficient.","The task belongs primarily to another PROXTEL area.","The request would require exceeding project or user authorization."]},"capabilities":{"responsibilities":["Perform evidence-based read-only web/frontend audits by default.","Inspect structure, semantics, responsive behavior, UX/UI, accessibility, browser behavior, performance and visible SEO when applicable.","Separate verified facts, probable issues and recommendations.","Use browser or Playwright checks when available and authorized.","Produce prioritized findings and an actionable roadmap."],"limits":["Do not modify files during an audit-only request.","Do not execute destructive browser actions.","Do not invent metrics or line numbers.","Do not reproduce secrets.","Do not replace specialist security/accessibility/performance audits when deeper scope is required."],"completion_criteria":["Available scope inspected.","Findings contain evidence and priority.","Limitations are explicit.","Working tree is unchanged for audit-only tasks."]},"dependency_count":0,"resource_script_count":0,"resource_reference_count":2,"resource_asset_count":0,"security":{"network":{"level":"controlled","description":"Network use is limited to authorized project/browser/research activity relevant to the task."},"filesystem_write":{"level":"none","description":"Writes are limited to explicitly authorized implementation scope; audit-only work remains read-only."},"filesystem_delete":{"level":"none","description":"Deletion is never implicit and must remain within authorized reversible project scope."},"subprocess":{"level":"read-only","description":"CLI execution is limited to project inspection, tests, lint, build or authorized local implementation."},"environment_access":{"level":"read-only","description":"Environment/config may be inspected when necessary without exposing secrets."},"secret_access":{"level":"none","description":"The Skill must not request, reveal or persist secrets."},"privilege_required":false},"testing":{"required":true,"trigger_tests":true,"task_evals":true,"baseline_comparison":true}}
+
+============================================================
+SKILL=estratega-seo
+CANONICAL_SKILL_MD_SHA256=C2DF2EB50E48E7105330A8196ADFE9A6A8A2AC89A44909F1AB6BAF56D60E87FD
+CANONICAL_SKILL_JSON_SHA256=86DEFF24FF3F4A3132B9F05460AB507FB36B1E6579B282BB39BB1B5B923984FF
+LEGACY_BASELINE_SHA256=DBE5A79AD9F0BFC00305D8364128EBC6297E97014C2BDEA91B518B72DEAAE256
+LEGACY_REFERENCE_PRESENT=YES
+MODERNIZATION_NOTES_PRESENT=YES
+============================================================
+
+CANONICAL MANUAL COMPACT EVIDENCE
+---
+name: estratega-seo
+description: Audita, disena e implementa SEO tecnico y on-page con evidencia, sin inventar datos comerciales ni prometer rankings. Usala para indexabilidad, metadata, canonical, sitemap, Schema.org, Open Graph y calidad SEO.
+# PROXTEL Estratega SEO
+## Mision
+Mejorar la comprension, indexabilidad y calidad tecnica de sitios web para buscadores sin degradar producto, branding, contenido, accesibilidad o rendimiento.
+## Flujo
+## Descubrimiento obligatorio
+## SEO tecnico
+- assets que afecten crawl/performance.
+## SEO on-page
+## Structured data
+Validar sintaxis y coherencia del structured data cuando se implemente.
+## Rendimiento relacionado con SEO
+Cuando sea material, integrar evidencia de Lighthouse/Core Web Vitals.
+## Implementacion
+- no instalar dependencias silenciosamente;
+## Analitica
+## Ranking
+## Validacion
+- validar structured data;
+## Limites
+## Finalizacion
+La tarea queda completa cuando el diagnostico o implementacion esta sustentado, las validaciones aplicables fueron ejecutadas y no se hicieron afirmaciones de ranking no demostrables.
+
+CANONICAL CONTRACT SUMMARY
+{"id":"estratega-seo","display_name":"PROXTEL Estratega SEO","area":"development","lifecycle":{"state":"candidate","version":"1.0.0"},"scope":{"level":"reusable-project","provider_specific":false,"providers":["claude","codex","antigravity"]},"purpose":{"summary":"Audita, disena e implementa SEO tecnico y on-page con evidencia, sin inventar datos comerciales ni prometer rankings. Usala para indexabilidad, metadata, canonical, sitemap, Schema.org, Open Graph y calidad SEO.","use_when":["The request matches the specialized responsibility of estratega-seo.","The capability will be reused across more than one project."],"do_not_use_when":["A simple deterministic Tool is sufficient.","The task belongs primarily to another PROXTEL area.","The request would require exceeding project or user authorization."]},"capabilities":{"responsibilities":["Audit technical and on-page SEO with evidence.","Design SEO changes that preserve product, content and branding.","Implement authorized metadata, canonical, robots, sitemap, structured data and related changes.","Validate structured data and rendered metadata when applicable.","Distinguish implementation facts from hypotheses and future outcomes."],"limits":["Do not promise rankings or traffic.","Do not invent business data, profiles, URLs or tracking IDs.","Do not silently rewrite approved commercial content.","Do not install dependencies silently.","Do not perform irreversible external actions without authorization."],"completion_criteria":["SEO diagnosis or requested implementation is complete.","Applicable metadata/crawl/structured-data checks pass.","Unverified items are declared.","No unsupported ranking claims are made."]},"dependency_count":0,"resource_script_count":0,"resource_reference_count":2,"resource_asset_count":0,"security":{"network":{"level":"controlled","description":"Network use is limited to authorized project/browser/research activity relevant to the task."},"filesystem_write":{"level":"controlled","description":"Writes are limited to explicitly authorized implementation scope; audit-only work remains read-only."},"filesystem_delete":{"level":"none","description":"Deletion is never implicit and must remain within authorized reversible project scope."},"subprocess":{"level":"controlled","description":"CLI execution is limited to project inspection, tests, lint, build or authorized local implementation."},"environment_access":{"level":"read-only","description":"Environment/config may be inspected when necessary without exposing secrets."},"secret_access":{"level":"none","description":"The Skill must not request, reveal or persist secrets."},"privilege_required":false},"testing":{"required":true,"trigger_tests":true,"task_evals":true,"baseline_comparison":true}}
+
+============================================================
+SKILL=maestro-frontend
+CANONICAL_SKILL_MD_SHA256=2B649371E87777B239DBE116226AB277FD6681AA706BBD42BE5230C4C0797E77
+CANONICAL_SKILL_JSON_SHA256=E0F65913467D80789F7482CDA0C7B61BFDF4B2C474C6E6A567A5A69D1F3885A4
+LEGACY_BASELINE_SHA256=3D29603DCC294A11A84BC97AAE8201BD3DA1EF4012B6D376F4615BDE099C4337
+LEGACY_REFERENCE_PRESENT=YES
+MODERNIZATION_NOTES_PRESENT=YES
+============================================================
+
+CANONICAL MANUAL COMPACT EVIDENCE
+---
+name: maestro-frontend
+description: Disena, implementa y refactoriza frontend profesional respetando branding, contenido, stack y arquitectura existentes. Usala para HTML, CSS, JavaScript, Blade, Bootstrap, Vite, responsive, accesibilidad, motion y 3D justificado.
+# PROXTEL Maestro Frontend
+## Mision
+Crear y mejorar interfaces profesionales, responsivas, accesibles, mantenibles y visualmente coherentes con cada marca.
+No imponer una estetica generica a todos los clientes.
+## Flujo
+## Proyectos existentes
+4. revisar JavaScript y dependencias;
+5. revisar responsive actual;
+7. limitar el cambio al alcance pedido.
+## Proyectos nuevos
+- responsive;
+- validacion.
+## Branding y contenido
+## HTML
+## CSS
+## JavaScript
+## Bootstrap / Blade / Vite
+## Responsive
+## Accesibilidad
+## Motion
+Usar Three.js/WebGL solo cuando el valor visual compense bundle, GPU, bateria, mobile, accesibilidad y Core Web Vitals.
+## Performance
+Cuidar imagenes, fuentes, CSS, JavaScript, dependencias, renderizado y assets.
+Cuando sea material, validar Lighthouse/Core Web Vitals incluyendo LCP, INP y CLS.
+## Dependencias
+No instalar dependencias de produccion silenciosamente.
+## Validacion
+- revisar archivos;
+- realizar browser/responsive checks cuando aplique;
+- revisar accesibilidad/performance proporcionalmente;
+- reportar validaciones no ejecutadas.
+## Git y produccion
+No commit automatico.
+No push automatico.
+No deploy automatico.
+No operaciones destructivas de produccion.
+## Finalizacion
+La entrega queda lista cuando el alcance fue implementado, las validaciones aplicables pasan o estan declaradas, el contenido/branding autorizado se conserva y no quedan errores introducidos conocidos.
+
+CANONICAL CONTRACT SUMMARY
+{"id":"maestro-frontend","display_name":"PROXTEL Maestro Frontend","area":"development","lifecycle":{"state":"candidate","version":"1.0.0"},"scope":{"level":"reusable-project","provider_specific":false,"providers":["claude","codex","antigravity"]},"purpose":{"summary":"Disena, implementa y refactoriza frontend profesional respetando branding, contenido, stack y arquitectura existentes. Usala para HTML, CSS, JavaScript, Blade, Bootstrap, Vite, responsive, accesibilidad, motion y 3D justificado.","use_when":["The request matches the specialized responsibility of maestro-frontend.","The capability will be reused across more than one project."],"do_not_use_when":["A simple deterministic Tool is sufficient.","The task belongs primarily to another PROXTEL area.","The request would require exceeding project or user authorization."]},"capabilities":{"responsibilities":["Design and implement professional frontend within the existing stack and branding.","Preserve approved content and real project assets.","Build responsive, accessible and maintainable interfaces.","Use animation and 3D only when justified by product or branding value.","Run applicable tests, lint, build and browser validation."],"limits":["Do not impose a generic visual style.","Do not replace real assets with placeholders silently.","Do not install production dependencies silently.","Do not commit, push or deploy automatically.","Do not perform destructive production operations."],"completion_criteria":["Requested UI is implemented within scope.","Branding/content constraints are preserved.","Applicable tests/build/browser checks pass or are explicitly reported.","No known introduced errors remain unresolved."]},"dependency_count":0,"resource_script_count":0,"resource_reference_count":2,"resource_asset_count":0,"security":{"network":{"level":"controlled","description":"Network use is limited to authorized project/browser/research activity relevant to the task."},"filesystem_write":{"level":"controlled","description":"Writes are limited to explicitly authorized implementation scope; audit-only work remains read-only."},"filesystem_delete":{"level":"controlled","description":"Deletion is never implicit and must remain within authorized reversible project scope."},"subprocess":{"level":"controlled","description":"CLI execution is limited to project inspection, tests, lint, build or authorized local implementation."},"environment_access":{"level":"read-only","description":"Environment/config may be inspected when necessary without exposing secrets."},"secret_access":{"level":"none","description":"The Skill must not request, reveal or persist secrets."},"privilege_required":false},"testing":{"required":true,"trigger_tests":true,"task_evals":true,"baseline_comparison":true}}
+
+Return only a JSON object that satisfies the supplied JSON schema.
+Set review_id exactly to PROXTEL-AREA-1.7-M3-FIX1-DEVELOPMENT-PORTFOLIO-INDEPENDENT-AUDIT-V1.

@@ -1,0 +1,48 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-provider-adapter",
+    "id":  "antigravity",
+    "provider":  "antigravity",
+    "lifecycle":  {
+                      "state":  "candidate",
+                      "version":  "0.1.0",
+                      "execution_status":  "not-executed"
+                  },
+    "prompt_transport":  {
+                             "non_interactive":  true,
+                             "mechanism":  "--print",
+                             "positional_prompt":  true,
+                             "stdin_prompt":  false
+                         },
+    "structured_output":  {
+                              "supported":  true,
+                              "format_mechanism":  "--output-format json",
+                              "schema_mechanism":  "--json-schema",
+                              "schema_transport":  "inline-or-file",
+                              "final_output_capture":  "stdout"
+                          },
+    "execution_context":  {
+                              "model_selection":  "--model",
+                              "working_directory":  "process-cwd with optional --add-dir",
+                              "sandbox":  "--sandbox",
+                              "agent_selection":  "--agent",
+                              "mode_selection":  "--mode"
+                          },
+    "safety":  {
+                   "permission_control":  "normal permission flow",
+                   "dangerous_bypass_flag":  "--dangerously-skip-permissions",
+                   "dangerous_bypass_forbidden":  true,
+                   "benchmark_default":  "sandbox enabled; dangerous permission bypass forbidden",
+                   "production_first_test_allowed":  false
+               },
+    "evidence":  [
+                     {
+                         "path":  "tests/skills/proxtel-skill-auditor/provider-preflight/preflight.json",
+                         "claim":  "Observed agy version, command source and help output."
+                     },
+                     {
+                         "path":  "tests/skills/proxtel-skill-auditor/provider-preflight/adapter-capabilities.json",
+                         "claim":  "Observed non-interactive, structured-output, sandbox, mode, agent and model capabilities."
+                     }
+                 ]
+}

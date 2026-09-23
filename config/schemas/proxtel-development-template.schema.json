@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://proxtel.local/schemas/proxtel-development-template.schema.json",
+  "title": "PROXTEL Development Template Contract",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "kind",
+    "id",
+    "area",
+    "status",
+    "purpose",
+    "required_skill_bundle",
+    "primary_lanes",
+    "compatible_tools",
+    "scaffold_policy"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "kind": {
+      "const": "proxtel-development-template"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "area": {
+      "const": "development"
+    },
+    "status": {
+      "enum": [
+        "design-validated",
+        "candidate-staged",
+        "certified"
+      ]
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "required_skill_bundle": {
+      "type": "string",
+      "minLength": 1
+    },
+    "primary_lanes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "compatible_tools": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "scaffold_policy": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    }
+  },
+  "additionalProperties": false
+}

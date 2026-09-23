@@ -1,0 +1,130 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-development-capability-map",
+    "id":  "development-capability-foundation",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "lanes":  [
+                  {
+                      "id":  "architecture",
+                      "description":  "Architecture, decomposition, technical decisions and risk analysis.",
+                      "preferred_provider":  "claude",
+                      "fallback":  [
+                                       "codex",
+                                       "antigravity"
+                                   ]
+                  },
+                  {
+                      "id":  "backend-laravel-php",
+                      "description":  "Laravel, PHP, application services, validation, queues, auth and backend implementation.",
+                      "preferred_provider":  "codex",
+                      "fallback":  [
+                                       "claude"
+                                   ]
+                  },
+                  {
+                      "id":  "frontend-web",
+                      "description":  "HTML, CSS, JavaScript, Blade, Bootstrap, Vite, responsive UI, motion and 3D when justified.",
+                      "preferred_provider":  "codex",
+                      "fallback":  [
+                                       "claude",
+                                       "antigravity"
+                                   ]
+                  },
+                  {
+                      "id":  "database-mysql",
+                      "description":  "Schema, migrations, indexes, query review, seeders and sanitized fixtures.",
+                      "preferred_provider":  "codex",
+                      "fallback":  [
+                                       "claude"
+                                   ]
+                  },
+                  {
+                      "id":  "api-integrations",
+                      "description":  "REST/webhooks/integrations with contract validation and failure handling.",
+                      "preferred_provider":  "codex",
+                      "fallback":  [
+                                       "claude"
+                                   ]
+                  },
+                  {
+                      "id":  "qa-browser",
+                      "description":  "Functional tests, Playwright/browser checks, visual review and independent QA.",
+                      "preferred_provider":  "antigravity",
+                      "fallback":  [
+                                       "codex",
+                                       "claude"
+                                   ]
+                  },
+                  {
+                      "id":  "accessibility",
+                      "description":  "WCAG-oriented automated and manual checks.",
+                      "preferred_provider":  "antigravity",
+                      "fallback":  [
+                                       "codex"
+                                   ]
+                  },
+                  {
+                      "id":  "performance",
+                      "description":  "Build health, Lighthouse/Core Web Vitals and performance regression.",
+                      "preferred_provider":  "antigravity",
+                      "fallback":  [
+                                       "codex"
+                                   ]
+                  },
+                  {
+                      "id":  "seo-web-quality",
+                      "description":  "Technical/on-page SEO, crawlability, metadata, structured data and web quality.",
+                      "preferred_provider":  "antigravity",
+                      "fallback":  [
+                                       "claude",
+                                       "codex"
+                                   ]
+                  },
+                  {
+                      "id":  "security",
+                      "description":  "Secrets, input validation, dependency risk, auth boundaries and safe deployment review.",
+                      "preferred_provider":  "claude",
+                      "fallback":  [
+                                       "antigravity",
+                                       "codex"
+                                   ]
+                  },
+                  {
+                      "id":  "documentation-release",
+                      "description":  "Change summary, runbooks, validation evidence and release readiness.",
+                      "preferred_provider":  "claude",
+                      "fallback":  [
+                                       "codex"
+                                   ]
+                  }
+              ],
+    "legacy_baseline_skills":  [
+                                   {
+                                       "id":  "auditor-web",
+                                       "state":  "baseline-existing",
+                                       "trusted_activation":  false,
+                                       "sha256":  "4892236E063BE00BC343FEAE1C01AAE380F274EDD5028E4E662C777770E81623",
+                                       "note":  "Useful audit baseline. Requires Skill Factory modernization/audit before canonical activation."
+                                   },
+                                   {
+                                       "id":  "estratega-seo",
+                                       "state":  "baseline-existing",
+                                       "trusted_activation":  false,
+                                       "sha256":  "DBE5A79AD9F0BFC00305D8364128EBC6297E97014C2BDEA91B518B72DEAAE256",
+                                       "note":  "Useful SEO baseline. Requires Skill Factory modernization/audit before canonical activation."
+                                   },
+                                   {
+                                       "id":  "maestro-frontend",
+                                       "state":  "baseline-existing",
+                                       "trusted_activation":  false,
+                                       "sha256":  "3D29603DCC294A11A84BC97AAE8201BD3DA1EF4012B6D376F4615BDE099C4337",
+                                       "note":  "Useful frontend baseline. Requires Skill Factory modernization/audit before canonical activation."
+                                   }
+                               ],
+    "canonical_active_development_skills":  [
+
+                                            ],
+    "next_portfolio_stage":  "AREA-1.7-DEVELOPMENT-SKILL-PORTFOLIO-MODERNIZATION"
+}

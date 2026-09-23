@@ -1,0 +1,37 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-development-template",
+    "id":  "crm",
+    "area":  "development",
+    "status":  "candidate-staged",
+    "purpose":  "Reusable white-label CRM project foundation without customer-specific credentials or integrations.",
+    "required_skill_bundle":  "crm",
+    "primary_lanes":  [
+                          "architecture",
+                          "backend-laravel-php",
+                          "frontend-web",
+                          "database-mysql",
+                          "api-integrations",
+                          "qa-browser",
+                          "accessibility",
+                          "performance",
+                          "seo-web-quality",
+                          "security",
+                          "documentation-release"
+                      ],
+    "compatible_tools":  [
+                             "artisan-runner",
+                             "db-inspector",
+                             "log-parser",
+                             "vite-builder",
+                             "api-tester"
+                         ],
+    "scaffold_policy":  {
+                            "white_label_ready":  true,
+                            "customer_specific_data_allowed":  false,
+                            "secrets_allowed":  false,
+                            "live_crm_endpoint_allowed":  false,
+                            "database_mutation_during_copy":  false,
+                            "deployment_during_copy":  false
+                        }
+}

@@ -1,0 +1,14 @@
+PROXTEL AI AGENCY - ANTIGRAVITY 1.2.6 DECLARED PROVIDER ADAPTER LIVE SMOKE.
+This is only a structured-output transport smoke test.
+Do not use tools, files, shell commands, web access, plugins, connectors, MCP, or external state.
+Do not ask for permissions.
+Do not explain reasoning.
+Return only an object matching the supplied JSON schema.
+Use these exact values:
+smoke_kind=proxtel-provider-adapter-live-smoke
+provider=antigravity
+adapter_id=antigravity
+transport=agy-direct-sandbox-schema-file
+result=PASS
+nonce=PROXTEL-C31-ANTIGRAVITY-1.2.6-ADAPTER-SMOKE-V1
+message=antigravity 1.2.6 structured-output transport operational

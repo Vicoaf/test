@@ -1,0 +1,64 @@
+{
+    "schema_version":  "1.0",
+    "packet_id":  "PROXTEL-AREA-1.2-CLAUDE-NATIVE-ADAPTER-LIVE-SMOKE-C18-V1",
+    "purpose":  "Fresh one-shot Claude native provider-adapter live smoke",
+    "provider":  "claude",
+    "adapter_id":  "claude",
+    "transport":  "native-executable-direct",
+    "lifecycle":  "fresh-unconsumed",
+    "model_selection":  "provider-default",
+    "explicit_model_flag":  false,
+    "one_model_call":  true,
+    "automatic_retry":  false,
+    "dangerous_bypass":  false,
+    "isolated_temp_workdir":  true,
+    "repository_as_provider_workdir":  false,
+    "structured_output":  true,
+    "account_route":  "claude.ai-pro",
+    "adapter_binding":  "hash-lock-and-parse-current-adapter-at-runtime",
+    "native_source":  {
+                          "path":  "C:\\Users\\MSI\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe",
+                          "sha256":  "1E472BCFD49449E73EF76698C87F6583055AEB88DC41CA190A9C12C6791B5EEA",
+                          "version":  "2.1.268 (Claude Code)",
+                          "authenticode":  "Valid",
+                          "signer_contains":  "Anthropic, PBC"
+                      },
+    "declared_adapter_contract":  {
+                                      "prompt_mechanism":  "--print",
+                                      "format_mechanism":  "--output-format json",
+                                      "schema_mechanism":  "--json-schema",
+                                      "format_argv":  [
+                                                          "--output-format",
+                                                          "json"
+                                                      ]
+                                  },
+    "declared_argv_shape":  [
+                                "--print",
+                                "\u003cPROMPT\u003e",
+                                "--output-format",
+                                "json",
+                                "--json-schema",
+                                "\u003cSCHEMA_JSON\u003e"
+                            ],
+    "expected_semantics":  {
+                               "smoke_kind":  "proxtel-provider-adapter-live-smoke",
+                               "provider":  "claude",
+                               "adapter_id":  "claude",
+                               "transport":  "native-executable-direct",
+                               "result":  "PASS",
+                               "nonce":  "PROXTEL-C18-NATIVE-CLAUDE-ADAPTER-SMOKE-V1",
+                               "message":  "native structured-output transport operational"
+                           },
+    "hashes":  {
+                   "prompt_sha256":  "DD7FFAC27C453F8597B6DAB5BBA2B71BE95C054B332EB39B90AF80FD82E76D1A",
+                   "schema_sha256":  "3415BC4426C028D941EDB3623E4A67E352C94B51DC2B972BEE52CB10A04ABBEA",
+                   "adapter_sha256":  "01219D3DE55632374E152DE0038544E9E9395DA1C952CBBE7253E8A201230A43",
+                   "adapter_snapshot_sha256":  "01219D3DE55632374E152DE0038544E9E9395DA1C952CBBE7253E8A201230A43",
+                   "skill_sha256":  "3D9835F89E3CFB791CBED6C6A83468B50F1DC4FBFDD552F939E66382EE8E1652",
+                   "registry_sha256":  "5287BF60F8A96FD17E26108B362EB50AADFFD73C712BCB526C12B043C6AA5668",
+                   "formal_adapt_report_sha256":  "637CD84898E8C56F2255D2AEF7F52CA79A37280D9B86E63C2D225D91A5FD411C",
+                   "historical_c9_fix2_execution_lock_sha256":  "E1E525F15FF8B5311F01DABCAA4B3D2775D4E48B2A2AE4E0044D8FCDCB454D4A",
+                   "historical_c9_fix2_stdout_sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+                   "historical_c9_fix2_stderr_sha256":  "900738B9CEB89FDE6AFCF656AB7937BCDB4DD092A8AA836FA5698AF4EACF4594"
+               }
+}

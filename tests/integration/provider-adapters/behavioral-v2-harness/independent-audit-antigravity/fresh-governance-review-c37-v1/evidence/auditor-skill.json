@@ -1,0 +1,147 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill",
+    "id":  "proxtel-skill-auditor",
+    "display_name":  "PROXTEL Skill Auditor",
+    "area":  "core",
+    "lifecycle":  {
+                      "state":  "candidate",
+                      "version":  "0.2.0"
+                  },
+    "scope":  {
+                  "level":  "core",
+                  "provider_specific":  false,
+                  "providers":  [
+                                    "claude",
+                                    "codex",
+                                    "antigravity"
+                                ]
+              },
+    "purpose":  {
+                    "summary":  "Audit internal or external Skills using evidence-driven gates before a final decision.",
+                    "use_when":  [
+                                     "Auditing a new internal Skill.",
+                                     "Auditing an external Skill in quarantine.",
+                                     "Reviewing a candidate Skill update.",
+                                     "Producing evidence for APPROVED, ADAPT, REFERENCE-ONLY or REJECTED."
+                                 ],
+                    "do_not_use_when":  [
+                                            "Creating a new Skill from scratch.",
+                                            "Silently modifying the audited Skill.",
+                                            "Executing unaudited upstream code.",
+                                            "Testing directly in production."
+                                        ]
+                },
+    "capabilities":  {
+                         "responsibilities":  [
+                                                  "Audit identity and provenance.",
+                                                  "Verify integrity and licensing.",
+                                                  "Assess static security and dependencies.",
+                                                  "Assess semantic quality and portability.",
+                                                  "Control safe-to-execute decisions.",
+                                                  "Evaluate candidate Skills against applicable evidence and baselines.",
+                                                  "Produce an evidence-backed final decision."
+                                              ],
+                         "limits":  [
+                                        "Does not self-approve created Skills without independent evidence.",
+                                        "Does not execute unaudited external code.",
+                                        "Does not install dependencies silently.",
+                                        "Does not use production as the first test environment."
+                                    ],
+                         "completion_criteria":  [
+                                                     "Applicable audit stages are explicitly classified.",
+                                                     "Material findings contain evidence.",
+                                                     "Unknowns remain explicitly identified.",
+                                                     "Final decision uses only allowed decision states."
+                                                 ]
+                     },
+    "dependencies":  [
+
+                     ],
+    "resources":  {
+                      "skill_md":  "SKILL.md",
+                      "scripts":  [
+
+                                  ],
+                      "references":  [
+                                         {
+                                             "path":  "references/audit-methodology.md",
+                                             "purpose":  "Detailed methodology and gate interpretation."
+                                         }
+                                     ],
+                      "assets":  [
+
+                                 ]
+                  },
+    "security":  {
+                     "network":  {
+                                     "level":  "none",
+                                     "description":  "No direct executable behavior in candidate v0.2.0."
+                                 },
+                     "filesystem_write":  {
+                                              "level":  "none",
+                                              "description":  "No direct executable behavior in candidate v0.2.0."
+                                          },
+                     "filesystem_delete":  {
+                                               "level":  "none",
+                                               "description":  "No direct executable behavior in candidate v0.2.0."
+                                           },
+                     "subprocess":  {
+                                        "level":  "none",
+                                        "description":  "No direct executable behavior in candidate v0.2.0."
+                                    },
+                     "environment_access":  {
+                                                "level":  "none",
+                                                "description":  "No direct executable behavior in candidate v0.2.0."
+                                            },
+                     "secret_access":  {
+                                           "level":  "none",
+                                           "description":  "No direct executable behavior in candidate v0.2.0."
+                                       },
+                     "privilege_required":  false
+                 },
+    "compatibility":  {
+                          "platforms":  [
+                                            "windows",
+                                            "macos",
+                                            "linux"
+                                        ],
+                          "providers":  [
+                                            "claude",
+                                            "codex",
+                                            "antigravity"
+                                        ]
+                      },
+    "testing":  {
+                    "required":  true,
+                    "trigger_tests":  true,
+                    "task_evals":  true,
+                    "baseline_comparison":  true
+                },
+    "provenance":  {
+                       "origin_type":  "proxtel-internal",
+                       "sources":  [
+                                       {
+                                           "type":  "internal",
+                                           "name":  "PROXTEL Skill Factory specifications",
+                                           "url":  null,
+                                           "commit":  "3364e2c",
+                                           "license":  null
+                                       },
+                                       {
+                                           "type":  "github",
+                                           "name":  "Anthropic skill-creator reference",
+                                           "url":  "https://github.com/anthropics/skills",
+                                           "commit":  "34040c9c568585f6929bedeaad110ad08f079624",
+                                           "license":  "Apache-2.0"
+                                       },
+                                       {
+                                           "type":  "github",
+                                           "name":  "OpenAI skill-creator legacy reference",
+                                           "url":  "https://github.com/openai/skills",
+                                           "commit":  "49f948faa9258a0c61caceaf225e179651397431",
+                                           "license":  "Apache-2.0"
+                                       }
+                                   ]
+                   }
+}

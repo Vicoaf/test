@@ -1,0 +1,19 @@
+{
+    "packet_id":  "PROXTEL-AREA-1.2-ANTIGRAVITY-1.2.6-DECLARED-ADAPTER-LIVE-SMOKE-C31-V1",
+    "provider":  "antigravity",
+    "adapter_id":  "antigravity",
+    "transport":  "agy-direct-sandbox-schema-file",
+    "adapter_sha256":  "C597D6CE6BE196BA8DE26A6ECB6B41AD5ED79CCB5F60F79B8C66173744EB67CF",
+    "cli_sha256":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+    "cli_observed_version":  "1.2.6",
+    "cli_source_last_write_utc_prestart":  "2026-09-18T18:20:25.3086656Z",
+    "model_selection":  "provider-default",
+    "explicit_model_flag":  false,
+    "automatic_retry":  false,
+    "dangerous_bypass":  false,
+    "sandbox":  true,
+    "add_dir":  false,
+    "permission_semantics_assumed":  false,
+    "consumed":  true,
+    "started_utc":  "2026-09-18T19:01:53.6206749Z"
+}

@@ -1,0 +1,43 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-one-shot-attempt-lock",
+    "attempt_id":  "PROXTEL-AREA-1.3-M3-R3-CREATOR-INDEPENDENT-AUDIT-V1",
+    "created_utc":  "2026-09-18T22:50:51.9043301Z",
+    "rerun_allowed":  false,
+    "automatic_retry_allowed":  false,
+    "provider":  "antigravity",
+    "model_selection":  "provider-default",
+    "explicit_model_flag":  false,
+    "sandbox":  true,
+    "add_dir":  false,
+    "dangerous_bypass":  false,
+    "provider_process_starts_authorized":  1,
+    "model_calls_authorized":  1,
+    "prompt_sha256":  "60DF83F43FA2F1093EBCFCF73E83DF09B0D7BE3B1DE7BF7D1F27E5CD3D995E45",
+    "schema_sha256":  "1A258A6DD252BEA1BE16E6903FC3822D6B2CBB5910C3388F104747EFDF408DA8",
+    "agy_sha256":  "F61A443428F15D545A69E57767F5B45FB35F2E96FCC2654CC6B692DAE1CBD4E5",
+    "agy_version":  "1.2.6",
+    "settings_sha256":  "66DD78DD54FFA37D2E60E2B4F226A7EF47DFD87A5DDBA6D6AE0EED4F5AB1FB6F",
+    "recovery_lineage":  {
+                             "original_m3_attempt_lock_sha256":  "0CE4271B9362E4926DFA60D8716457EC6217E7E416B2F0D7205DD430597C8159",
+                             "original_m3_exit_code":  2,
+                             "original_m3_failure_classification":  "agy-print-consumed-output-format-as-prompt",
+                             "original_m3_model_inference_proven":  false,
+                             "original_m3_rerun_allowed":  false,
+                             "m3_r1_attempt_lock_created":  false,
+                             "m3_r1_model_call_launched":  false,
+                             "m3_r2_attempt_lock_sha256":  "F5C08B12129FDAE1E532154FFC15BABE03B3ADFAB22E74AA40D7FF46D49E696A",
+                             "m3_r2_failure_classification":  "powershell-string-comparison-in-length-guard",
+                             "m3_r2_provider_process_started":  false,
+                             "m3_r2_model_inference_proven":  false,
+                             "m3_r2_rerun_allowed":  false
+                         },
+    "candidate":  {
+                      "skill_md_sha256":  "3F2AFE99189D949B998DFBEAA39ADF7E92E5692E5B11C5104450CF96FADA3BE2",
+                      "skill_json_sha256":  "83668A0BDBADE178D54D36B9AB77DD67F54CD0C9770C9A91E6CA5315C7B09341",
+                      "methodology_sha256":  "AD104D94E666B8D55C7B702279654E297E6736005805D46D6999AF8F2C78510B",
+                      "semantic_cases_sha256":  "076229CF2CD041F1E4494BEF2406407C2B536D1BA084BC83B26DA41650F8DCAF",
+                      "semantic_runner_sha256":  "ABB56E56877B13A4EA4DD126AF38C3F9D37755069A680A4D32EF76AAB81AB613",
+                      "registry_sha256":  "20FC4DB96DEA15F3903676CEA6A935147933C18667B0984E04E0465FA15DD267"
+                  }
+}

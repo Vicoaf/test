@@ -1,0 +1,69 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-development-project-runtime-test-cases",
+    "cases":  [
+                  {
+                      "id":  "explicit-website",
+                      "fixture":  "empty",
+                      "project_type":  "website",
+                      "expected_status":  "resolved",
+                      "expected_project_type":  "website"
+                  },
+                  {
+                      "id":  "explicit-landing-page",
+                      "fixture":  "empty",
+                      "project_type":  "landing-page",
+                      "expected_status":  "resolved",
+                      "expected_project_type":  "landing-page"
+                  },
+                  {
+                      "id":  "explicit-laravel",
+                      "fixture":  "laravel-family",
+                      "project_type":  "laravel",
+                      "expected_status":  "resolved",
+                      "expected_project_type":  "laravel"
+                  },
+                  {
+                      "id":  "explicit-crm",
+                      "fixture":  "laravel-family",
+                      "project_type":  "crm",
+                      "expected_status":  "resolved",
+                      "expected_project_type":  "crm"
+                  },
+                  {
+                      "id":  "explicit-saas",
+                      "fixture":  "laravel-family",
+                      "project_type":  "saas",
+                      "expected_status":  "resolved",
+                      "expected_project_type":  "saas"
+                  },
+                  {
+                      "id":  "unsupported-project-type",
+                      "fixture":  "empty",
+                      "project_type":  "wordpress",
+                      "expected_status":  "blocked-unsupported",
+                      "expected_project_type":  null
+                  },
+                  {
+                      "id":  "ambiguous-laravel-family",
+                      "fixture":  "laravel-family",
+                      "project_type":  null,
+                      "expected_status":  "blocked-ambiguous",
+                      "expected_project_type":  null
+                  },
+                  {
+                      "id":  "ambiguous-frontend-family",
+                      "fixture":  "frontend-family",
+                      "project_type":  null,
+                      "expected_status":  "blocked-ambiguous",
+                      "expected_project_type":  null
+                  },
+                  {
+                      "id":  "unresolved-empty-project",
+                      "fixture":  "empty",
+                      "project_type":  null,
+                      "expected_status":  "blocked-unresolved",
+                      "expected_project_type":  null
+                  }
+              ]
+}
