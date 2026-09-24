@@ -1,0 +1,45 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-crm-capability-map",
+    "id":  "crm-capability-map",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "lanes":  [
+                  {
+                      "id":  "crm-domain-analysis",
+                      "owner":  "crm-domain-analyst",
+                      "purpose":  "Requirements, roles, lead/contact lifecycle, pipeline semantics and business rules."
+                  },
+                  {
+                      "id":  "crm-data-governance",
+                      "owner":  "crm-data-model-specialist",
+                      "purpose":  "Entity semantics, import mapping, deduplication, data quality, retention and PII boundaries."
+                  },
+                  {
+                      "id":  "crm-workflow-automation",
+                      "owner":  "crm-workflow-automation-specialist",
+                      "purpose":  "States, assignments, tasks, SLAs, automation triggers, idempotency and failure handling."
+                  },
+                  {
+                      "id":  "crm-integrations",
+                      "owner":  "crm-integration-specialist",
+                      "purpose":  "Telephony, API, webhook and external-system contracts without secret exposure."
+                  },
+                  {
+                      "id":  "crm-domain-qa",
+                      "owner":  "crm-qa-compliance-reviewer",
+                      "purpose":  "Permissions, auditability, workflow correctness, import safety and release-domain verification."
+                  },
+                  {
+                      "id":  "software-implementation",
+                      "owner":  "proxtel-development-orchestrator",
+                      "purpose":  "Delegated implementation and technical validation through Development Gold Master."
+                  }
+              ],
+    "development_delegation":  {
+                                   "required_for_code_changes":  true,
+                                   "parent_orchestrator":  "proxtel-development-orchestrator",
+                                   "do_not_duplicate_development_subagents":  true
+                               }
+}

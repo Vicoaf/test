@@ -1,0 +1,34 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-crm-area-test-cases",
+    "expected":  {
+                     "agent_id":  "proxtel-crm-orchestrator",
+                     "agent_status":  "approved",
+                     "subagents":  [
+                                       "crm-domain-analyst",
+                                       "crm-data-model-specialist",
+                                       "crm-workflow-automation-specialist",
+                                       "crm-integration-specialist",
+                                       "crm-qa-compliance-reviewer"
+                                   ],
+                     "skills":  [
+                                    "crm-requirements-auditor",
+                                    "crm-data-import-governor",
+                                    "crm-workflow-designer",
+                                    "crm-integration-planner",
+                                    "crm-release-auditor"
+                                ],
+                     "inherited_development_skills":  [
+                                                          "auditor-web",
+                                                          "estratega-seo",
+                                                          "maestro-frontend"
+                                                      ],
+                     "workflow_id":  "crm-solution-delivery",
+                     "workflow_status":  "approved",
+                     "capability_lane_count":  6,
+                     "domain_lane_count":  5,
+                     "crm_specific_tools":  0,
+                     "crm_specific_mcp_servers":  0,
+                     "parent_gold_master":  "53f065b5d4a712b0c3f6d2e19e3d97b8a5c0a274"
+                 }
+}

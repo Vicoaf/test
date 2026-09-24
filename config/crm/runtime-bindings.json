@@ -1,0 +1,84 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-crm-runtime-bindings",
+    "id":  "crm-runtime-bindings",
+    "version":  "1.0.0",
+    "status":  "certified",
+    "provider_neutral":  true,
+    "orchestrator":  {
+                         "id":  "proxtel-crm-orchestrator",
+                         "source":  "agents/crm/proxtel-crm-orchestrator/agent.json"
+                     },
+    "workflow":  {
+                     "id":  "crm-solution-delivery",
+                     "source":  "workflows/crm/solution-delivery/workflow.json"
+                 },
+    "bindings":  [
+                     {
+                         "lane":  "crm-domain-analysis",
+                         "executor":  "crm-domain-analyst",
+                         "preferred_provider":  "claude",
+                         "fallback":  [
+                                          "codex",
+                                          "antigravity"
+                                      ]
+                     },
+                     {
+                         "lane":  "crm-data-governance",
+                         "executor":  "crm-data-model-specialist",
+                         "preferred_provider":  "claude",
+                         "fallback":  [
+                                          "codex"
+                                      ]
+                     },
+                     {
+                         "lane":  "crm-workflow-automation",
+                         "executor":  "crm-workflow-automation-specialist",
+                         "preferred_provider":  "claude",
+                         "fallback":  [
+                                          "codex"
+                                      ]
+                     },
+                     {
+                         "lane":  "crm-integrations",
+                         "executor":  "crm-integration-specialist",
+                         "preferred_provider":  "codex",
+                         "fallback":  [
+                                          "claude"
+                                      ]
+                     },
+                     {
+                         "lane":  "crm-domain-qa",
+                         "executor":  "crm-qa-compliance-reviewer",
+                         "preferred_provider":  "antigravity",
+                         "fallback":  [
+                                          "claude",
+                                          "codex"
+                                      ]
+                     },
+                     {
+                         "lane":  "software-implementation",
+                         "executor":  "proxtel-development-orchestrator",
+                         "preferred_provider":  "task-determined",
+                         "fallback":  [
+
+                                      ]
+                     }
+                 ],
+    "tool_policy":  {
+                        "reuse_development_registry":  "tools/registry/development-tools.json",
+                        "crm_specific_tools_materialized":  [
+
+                                                            ],
+                        "automatic_tool_execution":  false,
+                        "add_new_tool_only_if_gap_is_proven":  true
+                    },
+    "mcp_policy":  {
+                       "reuse_development_profile":  "config/development-mcp-profile.json",
+                       "crm_specific_servers_materialized":  [
+
+                                                             ],
+                       "automatic_approval":  false,
+                       "add_new_mcp_only_if_gap_is_proven":  true
+                   }
+}

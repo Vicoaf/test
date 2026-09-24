@@ -1,0 +1,192 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-certification",
+    "certification_id":  "PROXTEL-CRM-AREA-CERTIFICATION-V1",
+    "area":  "crm",
+    "version":  "1.0.0",
+    "status":  "CERTIFIED",
+    "activation_status":  "ACTIVE-AREA-LOCAL",
+    "certification_scope":  "LOCAL-DETERMINISTIC",
+    "independent_provider_review":  {
+                                        "performed":  false,
+                                        "status":  "NOT-PERFORMED",
+                                        "reason":  "No provider/model execution was authorized or required for this deterministic local certification macro."
+                                    },
+    "parent_gold_master":  {
+                               "area":  "development",
+                               "commit":  "53f065b5d4a712b0c3f6d2e19e3d97b8a5c0a274",
+                               "authorities_preserved":  true
+                           },
+    "validation":  {
+                       "materialized_baseline_exact":  true,
+                       "json_parse":  "PASS",
+                       "powershell_parse":  "PASS",
+                       "crm_contract_assertions":  109,
+                       "crm_contract_failures":  0,
+                       "historical_216_preserved":  true,
+                       "historical_manifest_sha256":  "F776496A060705E3C11A8B36793217A241CFBD43F55C54DC509CE5DD80B30DC2",
+                       "development_authorities_preserved":  true
+                   },
+    "architecture":  {
+                         "orchestrator":  "proxtel-crm-orchestrator",
+                         "subagent_count":  5,
+                         "crm_domain_skill_count":  5,
+                         "inherited_development_skill_count":  3,
+                         "workflow":  "crm-solution-delivery",
+                         "new_tools":  0,
+                         "new_mcp_servers":  0
+                     },
+    "activation":  {
+                       "authority":  "config/crm/activation.json",
+                       "scope":  "crm-area-local",
+                       "global_agency_manifest_updated":  false,
+                       "global_skill_registry_updated":  false,
+                       "development_authorities_mutated":  false
+                   },
+    "evidence_files":  [
+                           {
+                               "path":  "agents/crm/proxtel-crm-orchestrator/agent.json",
+                               "sha256":  "E33758DAF3543C6135E3EEF96E9A2E879AC08B163FABCF4D74986BAB86987FF5"
+                           },
+                           {
+                               "path":  "agents/crm/proxtel-crm-orchestrator/AGENT.md",
+                               "sha256":  "0A163DB5FB205BC0BBCE1951649CD90EF2B4A15CF061F41D7DADC2F90838F449"
+                           },
+                           {
+                               "path":  "agents/crm/subagents/crm-data-model-specialist/subagent.json",
+                               "sha256":  "EAE744677C7762CB3B12045EB7E8B98507536702C3B4E31450E7FF2C6A6BAEE3"
+                           },
+                           {
+                               "path":  "agents/crm/subagents/crm-data-model-specialist/SUBAGENT.md",
+                               "sha256":  "451252A3093BBF9B801D47F089B2D88053EEA2AEA43B86600823A70E41AE4E71"
+                           },
+                           {
+                               "path":  "agents/crm/subagents/crm-domain-analyst/subagent.json",
+                               "sha256":  "41F8DB70671B7FF01E3134828C60EF0CA2B02A25687748BC1E12D9C8944A5F3C"
+                           },
+                           {
+                               "path":  "agents/crm/subagents/crm-domain-analyst/SUBAGENT.md",
+                               "sha256":  "60BBB069A19873B12C1D155B05950E7136B7B08F55557AC299B385EE86780BA3"
+                           },
+                           {
+                               "path":  "agents/crm/subagents/crm-integration-specialist/subagent.json",
+                               "sha256":  "ED7A16238B9CB3ED651AE3CEACB8359D6CB991F47B4EA647974F22D70F09BFAE"
+                           },
+                           {
+                               "path":  "agents/crm/subagents/crm-integration-specialist/SUBAGENT.md",
+                               "sha256":  "0B27B9EC9157D311A57E0261E27DF0424BF4B99F9ACD4972B9761636A51215AD"
+                           },
+                           {
+                               "path":  "agents/crm/subagents/crm-qa-compliance-reviewer/subagent.json",
+                               "sha256":  "7245BD6B13F9CE744C3FF6859E77B5F654335BABAEF40CC50D9D588D1D99AE90"
+                           },
+                           {
+                               "path":  "agents/crm/subagents/crm-qa-compliance-reviewer/SUBAGENT.md",
+                               "sha256":  "132A7E3F5F76ED1399C652A2465E782E7C8EAC3502EFA4304CAAC3E8CB2B45A5"
+                           },
+                           {
+                               "path":  "agents/crm/subagents/crm-workflow-automation-specialist/subagent.json",
+                               "sha256":  "7124BC112F0A9A319F9A3BBE12BC42D10324B76012D6CB86FB0C48D85ED43B74"
+                           },
+                           {
+                               "path":  "agents/crm/subagents/crm-workflow-automation-specialist/SUBAGENT.md",
+                               "sha256":  "088E9FEF26E2010051A9D5D739F91285A989C1D4CC0C644F0311E0F52F65E3DC"
+                           },
+                           {
+                               "path":  "config/crm/activation.json",
+                               "sha256":  "AF97236A41178C0D407D4B11624625BB9005856B5A34806BE27EF362D0A8D1DA"
+                           },
+                           {
+                               "path":  "config/crm/area.json",
+                               "sha256":  "E3E96DB0AFAF0F6EDE3B8CEC4250FA6D1814E424A15F54253121BCC6AB5A8B5E"
+                           },
+                           {
+                               "path":  "config/crm/capability-map.json",
+                               "sha256":  "FDDFC5893F285BB369E93FB26C05098329EA86A907F3B175FFCEA8C0E12D9B16"
+                           },
+                           {
+                               "path":  "config/crm/runtime-bindings.json",
+                               "sha256":  "66E2574BDAA9AB72880A7DF3FAADF8F0B07AFBFDE0C009E7DD2535B13E1BE663"
+                           },
+                           {
+                               "path":  "config/crm/skill-bundle.json",
+                               "sha256":  "E94BD6793EC6BB482C39D70E3C74005948EC66622A6DBDF8A501B65FBC8D9A90"
+                           },
+                           {
+                               "path":  "docs/crm/architecture.md",
+                               "sha256":  "168B7AA4A29DF0EF436EA0904C0EB485305DB1088AA17AB4D2B5FF0C467C1680"
+                           },
+                           {
+                               "path":  "docs/crm/operating-model.md",
+                               "sha256":  "764C5A1892D86288F11833B7D9D17A4CCED3E347FCECD3179A93F366A2384BE3"
+                           },
+                           {
+                               "path":  "skills/crm/crm-data-import-governor/skill.json",
+                               "sha256":  "6204AE2298AF9365846A3752F3DFBCE63A8AB31E7A02FE1F53972A09B25E8EFE"
+                           },
+                           {
+                               "path":  "skills/crm/crm-data-import-governor/SKILL.md",
+                               "sha256":  "ED47335950584BEFA9C15428342E23DA499C9315FD4C108676B0A1C43B6681F3"
+                           },
+                           {
+                               "path":  "skills/crm/crm-integration-planner/skill.json",
+                               "sha256":  "99C11DCE903F836DC5608CCE81A08BAE290EA0C31EDB7128B441E486A47A38FD"
+                           },
+                           {
+                               "path":  "skills/crm/crm-integration-planner/SKILL.md",
+                               "sha256":  "3E9488A7DE5E9B670F54FDBDA49E918024467FBA7D7721898713418D760C91CF"
+                           },
+                           {
+                               "path":  "skills/crm/crm-release-auditor/skill.json",
+                               "sha256":  "819AEBBB979A3BD45758ABB9373BEFBD98B0D6572F921E2CCDFBEBE7F262499E"
+                           },
+                           {
+                               "path":  "skills/crm/crm-release-auditor/SKILL.md",
+                               "sha256":  "5BFA72694213A9A8B7745F2056BEC757F56BF6AB82FEF510CEF80F5921FC8CB0"
+                           },
+                           {
+                               "path":  "skills/crm/crm-requirements-auditor/skill.json",
+                               "sha256":  "A36D71E7C8D8824410D7DAE5421125F24E8B305114F3F022E7985BF602BB7513"
+                           },
+                           {
+                               "path":  "skills/crm/crm-requirements-auditor/SKILL.md",
+                               "sha256":  "A758441E31FB038B2121F52152ADA2DCDEC62E3597DBCFF0D4CA45DB8280A854"
+                           },
+                           {
+                               "path":  "skills/crm/crm-workflow-designer/skill.json",
+                               "sha256":  "AC1269FDAAE7B56271B10452DD418B335C0164074C7A80D01E8938A8E1A176D3"
+                           },
+                           {
+                               "path":  "skills/crm/crm-workflow-designer/SKILL.md",
+                               "sha256":  "45D910E7A3626D5DA660618003225D8D0A9EA9449579C25ABF2308D8D37CC4C6"
+                           },
+                           {
+                               "path":  "standards/crm/crm-standard.md",
+                               "sha256":  "630DDD55FB4AD1DD7BB25F3992712CD235A51597841134AB7754EF372166FBF4"
+                           },
+                           {
+                               "path":  "tests/crm/area-contract/cases.json",
+                               "sha256":  "B9E57CF5761FC7C27EBE7099D3D8E2A68C1976C4C14A9999C249D26468B3CDBE"
+                           },
+                           {
+                               "path":  "tests/crm/area-contract/run-crm-area-tests.ps1",
+                               "sha256":  "C8F2A1058003A4FFA9839DA8EF5613579C03B1810BEFC04616CEDF60DBDCC791"
+                           },
+                           {
+                               "path":  "workflows/crm/solution-delivery/workflow.json",
+                               "sha256":  "C98C65FD512376F035A25BA206EEA3922556CE0BD193618EEB048FD979FA3F88"
+                           },
+                           {
+                               "path":  "workflows/crm/solution-delivery/WORKFLOW.md",
+                               "sha256":  "514AC15CD0217C8A7314B8CAEC2205C0BBF244251F255AC5F0AF575B4BD3EB51"
+                           }
+                       ],
+    "git":  {
+                "branch":  "core-v2",
+                "head":  "53f065b5d4a712b0c3f6d2e19e3d97b8a5c0a274",
+                "git_add_executed":  false,
+                "commit_executed":  false,
+                "push_executed":  false
+            },
+    "certified_utc":  "2026-09-24T23:33:22.9645055Z"
+}

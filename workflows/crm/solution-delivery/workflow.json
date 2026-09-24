@@ -1,0 +1,152 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-workflow",
+    "id":  "crm-solution-delivery",
+    "display_name":  "PROXTEL CRM Solution Delivery Workflow",
+    "area":  "crm",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "execution_mode":  "orchestration-with-development-delegation",
+    "purpose":  {
+                    "summary":  "Coordinate CRM-domain discovery, design, delegated implementation and release-domain validation.",
+                    "use_when":  [
+                                     "Creating or changing CRM functionality.",
+                                     "CRM imports, workflows, permissions or integrations change.",
+                                     "A CRM project requires coordinated domain and software delivery."
+                                 ],
+                    "do_not_use_when":  [
+                                            "The task is purely Sales strategy.",
+                                            "The task is purely Customer Service policy.",
+                                            "The task is PBX administration."
+                                        ]
+                },
+    "inputs":  [
+                   "request",
+                   "project_path",
+                   "authorized_scope",
+                   "crm_domain_evidence",
+                   "risk_level"
+               ],
+    "outputs":  [
+                    "domain_contract",
+                    "data_contract",
+                    "workflow_contract",
+                    "integration_contract",
+                    "development_handoff",
+                    "validation_evidence",
+                    "release_decision"
+                ],
+    "states":  [
+                   "intake",
+                   "domain-discovery",
+                   "data-governance",
+                   "workflow-design",
+                   "integration-design",
+                   "development-handoff",
+                   "validating",
+                   "changes-required",
+                   "blocked",
+                   "release-ready",
+                   "closed"
+               ],
+    "steps":  [
+                  {
+                      "order":  1,
+                      "id":  "intake-and-scope",
+                      "owner":  "proxtel-crm-orchestrator",
+                      "action":  "Capture CRM objective, scope, constraints and prohibited actions.",
+                      "next":  "domain-discovery"
+                  },
+                  {
+                      "order":  2,
+                      "id":  "domain-discovery",
+                      "owner":  "crm-domain-analyst",
+                      "action":  "Establish actors, roles, records, lifecycle states and business rules from evidence.",
+                      "next":  "data-governance"
+                  },
+                  {
+                      "order":  3,
+                      "id":  "data-governance",
+                      "owner":  "crm-data-model-specialist",
+                      "action":  "Define data semantics, import/deduplication policy and PII boundaries.",
+                      "next":  "workflow-design"
+                  },
+                  {
+                      "order":  4,
+                      "id":  "workflow-design",
+                      "owner":  "crm-workflow-automation-specialist",
+                      "action":  "Define assignments, tasks, state transitions, triggers and failure handling.",
+                      "next":  "integration-design"
+                  },
+                  {
+                      "order":  5,
+                      "id":  "integration-design",
+                      "owner":  "crm-integration-specialist",
+                      "action":  "Define telephony/API/webhook contracts, idempotency and observability when applicable.",
+                      "next":  "development-handoff"
+                  },
+                  {
+                      "order":  6,
+                      "id":  "development-handoff",
+                      "owner":  "proxtel-crm-orchestrator",
+                      "action":  "Delegate authorized repository implementation to proxtel-development-orchestrator with explicit acceptance criteria.",
+                      "next":  "technical-validation"
+                  },
+                  {
+                      "order":  7,
+                      "id":  "technical-validation",
+                      "owner":  "proxtel-development-orchestrator",
+                      "action":  "Run applicable Development tests, lint, build, DB/API and browser validation.",
+                      "next":  "crm-domain-validation"
+                  },
+                  {
+                      "order":  8,
+                      "id":  "crm-domain-validation",
+                      "owner":  "crm-qa-compliance-reviewer",
+                      "action":  "Independently verify permissions, auditability, imports, workflows and integration behavior.",
+                      "next":  "release-gate"
+                  },
+                  {
+                      "order":  9,
+                      "id":  "release-gate",
+                      "owner":  "proxtel-crm-orchestrator",
+                      "action":  "Declare READY only when technical and CRM-domain validations pass and blockers are resolved.",
+                      "next":  "closed"
+                  }
+              ],
+    "final_decisions":  [
+                            {
+                                "decision":  "READY",
+                                "promotion_allowed":  true,
+                                "required_condition":  "Applicable technical and CRM-domain validations pass with zero blockers."
+                            },
+                            {
+                                "decision":  "CHANGES-REQUIRED",
+                                "promotion_allowed":  false,
+                                "required_condition":  "One or more relevant validations fail or reviewer changes are required."
+                            },
+                            {
+                                "decision":  "BLOCKED",
+                                "promotion_allowed":  false,
+                                "required_condition":  "Required evidence, authorization, dependency or environment is unavailable."
+                            },
+                            {
+                                "decision":  "DEFERRED",
+                                "promotion_allowed":  false,
+                                "required_condition":  "The user intentionally postpones the work."
+                            }
+                        ],
+    "safety":  {
+                   "discovery_first":  true,
+                   "local_first":  true,
+                   "production_first_forbidden":  true,
+                   "automatic_commit_forbidden":  true,
+                   "automatic_push_forbidden":  true,
+                   "automatic_deploy_forbidden":  true,
+                   "destructive_production_db_forbidden":  true,
+                   "silent_dependency_install_forbidden":  true,
+                   "secrets_in_artifacts_forbidden":  true,
+                   "automatic_live_retry_forbidden":  true
+               }
+}

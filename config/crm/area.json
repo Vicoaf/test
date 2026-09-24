@@ -1,0 +1,75 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-contract",
+    "id":  "crm",
+    "display_name":  "PROXTEL CRM Area",
+    "version":  "1.0.0",
+    "lifecycle_status":  "certified",
+    "provider_neutral":  true,
+    "parent_gold_master":  {
+                               "area":  "development",
+                               "branch":  "core-v2",
+                               "commit":  "53f065b5d4a712b0c3f6d2e19e3d97b8a5c0a274",
+                               "inheritance_mode":  "reuse-without-modifying-parent-authorities"
+                           },
+    "mission":  "Provide CRM-specific domain analysis, data governance, workflow design, integration planning and release assurance while delegating software implementation to the certified Development area.",
+    "boundaries":  {
+                       "owns":  [
+                                    "CRM domain requirements and lifecycle semantics",
+                                    "CRM data import governance and duplicate policy",
+                                    "CRM workflow and automation design",
+                                    "CRM integration contracts and operational semantics",
+                                    "CRM release-domain audit and compliance-oriented checks"
+                                ],
+                       "delegates_to_development":  [
+                                                        "Laravel/PHP implementation",
+                                                        "frontend implementation",
+                                                        "MySQL migrations and code-level database work",
+                                                        "API client implementation",
+                                                        "browser automation",
+                                                        "security implementation",
+                                                        "build and deterministic software validation"
+                                                    ],
+                       "does_not_own":  [
+                                            "Sales strategy",
+                                            "Customer Service operating policy",
+                                            "PBX administration",
+                                            "Finance operations",
+                                            "production deployment without explicit authorization"
+                                        ]
+                   },
+    "safety":  {
+                   "read_only_discovery_first":  true,
+                   "local_first":  true,
+                   "pii_minimization":  true,
+                   "secrets_in_repository_forbidden":  true,
+                   "production_mutation_default":  false,
+                   "database_mutation_default":  false,
+                   "external_api_mutation_default":  false,
+                   "automatic_dependency_installation":  false,
+                   "automatic_git_add":  false,
+                   "automatic_commit":  false,
+                   "automatic_push":  false,
+                   "automatic_deploy":  false,
+                   "automatic_live_retry":  false
+               },
+    "reuse":  {
+                  "development_runtime":  "config/development-project-runtime-policy.json",
+                  "development_tools":  "tools/registry/development-tools.json",
+                  "development_mcp":  "config/development-mcp-profile.json",
+                  "development_orchestrator":  "agents/development/proxtel-development-orchestrator/agent.json",
+                  "crm_template":  "templates/crm"
+              },
+    "certification":  {
+                          "status":  "certified",
+                          "scope":  "local-deterministic",
+                          "artifact":  "tests/crm/certification/area-crm-certification-v1.json",
+                          "independent_provider_review":  "not-performed"
+                      },
+    "activation":  {
+                       "status":  "active",
+                       "scope":  "crm-area-local",
+                       "authority":  "config/crm/activation.json",
+                       "global_agency_manifest":  "not-yet-promoted"
+                   }
+}

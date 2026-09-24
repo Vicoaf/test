@@ -1,0 +1,55 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill",
+    "id":  "crm-integration-planner",
+    "display_name":  "CRM Integration Planner",
+    "area":  "crm",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "description":  "Specify CRM telephony, REST, webhook and external-system contracts with explicit authentication, idempotency and observability boundaries.",
+    "scope":  {
+                  "use_when":  [
+                                   "CRM integrates with telephony",
+                                   "webhooks or APIs are involved",
+                                   "external side effects require a contract"
+                               ],
+                  "do_not_use_for":  [
+                                         "direct production deployment",
+                                         "destructive production database operations",
+                                         "bypassing Development implementation governance"
+                                     ]
+              },
+    "dependencies":  {
+                         "direct_scripts":  [
+
+                                            ],
+                         "direct_packages":  [
+
+                                             ],
+                         "silent_installation_allowed":  false
+                     },
+    "safety":  {
+                   "read_only_discovery_first":  true,
+                   "local_first":  true,
+                   "pii_minimization":  true,
+                   "secrets_in_output_forbidden":  true,
+                   "production_mutation_default":  false,
+                   "database_mutation_default":  false,
+                   "automatic_git_operations":  false,
+                   "automatic_live_retry":  false
+               },
+    "outputs":  [
+                    "integration contract",
+                    "data flow",
+                    "authentication boundary",
+                    "error/retry semantics",
+                    "observability requirements"
+                ],
+    "lifecycle":  {
+                      "current":  "approved",
+                      "certification_required_before_activation":  true,
+                      "global_registry_promotion":  "area-local-activation",
+                      "activation_scope":  "crm-area-local"
+                  }
+}

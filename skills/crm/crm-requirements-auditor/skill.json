@@ -1,0 +1,55 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill",
+    "id":  "crm-requirements-auditor",
+    "display_name":  "CRM Requirements Auditor",
+    "area":  "crm",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "description":  "Audit CRM requirements, actors, roles, record lifecycles and business rules from available evidence before implementation.",
+    "scope":  {
+                  "use_when":  [
+                                   "starting or changing CRM functionality",
+                                   "requirements are incomplete",
+                                   "roles or lifecycle behavior must be clarified"
+                               ],
+                  "do_not_use_for":  [
+                                         "direct production deployment",
+                                         "destructive production database operations",
+                                         "bypassing Development implementation governance"
+                                     ]
+              },
+    "dependencies":  {
+                         "direct_scripts":  [
+
+                                            ],
+                         "direct_packages":  [
+
+                                             ],
+                         "silent_installation_allowed":  false
+                     },
+    "safety":  {
+                   "read_only_discovery_first":  true,
+                   "local_first":  true,
+                   "pii_minimization":  true,
+                   "secrets_in_output_forbidden":  true,
+                   "production_mutation_default":  false,
+                   "database_mutation_default":  false,
+                   "automatic_git_operations":  false,
+                   "automatic_live_retry":  false
+               },
+    "outputs":  [
+                    "verified requirements",
+                    "role matrix intent",
+                    "lifecycle map",
+                    "open decisions",
+                    "implementation handoff"
+                ],
+    "lifecycle":  {
+                      "current":  "approved",
+                      "certification_required_before_activation":  true,
+                      "global_registry_promotion":  "area-local-activation",
+                      "activation_scope":  "crm-area-local"
+                  }
+}

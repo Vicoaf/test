@@ -1,0 +1,46 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-crm-area-activation",
+    "id":  "crm-area-activation",
+    "area":  "crm",
+    "version":  "1.0.0",
+    "status":  "active",
+    "scope":  "crm-area-local",
+    "certification":  {
+                          "required":  true,
+                          "status":  "certified",
+                          "basis":  "local-deterministic-contracts",
+                          "artifact":  "tests/crm/certification/area-crm-certification-v1.json",
+                          "independent_provider_review":  "not-performed"
+                      },
+    "routing":  {
+                    "orchestrator":  "agents/crm/proxtel-crm-orchestrator/agent.json",
+                    "capability_map":  "config/crm/capability-map.json",
+                    "runtime_bindings":  "config/crm/runtime-bindings.json",
+                    "skill_bundle":  "config/crm/skill-bundle.json",
+                    "workflow":  "workflows/crm/solution-delivery/workflow.json",
+                    "standard":  "standards/crm/crm-standard.md"
+                },
+    "parent":  {
+                   "area":  "development",
+                   "gold_master_commit":  "53f065b5d4a712b0c3f6d2e19e3d97b8a5c0a274",
+                   "authority_mutation":  false
+               },
+    "execution":  {
+                      "provider_execution":  "inherit-development-activation-authority",
+                      "model_execution":  "inherit-development-activation-authority",
+                      "automatic_tool_execution":  false,
+                      "local_tool_execution":  "explicit-per-task",
+                      "automatic_dependency_installation":  false,
+                      "automatic_git_add":  false,
+                      "automatic_commit":  false,
+                      "automatic_push":  false,
+                      "automatic_deploy":  false
+                  },
+    "global_promotion":  {
+                             "agency_manifest_updated":  false,
+                             "global_skill_registry_updated":  false,
+                             "development_skill_bundle_updated":  false,
+                             "note":  "Area-local activation is intentionally isolated from Development Gold Master authorities."
+                         }
+}

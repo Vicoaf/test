@@ -1,0 +1,25 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-crm-skill-bundle",
+    "id":  "crm-area-skill-bundle",
+    "version":  "1.0.0",
+    "status":  "active",
+    "domain_skills":  [
+                          "crm-requirements-auditor",
+                          "crm-data-import-governor",
+                          "crm-workflow-designer",
+                          "crm-integration-planner",
+                          "crm-release-auditor"
+                      ],
+    "inherited_development_skills":  [
+                                         "auditor-web",
+                                         "estratega-seo",
+                                         "maestro-frontend"
+                                     ],
+    "activation":  {
+                       "domain_skills_global_registry_state":  "area-local-approved",
+                       "automatic_activation":  false,
+                       "certification_required_before_activation":  true,
+                       "activation_scope":  "crm-area-local"
+                   }
+}
