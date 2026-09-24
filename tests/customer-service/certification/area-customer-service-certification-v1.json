@@ -1,0 +1,172 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-certification",
+    "certification_id":  "PROXTEL-CUSTOMER-SERVICE-AREA-CERTIFICATION-V1",
+    "area":  "customer-service",
+    "version":  "1.0.0",
+    "status":  "CERTIFIED",
+    "activation_status":  "ACTIVE-AREA-LOCAL",
+    "certification_scope":  "LOCAL-DETERMINISTIC",
+    "independent_provider_review":  {
+                                        "performed":  false,
+                                        "status":  "NOT-PERFORMED",
+                                        "reason":  "No provider/model execution required for deterministic local certification."
+                                    },
+    "parent_commit":  "59fedfff630cacb6d11fd728e5b03bc56e3380c1",
+    "architecture":  {
+                         "orchestrator":  "proxtel-customer-service-orchestrator",
+                         "subagent_count":  5,
+                         "domain_skill_count":  5,
+                         "workflow":  "customer-service-delivery",
+                         "new_tools":  0,
+                         "new_mcp_servers":  0,
+                         "development_delegation":  true,
+                         "crm_coordination":  true
+                     },
+    "evidence_files":  [
+                           {
+                               "path":  "agents/customer-service/proxtel-customer-service-orchestrator/agent.json",
+                               "sha256":  "A9FBD297300FF3BBC4E851583EB52083E905A86A79D90F02C848A086F6D6ED57"
+                           },
+                           {
+                               "path":  "agents/customer-service/proxtel-customer-service-orchestrator/AGENT.md",
+                               "sha256":  "FE7B48679122A8AC365C1E6F4E92EF6E9BE4767C91A530C4E32120D38DC00279"
+                           },
+                           {
+                               "path":  "agents/customer-service/subagents/customer-communications-specialist/subagent.json",
+                               "sha256":  "981919B71BFC91B1B373A219036526AB823D36193E7B9CBD23D613EEDEA6CAF8"
+                           },
+                           {
+                               "path":  "agents/customer-service/subagents/customer-communications-specialist/SUBAGENT.md",
+                               "sha256":  "18A362B6FC9C732E15F5F770D952410A064B1D57AC3E8B8C6CA7A63A17EF04AA"
+                           },
+                           {
+                               "path":  "agents/customer-service/subagents/customer-service-domain-analyst/subagent.json",
+                               "sha256":  "09E271B551393F1CBB00FCE4627A42306F455C7B5754B857CF6A4C5372DA8052"
+                           },
+                           {
+                               "path":  "agents/customer-service/subagents/customer-service-domain-analyst/SUBAGENT.md",
+                               "sha256":  "016BD44FAE96B3E390FFAB25016ACB3C0BAA122B5295EBCAFB4FA60CDC7E89DC"
+                           },
+                           {
+                               "path":  "agents/customer-service/subagents/customer-service-qa-reviewer/subagent.json",
+                               "sha256":  "91B2EC908F7708F594F0EFE986C1321A88A227E4725DC202D1A9E3DDA39AC4EA"
+                           },
+                           {
+                               "path":  "agents/customer-service/subagents/customer-service-qa-reviewer/SUBAGENT.md",
+                               "sha256":  "D552C40BB82D8231884CB8884A931848987979C090E1A8BFC7AF0B754CD3F84C"
+                           },
+                           {
+                               "path":  "agents/customer-service/subagents/knowledge-escalation-specialist/subagent.json",
+                               "sha256":  "F3FC34CE6B7513880AFE0F093AF48230E9BD78EDCB585704AD7C3EE045D8D768"
+                           },
+                           {
+                               "path":  "agents/customer-service/subagents/knowledge-escalation-specialist/SUBAGENT.md",
+                               "sha256":  "9ACC0FC4F749F003C78244594A3B571546C22AECDB3891BDDF3669C51174D566"
+                           },
+                           {
+                               "path":  "agents/customer-service/subagents/ticket-workflow-specialist/subagent.json",
+                               "sha256":  "35D5BEE36CF57DA37F02C3F19DCFD88390229AC52424FC7F52847A8B8726A271"
+                           },
+                           {
+                               "path":  "agents/customer-service/subagents/ticket-workflow-specialist/SUBAGENT.md",
+                               "sha256":  "33E097E292B43E816C013AC62475DC1B4214CF26AE0B7169CED42DC1FA194213"
+                           },
+                           {
+                               "path":  "config/customer-service/activation.json",
+                               "sha256":  "746FDF5F87A4D9D83816FE6DA3EC97AB9274045CC3771914690342DFE94D84E4"
+                           },
+                           {
+                               "path":  "config/customer-service/area.json",
+                               "sha256":  "E79384C09E11D4ED7701103C730080CDC2675EFBD1D129992C375449B1F3D28E"
+                           },
+                           {
+                               "path":  "config/customer-service/capability-map.json",
+                               "sha256":  "FE8946001BCB202F1D25906D2CC6E5B3B2F2E1A9C8E367B588B0BDD174ED7483"
+                           },
+                           {
+                               "path":  "config/customer-service/runtime-bindings.json",
+                               "sha256":  "B668B32EF6F9CC5246FE398953076A161E75559B23A67724DC889DD5997C1C08"
+                           },
+                           {
+                               "path":  "config/customer-service/skill-bundle.json",
+                               "sha256":  "15303D2EC14498A6479C05BAF7B16728EFAD05D3FBE30642E356D7018D97039C"
+                           },
+                           {
+                               "path":  "docs/customer-service/architecture.md",
+                               "sha256":  "5DBC05C01264D32A37117F1CD9E80B33DCF6ABC4AB313379DAF44D2AAADBD707"
+                           },
+                           {
+                               "path":  "docs/customer-service/operating-model.md",
+                               "sha256":  "7BE4F4A2388F08504F683511A766C6DCD53C04E5534F5D7B076C68F74E6C4965"
+                           },
+                           {
+                               "path":  "skills/customer-service/customer-communication-governor/skill.json",
+                               "sha256":  "E967452F771E0FF760D60B48F8C2E9B38C0244925AA1F7199E32080605B0F2F9"
+                           },
+                           {
+                               "path":  "skills/customer-service/customer-communication-governor/SKILL.md",
+                               "sha256":  "828178156F16F0D091AF7D169672D745C90C5167DC4D91AB848A4B9034C93230"
+                           },
+                           {
+                               "path":  "skills/customer-service/customer-service-release-auditor/skill.json",
+                               "sha256":  "43ACB7CE53FDE5BFCEB7D7BDA711E0C6BBC5ADF16DC26A4935AF856BD0A7671C"
+                           },
+                           {
+                               "path":  "skills/customer-service/customer-service-release-auditor/SKILL.md",
+                               "sha256":  "7408710D3F57F29D0490D742AC05D99F956F9825DF3F488531125848A78B6E26"
+                           },
+                           {
+                               "path":  "skills/customer-service/customer-service-requirements-auditor/skill.json",
+                               "sha256":  "1A92A081A02AAF08EABA60938CB5D33A91E146E2B5322A4213BD4464DB422FBD"
+                           },
+                           {
+                               "path":  "skills/customer-service/customer-service-requirements-auditor/SKILL.md",
+                               "sha256":  "2C58B385FCF2A38E2E1785BB7F5E1F4CB0AD95828C5025DC8841FE9EC3F1192D"
+                           },
+                           {
+                               "path":  "skills/customer-service/knowledge-escalation-planner/skill.json",
+                               "sha256":  "A8C06AD2231B80FA34D4185ED5F6DF5D7D6A06494629AC3E28AF03B5833EC4AF"
+                           },
+                           {
+                               "path":  "skills/customer-service/knowledge-escalation-planner/SKILL.md",
+                               "sha256":  "E51301EF474D33B152C0D063E61AA21DE3D819DDDF3655E106204089BA3B6D0F"
+                           },
+                           {
+                               "path":  "skills/customer-service/ticket-lifecycle-designer/skill.json",
+                               "sha256":  "C785A814CC001AD7071ACC3D67222EDF37811C3D1F01E20DD01C0A103A4DB130"
+                           },
+                           {
+                               "path":  "skills/customer-service/ticket-lifecycle-designer/SKILL.md",
+                               "sha256":  "39FCAC649102B74605D3379385C0E6ECD23F27D6E9EB589ADFE1121262449745"
+                           },
+                           {
+                               "path":  "standards/customer-service/customer-service-standard.md",
+                               "sha256":  "4953C7F6C05127BD05F2F8ACE47B46ADD969BF04DF63E01709468141EAEA6476"
+                           },
+                           {
+                               "path":  "tests/customer-service/area-contract/cases.json",
+                               "sha256":  "D12A4EA1BE35EBAC3748B2A8AA83660E031C654FAAC6BA3262607C2A1092647E"
+                           },
+                           {
+                               "path":  "tests/customer-service/area-contract/run-customer-service-area-tests.ps1",
+                               "sha256":  "79AE56DF103BDDE7604EE1983AE638417B7F41AF2A0BA4A855D4CA19C192E587"
+                           },
+                           {
+                               "path":  "workflows/customer-service/delivery/workflow.json",
+                               "sha256":  "7447A75C581580AA794E40AABAC8026938FD10A0F3F5759FCAD35A854EFD7B7B"
+                           },
+                           {
+                               "path":  "workflows/customer-service/delivery/WORKFLOW.md",
+                               "sha256":  "E7D5ACF37E123B7C261DB63CDA874DF4B011F3DE3A0D6ABBD7B1766B92DE6561"
+                           }
+                       ],
+    "git":  {
+                "branch":  "core-v2",
+                "head":  "59fedfff630cacb6d11fd728e5b03bc56e3380c1",
+                "git_add_executed":  false,
+                "commit_executed":  false,
+                "push_executed":  false
+            },
+    "certified_utc":  "2026-09-24T23:40:51.2010611Z"
+}

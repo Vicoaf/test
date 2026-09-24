@@ -1,0 +1,27 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-customer-service-area-test-cases",
+    "expected":  {
+                     "area_lifecycle":  "certified",
+                     "agent_status":  "approved",
+                     "workflow_status":  "approved",
+                     "subagents":  [
+                                       "customer-service-domain-analyst",
+                                       "ticket-workflow-specialist",
+                                       "customer-communications-specialist",
+                                       "knowledge-escalation-specialist",
+                                       "customer-service-qa-reviewer"
+                                   ],
+                     "skills":  [
+                                    "customer-service-requirements-auditor",
+                                    "ticket-lifecycle-designer",
+                                    "customer-communication-governor",
+                                    "knowledge-escalation-planner",
+                                    "customer-service-release-auditor"
+                                ],
+                     "lane_count":  7,
+                     "customer_service_specific_tools":  0,
+                     "customer_service_specific_mcp":  0,
+                     "parent_commit":  "59fedfff630cacb6d11fd728e5b03bc56e3380c1"
+                 }
+}

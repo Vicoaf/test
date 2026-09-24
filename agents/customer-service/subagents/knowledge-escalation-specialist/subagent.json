@@ -1,0 +1,32 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-subagent",
+    "id":  "knowledge-escalation-specialist",
+    "display_name":  "Knowledge and Escalation Specialist",
+    "area":  "customer-service",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "parent_agent":  "proxtel-customer-service-orchestrator",
+    "persistent":  false,
+    "mission":  "Design knowledge usage, escalation tiers, evidence required for handoff and unresolved-case management.",
+    "scope":  [
+                  "knowledge usage",
+                  "escalation tiers",
+                  "handoff evidence",
+                  "unresolved cases",
+                  "ownership transfer"
+              ],
+    "limits":  {
+                   "repository_code_implementation":  false,
+                   "production_mutation":  false,
+                   "database_mutation":  false,
+                   "automatic_git_operations":  false,
+                   "secret_export":  false
+               },
+    "handoff":  {
+                    "implementation_target":  "proxtel-development-orchestrator",
+                    "crm_coordination_target":  "proxtel-crm-orchestrator",
+                    "must_return_evidence":  true
+                }
+}

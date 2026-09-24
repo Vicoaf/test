@@ -1,0 +1,113 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-workflow",
+    "id":  "customer-service-delivery",
+    "display_name":  "PROXTEL Customer Service Delivery Workflow",
+    "area":  "customer-service",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "execution_mode":  "orchestration-with-crm-and-development-delegation",
+    "steps":  [
+                  {
+                      "order":  1,
+                      "id":  "intake-and-scope",
+                      "owner":  "proxtel-customer-service-orchestrator",
+                      "action":  "Capture objective, service scope, channels, constraints and prohibited actions.",
+                      "next":  "service-domain-discovery"
+                  },
+                  {
+                      "order":  2,
+                      "id":  "service-domain-discovery",
+                      "owner":  "customer-service-domain-analyst",
+                      "action":  "Establish actors, channels, queues, categories, priorities, ownership and operating rules.",
+                      "next":  "ticket-workflow-design"
+                  },
+                  {
+                      "order":  3,
+                      "id":  "ticket-workflow-design",
+                      "owner":  "ticket-workflow-specialist",
+                      "action":  "Define ticket lifecycle, routing, assignment, SLA intent and escalation triggers.",
+                      "next":  "communication-design"
+                  },
+                  {
+                      "order":  4,
+                      "id":  "communication-design",
+                      "owner":  "customer-communications-specialist",
+                      "action":  "Define response standards, templates, channel behavior and sensitive-data boundaries.",
+                      "next":  "knowledge-escalation-design"
+                  },
+                  {
+                      "order":  5,
+                      "id":  "knowledge-escalation-design",
+                      "owner":  "knowledge-escalation-specialist",
+                      "action":  "Define knowledge usage, escalation tiers, handoff evidence and unresolved-case behavior.",
+                      "next":  "crm-coordination"
+                  },
+                  {
+                      "order":  6,
+                      "id":  "crm-coordination",
+                      "owner":  "proxtel-customer-service-orchestrator",
+                      "action":  "Use CRM area when the change alters CRM records, activities, workflows or integrations; otherwise record NOT-APPLICABLE.",
+                      "next":  "development-handoff"
+                  },
+                  {
+                      "order":  7,
+                      "id":  "development-handoff",
+                      "owner":  "proxtel-customer-service-orchestrator",
+                      "action":  "Delegate authorized repository implementation to Development with explicit acceptance criteria.",
+                      "next":  "technical-validation"
+                  },
+                  {
+                      "order":  8,
+                      "id":  "technical-validation",
+                      "owner":  "proxtel-development-orchestrator",
+                      "action":  "Run applicable technical tests, lint, build, DB/API and browser validation.",
+                      "next":  "service-quality-review"
+                  },
+                  {
+                      "order":  9,
+                      "id":  "service-quality-review",
+                      "owner":  "customer-service-qa-reviewer",
+                      "action":  "Independently verify permissions, ticket behavior, SLA/escalation, communication and auditability.",
+                      "next":  "release-gate"
+                  },
+                  {
+                      "order":  10,
+                      "id":  "release-gate",
+                      "owner":  "proxtel-customer-service-orchestrator",
+                      "action":  "Declare READY only when applicable technical and service validations pass.",
+                      "next":  "closed"
+                  }
+              ],
+    "final_decisions":  [
+                            {
+                                "decision":  "READY",
+                                "promotion_allowed":  true
+                            },
+                            {
+                                "decision":  "CHANGES-REQUIRED",
+                                "promotion_allowed":  false
+                            },
+                            {
+                                "decision":  "BLOCKED",
+                                "promotion_allowed":  false
+                            },
+                            {
+                                "decision":  "DEFERRED",
+                                "promotion_allowed":  false
+                            }
+                        ],
+    "safety":  {
+                   "discovery_first":  true,
+                   "local_first":  true,
+                   "production_first_forbidden":  true,
+                   "automatic_commit_forbidden":  true,
+                   "automatic_push_forbidden":  true,
+                   "automatic_deploy_forbidden":  true,
+                   "destructive_production_db_forbidden":  true,
+                   "silent_dependency_install_forbidden":  true,
+                   "secrets_in_artifacts_forbidden":  true,
+                   "automatic_live_retry_forbidden":  true
+               }
+}

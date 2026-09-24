@@ -1,0 +1,28 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-customer-service-skill-bundle",
+    "id":  "customer-service-area-skill-bundle",
+    "version":  "1.0.0",
+    "status":  "active",
+    "domain_skills":  [
+                          "customer-service-requirements-auditor",
+                          "ticket-lifecycle-designer",
+                          "customer-communication-governor",
+                          "knowledge-escalation-planner",
+                          "customer-service-release-auditor"
+                      ],
+    "inherited_development_skills":  [
+                                         "auditor-web",
+                                         "maestro-frontend"
+                                     ],
+    "crm_coordination":  [
+                             "crm-requirements-auditor",
+                             "crm-workflow-designer",
+                             "crm-integration-planner"
+                         ],
+    "activation":  {
+                       "automatic_activation":  false,
+                       "certification_required_before_activation":  true,
+                       "scope":  "area-local-after-certification"
+                   }
+}

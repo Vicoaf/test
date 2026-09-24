@@ -1,0 +1,51 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-customer-service-capability-map",
+    "id":  "customer-service-capability-map",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "lanes":  [
+                  {
+                      "id":  "service-domain-analysis",
+                      "owner":  "customer-service-domain-analyst",
+                      "purpose":  "Service actors, channels, ticket categories, priorities, ownership and operating rules."
+                  },
+                  {
+                      "id":  "ticket-workflow",
+                      "owner":  "ticket-workflow-specialist",
+                      "purpose":  "Ticket states, queue routing, assignments, SLAs, reopen/close semantics and escalation triggers."
+                  },
+                  {
+                      "id":  "customer-communications",
+                      "owner":  "customer-communications-specialist",
+                      "purpose":  "Tone, templates, channel behavior, response boundaries and customer-facing clarity."
+                  },
+                  {
+                      "id":  "knowledge-escalation",
+                      "owner":  "knowledge-escalation-specialist",
+                      "purpose":  "Knowledge usage, escalation tiers, handoff evidence and unresolved-case management."
+                  },
+                  {
+                      "id":  "service-quality",
+                      "owner":  "customer-service-qa-reviewer",
+                      "purpose":  "Independent validation of permissions, SLA logic, auditability, communication and release readiness."
+                  },
+                  {
+                      "id":  "software-implementation",
+                      "owner":  "proxtel-development-orchestrator",
+                      "purpose":  "Delegated repository implementation and technical validation."
+                  },
+                  {
+                      "id":  "crm-domain-coordination",
+                      "owner":  "proxtel-crm-orchestrator",
+                      "purpose":  "Delegated CRM-domain decisions when customer-service changes alter CRM records, activities or integrations."
+                  }
+              ],
+    "delegation":  {
+                       "development_required_for_code_changes":  true,
+                       "crm_required_when_crm_domain_contract_changes":  true,
+                       "do_not_duplicate_development_capabilities":  true,
+                       "do_not_duplicate_crm_capabilities":  true
+                   }
+}

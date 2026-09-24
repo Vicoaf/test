@@ -1,0 +1,92 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-customer-service-runtime-bindings",
+    "id":  "customer-service-runtime-bindings",
+    "version":  "1.0.0",
+    "status":  "certified",
+    "provider_neutral":  true,
+    "orchestrator":  {
+                         "id":  "proxtel-customer-service-orchestrator",
+                         "source":  "agents/customer-service/proxtel-customer-service-orchestrator/agent.json"
+                     },
+    "workflow":  {
+                     "id":  "customer-service-delivery",
+                     "source":  "workflows/customer-service/delivery/workflow.json"
+                 },
+    "bindings":  [
+                     {
+                         "lane":  "service-domain-analysis",
+                         "executor":  "customer-service-domain-analyst",
+                         "preferred_provider":  "claude",
+                         "fallback":  [
+                                          "codex",
+                                          "antigravity"
+                                      ]
+                     },
+                     {
+                         "lane":  "ticket-workflow",
+                         "executor":  "ticket-workflow-specialist",
+                         "preferred_provider":  "claude",
+                         "fallback":  [
+                                          "codex"
+                                      ]
+                     },
+                     {
+                         "lane":  "customer-communications",
+                         "executor":  "customer-communications-specialist",
+                         "preferred_provider":  "claude",
+                         "fallback":  [
+                                          "antigravity"
+                                      ]
+                     },
+                     {
+                         "lane":  "knowledge-escalation",
+                         "executor":  "knowledge-escalation-specialist",
+                         "preferred_provider":  "claude",
+                         "fallback":  [
+                                          "codex"
+                                      ]
+                     },
+                     {
+                         "lane":  "service-quality",
+                         "executor":  "customer-service-qa-reviewer",
+                         "preferred_provider":  "antigravity",
+                         "fallback":  [
+                                          "claude",
+                                          "codex"
+                                      ]
+                     },
+                     {
+                         "lane":  "software-implementation",
+                         "executor":  "proxtel-development-orchestrator",
+                         "preferred_provider":  "task-determined",
+                         "fallback":  [
+
+                                      ]
+                     },
+                     {
+                         "lane":  "crm-domain-coordination",
+                         "executor":  "proxtel-crm-orchestrator",
+                         "preferred_provider":  "task-determined",
+                         "fallback":  [
+
+                                      ]
+                     }
+                 ],
+    "tool_policy":  {
+                        "reuse_development_registry":  "tools/registry/development-tools.json",
+                        "customer_service_specific_tools":  [
+
+                                                            ],
+                        "automatic_tool_execution":  false,
+                        "add_new_tool_only_if_gap_is_proven":  true
+                    },
+    "mcp_policy":  {
+                       "reuse_development_profile":  "config/development-mcp-profile.json",
+                       "customer_service_specific_servers":  [
+
+                                                             ],
+                       "automatic_approval":  false,
+                       "add_new_mcp_only_if_gap_is_proven":  true
+                   }
+}

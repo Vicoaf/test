@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-customer-service-area-activation",
+    "id":  "customer-service-area-activation",
+    "area":  "customer-service",
+    "version":  "1.0.0",
+    "status":  "active",
+    "scope":  "customer-service-area-local",
+    "parent_commit":  "59fedfff630cacb6d11fd728e5b03bc56e3380c1",
+    "routing":  {
+                    "orchestrator":  "agents/customer-service/proxtel-customer-service-orchestrator/agent.json",
+                    "capability_map":  "config/customer-service/capability-map.json",
+                    "runtime_bindings":  "config/customer-service/runtime-bindings.json",
+                    "skill_bundle":  "config/customer-service/skill-bundle.json",
+                    "workflow":  "workflows/customer-service/delivery/workflow.json"
+                },
+    "dependencies":  {
+                         "development":  "inherit",
+                         "crm":  "coordinate-when-applicable",
+                         "new_tools":  0,
+                         "new_mcp_servers":  0
+                     },
+    "execution":  {
+                      "automatic_tool_execution":  false,
+                      "automatic_dependency_installation":  false,
+                      "automatic_git_add":  false,
+                      "automatic_commit":  false,
+                      "automatic_push":  false,
+                      "automatic_deploy":  false
+                  }
+}

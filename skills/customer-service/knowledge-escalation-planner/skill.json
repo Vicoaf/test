@@ -1,0 +1,41 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill",
+    "id":  "knowledge-escalation-planner",
+    "display_name":  "Knowledge and Escalation Planner",
+    "area":  "customer-service",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "description":  "Define knowledge usage, escalation tiers, evidence requirements, ownership transfer and unresolved-case handling.",
+    "dependencies":  {
+                         "direct_scripts":  [
+
+                                            ],
+                         "direct_packages":  [
+
+                                             ],
+                         "silent_installation_allowed":  false
+                     },
+    "safety":  {
+                   "read_only_discovery_first":  true,
+                   "local_first":  true,
+                   "pii_minimization":  true,
+                   "secrets_in_output_forbidden":  true,
+                   "production_mutation_default":  false,
+                   "database_mutation_default":  false,
+                   "automatic_git_operations":  false,
+                   "automatic_live_retry":  false
+               },
+    "outputs":  [
+                    "knowledge usage rules",
+                    "escalation model",
+                    "handoff evidence",
+                    "unresolved-case policy"
+                ],
+    "lifecycle":  {
+                      "current":  "approved",
+                      "certification_required_before_activation":  true,
+                      "global_registry_promotion":  "area-local-activation"
+                  }
+}

@@ -1,0 +1,71 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-contract",
+    "id":  "customer-service",
+    "display_name":  "PROXTEL Customer Service Area",
+    "version":  "1.0.0",
+    "lifecycle_status":  "certified",
+    "provider_neutral":  true,
+    "parent_commit":  "59fedfff630cacb6d11fd728e5b03bc56e3380c1",
+    "mission":  "Coordinate customer-service operations, ticket lifecycle, communication standards, knowledge/escalation design and service-quality validation while delegating software implementation to Development and CRM-domain changes to CRM when applicable.",
+    "boundaries":  {
+                       "owns":  [
+                                    "customer-service requirements and operating semantics",
+                                    "ticket lifecycle and queue semantics",
+                                    "customer communication standards",
+                                    "knowledge usage and escalation design",
+                                    "SLA intent and service-quality validation"
+                                ],
+                       "delegates_to_development":  [
+                                                        "repository code implementation",
+                                                        "frontend/backend/database implementation",
+                                                        "API clients and browser automation",
+                                                        "technical security/build validation"
+                                                    ],
+                       "coordinates_with_crm":  [
+                                                    "customer/contact record semantics",
+                                                    "CRM activities and notes",
+                                                    "CRM workflow/integration changes"
+                                                ],
+                       "does_not_own":  [
+                                            "sales strategy",
+                                            "PBX administration",
+                                            "finance operations",
+                                            "production deployment without explicit authorization"
+                                        ]
+                   },
+    "safety":  {
+                   "read_only_discovery_first":  true,
+                   "local_first":  true,
+                   "pii_minimization":  true,
+                   "secrets_in_repository_forbidden":  true,
+                   "production_mutation_default":  false,
+                   "database_mutation_default":  false,
+                   "external_api_mutation_default":  false,
+                   "automatic_dependency_installation":  false,
+                   "automatic_git_add":  false,
+                   "automatic_commit":  false,
+                   "automatic_push":  false,
+                   "automatic_deploy":  false,
+                   "automatic_live_retry":  false
+               },
+    "reuse":  {
+                  "development_runtime":  "config/development-project-runtime-policy.json",
+                  "development_tools":  "tools/registry/development-tools.json",
+                  "development_mcp":  "config/development-mcp-profile.json",
+                  "crm_area":  "config/crm/area.json",
+                  "crm_workflow":  "workflows/crm/solution-delivery/workflow.json"
+              },
+    "certification":  {
+                          "status":  "certified",
+                          "scope":  "local-deterministic",
+                          "artifact":  "tests/customer-service/certification/area-customer-service-certification-v1.json",
+                          "independent_provider_review":  "not-performed"
+                      },
+    "activation":  {
+                       "status":  "active",
+                       "scope":  "customer-service-area-local",
+                       "authority":  "config/customer-service/activation.json",
+                       "global_agency_manifest":  "not-yet-promoted"
+                   }
+}
