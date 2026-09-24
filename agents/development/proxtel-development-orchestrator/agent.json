@@ -56,9 +56,7 @@
                    "no_automatic_retry_of_consumed_live_attempt":  true
                },
     "skills":  {
-                   "canonical_active":  [
-
-                                        ],
+                   "canonical_active":  ["auditor-web","estratega-seo","maestro-frontend"],
                    "legacy_baseline_reference_only":  [
                                                           "auditor-web",
                                                           "estratega-seo",

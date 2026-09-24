@@ -86,7 +86,7 @@
                              "config/development-runtime-bindings.json":  "E0BC5EF63D3B792FDB8F748193B208B44BFE3ABDAC24FCAB323E9242BEC0266D",
                              "tools/registry/development-tools.json":  "D381EC3A153E366D91121EA873944B80A8EC618B20626D2DC18E05A15241374B",
                              "config/skill-bundles.json":  "B47D123EF45430640736962429E2ED5721C21EC0B2D4F81C1F943D4A6E286D65",
-                             "agents/development/proxtel-development-orchestrator/agent.json":  "75AD9B409C29C505DBFC1F19BD2CC34B4B04CBE9AB929100E0F11D63EDF4FCF3",
+                             "agents/development/proxtel-development-orchestrator/agent.json":  "C22CDA4009BA104B9D6AB98E20B360D91F76DD6CFC941FB0B7C91649E7F6B711",
                              "workflows/development/software-delivery/workflow.json":  "0ABB0019815C0ACB653B94DA7E58DF03B59C2FBE1B702E75147F166A762AEC24",
                              "skills/_registry/skills-registry.json":  "38E1213E26A46209FA0B25072F469CA07B3564FFADDA9ADAB3DC7E3C494B9A8D",
                              "scripts/skill-source-resolver.ps1":  "0093B1540ECB5DA2CDD6FE6CA374C74B5682A4CB9E664E7D80CC3C9908C48AE0",

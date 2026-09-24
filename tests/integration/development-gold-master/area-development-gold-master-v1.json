@@ -1,0 +1,201 @@
+{
+    "schema_version":  "1.0",
+    "certification_id":  "PROXTEL-DEVELOPMENT-GOLD-MASTER-V1",
+    "generated_utc":  "2026-09-24T23:14:23.4572736Z",
+    "branch":  "core-v2",
+    "parent_head":  "705dea06a962038e1edbf1b675d5654df57da1e2",
+    "lifecycle":  {
+                      "development_gold_master":  "certified-ready-for-controlled-commit",
+                      "canonical_skill_count":  3,
+                      "mcp_configuration":  "tested-transport",
+                      "authenticated_remote_mcp_sessions":  "host-managed-not-certified-by-this-artifact"
+                  },
+    "regression":  {
+                       "static_repository":  "pass",
+                       "tool_contracts":  "pass",
+                       "template_contracts":  "pass",
+                       "project_runtime_contracts":  "pass",
+                       "distribution_bridge":  "pass",
+                       "workflow_contracts":  "pass",
+                       "current_agent_foundation_contract":  "pass",
+                       "historical_agent_foundation_tests":  "preserved-prepromotion-not-live-gates",
+                       "runtime_five_types":  "pass",
+                       "mcp_stdio_startup":  "pass",
+                       "mcp_remote_transport_reachability":  "pass"
+                   },
+    "safety":  {
+                   "automatic_tool_execution":  false,
+                   "provider_execution":  false,
+                   "model_execution":  false,
+                   "production_mutation":  false,
+                   "secrets_written_by_gold_master":  false
+               },
+    "historical_evidence":  {
+                                "file_count":  216,
+                                "manifest_sha256":  "F776496A060705E3C11A8B36793217A241CFBD43F55C54DC509CE5DD80B30DC2",
+                                "repository_disposition":  "preserved-untracked-certified-exclusion",
+                                "archive_root":  null,
+                                "automatic_move_performed":  false,
+                                "automatic_delete_performed":  false
+                            },
+    "tracked_modifications":  [
+                                  {
+                                      "path":  "agents/development/proxtel-development-orchestrator/agent.json",
+                                      "sha256":  "C22CDA4009BA104B9D6AB98E20B360D91F76DD6CFC941FB0B7C91649E7F6B711",
+                                      "disposition":  "modified"
+                                  },
+                                  {
+                                      "path":  "config/development-capability-map.json",
+                                      "sha256":  "CD948515F6B7AE1FD19E135A37B529A2A9933F380B89D57682D87CE076A80D54",
+                                      "disposition":  "modified"
+                                  },
+                                  {
+                                      "path":  "config/development-project-runtime-policy.json",
+                                      "sha256":  "EA34AF4C47AC8595784A4D6AA6D12B57055B16BF2D18B621F1BD58AD2ACF8B24",
+                                      "disposition":  "modified"
+                                  },
+                                  {
+                                      "path":  "scripts/development-project-runtime-resolver.ps1",
+                                      "sha256":  "785DDBC6650EF7E46A5BEF7A440153905239F01E25D43660DFA33C586FCDB752",
+                                      "disposition":  "modified"
+                                  }
+                              ],
+    "new_files":  [
+                      {
+                          "path":  ".mcp.json",
+                          "sha256":  "0B2F1365880226AEDE5104BBA94E3B69339BC53C9425B7748169B0898B0F5D17",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  ".agents/mcp_config.json",
+                          "sha256":  "EBB715E895DA33A4E9AF99364100B23AECF3E04AF900E83929B2AF0B62C518BC",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "config/development-mcp-profile.json",
+                          "sha256":  "0D73175BF7BBC2262A0AEB45EA1966D8692CA0C41B4F29AA6C361E507E811933",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "config/schemas/proxtel-development-mcp-profile.schema.json",
+                          "sha256":  "DD6CDACF40D15BBE0EE79D3D37F082E9A834436B12396EE86C35E551ECB42F53",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/website/.proxtel-template/blueprint.json",
+                          "sha256":  "557DCBF938FB4A2C7ACDC6A00092D096F5E813CF98784F1751991B877EFDE29D",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/website/docs/proxtel/STARTER.md",
+                          "sha256":  "387C1167D8D2697F99C0E0B9AAD3783724524613479BA99E2C451AE86AD7FAC7",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/website/public/index.php",
+                          "sha256":  "8ED9C5426D8AFD2422E6F0ADA4F5592F2C894C47007323B041D08128B245CA35",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/website/public/assets/css/app.css",
+                          "sha256":  "DA3E487922A0E04DA4F9720D4E70D94D5DA3104BB3A0A84DF859D78BCA0414C5",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/website/public/assets/js/app.js",
+                          "sha256":  "D04B110D9EDA7985B69784B150AB42A7252CC06395B2CE1CFA52B6C1E5DECF1A",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/landing-page/.proxtel-template/blueprint.json",
+                          "sha256":  "6CF8AB5E8DA0BA657CD6D64D73AE36C7686E8C869A7759C5857DA4D9B90FB619",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/landing-page/docs/proxtel/STARTER.md",
+                          "sha256":  "8E10176F55AB6923335F479F3AD6F8DF6AA155AF607159EE2110CF6C1131610B",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/landing-page/public/index.php",
+                          "sha256":  "AFC1FD5763EA8F59938999EEDCCB3A7DC34DDAA638B081734CDA37A6295D778B",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/landing-page/public/assets/css/app.css",
+                          "sha256":  "DA3E487922A0E04DA4F9720D4E70D94D5DA3104BB3A0A84DF859D78BCA0414C5",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/landing-page/public/assets/js/app.js",
+                          "sha256":  "D04B110D9EDA7985B69784B150AB42A7252CC06395B2CE1CFA52B6C1E5DECF1A",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/laravel/.proxtel-template/blueprint.json",
+                          "sha256":  "75F61C52FA4A5AA50790C6C52B64B70FC23A81EB124A0DC2F7A5A1186A3FC6EE",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/laravel/docs/proxtel/STARTER.md",
+                          "sha256":  "170871897CB42AE6D038CB34C600CE2C7CDA3B1D2B0FC29B0D1BCAA474563BF7",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/laravel/docs/proxtel/ARCHITECTURE.md",
+                          "sha256":  "E896FA608838536C373AEC7A9F168F5911C4218F82CA069C7DDD7310429979FB",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/laravel/docs/proxtel/BOOTSTRAP.md",
+                          "sha256":  "170871897CB42AE6D038CB34C600CE2C7CDA3B1D2B0FC29B0D1BCAA474563BF7",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/crm/.proxtel-template/blueprint.json",
+                          "sha256":  "EAFD1DADDAF32CC92EA07B0B94EB4EB1B83F333BAFABB567ABC778FB72B6FCED",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/crm/docs/proxtel/STARTER.md",
+                          "sha256":  "1CF20FD945CE2ADDBAEC4BCC51F9BE71E7D61336DFBCB7127E4499D4812A25C0",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/crm/docs/proxtel/ARCHITECTURE.md",
+                          "sha256":  "E896FA608838536C373AEC7A9F168F5911C4218F82CA069C7DDD7310429979FB",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/crm/docs/proxtel/MODULES.md",
+                          "sha256":  "89C016C5A55834F673DE4E19CE143ED612E0EC674F2AB92290832EA6F17911BD",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/saas/.proxtel-template/blueprint.json",
+                          "sha256":  "6D6D26AB3C24871092A8C6F9139F15BD43579C49DA14A3773A5F619BD63B4C22",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/saas/docs/proxtel/STARTER.md",
+                          "sha256":  "6F773B10F4E4B4971C94C4A8C81C2AE77D1289FC17461CACCFD3FF48D57BBD64",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/saas/docs/proxtel/ARCHITECTURE.md",
+                          "sha256":  "E896FA608838536C373AEC7A9F168F5911C4218F82CA069C7DDD7310429979FB",
+                          "disposition":  "new"
+                      },
+                      {
+                          "path":  "templates/saas/docs/proxtel/TENANCY.md",
+                          "sha256":  "6BF1C86596181E2D020309779EB529DF83210290828BB6D2CE4E14C7D9D08A30",
+                          "disposition":  "new"
+                      }
+                  ],
+    "commit_policy":  {
+                          "git_add_dot_forbidden":  true,
+                          "exact_allowlist_required":  true,
+                          "single_commit":  true,
+                          "single_push":  true
+                      }
+}

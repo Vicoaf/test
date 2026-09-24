@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "proxtel-development-mcp-v1",
+  "status": "materialized",
+  "scope": "development",
+  "security": {
+    "secrets_in_repository": false,
+    "github_mode": "remote-readonly-oauth-or-host-auth",
+    "context7_api_key_required": false,
+    "filesystem_allowed_roots": [
+      "C:\\DEV\\PROXTEL-AI-AGENCY",
+      "C:\\DEV\\WEBS"
+    ],
+    "automatic_tool_approval": false
+  },
+  "workspace_servers": [
+    {
+      "id": "filesystem",
+      "transport": "stdio",
+      "purpose": "Workspace-bounded local filesystem context and file operations."
+    },
+    {
+      "id": "playwright",
+      "transport": "stdio",
+      "purpose": "Isolated browser QA and deterministic web interaction."
+    },
+    {
+      "id": "context7",
+      "transport": "http",
+      "purpose": "Current library and API documentation context."
+    },
+    {
+      "id": "github-readonly",
+      "transport": "http",
+      "purpose": "Read-only GitHub repository, issue and pull-request context."
+    }
+  ],
+  "conditional_integrations": {
+    "laravel_boost": {
+      "scope": "target-laravel-project-only",
+      "agency_root_installation": false,
+      "detect": [
+        "artisan",
+        "composer.json"
+      ],
+      "install_requires_explicit_project_authorization": true,
+      "install_commands": [
+        "composer require laravel/boost --dev",
+        "php artisan boost:install"
+      ],
+      "mcp": {
+        "command": "php",
+        "args": [
+          "artisan",
+          "boost:mcp"
+        ]
+      }
+    }
+  },
+  "local_tool_policy": {
+    "mode": "explicit-per-task",
+    "automatic_tool_execution": false,
+    "registry_execution_enabled": false,
+    "contract_validation_required": true,
+    "tool_ids": [
+      "artisan-runner",
+      "db-inspector",
+      "log-parser",
+      "vite-builder",
+      "api-tester"
+    ]
+  }
+}

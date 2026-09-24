@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "template": "laravel",
+  "lifecycle": "materialized",
+  "starter_mode": "framework-safe-overlay",
+  "full_framework_installation": false,
+  "framework_bootstrap_required": true,
+  "recommended_bootstrap": "composer create-project laravel/laravel",
+  "post_bootstrap": [
+    "apply this starter overlay",
+    "configure .env locally",
+    "run migrations only after explicit authorization",
+    "install Laravel Boost only inside the target Laravel project when authorized"
+  ]
+}

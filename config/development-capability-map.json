@@ -123,8 +123,6 @@
                                        "note":  "Useful frontend baseline. Requires Skill Factory modernization/audit before canonical activation."
                                    }
                                ],
-    "canonical_active_development_skills":  [
-
-                                            ],
+    "canonical_active_development_skills":  ["auditor-web","estratega-seo","maestro-frontend"],
     "next_portfolio_stage":  "AREA-1.7-DEVELOPMENT-SKILL-PORTFOLIO-MODERNIZATION"
 }

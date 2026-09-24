@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "template": "crm",
+  "lifecycle": "materialized",
+  "starter_mode": "laravel-crm-overlay",
+  "full_framework_installation": false,
+  "framework_bootstrap_required": true,
+  "architecture": [
+    "roles-and-permissions",
+    "contacts-and-leads",
+    "activity-audit",
+    "api-integrations",
+    "queue-ready-jobs"
+  ]
+}

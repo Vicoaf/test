@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "template": "landing-page",
+  "lifecycle": "materialized",
+  "starter_mode": "php-public-starter",
+  "full_framework_installation": false,
+  "entrypoint": "public/index.php",
+  "security_defaults": {
+    "display_errors": false,
+    "escape_output": true,
+    "secrets_in_repository": false
+  }
+}

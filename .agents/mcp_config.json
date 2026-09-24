@@ -1,0 +1,31 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\DEV\\PROXTEL-AI-AGENCY",
+        "C:\\DEV\\WEBS"
+      ]
+    },
+    "playwright": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@playwright/mcp@latest",
+        "--isolated"
+      ]
+    },
+    "context7": {
+      "serverUrl": "https://mcp.context7.com/mcp"
+    },
+    "github-readonly": {
+      "serverUrl": "https://api.githubcopilot.com/mcp/readonly"
+    }
+  }
+}

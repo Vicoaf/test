@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://proxtel.local/schemas/proxtel-development-mcp-profile.schema.json",
+  "title": "PROXTEL Development MCP Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "profile_id",
+    "status",
+    "scope",
+    "security",
+    "workspace_servers",
+    "conditional_integrations",
+    "local_tool_policy"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "profile_id": {
+      "type": "string",
+      "const": "proxtel-development-mcp-v1"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "materialized",
+        "tested",
+        "certified"
+      ]
+    },
+    "scope": {
+      "type": "string",
+      "const": "development"
+    },
+    "security": {
+      "type": "object"
+    },
+    "workspace_servers": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "conditional_integrations": {
+      "type": "object"
+    },
+    "local_tool_policy": {
+      "type": "object"
+    }
+  }
+}

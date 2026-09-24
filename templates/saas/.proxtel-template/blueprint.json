@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "template": "saas",
+  "lifecycle": "materialized",
+  "starter_mode": "laravel-saas-overlay",
+  "full_framework_installation": false,
+  "framework_bootstrap_required": true,
+  "architecture": [
+    "tenant-boundary",
+    "plans-and-entitlements",
+    "billing-adapter-boundary",
+    "roles-and-permissions",
+    "audit-and-observability"
+  ]
+}
