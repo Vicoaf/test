@@ -1,0 +1,24 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-subagent",
+    "id":  "pbx-security-operations-specialist",
+    "display_name":  "PBX Security and Operations Specialist",
+    "area":  "pbx",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "parent_agent":  "proxtel-pbx-orchestrator",
+    "persistent":  false,
+    "mission":  "Define PBX network hardening, nftables, Fail2Ban, SSH, GeoIP, QoS, logging, monitoring, maintenance and controlled operational procedures.",
+    "limits":  {
+                   "repository_code_implementation":  false,
+                   "production_pbx_mutation":  false,
+                   "database_mutation":  false,
+                   "service_restart":  false,
+                   "firewall_reload":  false,
+                   "freepbx_apply":  false,
+                   "trunk_endpoint_mutation":  false,
+                   "credential_exposure":  false,
+                   "automatic_git_operations":  false
+               }
+}

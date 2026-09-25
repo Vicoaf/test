@@ -1,0 +1,29 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-pbx-skill-bundle",
+    "id":  "pbx-area-skill-bundle",
+    "version":  "1.0.0",
+    "status":  "active",
+    "domain_skills":  [
+                          "pbx-requirements-auditor",
+                          "pbx-architecture-planner",
+                          "asterisk-dialplan-governor",
+                          "sip-security-integration-planner",
+                          "pbx-release-auditor"
+                      ],
+    "inherited_development_skills":  [
+                                         "auditor-web"
+                                     ],
+    "crm_coordination":  [
+                             "crm-requirements-auditor",
+                             "crm-integration-planner"
+                         ],
+    "documentation_coordination":  [
+                                       "documentation-requirements-auditor"
+                                   ],
+    "activation":  {
+                       "automatic_activation":  false,
+                       "certification_required_before_activation":  true,
+                       "scope":  "pbx-area-local-after-certification"
+                   }
+}

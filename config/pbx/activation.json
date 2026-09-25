@@ -1,0 +1,35 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-pbx-area-activation",
+    "id":  "pbx-area-activation",
+    "area":  "pbx",
+    "version":  "1.0.0",
+    "status":  "active",
+    "scope":  "pbx-area-local",
+    "parent_commit":  "81707d12bdbf97af8c0e19e3900471c7f886f1c1",
+    "dependencies":  {
+                         "development":  "implementation-authority",
+                         "crm":  "integration-authority",
+                         "documentation":  "documentation-authority",
+                         "customer_service":  "operational-feedback",
+                         "finance":  "cost-and-budget-boundary",
+                         "sales":  "customer-requirements-coordination",
+                         "new_tools":  0,
+                         "new_mcp_servers":  0
+                     },
+    "execution":  {
+                      "automatic_tool_execution":  false,
+                      "live_server_execution":  false,
+                      "production_pbx_mutation":  false,
+                      "automatic_service_restart":  false,
+                      "automatic_firewall_reload":  false,
+                      "automatic_freepbx_apply":  false,
+                      "automatic_trunk_endpoint_change":  false,
+                      "automatic_dependency_installation":  false,
+                      "automatic_git_add":  false,
+                      "automatic_commit":  false,
+                      "automatic_push":  false,
+                      "automatic_deploy":  false,
+                      "explicit_authorization_for_live_change":  true
+                  }
+}

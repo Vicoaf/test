@@ -1,0 +1,174 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-certification",
+    "certification_id":  "PROXTEL-PBX-AREA-CERTIFICATION-V1",
+    "area":  "pbx",
+    "version":  "1.0.0",
+    "status":  "CERTIFIED",
+    "activation_status":  "ACTIVE-AREA-LOCAL",
+    "certification_scope":  "LOCAL-DETERMINISTIC",
+    "independent_provider_review":  {
+                                        "performed":  false,
+                                        "status":  "NOT-PERFORMED",
+                                        "reason":  "No live PBX, provider or model execution is required for deterministic local area certification."
+                                    },
+    "parent_commit":  "81707d12bdbf97af8c0e19e3900471c7f886f1c1",
+    "architecture":  {
+                         "orchestrator":  "proxtel-pbx-orchestrator",
+                         "subagent_count":  5,
+                         "domain_skill_count":  5,
+                         "workflow":  "pbx-delivery",
+                         "new_tools":  0,
+                         "new_mcp_servers":  0,
+                         "development_delegation":  true,
+                         "crm_coordination":  true,
+                         "live_server_execution":  false,
+                         "autonomous_pbx_mutation":  false
+                     },
+    "evidence_files":  [
+                           {
+                               "path":  "agents/pbx/proxtel-pbx-orchestrator/agent.json",
+                               "sha256":  "10813638C9DFB9D76251BDF03FE1E3B0DC4C80345397BFF9327F21B6EE6BEBB8"
+                           },
+                           {
+                               "path":  "agents/pbx/proxtel-pbx-orchestrator/AGENT.md",
+                               "sha256":  "41FCFA1D9499B9E54CBB903A2791421520D81F7A9BD61124B7977C9F81E7B54E"
+                           },
+                           {
+                               "path":  "agents/pbx/subagents/asterisk-dialplan-specialist/subagent.json",
+                               "sha256":  "D6438240AF09122E4410606A271EC3D9FEAB06808FD8239CCA66583153DEFC2F"
+                           },
+                           {
+                               "path":  "agents/pbx/subagents/asterisk-dialplan-specialist/SUBAGENT.md",
+                               "sha256":  "AA3B4B2D1EC61E843D5BE3238D4E17987D22B2353DC57CBE28981A252EDCD99A"
+                           },
+                           {
+                               "path":  "agents/pbx/subagents/pbx-architecture-specialist/subagent.json",
+                               "sha256":  "6EA7389E79D46FF686A45B895B03B95E3D8A50306AB4754F3532AE6CE4DDD87C"
+                           },
+                           {
+                               "path":  "agents/pbx/subagents/pbx-architecture-specialist/SUBAGENT.md",
+                               "sha256":  "809E45625FD81AF2DBB841E5C848BE8863DB48A4BD53C8379AE15542D684AF68"
+                           },
+                           {
+                               "path":  "agents/pbx/subagents/pbx-qa-release-reviewer/subagent.json",
+                               "sha256":  "8994C6BE3D965BF7D97183E69979A4E6934683C7453C22DA9A646E7967D1CBBE"
+                           },
+                           {
+                               "path":  "agents/pbx/subagents/pbx-qa-release-reviewer/SUBAGENT.md",
+                               "sha256":  "07F334892327CE44DD51793A16E6338F84AC5FA5AD6D048D599A0D64BC332976"
+                           },
+                           {
+                               "path":  "agents/pbx/subagents/pbx-security-operations-specialist/subagent.json",
+                               "sha256":  "3ACA1934AF5B250B374974CB1DECA143AE5557DFFD2C6C65FEA2D9F5578C642B"
+                           },
+                           {
+                               "path":  "agents/pbx/subagents/pbx-security-operations-specialist/SUBAGENT.md",
+                               "sha256":  "6E18BEF11849831B85BA87C41558B2DC9C32DF10BCC0A70E9E095A4B250579C2"
+                           },
+                           {
+                               "path":  "agents/pbx/subagents/sip-carrier-integration-specialist/subagent.json",
+                               "sha256":  "B3AB2039A4AC40AC93650FEE7B8EAFE529CF3FBDAFFCC35552A32FA0B9FDF6D1"
+                           },
+                           {
+                               "path":  "agents/pbx/subagents/sip-carrier-integration-specialist/SUBAGENT.md",
+                               "sha256":  "0128CEF23B630DCB8C3A7C254179E639C6386AF1E50B0363CAF686E67BB4D66C"
+                           },
+                           {
+                               "path":  "config/pbx/activation.json",
+                               "sha256":  "AA98253575225DC10D486F855BC1EC3FBF9FEBF8D82A957A8405D9BFE80078C2"
+                           },
+                           {
+                               "path":  "config/pbx/area.json",
+                               "sha256":  "4D199CBC5DDABD701789D6C5AAD471112FD64370DB0E4B7CA204FD00122B81C4"
+                           },
+                           {
+                               "path":  "config/pbx/capability-map.json",
+                               "sha256":  "6AC8DD40A125A7EEDECDAA14077C9AD5A9E92BFE6249848C9D495E70F4FFE0DC"
+                           },
+                           {
+                               "path":  "config/pbx/runtime-bindings.json",
+                               "sha256":  "DC1E71A154BED3D1ECC4B6F55D8F10F61AA6E2DAC6738649F7506CFD0F9772CF"
+                           },
+                           {
+                               "path":  "config/pbx/skill-bundle.json",
+                               "sha256":  "BA15B820ECE1C280431F0CCD987A24D02451E98E953A1F82C663A0DAAA7059D8"
+                           },
+                           {
+                               "path":  "docs/pbx/architecture.md",
+                               "sha256":  "025BFE116AF2A85AD0FC2BBEA8BA18A9E67B235D4C44429336D7547AEBA98DD8"
+                           },
+                           {
+                               "path":  "docs/pbx/operating-model.md",
+                               "sha256":  "FC938B5F9D273DB6855B3CE49A7A429C6AEED445DD99CF06D70E677DFCC9BF96"
+                           },
+                           {
+                               "path":  "skills/pbx/asterisk-dialplan-governor/skill.json",
+                               "sha256":  "3BED52367DFE03052EE48816B935ADCCB0B04B5DE4FEEA73C995B01F98885292"
+                           },
+                           {
+                               "path":  "skills/pbx/asterisk-dialplan-governor/SKILL.md",
+                               "sha256":  "8F0AFCCE9999C5AAD6A6694E7AFC3485067FC60FF4B120ACD6C8B125326E12AB"
+                           },
+                           {
+                               "path":  "skills/pbx/pbx-architecture-planner/skill.json",
+                               "sha256":  "8ACF54B74EE6319723431FF9DFA56C4F440F4352C3BE131EA7F82EC2B816D100"
+                           },
+                           {
+                               "path":  "skills/pbx/pbx-architecture-planner/SKILL.md",
+                               "sha256":  "B97724E9A3892D3098BC7400AF3BED5C1BBF4B8E6D2583D239E57E95A0405609"
+                           },
+                           {
+                               "path":  "skills/pbx/pbx-release-auditor/skill.json",
+                               "sha256":  "2C4FCD05E10B788519D18058026B304EC7CC850BF721A489F04B12ED9307B227"
+                           },
+                           {
+                               "path":  "skills/pbx/pbx-release-auditor/SKILL.md",
+                               "sha256":  "0C73AECE5B1D154AA9ECB700738879CBC6C4EE10D76A9888138A137101E0B51E"
+                           },
+                           {
+                               "path":  "skills/pbx/pbx-requirements-auditor/skill.json",
+                               "sha256":  "D096B4ED1285F501A969560616EB02E83B92AD66BD3FCACD66D8CB9C06445B3B"
+                           },
+                           {
+                               "path":  "skills/pbx/pbx-requirements-auditor/SKILL.md",
+                               "sha256":  "72183AEB311D8F1C8FB95904AC1E07A3643A17CE724D49B48DCE8A51604B0E87"
+                           },
+                           {
+                               "path":  "skills/pbx/sip-security-integration-planner/skill.json",
+                               "sha256":  "6BF1A8E37F951215934A3D9A30709F33BCB0820C22FB80ECCD5FC1CB316E3722"
+                           },
+                           {
+                               "path":  "skills/pbx/sip-security-integration-planner/SKILL.md",
+                               "sha256":  "40E488FD63F0739D0ECEE9490CCB7DB0B7458039D682714FD21F62D703A46B1B"
+                           },
+                           {
+                               "path":  "standards/pbx/pbx-standard.md",
+                               "sha256":  "D3DD8D2E53F9EF358117014DBE5FED1333069D764EACB0D823C68CEB4307EE84"
+                           },
+                           {
+                               "path":  "tests/pbx/area-contract/cases.json",
+                               "sha256":  "D09C752413CFEA91EFEE900559DABAB01F89C62138BE68E3A5E450C831324B9C"
+                           },
+                           {
+                               "path":  "tests/pbx/area-contract/run-pbx-area-tests.ps1",
+                               "sha256":  "41CDE1E789E8458158612AE38FB6425FEA1D8322BD38C3D9FEDD032EA2060CDD"
+                           },
+                           {
+                               "path":  "workflows/pbx/delivery/workflow.json",
+                               "sha256":  "B1713D5C504A66DD7C079D72AE7AA340E55F8A13F01E6693D228AE41335CC95A"
+                           },
+                           {
+                               "path":  "workflows/pbx/delivery/WORKFLOW.md",
+                               "sha256":  "056B11ABEAE3908970687535000453AF810CC40BD5A17A8B9EE30468B90A022E"
+                           }
+                       ],
+    "git":  {
+                "branch":  "core-v2",
+                "head":  "81707d12bdbf97af8c0e19e3900471c7f886f1c1",
+                "git_add_executed":  false,
+                "commit_executed":  false,
+                "push_executed":  false
+            },
+    "certified_utc":  "2026-09-25T01:53:29.7802324Z"
+}

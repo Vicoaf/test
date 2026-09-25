@@ -1,0 +1,70 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-pbx-runtime-bindings",
+    "id":  "pbx-runtime-bindings",
+    "version":  "1.0.0",
+    "status":  "certified",
+    "provider_neutral":  true,
+    "orchestrator":  {
+                         "id":  "proxtel-pbx-orchestrator",
+                         "source":  "agents/pbx/proxtel-pbx-orchestrator/agent.json"
+                     },
+    "workflow":  {
+                     "id":  "pbx-delivery",
+                     "source":  "workflows/pbx/delivery/workflow.json"
+                 },
+    "bindings":  [
+                     {
+                         "lane":  "pbx-architecture",
+                         "executor":  "pbx-architecture-specialist",
+                         "preferred_provider":  "claude"
+                     },
+                     {
+                         "lane":  "asterisk-dialplan",
+                         "executor":  "asterisk-dialplan-specialist",
+                         "preferred_provider":  "claude"
+                     },
+                     {
+                         "lane":  "sip-carrier-integration",
+                         "executor":  "sip-carrier-integration-specialist",
+                         "preferred_provider":  "claude"
+                     },
+                     {
+                         "lane":  "pbx-security-operations",
+                         "executor":  "pbx-security-operations-specialist",
+                         "preferred_provider":  "antigravity"
+                     },
+                     {
+                         "lane":  "pbx-quality",
+                         "executor":  "pbx-qa-release-reviewer",
+                         "preferred_provider":  "antigravity"
+                     },
+                     {
+                         "lane":  "crm-telephony-coordination",
+                         "executor":  "proxtel-pbx-orchestrator",
+                         "preferred_provider":  "task-determined"
+                     },
+                     {
+                         "lane":  "software-installer-implementation",
+                         "executor":  "proxtel-development-orchestrator",
+                         "preferred_provider":  "task-determined"
+                     }
+                 ],
+    "tool_policy":  {
+                        "reuse":  "tools/registry/development-tools.json",
+                        "pbx_specific_tools":  [
+
+                                               ],
+                        "automatic_tool_execution":  false,
+                        "live_server_execution":  false,
+                        "add_new_tool_only_if_gap_is_proven":  true
+                    },
+    "mcp_policy":  {
+                       "reuse":  "config/development-mcp-profile.json",
+                       "pbx_specific_servers":  [
+
+                                                ],
+                       "automatic_approval":  false,
+                       "add_new_mcp_only_if_gap_is_proven":  true
+                   }
+}

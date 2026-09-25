@@ -1,0 +1,78 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-agent",
+    "id":  "proxtel-pbx-orchestrator",
+    "display_name":  "PROXTEL PBX Orchestrator",
+    "area":  "pbx",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "role":  "Main PBX Orchestrator",
+    "mission":  "Coordinate PBX architecture, FreePBX, Asterisk, PJSIP, trunks, endpoints, dialplan, routing, carrier integration, CRM telephony, security, QoS, recording, operations and PBX QA.",
+    "subagents":  [
+                      {
+                          "id":  "pbx-architecture-specialist",
+                          "persistent":  false
+                      },
+                      {
+                          "id":  "asterisk-dialplan-specialist",
+                          "persistent":  false
+                      },
+                      {
+                          "id":  "sip-carrier-integration-specialist",
+                          "persistent":  false
+                      },
+                      {
+                          "id":  "pbx-security-operations-specialist",
+                          "persistent":  false
+                      },
+                      {
+                          "id":  "pbx-qa-release-reviewer",
+                          "persistent":  false
+                      }
+                  ],
+    "skills":  {
+                   "candidate_domain":  [
+                                            "pbx-requirements-auditor",
+                                            "pbx-architecture-planner",
+                                            "asterisk-dialplan-governor",
+                                            "sip-security-integration-planner",
+                                            "pbx-release-auditor"
+                                        ]
+               },
+    "tools":  {
+                  "pbx_specific_tools":  [
+
+                                         ],
+                  "automatic_execution":  false,
+                  "live_server_execution":  false
+              },
+    "mcp":  {
+                "pbx_specific_servers":  [
+
+                                         ],
+                "automatic_approval":  false
+            },
+    "delegation":  {
+                       "repository_changes_require_development":  true,
+                       "installer_code_requires_development":  true,
+                       "crm_domain_changes_require_crm":  true,
+                       "reusable_documentation_requires_documentation":  true
+                   },
+    "limits":  {
+                   "no_automatic_commit":  true,
+                   "no_automatic_push":  true,
+                   "no_automatic_deploy":  true,
+                   "no_automatic_service_restart":  true,
+                   "no_automatic_firewall_reload":  true,
+                   "no_automatic_freepbx_apply":  true,
+                   "no_automatic_trunk_endpoint_change":  true,
+                   "no_secret_exposure":  true,
+                   "explicit_authorization_for_live_mutation":  true
+               },
+    "activation":  {
+                       "status":  "active",
+                       "scope":  "pbx-area-local",
+                       "authority":  "config/pbx/activation.json"
+                   }
+}

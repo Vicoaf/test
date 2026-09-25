@@ -59,7 +59,7 @@
       "id": "pbx",
       "name": "PBX",
       "order": 8,
-      "status": "planned"
+      "status": "active"
     }
   ],
   "providers": [

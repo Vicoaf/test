@@ -1,0 +1,36 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill",
+    "id":  "pbx-requirements-auditor",
+    "display_name":  "PBX Requirements Auditor",
+    "area":  "pbx",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "description":  "Audit PBX topology, call flows, extensions, trunks, carriers, routing, security, CRM integration, QoS, recording, monitoring and operational requirements before implementation.",
+    "dependencies":  {
+                         "direct_scripts":  [
+
+                                            ],
+                         "direct_packages":  [
+
+                                             ],
+                         "silent_installation_allowed":  false
+                     },
+    "safety":  {
+                   "read_only_discovery_first":  true,
+                   "evidence_before_mutation":  true,
+                   "production_pbx_mutation_default":  false,
+                   "automatic_service_restart":  false,
+                   "automatic_firewall_reload":  false,
+                   "automatic_freepbx_apply":  false,
+                   "automatic_trunk_endpoint_change":  false,
+                   "credential_exposure":  false,
+                   "automatic_git_operations":  false
+               },
+    "lifecycle":  {
+                      "current":  "approved",
+                      "certification_required_before_activation":  true,
+                      "global_registry_promotion":  "area-local-activation"
+                  }
+}

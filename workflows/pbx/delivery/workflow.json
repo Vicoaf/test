@@ -1,0 +1,95 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-workflow",
+    "id":  "pbx-delivery",
+    "display_name":  "PROXTEL PBX Delivery Workflow",
+    "area":  "pbx",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "steps":  [
+                  {
+                      "order":  1,
+                      "id":  "intake",
+                      "owner":  "proxtel-pbx-orchestrator"
+                  },
+                  {
+                      "order":  2,
+                      "id":  "pbx-baseline-discovery",
+                      "owner":  "pbx-architecture-specialist"
+                  },
+                  {
+                      "order":  3,
+                      "id":  "pbx-architecture-design",
+                      "owner":  "pbx-architecture-specialist"
+                  },
+                  {
+                      "order":  4,
+                      "id":  "sip-pjsip-carrier-design",
+                      "owner":  "sip-carrier-integration-specialist"
+                  },
+                  {
+                      "order":  5,
+                      "id":  "dialplan-routing-lcr-design",
+                      "owner":  "asterisk-dialplan-specialist"
+                  },
+                  {
+                      "order":  6,
+                      "id":  "crm-callerid-integration",
+                      "owner":  "proxtel-pbx-orchestrator"
+                  },
+                  {
+                      "order":  7,
+                      "id":  "security-network-hardening",
+                      "owner":  "pbx-security-operations-specialist"
+                  },
+                  {
+                      "order":  8,
+                      "id":  "media-qos-recording-operations",
+                      "owner":  "pbx-security-operations-specialist"
+                  },
+                  {
+                      "order":  9,
+                      "id":  "development-installer-handoff",
+                      "owner":  "proxtel-development-orchestrator"
+                  },
+                  {
+                      "order":  10,
+                      "id":  "technical-validation",
+                      "owner":  "proxtel-pbx-orchestrator"
+                  },
+                  {
+                      "order":  11,
+                      "id":  "pbx-quality-security-review",
+                      "owner":  "pbx-qa-release-reviewer"
+                  },
+                  {
+                      "order":  12,
+                      "id":  "rollback-readiness",
+                      "owner":  "pbx-qa-release-reviewer"
+                  },
+                  {
+                      "order":  13,
+                      "id":  "release-gate",
+                      "owner":  "proxtel-pbx-orchestrator"
+                  }
+              ],
+    "final_decisions":  [
+                            "READY",
+                            "CHANGES-REQUIRED",
+                            "BLOCKED",
+                            "DEFERRED"
+                        ],
+    "safety":  {
+                   "read_only_discovery_first":  true,
+                   "evidence_before_mutation":  true,
+                   "live_mutation_requires_explicit_authorization":  true,
+                   "automatic_service_restart_forbidden":  true,
+                   "automatic_firewall_reload_forbidden":  true,
+                   "automatic_freepbx_apply_forbidden":  true,
+                   "automatic_trunk_endpoint_change_forbidden":  true,
+                   "automatic_commit_forbidden":  true,
+                   "automatic_push_forbidden":  true,
+                   "automatic_deploy_forbidden":  true
+               }
+}

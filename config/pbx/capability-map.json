@@ -1,0 +1,46 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-pbx-capability-map",
+    "id":  "pbx-capability-map",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "lanes":  [
+                  {
+                      "id":  "pbx-architecture",
+                      "owner":  "pbx-architecture-specialist"
+                  },
+                  {
+                      "id":  "asterisk-dialplan",
+                      "owner":  "asterisk-dialplan-specialist"
+                  },
+                  {
+                      "id":  "sip-carrier-integration",
+                      "owner":  "sip-carrier-integration-specialist"
+                  },
+                  {
+                      "id":  "pbx-security-operations",
+                      "owner":  "pbx-security-operations-specialist"
+                  },
+                  {
+                      "id":  "pbx-quality",
+                      "owner":  "pbx-qa-release-reviewer"
+                  },
+                  {
+                      "id":  "crm-telephony-coordination",
+                      "owner":  "proxtel-pbx-orchestrator"
+                  },
+                  {
+                      "id":  "software-installer-implementation",
+                      "owner":  "proxtel-development-orchestrator"
+                  }
+              ],
+    "delegation":  {
+                       "development_required_for_repository_changes":  true,
+                       "development_required_for_installer_code":  true,
+                       "crm_required_for_crm_domain_changes":  true,
+                       "pbx_required_for_telephony_domain_changes":  true,
+                       "do_not_duplicate_development_capabilities":  true,
+                       "do_not_duplicate_crm_capabilities":  true
+                   }
+}

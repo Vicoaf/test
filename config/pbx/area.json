@@ -1,0 +1,81 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-contract",
+    "id":  "pbx",
+    "display_name":  "PROXTEL PBX Area",
+    "version":  "1.0.0",
+    "lifecycle_status":  "certified",
+    "provider_neutral":  true,
+    "parent_commit":  "81707d12bdbf97af8c0e19e3900471c7f886f1c1",
+    "mission":  "Govern PBX architecture, FreePBX, Asterisk, PJSIP, SIP and RTP flows, dialplan, carriers, routing, CRM telephony integration, security, QoS, recording, monitoring and release validation using controlled evidence-based changes.",
+    "boundaries":  {
+                       "owns":  [
+                                    "PBX domain requirements",
+                                    "FreePBX and Asterisk architecture",
+                                    "PJSIP and SIP transport semantics",
+                                    "trunk and endpoint requirements",
+                                    "dialplan and call-routing semantics",
+                                    "Caller ID and LCR requirements",
+                                    "carrier failover requirements",
+                                    "RTP and media requirements",
+                                    "PBX security and operational controls",
+                                    "PBX-domain release validation"
+                                ],
+                       "delegates_to_crm":  [
+                                                "CRM record semantics",
+                                                "CRM API ownership",
+                                                "CRM database changes"
+                                            ],
+                       "delegates_to_development":  [
+                                                        "repository implementation",
+                                                        "installer implementation",
+                                                        "software changes",
+                                                        "automation code changes"
+                                                    ],
+                       "coordinates_with":  [
+                                                "documentation",
+                                                "customer-service",
+                                                "finance",
+                                                "sales"
+                                            ]
+                   },
+    "safety":  {
+                   "read_only_discovery_first":  true,
+                   "local_first":  true,
+                   "evidence_before_mutation":  true,
+                   "secrets_in_repository_forbidden":  true,
+                   "production_pbx_mutation_default":  false,
+                   "automatic_service_restart":  false,
+                   "automatic_firewall_reload":  false,
+                   "automatic_freepbx_apply":  false,
+                   "automatic_trunk_endpoint_change":  false,
+                   "automatic_credential_exposure":  false,
+                   "database_mutation_default":  false,
+                   "automatic_dependency_installation":  false,
+                   "automatic_git_add":  false,
+                   "automatic_commit":  false,
+                   "automatic_push":  false,
+                   "automatic_deploy":  false,
+                   "explicit_authorization_required_for_live_changes":  true
+               },
+    "reuse":  {
+                  "development":  "implementation-authority",
+                  "crm":  "integration-authority",
+                  "documentation":  "documentation-authority",
+                  "customer_service":  "operational-feedback",
+                  "finance":  "cost-and-budget-boundary",
+                  "sales":  "customer-requirements-coordination"
+              },
+    "certification":  {
+                          "status":  "certified",
+                          "scope":  "local-deterministic",
+                          "artifact":  "tests/pbx/certification/area-pbx-certification-v1.json",
+                          "independent_provider_review":  "not-performed"
+                      },
+    "activation":  {
+                       "status":  "active",
+                       "scope":  "pbx-area-local",
+                       "authority":  "config/pbx/activation.json",
+                       "global_agency_manifest":  "not-yet-promoted"
+                   }
+}

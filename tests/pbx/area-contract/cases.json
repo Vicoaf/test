@@ -1,0 +1,24 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-pbx-area-test-cases",
+    "expected":  {
+                     "area_lifecycle":  "certified",
+                     "agent_status":  "approved",
+                     "workflow_status":  "approved",
+                     "subagents":  [
+                                       "pbx-architecture-specialist",
+                                       "asterisk-dialplan-specialist",
+                                       "sip-carrier-integration-specialist",
+                                       "pbx-security-operations-specialist",
+                                       "pbx-qa-release-reviewer"
+                                   ],
+                     "skills":  [
+                                    "pbx-requirements-auditor",
+                                    "pbx-architecture-planner",
+                                    "asterisk-dialplan-governor",
+                                    "sip-security-integration-planner",
+                                    "pbx-release-auditor"
+                                ],
+                     "parent_commit":  "81707d12bdbf97af8c0e19e3900471c7f886f1c1"
+                 }
+}
