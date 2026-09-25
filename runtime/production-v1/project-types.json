@@ -1,0 +1,74 @@
+{
+    "schema_version":  "1.0",
+    "types":  [
+                  {
+                      "id":  "generic",
+                      "areas":  [
+                                    "development",
+                                    "documentation"
+                                ]
+                  },
+                  {
+                      "id":  "website",
+                      "areas":  [
+                                    "development",
+                                    "documentation",
+                                    "marketing"
+                                ]
+                  },
+                  {
+                      "id":  "laravel-web",
+                      "areas":  [
+                                    "development",
+                                    "documentation",
+                                    "marketing"
+                                ]
+                  },
+                  {
+                      "id":  "crm",
+                      "areas":  [
+                                    "development",
+                                    "crm",
+                                    "documentation",
+                                    "customer-service"
+                                ]
+                  },
+                  {
+                      "id":  "webtrader",
+                      "areas":  [
+                                    "development",
+                                    "crm",
+                                    "documentation",
+                                    "sales",
+                                    "customer-service",
+                                    "finance",
+                                    "marketing"
+                                ]
+                  },
+                  {
+                      "id":  "pbx",
+                      "areas":  [
+                                    "development",
+                                    "crm",
+                                    "documentation",
+                                    "customer-service",
+                                    "pbx"
+                                ]
+                  },
+                  {
+                      "id":  "api",
+                      "areas":  [
+                                    "development",
+                                    "crm",
+                                    "documentation"
+                                ]
+                  },
+                  {
+                      "id":  "automation",
+                      "areas":  [
+                                    "development",
+                                    "documentation"
+                                ]
+                  }
+              ]
+}

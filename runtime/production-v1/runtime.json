@@ -1,0 +1,22 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-production-runtime",
+    "id":  "proxtel-production-runtime",
+    "version":  "1.0.0",
+    "status":  "certified",
+    "parent_gold_master_commit":  "f44e317e2301d35477132bdfbde86a0573f1992c",
+    "commands":  [
+                     "help",
+                     "status",
+                     "doctor",
+                     "new",
+                     "route",
+                     "task"
+                 ],
+    "project_workspace":  ".proxtel",
+    "routing":  "deterministic-area-routing",
+    "provider_execution":  "explicit-per-task",
+    "qa_gate":  "required",
+    "evidence":  "required",
+    "approvals":  "required"
+}

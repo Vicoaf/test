@@ -1,0 +1,16 @@
+{
+    "schema_version":  "1.0",
+    "expected":  {
+                     "lifecycle":  "certified",
+                     "activation":  "ACTIVE-RUNTIME-LOCAL",
+                     "runtime_status":  "certified",
+                     "workflow_status":  "approved",
+                     "runtime_version":  "1.0.0",
+                     "command_count":  6,
+                     "project_type_count":  8,
+                     "provider_count":  3,
+                     "approval_gate_count":  7,
+                     "webtrader_area_count":  7,
+                     "pbx_keyword_adds_area":  "pbx"
+                 }
+}

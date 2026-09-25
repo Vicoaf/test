@@ -1,0 +1,44 @@
+{
+    "schema_version":  "1.0",
+    "area_order":  [
+                       "development",
+                       "crm",
+                       "documentation",
+                       "sales",
+                       "customer-service",
+                       "finance",
+                       "marketing",
+                       "pbx"
+                   ],
+    "keyword_routes":  [
+                           {
+                               "area":  "pbx",
+                               "pattern":  "pbx|asterisk|freepbx|sip|pjsip|trunk|troncal|dialplan|caller id|rtp|extension|extensiÃ³n|llamada"
+                           },
+                           {
+                               "area":  "crm",
+                               "pattern":  "crm|lead|cliente|customer|contacto|pipeline|callcenter|click.to.call"
+                           },
+                           {
+                               "area":  "sales",
+                               "pattern":  "venta|sales|prospect|conversion|conversiÃ³n|cotizacion|cotizaciÃ³n"
+                           },
+                           {
+                               "area":  "customer-service",
+                               "pattern":  "soporte|support|ticket|customer service|atencion|atenciÃ³n"
+                           },
+                           {
+                               "area":  "finance",
+                               "pattern":  "finance|finanzas|budget|presupuesto|costo|cost|forecast|revenue"
+                           },
+                           {
+                               "area":  "marketing",
+                               "pattern":  "marketing|seo|campaign|campaÃ±a|ads|contenido|content|landing"
+                           },
+                           {
+                               "area":  "documentation",
+                               "pattern":  "documentacion|documentaciÃ³n|docs|readme|manual|guia|guÃ­a"
+                           }
+                       ],
+    "invariant":  "development-remains-implementation-authority"
+}

@@ -1,0 +1,99 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-production-runtime-certification",
+    "certification_id":  "PROXTEL-PRODUCTION-RUNTIME-V1",
+    "version":  "1.0.0",
+    "status":  "CERTIFIED",
+    "activation_status":  "ACTIVE-RUNTIME-LOCAL",
+    "parent_gold_master_commit":  "f44e317e2301d35477132bdfbde86a0573f1992c",
+    "global_gold_master_certification_sha256":  "0653981E43A4A0C7EE265DC3D6E4AF91376A2F288E877003E5590228BF8A3636",
+    "runtime":  {
+                    "project_bootstrap":  true,
+                    "deterministic_area_routing":  true,
+                    "task_packets":  true,
+                    "project_memory":  true,
+                    "qa_gate":  true,
+                    "evidence_model":  true,
+                    "approval_gates":  true,
+                    "provider_plan":  "CLAUDE-ARCHITECTURE,CODEX-IMPLEMENTATION,ANTIGRAVITY-AUDIT",
+                    "automatic_provider_execution":  false,
+                    "explicit_per_task_execution":  true
+                },
+    "safety":  {
+                   "automatic_git_commit":  false,
+                   "automatic_git_push":  false,
+                   "automatic_deploy":  false,
+                   "automatic_production_mutation":  false,
+                   "automatic_pbx_live_change":  false
+               },
+    "repository_mutation":  {
+                                "git_add_executed":  false,
+                                "commit_executed":  false,
+                                "push_executed":  false
+                            },
+    "evidence_files":  [
+                           {
+                               "path":  "bin/proxtel.cmd",
+                               "sha256":  "3D49E00F36C642FFE7132B9D7EC899A89BAAFFB7AAD24894379A5C194B608604"
+                           },
+                           {
+                               "path":  "config/production-runtime.json",
+                               "sha256":  "24F317837DCD06796F08B58F41CF7F030446224F38C551325DF35559836C03C0"
+                           },
+                           {
+                               "path":  "docs/production-runtime.md",
+                               "sha256":  "2621D062CC03E0CF089613C7E05BA896F133E69E89DBE7F5432458446D6989CA"
+                           },
+                           {
+                               "path":  "runtime/production-v1/approval-gates.json",
+                               "sha256":  "92283DACA3E699208E240DC6598EA528744B14ABC3B587B23CEF47531130A948"
+                           },
+                           {
+                               "path":  "runtime/production-v1/project-types.json",
+                               "sha256":  "0E17C02BF3CCEF6361AB5DA6A07BA8D5400853BF60095F186932CC08CF0D1454"
+                           },
+                           {
+                               "path":  "runtime/production-v1/providers.json",
+                               "sha256":  "4E2222341E96340BB3921209C93A8B55C7EB574B20BDC343A933F5006E8C9769"
+                           },
+                           {
+                               "path":  "runtime/production-v1/README.md",
+                               "sha256":  "F8F4F2149C3E011637B0A7B50D6711C9A4C7670C517414AE51B94F4FDDAAB086"
+                           },
+                           {
+                               "path":  "runtime/production-v1/router.json",
+                               "sha256":  "AADE2AF65A776F41D4DA40FF08EFC751B9A50AF430B6A41BC60399F3641E222A"
+                           },
+                           {
+                               "path":  "runtime/production-v1/runtime.json",
+                               "sha256":  "B2D6328E089B14E3C94AAC7A6232CE353C889A4FF4A7A1D29680185A919E181C"
+                           },
+                           {
+                               "path":  "runtime/production-v1/workflow.json",
+                               "sha256":  "6956F3BE4ED414C09CB1460D39CE506EBE262F7C30709315C14FDE0ACDDE981D"
+                           },
+                           {
+                               "path":  "scripts/proxtel.ps1",
+                               "sha256":  "7621B6505433CD5D605896EE5D8EC1D593513F623E0AC91398DC87C8C88FE01A"
+                           },
+                           {
+                               "path":  "tests/runtime/production-v1/cases.json",
+                               "sha256":  "DECC0A961AF52ED8F49EF05E11262B0385809B8570FFFEA1F2CA81E9C464E043"
+                           },
+                           {
+                               "path":  "tests/runtime/production-v1/run-runtime-tests.ps1",
+                               "sha256":  "DA4C90D115C505963F2A36029D2B2C2DDA9D06D16CA62517EAC6771F04DC14E7"
+                           }
+                       ],
+    "certified_utc":  "2026-09-25T02:44:40.0158326Z",
+    "cli_validation":  {
+                           "repository_command":  "PASS",
+                           "global_command":  "PASS",
+                           "status":  "PASS",
+                           "doctor":  "PASS",
+                           "project_bootstrap":  "PASS",
+                           "routing":  "PASS",
+                           "task_intake":  "PASS",
+                           "regression":  "32/32-PASS"
+                       }
+}

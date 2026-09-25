@@ -1,0 +1,33 @@
+{
+    "schema_version":  "1.0",
+    "gates":  [
+                  {
+                      "id":  "git-commit",
+                      "explicit_authorization":  true
+                  },
+                  {
+                      "id":  "git-push",
+                      "explicit_authorization":  true
+                  },
+                  {
+                      "id":  "dependency-install",
+                      "explicit_authorization":  true
+                  },
+                  {
+                      "id":  "deploy",
+                      "explicit_authorization":  true
+                  },
+                  {
+                      "id":  "production-mutation",
+                      "explicit_authorization":  true
+                  },
+                  {
+                      "id":  "pbx-live-change",
+                      "explicit_authorization":  true
+                  },
+                  {
+                      "id":  "database-destructive-change",
+                      "explicit_authorization":  true
+                  }
+              ]
+}

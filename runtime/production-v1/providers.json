@@ -1,0 +1,42 @@
+{
+    "schema_version":  "1.0",
+    "execution_mode":  "explicit-per-task",
+    "automatic_execution":  false,
+    "providers":  [
+                      {
+                          "id":  "claude",
+                          "command":  "claude",
+                          "role":  "architecture-and-complex-analysis",
+                          "automatic":  false
+                      },
+                      {
+                          "id":  "codex",
+                          "command":  "codex",
+                          "role":  "implementation-worker",
+                          "automatic":  false
+                      },
+                      {
+                          "id":  "antigravity",
+                          "command":  "agy",
+                          "role":  "research-and-independent-audit",
+                          "automatic":  false
+                      }
+                  ],
+    "default_plan":  [
+                         {
+                             "order":  1,
+                             "role":  "architecture",
+                             "provider":  "claude"
+                         },
+                         {
+                             "order":  2,
+                             "role":  "implementation",
+                             "provider":  "codex"
+                         },
+                         {
+                             "order":  3,
+                             "role":  "audit",
+                             "provider":  "antigravity"
+                         }
+                     ]
+}

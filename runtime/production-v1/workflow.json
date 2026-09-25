@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0",
+    "id":  "production-project-delivery",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "steps":  [
+                  {
+                      "order":  1,
+                      "id":  "project-bootstrap"
+                  },
+                  {
+                      "order":  2,
+                      "id":  "task-intake"
+                  },
+                  {
+                      "order":  3,
+                      "id":  "area-routing"
+                  },
+                  {
+                      "order":  4,
+                      "id":  "context-pack"
+                  },
+                  {
+                      "order":  5,
+                      "id":  "architecture"
+                  },
+                  {
+                      "order":  6,
+                      "id":  "implementation"
+                  },
+                  {
+                      "order":  7,
+                      "id":  "qa-and-independent-review"
+                  },
+                  {
+                      "order":  8,
+                      "id":  "approval-gate"
+                  },
+                  {
+                      "order":  9,
+                      "id":  "commit-or-deploy"
+                  },
+                  {
+                      "order":  10,
+                      "id":  "evidence-and-close"
+                  }
+              ],
+    "final_states":  [
+                         "READY",
+                         "IN-PROGRESS",
+                         "WAITING-APPROVAL",
+                         "CHANGES-REQUIRED",
+                         "BLOCKED",
+                         "CLOSED"
+                     ]
+}

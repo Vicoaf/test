@@ -1,0 +1,25 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-production-runtime-activation",
+    "id":  "production-runtime-v1",
+    "version":  "1.0.0",
+    "lifecycle":  "certified",
+    "activation":  "ACTIVE-RUNTIME-LOCAL",
+    "parent_gold_master_commit":  "f44e317e2301d35477132bdfbde86a0573f1992c",
+    "runtime_root":  "runtime/production-v1",
+    "cli":  "scripts/proxtel.ps1",
+    "command":  "proxtel",
+    "policies":  {
+                     "local_first":  true,
+                     "git_local_first":  true,
+                     "automatic_commit":  false,
+                     "automatic_push":  false,
+                     "automatic_deploy":  false,
+                     "automatic_provider_execution":  false,
+                     "explicit_per_task_provider_execution":  true,
+                     "qa_required":  true,
+                     "evidence_required":  true,
+                     "project_isolation_required":  true,
+                     "approval_gates_required":  true
+                 }
+}
