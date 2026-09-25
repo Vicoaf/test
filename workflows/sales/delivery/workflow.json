@@ -1,0 +1,79 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-workflow",
+    "id":  "sales-delivery",
+    "display_name":  "PROXTEL Sales Delivery Workflow",
+    "area":  "sales",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "steps":  [
+                  {
+                      "order":  1,
+                      "id":  "intake",
+                      "owner":  "proxtel-sales-orchestrator"
+                  },
+                  {
+                      "order":  2,
+                      "id":  "sales-domain-discovery",
+                      "owner":  "sales-domain-analyst"
+                  },
+                  {
+                      "order":  3,
+                      "id":  "pipeline-opportunity-design",
+                      "owner":  "pipeline-opportunity-specialist"
+                  },
+                  {
+                      "order":  4,
+                      "id":  "outreach-design",
+                      "owner":  "sales-outreach-specialist"
+                  },
+                  {
+                      "order":  5,
+                      "id":  "proposal-handoff-design",
+                      "owner":  "proposal-handoff-specialist"
+                  },
+                  {
+                      "order":  6,
+                      "id":  "crm-coordination",
+                      "owner":  "proxtel-sales-orchestrator"
+                  },
+                  {
+                      "order":  7,
+                      "id":  "documentation-coordination",
+                      "owner":  "proxtel-sales-orchestrator"
+                  },
+                  {
+                      "order":  8,
+                      "id":  "development-handoff",
+                      "owner":  "proxtel-sales-orchestrator"
+                  },
+                  {
+                      "order":  9,
+                      "id":  "technical-validation",
+                      "owner":  "proxtel-development-orchestrator"
+                  },
+                  {
+                      "order":  10,
+                      "id":  "sales-quality-review",
+                      "owner":  "sales-qa-compliance-reviewer"
+                  },
+                  {
+                      "order":  11,
+                      "id":  "release-gate",
+                      "owner":  "proxtel-sales-orchestrator"
+                  }
+              ],
+    "final_decisions":  [
+                            "READY",
+                            "CHANGES-REQUIRED",
+                            "BLOCKED",
+                            "DEFERRED"
+                        ],
+    "safety":  {
+                   "unsupported_claims_forbidden":  true,
+                   "automatic_commit_forbidden":  true,
+                   "automatic_push_forbidden":  true,
+                   "automatic_deploy_forbidden":  true
+               }
+}

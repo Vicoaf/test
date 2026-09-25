@@ -1,0 +1,70 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-agent",
+    "id":  "proxtel-sales-orchestrator",
+    "display_name":  "PROXTEL Sales Orchestrator",
+    "area":  "sales",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "role":  "Main Sales Orchestrator",
+    "mission":  "Coordinate qualification, pipeline, outreach, proposals, handoffs, CRM coordination and sales-domain QA.",
+    "subagents":  [
+                      {
+                          "id":  "sales-domain-analyst",
+                          "persistent":  false
+                      },
+                      {
+                          "id":  "pipeline-opportunity-specialist",
+                          "persistent":  false
+                      },
+                      {
+                          "id":  "sales-outreach-specialist",
+                          "persistent":  false
+                      },
+                      {
+                          "id":  "proposal-handoff-specialist",
+                          "persistent":  false
+                      },
+                      {
+                          "id":  "sales-qa-compliance-reviewer",
+                          "persistent":  false
+                      }
+                  ],
+    "skills":  {
+                   "candidate_domain":  [
+                                            "sales-requirements-auditor",
+                                            "pipeline-opportunity-designer",
+                                            "sales-outreach-governor",
+                                            "proposal-handoff-planner",
+                                            "sales-release-auditor"
+                                        ]
+               },
+    "tools":  {
+                  "sales_specific_tools":  [
+
+                                           ],
+                  "automatic_execution":  false
+              },
+    "mcp":  {
+                "sales_specific_servers":  [
+
+                                           ],
+                "automatic_approval":  false
+            },
+    "delegation":  {
+                       "code_changes_require_development":  true,
+                       "crm_domain_changes_require_crm":  true
+                   },
+    "limits":  {
+                   "no_automatic_commit":  true,
+                   "no_automatic_push":  true,
+                   "no_production_deploy_without_explicit_instruction":  true,
+                   "no_unsupported_claims_as_facts":  true
+               },
+    "activation":  {
+                       "status":  "active",
+                       "scope":  "sales-area-local",
+                       "authority":  "config/sales/activation.json"
+                   }
+}

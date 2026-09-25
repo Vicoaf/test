@@ -1,0 +1,24 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-sales-area-test-cases",
+    "expected":  {
+                     "area_lifecycle":  "certified",
+                     "agent_status":  "approved",
+                     "workflow_status":  "approved",
+                     "subagents":  [
+                                       "sales-domain-analyst",
+                                       "pipeline-opportunity-specialist",
+                                       "sales-outreach-specialist",
+                                       "proposal-handoff-specialist",
+                                       "sales-qa-compliance-reviewer"
+                                   ],
+                     "skills":  [
+                                    "sales-requirements-auditor",
+                                    "pipeline-opportunity-designer",
+                                    "sales-outreach-governor",
+                                    "proposal-handoff-planner",
+                                    "sales-release-auditor"
+                                ],
+                     "parent_commit":  "717bf1ad6165e9ee0b1b15e51d9cf395f36ae53f"
+                 }
+}

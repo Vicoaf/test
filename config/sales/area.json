@@ -1,0 +1,66 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-contract",
+    "id":  "sales",
+    "display_name":  "PROXTEL Sales Area",
+    "version":  "1.0.0",
+    "lifecycle_status":  "certified",
+    "provider_neutral":  true,
+    "parent_commit":  "717bf1ad6165e9ee0b1b15e51d9cf395f36ae53f",
+    "mission":  "Govern evidence-based sales workflows, opportunity progression, outreach, proposals and handoffs while coordinating CRM records and preserving customer-service and documentation boundaries.",
+    "boundaries":  {
+                       "owns":  [
+                                    "sales requirements and qualification semantics",
+                                    "pipeline and opportunity progression",
+                                    "sales outreach standards",
+                                    "proposal and commercial handoff semantics",
+                                    "sales-domain quality validation"
+                                ],
+                       "delegates_to_crm":  [
+                                                "CRM record semantics",
+                                                "CRM workflow changes",
+                                                "CRM integration changes"
+                                            ],
+                       "delegates_to_development":  [
+                                                        "repository implementation",
+                                                        "software changes",
+                                                        "technical validation"
+                                                    ],
+                       "coordinates_with":  [
+                                                "documentation",
+                                                "customer-service"
+                                            ]
+                   },
+    "safety":  {
+                   "read_only_discovery_first":  true,
+                   "local_first":  true,
+                   "pii_minimization":  true,
+                   "secrets_in_repository_forbidden":  true,
+                   "unsupported_claims_forbidden":  true,
+                   "production_mutation_default":  false,
+                   "database_mutation_default":  false,
+                   "automatic_dependency_installation":  false,
+                   "automatic_git_add":  false,
+                   "automatic_commit":  false,
+                   "automatic_push":  false,
+                   "automatic_deploy":  false
+               },
+    "reuse":  {
+                  "development":  "inherit",
+                  "crm":  "coordinate",
+                  "documentation":  "coordinate",
+                  "customer_service":  "handoff-when-applicable"
+              },
+    "certification":  {
+                          "status":  "certified",
+                          "scope":  "local-deterministic",
+                          "artifact":  "tests/sales/certification/area-sales-certification-v1.json",
+                          "independent_provider_review":  "not-performed"
+                      },
+    "activation":  {
+                       "status":  "active",
+                       "scope":  "sales-area-local",
+                       "authority":  "config/sales/activation.json",
+                       "global_agency_manifest":  "not-yet-promoted"
+                   }
+}

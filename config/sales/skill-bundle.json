@@ -1,0 +1,30 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-sales-skill-bundle",
+    "id":  "sales-area-skill-bundle",
+    "version":  "1.0.0",
+    "status":  "active",
+    "domain_skills":  [
+                          "sales-requirements-auditor",
+                          "pipeline-opportunity-designer",
+                          "sales-outreach-governor",
+                          "proposal-handoff-planner",
+                          "sales-release-auditor"
+                      ],
+    "inherited_development_skills":  [
+                                         "auditor-web"
+                                     ],
+    "crm_coordination":  [
+                             "crm-requirements-auditor",
+                             "crm-workflow-designer",
+                             "crm-integration-planner"
+                         ],
+    "documentation_coordination":  [
+                                       "documentation-requirements-auditor"
+                                   ],
+    "activation":  {
+                       "automatic_activation":  false,
+                       "certification_required_before_activation":  true,
+                       "scope":  "sales-area-local-after-certification"
+                   }
+}

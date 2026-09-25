@@ -1,0 +1,69 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-sales-runtime-bindings",
+    "id":  "sales-runtime-bindings",
+    "version":  "1.0.0",
+    "status":  "certified",
+    "provider_neutral":  true,
+    "orchestrator":  {
+                         "id":  "proxtel-sales-orchestrator",
+                         "source":  "agents/sales/proxtel-sales-orchestrator/agent.json"
+                     },
+    "workflow":  {
+                     "id":  "sales-delivery",
+                     "source":  "workflows/sales/delivery/workflow.json"
+                 },
+    "bindings":  [
+                     {
+                         "lane":  "sales-domain-analysis",
+                         "executor":  "sales-domain-analyst",
+                         "preferred_provider":  "claude"
+                     },
+                     {
+                         "lane":  "pipeline-opportunity",
+                         "executor":  "pipeline-opportunity-specialist",
+                         "preferred_provider":  "claude"
+                     },
+                     {
+                         "lane":  "sales-outreach",
+                         "executor":  "sales-outreach-specialist",
+                         "preferred_provider":  "claude"
+                     },
+                     {
+                         "lane":  "proposal-handoff",
+                         "executor":  "proposal-handoff-specialist",
+                         "preferred_provider":  "claude"
+                     },
+                     {
+                         "lane":  "sales-quality",
+                         "executor":  "sales-qa-compliance-reviewer",
+                         "preferred_provider":  "antigravity"
+                     },
+                     {
+                         "lane":  "crm-domain-coordination",
+                         "executor":  "proxtel-crm-orchestrator",
+                         "preferred_provider":  "task-determined"
+                     },
+                     {
+                         "lane":  "software-implementation",
+                         "executor":  "proxtel-development-orchestrator",
+                         "preferred_provider":  "task-determined"
+                     }
+                 ],
+    "tool_policy":  {
+                        "reuse":  "tools/registry/development-tools.json",
+                        "sales_specific_tools":  [
+
+                                                 ],
+                        "automatic_tool_execution":  false,
+                        "add_new_tool_only_if_gap_is_proven":  true
+                    },
+    "mcp_policy":  {
+                       "reuse":  "config/development-mcp-profile.json",
+                       "sales_specific_servers":  [
+
+                                                  ],
+                       "automatic_approval":  false,
+                       "add_new_mcp_only_if_gap_is_proven":  true
+                   }
+}

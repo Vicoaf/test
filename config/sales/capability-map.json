@@ -1,0 +1,44 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-sales-capability-map",
+    "id":  "sales-capability-map",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "lanes":  [
+                  {
+                      "id":  "sales-domain-analysis",
+                      "owner":  "sales-domain-analyst"
+                  },
+                  {
+                      "id":  "pipeline-opportunity",
+                      "owner":  "pipeline-opportunity-specialist"
+                  },
+                  {
+                      "id":  "sales-outreach",
+                      "owner":  "sales-outreach-specialist"
+                  },
+                  {
+                      "id":  "proposal-handoff",
+                      "owner":  "proposal-handoff-specialist"
+                  },
+                  {
+                      "id":  "sales-quality",
+                      "owner":  "sales-qa-compliance-reviewer"
+                  },
+                  {
+                      "id":  "crm-domain-coordination",
+                      "owner":  "proxtel-crm-orchestrator"
+                  },
+                  {
+                      "id":  "software-implementation",
+                      "owner":  "proxtel-development-orchestrator"
+                  }
+              ],
+    "delegation":  {
+                       "crm_required_for_crm_domain_changes":  true,
+                       "development_required_for_code_changes":  true,
+                       "do_not_duplicate_crm_capabilities":  true,
+                       "do_not_duplicate_development_capabilities":  true
+                   }
+}

@@ -1,0 +1,26 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-sales-area-activation",
+    "id":  "sales-area-activation",
+    "area":  "sales",
+    "version":  "1.0.0",
+    "status":  "active",
+    "scope":  "sales-area-local",
+    "parent_commit":  "717bf1ad6165e9ee0b1b15e51d9cf395f36ae53f",
+    "dependencies":  {
+                         "development":  "inherit",
+                         "crm":  "coordinate",
+                         "documentation":  "coordinate",
+                         "customer_service":  "handoff-when-applicable",
+                         "new_tools":  0,
+                         "new_mcp_servers":  0
+                     },
+    "execution":  {
+                      "automatic_tool_execution":  false,
+                      "automatic_dependency_installation":  false,
+                      "automatic_git_add":  false,
+                      "automatic_commit":  false,
+                      "automatic_push":  false,
+                      "automatic_deploy":  false
+                  }
+}

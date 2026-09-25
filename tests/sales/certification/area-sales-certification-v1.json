@@ -1,0 +1,169 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-certification",
+    "certification_id":  "PROXTEL-SALES-AREA-CERTIFICATION-V1",
+    "area":  "sales",
+    "version":  "1.0.0",
+    "status":  "CERTIFIED",
+    "activation_status":  "ACTIVE-AREA-LOCAL",
+    "certification_scope":  "LOCAL-DETERMINISTIC",
+    "independent_provider_review":  {
+                                        "performed":  false,
+                                        "status":  "NOT-PERFORMED"
+                                    },
+    "parent_commit":  "717bf1ad6165e9ee0b1b15e51d9cf395f36ae53f",
+    "architecture":  {
+                         "orchestrator":  "proxtel-sales-orchestrator",
+                         "subagent_count":  5,
+                         "domain_skill_count":  5,
+                         "workflow":  "sales-delivery",
+                         "new_tools":  0,
+                         "new_mcp_servers":  0
+                     },
+    "evidence_files":  [
+                           {
+                               "path":  "agents/sales/proxtel-sales-orchestrator/agent.json",
+                               "sha256":  "FF839EF2B9CE05D282B3AF26CB09090085CBF20C9C8C68D4BCB0105A182C3568"
+                           },
+                           {
+                               "path":  "agents/sales/proxtel-sales-orchestrator/AGENT.md",
+                               "sha256":  "FE3F175E86B010B686C617BE16D0EC3C02CA7AFE5064ACCA9B6A765C30F88147"
+                           },
+                           {
+                               "path":  "agents/sales/subagents/pipeline-opportunity-specialist/subagent.json",
+                               "sha256":  "CFD4153DA56DF54CB7F6B7D0728BAD9C357D76336B672A4F0DF5724CC51F7EB6"
+                           },
+                           {
+                               "path":  "agents/sales/subagents/pipeline-opportunity-specialist/SUBAGENT.md",
+                               "sha256":  "F5616BAC9B35A03FD6BADD97F7B60846457DB7AF54FE5DA27F1E0080C0F27966"
+                           },
+                           {
+                               "path":  "agents/sales/subagents/proposal-handoff-specialist/subagent.json",
+                               "sha256":  "92542F4B9DFE86672C985B858CEADBAF31761AF278C79E31FCA59BE8F89BE338"
+                           },
+                           {
+                               "path":  "agents/sales/subagents/proposal-handoff-specialist/SUBAGENT.md",
+                               "sha256":  "E63C7750C6250E2A21218810611609AA4EE6FB30F6FE6D876280A312AD3ABA34"
+                           },
+                           {
+                               "path":  "agents/sales/subagents/sales-domain-analyst/subagent.json",
+                               "sha256":  "CAE5EF6BDA37EA602C35CA65C06D23480FB489BB4FC558280756F8AEF4EB9BF9"
+                           },
+                           {
+                               "path":  "agents/sales/subagents/sales-domain-analyst/SUBAGENT.md",
+                               "sha256":  "A830873164E4F900816677118C9D2E74D33B2EFBD5A41ECE95C6D4E8968E1D73"
+                           },
+                           {
+                               "path":  "agents/sales/subagents/sales-outreach-specialist/subagent.json",
+                               "sha256":  "1005F317E13D09B79BB2271633CA071B304AE31A008CF0B23D55DE5F79FEF6AE"
+                           },
+                           {
+                               "path":  "agents/sales/subagents/sales-outreach-specialist/SUBAGENT.md",
+                               "sha256":  "716CB5D1E11F3F0BBF770A3AF67314B73D32DF659C818FA9F6436298D40EEABE"
+                           },
+                           {
+                               "path":  "agents/sales/subagents/sales-qa-compliance-reviewer/subagent.json",
+                               "sha256":  "C4E0A86D4A452C4318330FE75F97CC73DF6F148C51F1D1060582BD4EDA60EF88"
+                           },
+                           {
+                               "path":  "agents/sales/subagents/sales-qa-compliance-reviewer/SUBAGENT.md",
+                               "sha256":  "D4E3EC3B2966CF460C5587345D5FFD63CF75DB0F3A3A316160DB8BF2185A4676"
+                           },
+                           {
+                               "path":  "config/sales/activation.json",
+                               "sha256":  "6044E14D8FE10B4ED7372B183E9870B314BBD4A13225283251BBB5B81BB05DC9"
+                           },
+                           {
+                               "path":  "config/sales/area.json",
+                               "sha256":  "63E827AF1F9645FDE61EB12FE12E54698C246380B192479CDC4198E04D5D4545"
+                           },
+                           {
+                               "path":  "config/sales/capability-map.json",
+                               "sha256":  "9E88F436E201C8E92516173D4F187FC4B8944CF7D976038FBF890A7A365CCB45"
+                           },
+                           {
+                               "path":  "config/sales/runtime-bindings.json",
+                               "sha256":  "2A34F9F0C6BD41AEEFBDAD4A2C905E3A1173793E8DDBAC72DCFB5BD60F888FF3"
+                           },
+                           {
+                               "path":  "config/sales/skill-bundle.json",
+                               "sha256":  "48363D2F682713F417CAED04D434D4A83E6622D9EB64E11B668839B2284EDF67"
+                           },
+                           {
+                               "path":  "docs/sales/architecture.md",
+                               "sha256":  "EE17FF02E704DE6065BE17E6EEA717412AE8B8770664FD78C3E3C9D5270BA023"
+                           },
+                           {
+                               "path":  "docs/sales/operating-model.md",
+                               "sha256":  "7302B893874253E193DFD6565FE01ADB9AF6BC6874C7B851AE562BC1141BCEE0"
+                           },
+                           {
+                               "path":  "skills/sales/pipeline-opportunity-designer/skill.json",
+                               "sha256":  "3D46398D81ADD20D536DFFF5D2CB7FC48A3C6FD90D89BB245044371448191D86"
+                           },
+                           {
+                               "path":  "skills/sales/pipeline-opportunity-designer/SKILL.md",
+                               "sha256":  "C7A2C311C5EC9D597F0DD9417556D8FDAE870152964A3F36CA6A3EB75E1A30C4"
+                           },
+                           {
+                               "path":  "skills/sales/proposal-handoff-planner/skill.json",
+                               "sha256":  "CE0B2A36C2C126B6F151EC9159101459D73558C5DAB2BC900196FBC1C0004A0A"
+                           },
+                           {
+                               "path":  "skills/sales/proposal-handoff-planner/SKILL.md",
+                               "sha256":  "2B4A2BBD21183F0D4EE8E6DCE8274C8F310A4BEE3A0DE3396F64900AD5D07D6C"
+                           },
+                           {
+                               "path":  "skills/sales/sales-outreach-governor/skill.json",
+                               "sha256":  "D4D0B7D03BEA4A16C697AE4ADC818A3029B9969A84C79EE890EF237651EAB195"
+                           },
+                           {
+                               "path":  "skills/sales/sales-outreach-governor/SKILL.md",
+                               "sha256":  "6986F353E47F10CDDDEB6E4010A5B211C0CE6282098783D8057ED64FDBA62F0F"
+                           },
+                           {
+                               "path":  "skills/sales/sales-release-auditor/skill.json",
+                               "sha256":  "FA8337CE168216FC948599197450281CBDC3E94D737B402867D112B4AD58B423"
+                           },
+                           {
+                               "path":  "skills/sales/sales-release-auditor/SKILL.md",
+                               "sha256":  "841CE30B2AC8DD91144E19A2162344490A0B7408E16019178C82E24426F11B41"
+                           },
+                           {
+                               "path":  "skills/sales/sales-requirements-auditor/skill.json",
+                               "sha256":  "62477A958FE45272A6A3155F2059FF365F84B29FD6EE50CEF37C5CFC70B1BDA3"
+                           },
+                           {
+                               "path":  "skills/sales/sales-requirements-auditor/SKILL.md",
+                               "sha256":  "848B7CABD43FBA5CF81099E19288CDC780A039612940F34DFA57F69AB93BE5D4"
+                           },
+                           {
+                               "path":  "standards/sales/sales-standard.md",
+                               "sha256":  "E2C1B1D7ECB01C26CD7D894A02346AD0B95EC51957A4890E7B557EB0BF728F46"
+                           },
+                           {
+                               "path":  "tests/sales/area-contract/cases.json",
+                               "sha256":  "2C2AD541A04FC278AEE95BC28B998D851C5FC7906C50CCAEA914B43D236F6299"
+                           },
+                           {
+                               "path":  "tests/sales/area-contract/run-sales-area-tests.ps1",
+                               "sha256":  "293B13899703D7CF05B49CB3471CEC6C7C967E576127D3C18E6769DC39280CD6"
+                           },
+                           {
+                               "path":  "workflows/sales/delivery/workflow.json",
+                               "sha256":  "B0D7AB18EEE637728993B5EDC44B790E9DC5147B983ED50E28672ED0461A9954"
+                           },
+                           {
+                               "path":  "workflows/sales/delivery/WORKFLOW.md",
+                               "sha256":  "4D1618025101E272207E9DAD43AA7436F91AAB418D3575191C515DF1B5EB1E40"
+                           }
+                       ],
+    "git":  {
+                "branch":  "core-v2",
+                "head":  "717bf1ad6165e9ee0b1b15e51d9cf395f36ae53f",
+                "git_add_executed":  false,
+                "commit_executed":  false,
+                "push_executed":  false
+            },
+    "certified_utc":  "2026-09-25T01:13:37.9014950Z"
+}

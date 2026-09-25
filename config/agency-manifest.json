@@ -35,7 +35,7 @@
       "id": "sales",
       "name": "Sales",
       "order": 4,
-      "status": "planned"
+      "status": "active"
     },
     {
       "id": "customer-service",
