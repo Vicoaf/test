@@ -1,0 +1,39 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill",
+    "id":  "documentation-release-auditor",
+    "display_name":  "Documentation Release Auditor",
+    "area":  "documentation",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "description":  "Independently review documentation accuracy, completeness, traceability, terminology, links, freshness and release readiness.",
+    "dependencies":  {
+                         "direct_scripts":  [
+
+                                            ],
+                         "direct_packages":  [
+
+                                             ],
+                         "silent_installation_allowed":  false
+                     },
+    "safety":  {
+                   "source_grounded_first":  true,
+                   "read_only_discovery_first":  true,
+                   "local_first":  true,
+                   "secrets_in_output_forbidden":  true,
+                   "production_mutation_default":  false,
+                   "automatic_git_operations":  false
+               },
+    "outputs":  [
+                    "release decision",
+                    "blocking findings",
+                    "traceability findings",
+                    "freshness findings"
+                ],
+    "lifecycle":  {
+                      "current":  "approved",
+                      "certification_required_before_activation":  true,
+                      "global_registry_promotion":  "area-local-activation"
+                  }
+}

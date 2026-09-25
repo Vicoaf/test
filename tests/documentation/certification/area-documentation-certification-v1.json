@@ -1,0 +1,172 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-certification",
+    "certification_id":  "PROXTEL-DOCUMENTATION-AREA-CERTIFICATION-V1",
+    "area":  "documentation",
+    "version":  "1.0.0",
+    "status":  "CERTIFIED",
+    "activation_status":  "ACTIVE-AREA-LOCAL",
+    "certification_scope":  "LOCAL-DETERMINISTIC",
+    "independent_provider_review":  {
+                                        "performed":  false,
+                                        "status":  "NOT-PERFORMED",
+                                        "reason":  "No provider/model execution required for deterministic local certification."
+                                    },
+    "parent_commit":  "674166ae934b0c8a8085a908542b9a657e462ba0",
+    "architecture":  {
+                         "orchestrator":  "proxtel-documentation-orchestrator",
+                         "subagent_count":  5,
+                         "domain_skill_count":  5,
+                         "workflow":  "documentation-delivery",
+                         "new_tools":  0,
+                         "new_mcp_servers":  0,
+                         "development_delegation":  true,
+                         "domain_source_coordination":  true
+                     },
+    "evidence_files":  [
+                           {
+                               "path":  "agents/documentation/proxtel-documentation-orchestrator/agent.json",
+                               "sha256":  "90E479F1AAFD114C0621F9ADD0B0F2248DFC5389A7FF8E977E61C69B7EE06365"
+                           },
+                           {
+                               "path":  "agents/documentation/proxtel-documentation-orchestrator/AGENT.md",
+                               "sha256":  "BEF66CC84664B0032360D7671FA9FBB15A1AC6AA3FDA8DDAF6C0B6D53574DDA9"
+                           },
+                           {
+                               "path":  "agents/documentation/subagents/documentation-domain-analyst/subagent.json",
+                               "sha256":  "5C417D4DACF599FCD8183CE9C0DEB408C1CD455DCA6A86EBB9556B0DC144AA1D"
+                           },
+                           {
+                               "path":  "agents/documentation/subagents/documentation-domain-analyst/SUBAGENT.md",
+                               "sha256":  "FC523280853F72DD062398154E6A5D27E3524726A84479723B62EB59C1FDDE20"
+                           },
+                           {
+                               "path":  "agents/documentation/subagents/documentation-qa-reviewer/subagent.json",
+                               "sha256":  "56335B0592EACED70BE8DE5E73B96A1EAC681A7CB743DE7FA65189FEA158219F"
+                           },
+                           {
+                               "path":  "agents/documentation/subagents/documentation-qa-reviewer/SUBAGENT.md",
+                               "sha256":  "DEB351B20A0C22B7CA97BB7FA3BC9EAF0F8B10F9B2A8A683BD4B5AD1A0B82EB7"
+                           },
+                           {
+                               "path":  "agents/documentation/subagents/knowledge-architecture-specialist/subagent.json",
+                               "sha256":  "AE0B01C126DE1C30C60E71DE6BE2E92DFE5E5004B3709043A31392FA7D7BACC9"
+                           },
+                           {
+                               "path":  "agents/documentation/subagents/knowledge-architecture-specialist/SUBAGENT.md",
+                               "sha256":  "91AAE48B293148C448D82EBA045C3E15D932ECC6F1DCBF86B4C548A29355FBC2"
+                           },
+                           {
+                               "path":  "agents/documentation/subagents/runbook-release-notes-specialist/subagent.json",
+                               "sha256":  "FC9BC114E2C928572A7BD985CCAC4F5B46D6505C363E1BDD793B8FD5913574C6"
+                           },
+                           {
+                               "path":  "agents/documentation/subagents/runbook-release-notes-specialist/SUBAGENT.md",
+                               "sha256":  "905CB8D46EB4CB836AA48C9D293C817D316E0CB28D97117923F4E6E7245DD455"
+                           },
+                           {
+                               "path":  "agents/documentation/subagents/technical-documentation-specialist/subagent.json",
+                               "sha256":  "C8AA09E36F19AC077B3C6857DC1FF7D1999440C45B90DAF51EF27D5ADCCB9D06"
+                           },
+                           {
+                               "path":  "agents/documentation/subagents/technical-documentation-specialist/SUBAGENT.md",
+                               "sha256":  "756CC7DFA7918895FC4D641BD611AFFED986AA05A526208E985F823D2E5EFC60"
+                           },
+                           {
+                               "path":  "config/documentation/activation.json",
+                               "sha256":  "B5A9B13E7488B2C92F1E03F7E5D8B7C763DCA97D6439312BA58B6C6A182987B6"
+                           },
+                           {
+                               "path":  "config/documentation/area.json",
+                               "sha256":  "265992DC7B734171CCF4C72A5545EFEE4ABF5913BE78B480EFC0D2D1B6F7D54F"
+                           },
+                           {
+                               "path":  "config/documentation/capability-map.json",
+                               "sha256":  "A4273E93223705AFE84E4ADDC7898374E7D844DE34A9C27F48FD906FD2E8063E"
+                           },
+                           {
+                               "path":  "config/documentation/runtime-bindings.json",
+                               "sha256":  "DD79ED511542426C602476633F7C74B3DA45F229EA43558D9AAFB4C3C260BC85"
+                           },
+                           {
+                               "path":  "config/documentation/skill-bundle.json",
+                               "sha256":  "A431ED1F567A8620E5371BF58946DF577BC283D814B487C322E042969DF3E56A"
+                           },
+                           {
+                               "path":  "docs/documentation/architecture.md",
+                               "sha256":  "9D372FBFC1DB7F467EE774E8C6E4A544CABEB59DFDD92973AB624F3F31656CB1"
+                           },
+                           {
+                               "path":  "docs/documentation/operating-model.md",
+                               "sha256":  "E0562BA308D42546769B241F0B9C4CC056CC2D9379A95B678827653FD18CE98B"
+                           },
+                           {
+                               "path":  "skills/documentation/documentation-release-auditor/skill.json",
+                               "sha256":  "95528C36856A69C3AA0089C0B5A6E06E284879FE948949FCF9565490438C5F3E"
+                           },
+                           {
+                               "path":  "skills/documentation/documentation-release-auditor/SKILL.md",
+                               "sha256":  "1922ECCCFF20272E8F351F02DBD49AFACED33C971A4F4620AE05DE4AB2E29342"
+                           },
+                           {
+                               "path":  "skills/documentation/documentation-requirements-auditor/skill.json",
+                               "sha256":  "AC02198D460434BEEEC81C11EA323A67C04DDE96DC53719636D16D23FD2654E8"
+                           },
+                           {
+                               "path":  "skills/documentation/documentation-requirements-auditor/SKILL.md",
+                               "sha256":  "96A7A48474E5993C6ED0E1EB847AF65F3B54E60C382AA66B78797C5094FE5AA6"
+                           },
+                           {
+                               "path":  "skills/documentation/knowledge-structure-governor/skill.json",
+                               "sha256":  "73DB1745838EA88C2C95E0646BAF269926B8B14333ED72F85855A0ACE7B5CE03"
+                           },
+                           {
+                               "path":  "skills/documentation/knowledge-structure-governor/SKILL.md",
+                               "sha256":  "BF7408379A80CF4FEF6B5655E195B5C8985544289B5B2F678FA4FA4842349214"
+                           },
+                           {
+                               "path":  "skills/documentation/runbook-release-notes-planner/skill.json",
+                               "sha256":  "18BF51101CB28CF0821E3DE6DEA654DC8AF7EA7A769289749322381B04EEB45B"
+                           },
+                           {
+                               "path":  "skills/documentation/runbook-release-notes-planner/SKILL.md",
+                               "sha256":  "D40B03651A3E3B7414788990C8E71EFD3917D63E3B09B58F328F3F4CD39D1A2C"
+                           },
+                           {
+                               "path":  "skills/documentation/technical-documentation-designer/skill.json",
+                               "sha256":  "B2DCD05EAE8DCF97F9AA2B1E488FB596365047BC70FA3627C27D8D842CB9E23B"
+                           },
+                           {
+                               "path":  "skills/documentation/technical-documentation-designer/SKILL.md",
+                               "sha256":  "026BD1E67C625A399E8CDB4440ED02B5F711817BAC56685A015FAFC02AA0B081"
+                           },
+                           {
+                               "path":  "standards/documentation/documentation-standard.md",
+                               "sha256":  "407F2875BCDDEF763C64056CEEE3CA6D0D420421701AF438CDAD7C3A9B60B90D"
+                           },
+                           {
+                               "path":  "tests/documentation/area-contract/cases.json",
+                               "sha256":  "BA9E5F497FACDF280E3DD9BC5F0458638D593140427304362C52F09D6294DD5F"
+                           },
+                           {
+                               "path":  "tests/documentation/area-contract/run-documentation-area-tests.ps1",
+                               "sha256":  "9CC27E677DC15501ED641473AEA9D7A39251BF77F07DB34353CBDF3B71BFEB24"
+                           },
+                           {
+                               "path":  "workflows/documentation/delivery/workflow.json",
+                               "sha256":  "FEFAA8E214C9D1E71705B6405B160393FB83B8D4030BC329F5B9A652FDE378B9"
+                           },
+                           {
+                               "path":  "workflows/documentation/delivery/WORKFLOW.md",
+                               "sha256":  "D36EE7607C49366158EA6161B3518146DCFC22ECFF80855AEC5D677A0705D04B"
+                           }
+                       ],
+    "git":  {
+                "branch":  "core-v2",
+                "head":  "674166ae934b0c8a8085a908542b9a657e462ba0",
+                "git_add_executed":  false,
+                "commit_executed":  false,
+                "push_executed":  false
+            },
+    "certified_utc":  "2026-09-24T23:51:16.9757231Z"
+}

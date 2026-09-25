@@ -1,0 +1,50 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-documentation-capability-map",
+    "id":  "documentation-capability-map",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "lanes":  [
+                  {
+                      "id":  "documentation-analysis",
+                      "owner":  "documentation-domain-analyst",
+                      "purpose":  "Audience, scope, source-of-truth, terminology and documentation requirements."
+                  },
+                  {
+                      "id":  "technical-documentation",
+                      "owner":  "technical-documentation-specialist",
+                      "purpose":  "Architecture, API, installation, configuration and developer documentation."
+                  },
+                  {
+                      "id":  "knowledge-architecture",
+                      "owner":  "knowledge-architecture-specialist",
+                      "purpose":  "Information hierarchy, taxonomy, cross-linking, reuse and findability."
+                  },
+                  {
+                      "id":  "runbooks-release-notes",
+                      "owner":  "runbook-release-notes-specialist",
+                      "purpose":  "Operational runbooks, troubleshooting, change logs and release notes."
+                  },
+                  {
+                      "id":  "documentation-quality",
+                      "owner":  "documentation-qa-reviewer",
+                      "purpose":  "Accuracy, completeness, traceability, terminology, freshness and release readiness."
+                  },
+                  {
+                      "id":  "software-implementation",
+                      "owner":  "proxtel-development-orchestrator",
+                      "purpose":  "Delegated implementation when documentation tooling or repository code changes are needed."
+                  },
+                  {
+                      "id":  "domain-source-coordination",
+                      "owner":  "source-area",
+                      "purpose":  "Use CRM, Customer Service or other certified area as source authority for domain-specific facts."
+                  }
+              ],
+    "delegation":  {
+                       "development_required_for_code_changes":  true,
+                       "domain_facts_must_come_from_owning_area_or_evidence":  true,
+                       "do_not_duplicate_development_capabilities":  true
+                   }
+}

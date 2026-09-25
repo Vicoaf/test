@@ -1,0 +1,30 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-documentation-skill-bundle",
+    "id":  "documentation-area-skill-bundle",
+    "version":  "1.0.0",
+    "status":  "active",
+    "domain_skills":  [
+                          "documentation-requirements-auditor",
+                          "technical-documentation-designer",
+                          "knowledge-structure-governor",
+                          "runbook-release-notes-planner",
+                          "documentation-release-auditor"
+                      ],
+    "inherited_development_skills":  [
+                                         "auditor-web"
+                                     ],
+    "domain_coordination":  {
+                                "crm":  [
+                                            "crm-requirements-auditor"
+                                        ],
+                                "customer_service":  [
+                                                         "customer-service-requirements-auditor"
+                                                     ]
+                            },
+    "activation":  {
+                       "automatic_activation":  false,
+                       "certification_required_before_activation":  true,
+                       "scope":  "documentation-area-local-after-certification"
+                   }
+}

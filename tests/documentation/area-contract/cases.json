@@ -1,0 +1,27 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-documentation-area-test-cases",
+    "expected":  {
+                     "area_lifecycle":  "certified",
+                     "agent_status":  "approved",
+                     "workflow_status":  "approved",
+                     "subagents":  [
+                                       "documentation-domain-analyst",
+                                       "technical-documentation-specialist",
+                                       "knowledge-architecture-specialist",
+                                       "runbook-release-notes-specialist",
+                                       "documentation-qa-reviewer"
+                                   ],
+                     "skills":  [
+                                    "documentation-requirements-auditor",
+                                    "technical-documentation-designer",
+                                    "knowledge-structure-governor",
+                                    "runbook-release-notes-planner",
+                                    "documentation-release-auditor"
+                                ],
+                     "lane_count":  7,
+                     "new_tools":  0,
+                     "new_mcp":  0,
+                     "parent_commit":  "674166ae934b0c8a8085a908542b9a657e462ba0"
+                 }
+}

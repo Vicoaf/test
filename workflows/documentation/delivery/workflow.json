@@ -1,0 +1,100 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-workflow",
+    "id":  "documentation-delivery",
+    "display_name":  "PROXTEL Documentation Delivery Workflow",
+    "area":  "documentation",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "steps":  [
+                  {
+                      "order":  1,
+                      "id":  "intake",
+                      "owner":  "proxtel-documentation-orchestrator",
+                      "action":  "Capture objective, audience, scope and prohibited assumptions.",
+                      "next":  "source-discovery"
+                  },
+                  {
+                      "order":  2,
+                      "id":  "source-discovery",
+                      "owner":  "documentation-domain-analyst",
+                      "action":  "Identify source-of-truth, terminology, current coverage and gaps.",
+                      "next":  "information-architecture"
+                  },
+                  {
+                      "order":  3,
+                      "id":  "information-architecture",
+                      "owner":  "knowledge-architecture-specialist",
+                      "action":  "Define hierarchy, taxonomy, navigation and cross-links.",
+                      "next":  "technical-drafting"
+                  },
+                  {
+                      "order":  4,
+                      "id":  "technical-drafting",
+                      "owner":  "technical-documentation-specialist",
+                      "action":  "Draft verified technical documentation appropriate to the audience.",
+                      "next":  "runbooks-release-notes"
+                  },
+                  {
+                      "order":  5,
+                      "id":  "runbooks-release-notes",
+                      "owner":  "runbook-release-notes-specialist",
+                      "action":  "Create applicable operational runbooks, troubleshooting and release/change documentation.",
+                      "next":  "source-owner-validation"
+                  },
+                  {
+                      "order":  6,
+                      "id":  "source-owner-validation",
+                      "owner":  "proxtel-documentation-orchestrator",
+                      "action":  "Validate domain-specific facts against owning area or evidence.",
+                      "next":  "development-handoff"
+                  },
+                  {
+                      "order":  7,
+                      "id":  "development-handoff",
+                      "owner":  "proxtel-documentation-orchestrator",
+                      "action":  "Delegate code/tooling changes to Development if needed; otherwise mark NOT-APPLICABLE.",
+                      "next":  "documentation-qa"
+                  },
+                  {
+                      "order":  8,
+                      "id":  "documentation-qa",
+                      "owner":  "documentation-qa-reviewer",
+                      "action":  "Independently verify accuracy, completeness, links, traceability, terminology and freshness.",
+                      "next":  "release-gate"
+                  },
+                  {
+                      "order":  9,
+                      "id":  "release-gate",
+                      "owner":  "proxtel-documentation-orchestrator",
+                      "action":  "Declare READY only when applicable validation passes and blockers are resolved.",
+                      "next":  "closed"
+                  }
+              ],
+    "final_decisions":  [
+                            {
+                                "decision":  "READY",
+                                "promotion_allowed":  true
+                            },
+                            {
+                                "decision":  "CHANGES-REQUIRED",
+                                "promotion_allowed":  false
+                            },
+                            {
+                                "decision":  "BLOCKED",
+                                "promotion_allowed":  false
+                            },
+                            {
+                                "decision":  "DEFERRED",
+                                "promotion_allowed":  false
+                            }
+                        ],
+    "safety":  {
+                   "source_grounded_first":  true,
+                   "automatic_commit_forbidden":  true,
+                   "automatic_push_forbidden":  true,
+                   "automatic_deploy_forbidden":  true,
+                   "secrets_in_artifacts_forbidden":  true
+               }
+}

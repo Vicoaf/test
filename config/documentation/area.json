@@ -1,0 +1,68 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-contract",
+    "id":  "documentation",
+    "display_name":  "PROXTEL Documentation Area",
+    "version":  "1.0.0",
+    "lifecycle_status":  "certified",
+    "provider_neutral":  true,
+    "parent_commit":  "674166ae934b0c8a8085a908542b9a657e462ba0",
+    "mission":  "Create and govern accurate, reusable, auditable documentation, knowledge architecture, runbooks and release notes while preserving source-of-truth boundaries.",
+    "boundaries":  {
+                       "owns":  [
+                                    "documentation requirements and audiences",
+                                    "technical documentation structure",
+                                    "knowledge architecture and findability",
+                                    "runbooks and operational procedures",
+                                    "release notes and change communication",
+                                    "documentation quality and freshness rules"
+                                ],
+                       "delegates_to_development":  [
+                                                        "repository implementation when documentation changes require code/tooling changes",
+                                                        "documentation-site or generator implementation",
+                                                        "technical validation of documentation tooling"
+                                                    ],
+                       "coordinates_with":  [
+                                                "crm for CRM-domain truth",
+                                                "customer-service for service-domain truth",
+                                                "development for software/runtime truth"
+                                            ],
+                       "does_not_own":  [
+                                            "unverified system behavior",
+                                            "production mutation",
+                                            "sales/marketing claims",
+                                            "PBX administration"
+                                        ]
+                   },
+    "safety":  {
+                   "source_grounded_first":  true,
+                   "read_only_discovery_first":  true,
+                   "local_first":  true,
+                   "pii_minimization":  true,
+                   "secrets_in_documentation_forbidden":  true,
+                   "production_mutation_default":  false,
+                   "automatic_dependency_installation":  false,
+                   "automatic_git_add":  false,
+                   "automatic_commit":  false,
+                   "automatic_push":  false,
+                   "automatic_deploy":  false
+               },
+    "reuse":  {
+                  "development_tools":  "tools/registry/development-tools.json",
+                  "development_mcp":  "config/development-mcp-profile.json",
+                  "crm_area":  "config/crm/area.json",
+                  "customer_service_area":  "config/customer-service/area.json"
+              },
+    "certification":  {
+                          "status":  "certified",
+                          "scope":  "local-deterministic",
+                          "artifact":  "tests/documentation/certification/area-documentation-certification-v1.json",
+                          "independent_provider_review":  "not-performed"
+                      },
+    "activation":  {
+                       "status":  "active",
+                       "scope":  "documentation-area-local",
+                       "authority":  "config/documentation/activation.json",
+                       "global_agency_manifest":  "not-yet-promoted"
+                   }
+}

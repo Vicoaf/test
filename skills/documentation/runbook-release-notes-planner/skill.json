@@ -1,0 +1,39 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill",
+    "id":  "runbook-release-notes-planner",
+    "display_name":  "Runbook and Release Notes Planner",
+    "area":  "documentation",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "description":  "Define operational runbooks, troubleshooting flow, validation checkpoints, change logs and release-note structure.",
+    "dependencies":  {
+                         "direct_scripts":  [
+
+                                            ],
+                         "direct_packages":  [
+
+                                             ],
+                         "silent_installation_allowed":  false
+                     },
+    "safety":  {
+                   "source_grounded_first":  true,
+                   "read_only_discovery_first":  true,
+                   "local_first":  true,
+                   "secrets_in_output_forbidden":  true,
+                   "production_mutation_default":  false,
+                   "automatic_git_operations":  false
+               },
+    "outputs":  [
+                    "runbook plan",
+                    "troubleshooting flow",
+                    "operational checkpoints",
+                    "release-note structure"
+                ],
+    "lifecycle":  {
+                      "current":  "approved",
+                      "certification_required_before_activation":  true,
+                      "global_registry_promotion":  "area-local-activation"
+                  }
+}

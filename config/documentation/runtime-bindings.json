@@ -1,0 +1,92 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-documentation-runtime-bindings",
+    "id":  "documentation-runtime-bindings",
+    "version":  "1.0.0",
+    "status":  "certified",
+    "provider_neutral":  true,
+    "orchestrator":  {
+                         "id":  "proxtel-documentation-orchestrator",
+                         "source":  "agents/documentation/proxtel-documentation-orchestrator/agent.json"
+                     },
+    "workflow":  {
+                     "id":  "documentation-delivery",
+                     "source":  "workflows/documentation/delivery/workflow.json"
+                 },
+    "bindings":  [
+                     {
+                         "lane":  "documentation-analysis",
+                         "executor":  "documentation-domain-analyst",
+                         "preferred_provider":  "claude",
+                         "fallback":  [
+                                          "antigravity",
+                                          "codex"
+                                      ]
+                     },
+                     {
+                         "lane":  "technical-documentation",
+                         "executor":  "technical-documentation-specialist",
+                         "preferred_provider":  "claude",
+                         "fallback":  [
+                                          "codex"
+                                      ]
+                     },
+                     {
+                         "lane":  "knowledge-architecture",
+                         "executor":  "knowledge-architecture-specialist",
+                         "preferred_provider":  "claude",
+                         "fallback":  [
+                                          "antigravity"
+                                      ]
+                     },
+                     {
+                         "lane":  "runbooks-release-notes",
+                         "executor":  "runbook-release-notes-specialist",
+                         "preferred_provider":  "claude",
+                         "fallback":  [
+                                          "codex"
+                                      ]
+                     },
+                     {
+                         "lane":  "documentation-quality",
+                         "executor":  "documentation-qa-reviewer",
+                         "preferred_provider":  "antigravity",
+                         "fallback":  [
+                                          "claude",
+                                          "codex"
+                                      ]
+                     },
+                     {
+                         "lane":  "software-implementation",
+                         "executor":  "proxtel-development-orchestrator",
+                         "preferred_provider":  "task-determined",
+                         "fallback":  [
+
+                                      ]
+                     },
+                     {
+                         "lane":  "domain-source-coordination",
+                         "executor":  "source-area",
+                         "preferred_provider":  "task-determined",
+                         "fallback":  [
+
+                                      ]
+                     }
+                 ],
+    "tool_policy":  {
+                        "reuse_development_registry":  "tools/registry/development-tools.json",
+                        "documentation_specific_tools":  [
+
+                                                         ],
+                        "automatic_tool_execution":  false,
+                        "add_new_tool_only_if_gap_is_proven":  true
+                    },
+    "mcp_policy":  {
+                       "reuse_development_profile":  "config/development-mcp-profile.json",
+                       "documentation_specific_servers":  [
+
+                                                          ],
+                       "automatic_approval":  false,
+                       "add_new_mcp_only_if_gap_is_proven":  true
+                   }
+}
