@@ -1,0 +1,69 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-marketing-runtime-bindings",
+    "id":  "marketing-runtime-bindings",
+    "version":  "1.0.0",
+    "status":  "certified",
+    "provider_neutral":  true,
+    "orchestrator":  {
+                         "id":  "proxtel-marketing-orchestrator",
+                         "source":  "agents/marketing/proxtel-marketing-orchestrator/agent.json"
+                     },
+    "workflow":  {
+                     "id":  "marketing-delivery",
+                     "source":  "workflows/marketing/delivery/workflow.json"
+                 },
+    "bindings":  [
+                     {
+                         "lane":  "marketing-domain-analysis",
+                         "executor":  "marketing-domain-analyst",
+                         "preferred_provider":  "claude"
+                     },
+                     {
+                         "lane":  "campaign-content",
+                         "executor":  "campaign-content-specialist",
+                         "preferred_provider":  "claude"
+                     },
+                     {
+                         "lane":  "growth-channel",
+                         "executor":  "growth-channel-specialist",
+                         "preferred_provider":  "claude"
+                     },
+                     {
+                         "lane":  "brand-demand",
+                         "executor":  "brand-demand-specialist",
+                         "preferred_provider":  "claude"
+                     },
+                     {
+                         "lane":  "marketing-quality",
+                         "executor":  "marketing-qa-compliance-reviewer",
+                         "preferred_provider":  "antigravity"
+                     },
+                     {
+                         "lane":  "crm-sales-coordination",
+                         "executor":  "proxtel-marketing-orchestrator",
+                         "preferred_provider":  "task-determined"
+                     },
+                     {
+                         "lane":  "software-implementation",
+                         "executor":  "proxtel-development-orchestrator",
+                         "preferred_provider":  "task-determined"
+                     }
+                 ],
+    "tool_policy":  {
+                        "reuse":  "tools/registry/development-tools.json",
+                        "marketing_specific_tools":  [
+
+                                                     ],
+                        "automatic_tool_execution":  false,
+                        "add_new_tool_only_if_gap_is_proven":  true
+                    },
+    "mcp_policy":  {
+                       "reuse":  "config/development-mcp-profile.json",
+                       "marketing_specific_servers":  [
+
+                                                      ],
+                       "automatic_approval":  false,
+                       "add_new_mcp_only_if_gap_is_proven":  true
+                   }
+}

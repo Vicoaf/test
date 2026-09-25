@@ -1,0 +1,174 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-certification",
+    "certification_id":  "PROXTEL-MARKETING-AREA-CERTIFICATION-V1",
+    "area":  "marketing",
+    "version":  "1.0.0",
+    "status":  "CERTIFIED",
+    "activation_status":  "ACTIVE-AREA-LOCAL",
+    "certification_scope":  "LOCAL-DETERMINISTIC",
+    "independent_provider_review":  {
+                                        "performed":  false,
+                                        "status":  "NOT-PERFORMED",
+                                        "reason":  "No provider/model execution required for deterministic local certification."
+                                    },
+    "parent_commit":  "5285af5ba357a84a3bacf58a00d9077045e77197",
+    "architecture":  {
+                         "orchestrator":  "proxtel-marketing-orchestrator",
+                         "subagent_count":  5,
+                         "domain_skill_count":  5,
+                         "workflow":  "marketing-delivery",
+                         "new_tools":  0,
+                         "new_mcp_servers":  0,
+                         "development_delegation":  true,
+                         "crm_sales_finance_coordination":  true,
+                         "autonomous_campaign_publishing":  false,
+                         "autonomous_ad_spend":  false
+                     },
+    "evidence_files":  [
+                           {
+                               "path":  "agents/marketing/proxtel-marketing-orchestrator/agent.json",
+                               "sha256":  "78A9E59D2D891F8AB96297643D52E9E91C02E89CE74D176CA43642C2679B8535"
+                           },
+                           {
+                               "path":  "agents/marketing/proxtel-marketing-orchestrator/AGENT.md",
+                               "sha256":  "AFD6FEA778C28EB6562105CCEB10037B86420E8789784CF99A85EF2492C761FD"
+                           },
+                           {
+                               "path":  "agents/marketing/subagents/brand-demand-specialist/subagent.json",
+                               "sha256":  "8BB1B5500A3E486D5D69C781CA1A455DFCC42D6EDFB10F9787C4534B34B614CB"
+                           },
+                           {
+                               "path":  "agents/marketing/subagents/brand-demand-specialist/SUBAGENT.md",
+                               "sha256":  "B8266034805FFB2EA9862B347A3064D0799EF1F9C0DEA35381BF56622599E5B8"
+                           },
+                           {
+                               "path":  "agents/marketing/subagents/campaign-content-specialist/subagent.json",
+                               "sha256":  "55E38D05B1C5FEFEA707944DCE3AA1A3203D82631065F2885413E553A62CE710"
+                           },
+                           {
+                               "path":  "agents/marketing/subagents/campaign-content-specialist/SUBAGENT.md",
+                               "sha256":  "D75BAA489B437E1C0DABB9C3701D970241C5DE5A8ADA298929DBDA4D2289334D"
+                           },
+                           {
+                               "path":  "agents/marketing/subagents/growth-channel-specialist/subagent.json",
+                               "sha256":  "3D0018F7BA3C43E2C6BB7CB13DC257FEF353E4EACD1BFE4CBC8976D4D1D13AC4"
+                           },
+                           {
+                               "path":  "agents/marketing/subagents/growth-channel-specialist/SUBAGENT.md",
+                               "sha256":  "26E95211688F7489CA84775D87BB8C122B834FE30D0EE44DEE9573C84B79DAE9"
+                           },
+                           {
+                               "path":  "agents/marketing/subagents/marketing-domain-analyst/subagent.json",
+                               "sha256":  "62C802221CB7E99D814EED63D70704A47E2E7E89A03A824746F7D18D6AE502B5"
+                           },
+                           {
+                               "path":  "agents/marketing/subagents/marketing-domain-analyst/SUBAGENT.md",
+                               "sha256":  "54ADF76BBC86484C2E3DFEA9A6489432C0C619F2871EE153B17B1DAD3DB391C9"
+                           },
+                           {
+                               "path":  "agents/marketing/subagents/marketing-qa-compliance-reviewer/subagent.json",
+                               "sha256":  "B09D987E845E0C4CD9D33ECA3486BE0FA22C16F36B7EB1BD8C302F29DB55CC39"
+                           },
+                           {
+                               "path":  "agents/marketing/subagents/marketing-qa-compliance-reviewer/SUBAGENT.md",
+                               "sha256":  "0606D98D5604A5C56279156A28FE9E56BB9D712866972A0554DF33960C147FDE"
+                           },
+                           {
+                               "path":  "config/marketing/activation.json",
+                               "sha256":  "3045A50BD2C7895A086B44E8FE2B0956489F51A4CBA299CCC3EA11208ECAE2EA"
+                           },
+                           {
+                               "path":  "config/marketing/area.json",
+                               "sha256":  "331E362950B0831FDD15B7103F8A1B4A3AC253D29909B3D4208C4743F36853D8"
+                           },
+                           {
+                               "path":  "config/marketing/capability-map.json",
+                               "sha256":  "5A9F1E1681016543C2E846B1632202D55BF3B46533ABBC9AD9C597B999628520"
+                           },
+                           {
+                               "path":  "config/marketing/runtime-bindings.json",
+                               "sha256":  "1CF75970902F0CF57B1E039DFE2766CF3DCC62F77AC1B16571EEFEA23C520EE7"
+                           },
+                           {
+                               "path":  "config/marketing/skill-bundle.json",
+                               "sha256":  "8A8E82D0FB1138A53720DE476B7A95069A298175B072DC654C5005405616A5AB"
+                           },
+                           {
+                               "path":  "docs/marketing/architecture.md",
+                               "sha256":  "F709E0D38DEDD018869BD3FBAAC23A52B25295CADEC629614B3DA1E93D768561"
+                           },
+                           {
+                               "path":  "docs/marketing/operating-model.md",
+                               "sha256":  "7A2B51F1EC644B5F488F7E4821A2039DA81F827B81175885C991AE9C74E3A09C"
+                           },
+                           {
+                               "path":  "skills/marketing/brand-demand-planner/skill.json",
+                               "sha256":  "4B2325F47E8E97A5730E5DC79B8DAFA8F07910C38535767832EBFC4F04D68FD8"
+                           },
+                           {
+                               "path":  "skills/marketing/brand-demand-planner/SKILL.md",
+                               "sha256":  "B7DDC59BA6B0F6DFEB3F60D39D3CC91E4C1157A39CC4BAFD52AC7D004F54D11A"
+                           },
+                           {
+                               "path":  "skills/marketing/campaign-content-designer/skill.json",
+                               "sha256":  "59499B3971B658EF2274DDDE744EEA763E5A483FD0878C239B05F152A0C84381"
+                           },
+                           {
+                               "path":  "skills/marketing/campaign-content-designer/SKILL.md",
+                               "sha256":  "2F6911193C68EA5782EEF771D1DBAB84B4B5986693FAFC5A64EB9B1E5C056D4B"
+                           },
+                           {
+                               "path":  "skills/marketing/growth-channel-governor/skill.json",
+                               "sha256":  "665E03FC0F76800408FD286EE2AC0CC4BBB0A4F23C76963A31A9124DC8382423"
+                           },
+                           {
+                               "path":  "skills/marketing/growth-channel-governor/SKILL.md",
+                               "sha256":  "78D864738AD891A33BB1171E30B2E8ADEB4B78A8DFC6B7518A69B1C75CFFBACA"
+                           },
+                           {
+                               "path":  "skills/marketing/marketing-release-auditor/skill.json",
+                               "sha256":  "08422AB826F8456CB28FBB6AA7F7A96631828E54BE69FEB0362F337981B38E30"
+                           },
+                           {
+                               "path":  "skills/marketing/marketing-release-auditor/SKILL.md",
+                               "sha256":  "AF2FA22957C5B347BE1DAE26089D8BDA6B6E72ABBB1280C2DC17F1A24F2F9FF8"
+                           },
+                           {
+                               "path":  "skills/marketing/marketing-requirements-auditor/skill.json",
+                               "sha256":  "0E66047D204954B2BA37662735E838B8532C199B661878A48A777263384315F7"
+                           },
+                           {
+                               "path":  "skills/marketing/marketing-requirements-auditor/SKILL.md",
+                               "sha256":  "4B43C8FA817190BB52B334A2AE703789BB92604CB49855355FDD7E602C6BDC56"
+                           },
+                           {
+                               "path":  "standards/marketing/marketing-standard.md",
+                               "sha256":  "881ECAAD7C74886F6CE90472222E0BB5185685C1F2237C8AA4CBB101F535551F"
+                           },
+                           {
+                               "path":  "tests/marketing/area-contract/cases.json",
+                               "sha256":  "D51220892E46EAD2A1789AFAA7354E6F3C1596B8987CAE1C6B08F875187F5D19"
+                           },
+                           {
+                               "path":  "tests/marketing/area-contract/run-marketing-area-tests.ps1",
+                               "sha256":  "7E4B6D37694E3F342D187694657D3C620573BECC4604C408E2EEE43937D71371"
+                           },
+                           {
+                               "path":  "workflows/marketing/delivery/workflow.json",
+                               "sha256":  "D54326434F327FE9FE4A3D2D64E678FCB9867CBB2FE00DE32FFD02B38335B8F1"
+                           },
+                           {
+                               "path":  "workflows/marketing/delivery/WORKFLOW.md",
+                               "sha256":  "558F927F7A6D59B88FC38393D54DA210113598A108B0A039966F1EB6534FCD1E"
+                           }
+                       ],
+    "git":  {
+                "branch":  "core-v2",
+                "head":  "5285af5ba357a84a3bacf58a00d9077045e77197",
+                "git_add_executed":  false,
+                "commit_executed":  false,
+                "push_executed":  false
+            },
+    "certified_utc":  "2026-09-25T01:46:23.6425314Z"
+}

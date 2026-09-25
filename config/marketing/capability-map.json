@@ -1,0 +1,46 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-marketing-capability-map",
+    "id":  "marketing-capability-map",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "lanes":  [
+                  {
+                      "id":  "marketing-domain-analysis",
+                      "owner":  "marketing-domain-analyst"
+                  },
+                  {
+                      "id":  "campaign-content",
+                      "owner":  "campaign-content-specialist"
+                  },
+                  {
+                      "id":  "growth-channel",
+                      "owner":  "growth-channel-specialist"
+                  },
+                  {
+                      "id":  "brand-demand",
+                      "owner":  "brand-demand-specialist"
+                  },
+                  {
+                      "id":  "marketing-quality",
+                      "owner":  "marketing-qa-compliance-reviewer"
+                  },
+                  {
+                      "id":  "crm-sales-coordination",
+                      "owner":  "proxtel-marketing-orchestrator"
+                  },
+                  {
+                      "id":  "software-implementation",
+                      "owner":  "proxtel-development-orchestrator"
+                  }
+              ],
+    "delegation":  {
+                       "development_required_for_code_changes":  true,
+                       "crm_coordination_required_for_crm_changes":  true,
+                       "sales_coordination_required_for_sales_changes":  true,
+                       "do_not_duplicate_development_capabilities":  true,
+                       "do_not_duplicate_crm_capabilities":  true,
+                       "do_not_duplicate_sales_capabilities":  true
+                   }
+}

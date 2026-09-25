@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-marketing-area-activation",
+    "id":  "marketing-area-activation",
+    "area":  "marketing",
+    "version":  "1.0.0",
+    "status":  "active",
+    "scope":  "marketing-area-local",
+    "parent_commit":  "5285af5ba357a84a3bacf58a00d9077045e77197",
+    "dependencies":  {
+                         "development":  "inherit",
+                         "crm":  "coordinate",
+                         "sales":  "coordinate",
+                         "finance":  "coordinate",
+                         "documentation":  "coordinate",
+                         "customer_service":  "feedback-and-handoff",
+                         "new_tools":  0,
+                         "new_mcp_servers":  0
+                     },
+    "execution":  {
+                      "automatic_tool_execution":  false,
+                      "automatic_campaign_publishing":  false,
+                      "automatic_ad_spend":  false,
+                      "sensitive_attribute_targeting":  false,
+                      "automatic_dependency_installation":  false,
+                      "automatic_git_add":  false,
+                      "automatic_commit":  false,
+                      "automatic_push":  false,
+                      "automatic_deploy":  false
+                  }
+}

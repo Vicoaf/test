@@ -1,0 +1,78 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-contract",
+    "id":  "marketing",
+    "display_name":  "PROXTEL Marketing Area",
+    "version":  "1.0.0",
+    "lifecycle_status":  "certified",
+    "provider_neutral":  true,
+    "parent_commit":  "5285af5ba357a84a3bacf58a00d9077045e77197",
+    "mission":  "Govern source-grounded marketing requirements, positioning, campaigns, content, channels, growth, brand, demand generation and marketing-domain quality without autonomous publishing or ad spend.",
+    "boundaries":  {
+                       "owns":  [
+                                    "marketing requirements and objectives",
+                                    "audience and positioning semantics",
+                                    "campaign and content requirements",
+                                    "growth and channel strategy",
+                                    "brand and demand-generation requirements",
+                                    "marketing-domain quality validation"
+                                ],
+                       "delegates_to_crm":  [
+                                                "CRM record semantics",
+                                                "CRM automation changes",
+                                                "CRM integration changes"
+                                            ],
+                       "delegates_to_sales":  [
+                                                  "sales qualification semantics",
+                                                  "opportunity ownership",
+                                                  "commercial follow-up semantics"
+                                              ],
+                       "delegates_to_development":  [
+                                                        "repository implementation",
+                                                        "software changes",
+                                                        "technical validation"
+                                                    ],
+                       "coordinates_with":  [
+                                                "documentation",
+                                                "customer-service",
+                                                "finance"
+                                            ]
+                   },
+    "safety":  {
+                   "source_grounded_first":  true,
+                   "read_only_discovery_first":  true,
+                   "local_first":  true,
+                   "pii_minimization":  true,
+                   "unsupported_claims_forbidden":  true,
+                   "sensitive_attribute_targeting_allowed":  false,
+                   "automatic_campaign_publishing":  false,
+                   "automatic_ad_spend":  false,
+                   "production_mutation_default":  false,
+                   "database_mutation_default":  false,
+                   "automatic_dependency_installation":  false,
+                   "automatic_git_add":  false,
+                   "automatic_commit":  false,
+                   "automatic_push":  false,
+                   "automatic_deploy":  false
+               },
+    "reuse":  {
+                  "development":  "inherit",
+                  "crm":  "coordinate",
+                  "sales":  "coordinate",
+                  "documentation":  "coordinate",
+                  "customer_service":  "feedback-and-handoff",
+                  "finance":  "budget-boundary-coordination"
+              },
+    "certification":  {
+                          "status":  "certified",
+                          "scope":  "local-deterministic",
+                          "artifact":  "tests/marketing/certification/area-marketing-certification-v1.json",
+                          "independent_provider_review":  "not-performed"
+                      },
+    "activation":  {
+                       "status":  "active",
+                       "scope":  "marketing-area-local",
+                       "authority":  "config/marketing/activation.json",
+                       "global_agency_manifest":  "not-yet-promoted"
+                   }
+}

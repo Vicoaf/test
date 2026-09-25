@@ -1,0 +1,35 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill",
+    "id":  "marketing-release-auditor",
+    "display_name":  "Marketing Release Auditor",
+    "area":  "marketing",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "description":  "Independently review claims, evidence, consent, targeting, CRM coordination, brand consistency and release readiness.",
+    "dependencies":  {
+                         "direct_scripts":  [
+
+                                            ],
+                         "direct_packages":  [
+
+                                             ],
+                         "silent_installation_allowed":  false
+                     },
+    "safety":  {
+                   "source_grounded_first":  true,
+                   "read_only_discovery_first":  true,
+                   "automatic_campaign_publishing":  false,
+                   "automatic_ad_spend":  false,
+                   "sensitive_attribute_targeting":  false,
+                   "unsupported_claims_forbidden":  true,
+                   "production_mutation_default":  false,
+                   "automatic_git_operations":  false
+               },
+    "lifecycle":  {
+                      "current":  "approved",
+                      "certification_required_before_activation":  true,
+                      "global_registry_promotion":  "area-local-activation"
+                  }
+}

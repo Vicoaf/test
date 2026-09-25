@@ -1,0 +1,87 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-workflow",
+    "id":  "marketing-delivery",
+    "display_name":  "PROXTEL Marketing Delivery Workflow",
+    "area":  "marketing",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "steps":  [
+                  {
+                      "order":  1,
+                      "id":  "intake",
+                      "owner":  "proxtel-marketing-orchestrator"
+                  },
+                  {
+                      "order":  2,
+                      "id":  "marketing-domain-discovery",
+                      "owner":  "marketing-domain-analyst"
+                  },
+                  {
+                      "order":  3,
+                      "id":  "audience-positioning-design",
+                      "owner":  "marketing-domain-analyst"
+                  },
+                  {
+                      "order":  4,
+                      "id":  "campaign-content-design",
+                      "owner":  "campaign-content-specialist"
+                  },
+                  {
+                      "order":  5,
+                      "id":  "growth-channel-design",
+                      "owner":  "growth-channel-specialist"
+                  },
+                  {
+                      "order":  6,
+                      "id":  "brand-demand-design",
+                      "owner":  "brand-demand-specialist"
+                  },
+                  {
+                      "order":  7,
+                      "id":  "crm-sales-coordination",
+                      "owner":  "proxtel-marketing-orchestrator"
+                  },
+                  {
+                      "order":  8,
+                      "id":  "documentation-finance-coordination",
+                      "owner":  "proxtel-marketing-orchestrator"
+                  },
+                  {
+                      "order":  9,
+                      "id":  "development-handoff",
+                      "owner":  "proxtel-marketing-orchestrator"
+                  },
+                  {
+                      "order":  10,
+                      "id":  "technical-validation",
+                      "owner":  "proxtel-development-orchestrator"
+                  },
+                  {
+                      "order":  11,
+                      "id":  "marketing-quality-review",
+                      "owner":  "marketing-qa-compliance-reviewer"
+                  },
+                  {
+                      "order":  12,
+                      "id":  "release-gate",
+                      "owner":  "proxtel-marketing-orchestrator"
+                  }
+              ],
+    "final_decisions":  [
+                            "READY",
+                            "CHANGES-REQUIRED",
+                            "BLOCKED",
+                            "DEFERRED"
+                        ],
+    "safety":  {
+                   "source_grounded_first":  true,
+                   "automatic_campaign_publishing_forbidden":  true,
+                   "automatic_ad_spend_forbidden":  true,
+                   "sensitive_attribute_targeting_forbidden":  true,
+                   "automatic_commit_forbidden":  true,
+                   "automatic_push_forbidden":  true,
+                   "automatic_deploy_forbidden":  true
+               }
+}

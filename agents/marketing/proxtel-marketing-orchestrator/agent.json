@@ -1,0 +1,74 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-agent",
+    "id":  "proxtel-marketing-orchestrator",
+    "display_name":  "PROXTEL Marketing Orchestrator",
+    "area":  "marketing",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "role":  "Main Marketing Orchestrator",
+    "mission":  "Coordinate source-grounded marketing discovery, positioning, campaigns, content, channel strategy, demand generation, CRM/Sales coordination and marketing QA.",
+    "subagents":  [
+                      {
+                          "id":  "marketing-domain-analyst",
+                          "persistent":  false
+                      },
+                      {
+                          "id":  "campaign-content-specialist",
+                          "persistent":  false
+                      },
+                      {
+                          "id":  "growth-channel-specialist",
+                          "persistent":  false
+                      },
+                      {
+                          "id":  "brand-demand-specialist",
+                          "persistent":  false
+                      },
+                      {
+                          "id":  "marketing-qa-compliance-reviewer",
+                          "persistent":  false
+                      }
+                  ],
+    "skills":  {
+                   "candidate_domain":  [
+                                            "marketing-requirements-auditor",
+                                            "campaign-content-designer",
+                                            "growth-channel-governor",
+                                            "brand-demand-planner",
+                                            "marketing-release-auditor"
+                                        ]
+               },
+    "tools":  {
+                  "marketing_specific_tools":  [
+
+                                               ],
+                  "automatic_execution":  false
+              },
+    "mcp":  {
+                "marketing_specific_servers":  [
+
+                                               ],
+                "automatic_approval":  false
+            },
+    "delegation":  {
+                       "code_changes_require_development":  true,
+                       "crm_domain_changes_require_crm":  true,
+                       "sales_domain_changes_require_sales":  true,
+                       "reusable_documentation_requires_documentation":  true
+                   },
+    "limits":  {
+                   "no_automatic_commit":  true,
+                   "no_automatic_push":  true,
+                   "no_automatic_campaign_publish":  true,
+                   "no_automatic_ad_spend":  true,
+                   "no_sensitive_attribute_targeting":  true,
+                   "no_unsupported_claims_as_facts":  true
+               },
+    "activation":  {
+                       "status":  "active",
+                       "scope":  "marketing-area-local",
+                       "authority":  "config/marketing/activation.json"
+                   }
+}

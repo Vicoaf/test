@@ -1,0 +1,37 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-marketing-skill-bundle",
+    "id":  "marketing-area-skill-bundle",
+    "version":  "1.0.0",
+    "status":  "active",
+    "domain_skills":  [
+                          "marketing-requirements-auditor",
+                          "campaign-content-designer",
+                          "growth-channel-governor",
+                          "brand-demand-planner",
+                          "marketing-release-auditor"
+                      ],
+    "inherited_development_skills":  [
+                                         "auditor-web"
+                                     ],
+    "crm_coordination":  [
+                             "crm-requirements-auditor",
+                             "crm-workflow-designer",
+                             "crm-integration-planner"
+                         ],
+    "sales_coordination":  [
+                               "sales-requirements-auditor",
+                               "sales-outreach-governor"
+                           ],
+    "documentation_coordination":  [
+                                       "documentation-requirements-auditor"
+                                   ],
+    "finance_coordination":  [
+                                 "finance-requirements-auditor"
+                             ],
+    "activation":  {
+                       "automatic_activation":  false,
+                       "certification_required_before_activation":  true,
+                       "scope":  "marketing-area-local-after-certification"
+                   }
+}

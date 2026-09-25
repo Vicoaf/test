@@ -1,0 +1,24 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-marketing-area-test-cases",
+    "expected":  {
+                     "area_lifecycle":  "certified",
+                     "agent_status":  "approved",
+                     "workflow_status":  "approved",
+                     "subagents":  [
+                                       "marketing-domain-analyst",
+                                       "campaign-content-specialist",
+                                       "growth-channel-specialist",
+                                       "brand-demand-specialist",
+                                       "marketing-qa-compliance-reviewer"
+                                   ],
+                     "skills":  [
+                                    "marketing-requirements-auditor",
+                                    "campaign-content-designer",
+                                    "growth-channel-governor",
+                                    "brand-demand-planner",
+                                    "marketing-release-auditor"
+                                ],
+                     "parent_commit":  "5285af5ba357a84a3bacf58a00d9077045e77197"
+                 }
+}

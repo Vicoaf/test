@@ -53,7 +53,7 @@
       "id": "marketing",
       "name": "Marketing",
       "order": 7,
-      "status": "planned"
+      "status": "active"
     },
     {
       "id": "pbx",
