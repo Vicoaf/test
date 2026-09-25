@@ -1,0 +1,202 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-global-gold-master-certification",
+    "certification_id":  "PROXTEL-AI-AGENCY-GLOBAL-GOLD-MASTER-V1",
+    "agency":  "PROXTEL AI AGENCY",
+    "status":  "GOLD-MASTER",
+    "certification_scope":  "GLOBAL",
+    "branch":  "core-v2",
+    "parent_commit":  "fceb3b89a2b0c21078e9c88ec815202a1dd17334",
+    "pre_finalization_audit":  {
+                                   "audit":  "PROXTEL_GLOBAL_FINAL_AUDIT_v1.1",
+                                   "script_sha256":  "B9F288648C2FE0239108D9C9533D68A753B1036E8DEF8717DD389454ED400577",
+                                   "checks":  127,
+                                   "passed":  127,
+                                   "failed":  0,
+                                   "status":  "SUCCESS",
+                                   "gold_master_ready":  true
+                               },
+    "repository":  {
+                       "final_pre_certification_head":  "fceb3b89a2b0c21078e9c88ec815202a1dd17334",
+                       "remote_pre_certification_head":  "fceb3b89a2b0c21078e9c88ec815202a1dd17334",
+                       "agency_manifest_sha256":  "5DA62CA00B92E2227A33E9F3FC9FD8AF390C0188FEED94CBA644E7A938704FC2",
+                       "git_object_database":  "VALID",
+                       "staged_before_finalization":  0,
+                       "tracked_delta_before_finalization":  0
+                   },
+    "historical_evidence":  {
+                                "count":  216,
+                                "manifest_sha256":  "F776496A060705E3C11A8B36793217A241CFBD43F55C54DC509CE5DD80B30DC2",
+                                "status":  "PRESERVED"
+                            },
+    "development_gold_master":  {
+                                    "status":  "PRESERVED",
+                                    "closure_commit":  "53f065b5d4a712b0c3f6d2e19e3d97b8a5c0a274",
+                                    "manifest_status":  "next",
+                                    "authority_model":  "SEPARATE-GOLD-MASTER",
+                                    "protected_sentinels":  [
+                                                                {
+                                                                    "path":  "config/development-project-runtime-policy.json",
+                                                                    "sha256":  "EA34AF4C47AC8595784A4D6AA6D12B57055B16BF2D18B621F1BD58AD2ACF8B24"
+                                                                },
+                                                                {
+                                                                    "path":  "config/skill-bundles.json",
+                                                                    "sha256":  "B47D123EF45430640736962429E2ED5721C21EC0B2D4F81C1F943D4A6E286D65"
+                                                                },
+                                                                {
+                                                                    "path":  "skills/_registry/skills-registry.json",
+                                                                    "sha256":  "38E1213E26A46209FA0B25072F469CA07B3564FFADDA9ADAB3DC7E3C494B9A8D"
+                                                                },
+                                                                {
+                                                                    "path":  "tools/registry/development-tools.json",
+                                                                    "sha256":  "D381EC3A153E366D91121EA873944B80A8EC618B20626D2DC18E05A15241374B"
+                                                                },
+                                                                {
+                                                                    "path":  "config/development-mcp-profile.json",
+                                                                    "sha256":  "0D73175BF7BBC2262A0AEB45EA1966D8692CA0C41B4F29AA6C361E507E811933"
+                                                                },
+                                                                {
+                                                                    "path":  ".mcp.json",
+                                                                    "sha256":  "0B2F1365880226AEDE5104BBA94E3B69339BC53C9425B7748169B0898B0F5D17"
+                                                                },
+                                                                {
+                                                                    "path":  ".agents/mcp_config.json",
+                                                                    "sha256":  "EBB715E895DA33A4E9AF99364100B23AECF3E04AF900E83929B2AF0B62C518BC"
+                                                                }
+                                                            ]
+                                },
+    "post_development_areas":  {
+                                   "count":  7,
+                                   "certified_and_closed_global":  7,
+                                   "areas":  [
+                                                 {
+                                                     "area":  "documentation",
+                                                     "certification_sha256":  "E9BFADD02097DF8961DC90F10D9835D77557ABE07E494F9F22E9C8A9BD236293",
+                                                     "closure_commit":  "717bf1ad6165e9ee0b1b15e51d9cf395f36ae53f",
+                                                     "certification_status":  "CERTIFIED"
+                                                 },
+                                                 {
+                                                     "area":  "crm",
+                                                     "certification_sha256":  "DBACF68BF6AB43A7E4D9396534FB2AA46E6AAA9FC11E8227AACD07B957738CC2",
+                                                     "closure_commit":  "59fedfff630cacb6d11fd728e5b03bc56e3380c1",
+                                                     "certification_status":  "CERTIFIED"
+                                                 },
+                                                 {
+                                                     "area":  "sales",
+                                                     "certification_sha256":  "A5BA1485FF77886048E76814205D7BEBFD4C43A3F63AD50679F7C63FD03FE6CA",
+                                                     "closure_commit":  "c54d26ca210397bdfa4b9b7a9361a95b4c0b6fab",
+                                                     "certification_status":  "CERTIFIED"
+                                                 },
+                                                 {
+                                                     "area":  "customer-service",
+                                                     "certification_sha256":  "A8B3064818EB0542E6F24ED085B00FFFC55F0E1983FF88060BB61C362AE1453C",
+                                                     "closure_commit":  "674166ae934b0c8a8085a908542b9a657e462ba0",
+                                                     "certification_status":  "CERTIFIED"
+                                                 },
+                                                 {
+                                                     "area":  "finance",
+                                                     "certification_sha256":  "ED841ED1154988046700290740255958D05A4B336503491C99A26612F6961D46",
+                                                     "closure_commit":  "5285af5ba357a84a3bacf58a00d9077045e77197",
+                                                     "certification_status":  "CERTIFIED"
+                                                 },
+                                                 {
+                                                     "area":  "marketing",
+                                                     "certification_sha256":  "DA69B48B6140C90C3C460086CA07A1F84D9716C2D0597B9C22E6A3505995081B",
+                                                     "closure_commit":  "81707d12bdbf97af8c0e19e3900471c7f886f1c1",
+                                                     "certification_status":  "CERTIFIED"
+                                                 },
+                                                 {
+                                                     "area":  "pbx",
+                                                     "certification_sha256":  "09FC79BA93CE683321606575F0FB9B98B4DAB059F352C41C963EB1445989919B",
+                                                     "closure_commit":  "fceb3b89a2b0c21078e9c88ec815202a1dd17334",
+                                                     "certification_status":  "CERTIFIED"
+                                                 }
+                                             ]
+                               },
+    "contract_regression":  {
+                                "all_passed":  true,
+                                "areas":  [
+                                              {
+                                                  "area":  "documentation",
+                                                  "assertions":  92,
+                                                  "passed":  92,
+                                                  "failed":  0,
+                                                  "exit_code":  0
+                                              },
+                                              {
+                                                  "area":  "crm",
+                                                  "assertions":  109,
+                                                  "passed":  109,
+                                                  "failed":  0,
+                                                  "exit_code":  0
+                                              },
+                                              {
+                                                  "area":  "sales",
+                                                  "assertions":  73,
+                                                  "passed":  73,
+                                                  "failed":  0,
+                                                  "exit_code":  0
+                                              },
+                                              {
+                                                  "area":  "customer-service",
+                                                  "assertions":  93,
+                                                  "passed":  93,
+                                                  "failed":  0,
+                                                  "exit_code":  0
+                                              },
+                                              {
+                                                  "area":  "finance",
+                                                  "assertions":  81,
+                                                  "passed":  81,
+                                                  "failed":  0,
+                                                  "exit_code":  0
+                                              },
+                                              {
+                                                  "area":  "marketing",
+                                                  "assertions":  103,
+                                                  "passed":  103,
+                                                  "failed":  0,
+                                                  "exit_code":  0
+                                              },
+                                              {
+                                                  "area":  "pbx",
+                                                  "assertions":  129,
+                                                  "passed":  129,
+                                                  "failed":  0,
+                                                  "exit_code":  0
+                                              }
+                                          ]
+                            },
+    "file_integrity":  {
+                           "tracked_json_pre_certification":  289,
+                           "invalid_json":  0,
+                           "tracked_powershell":  45,
+                           "invalid_powershell":  0
+                       },
+    "safety":  {
+                   "global_skill_registry_preserved":  true,
+                   "automatic_git_operations":  false,
+                   "provider_execution_during_finalization":  false,
+                   "model_execution_during_finalization":  false,
+                   "live_pbx_execution":  false,
+                   "automatic_pbx_mutation":  false,
+                   "automatic_service_restart":  false,
+                   "automatic_firewall_reload":  false,
+                   "automatic_freepbx_apply":  false,
+                   "explicit_live_pbx_authorization_required":  true
+               },
+    "lifecycle":  {
+                      "all_planned_areas_closed":  true,
+                      "remaining_planned_areas":  0,
+                      "next_phase":  "OPERATIONS-AND-CONTINUOUS-EVOLUTION"
+                  },
+    "git_finalization":  {
+                             "exact_allowlist_only":  true,
+                             "certification_artifact":  "tests/global/certification/proxtel-ai-agency-gold-master-v1.json",
+                             "git_add_dot":  false,
+                             "commit_authorized":  true,
+                             "push_authorized":  true,
+                             "automatic_push_retry":  false
+                         },
+    "certified_utc":  "2026-09-25T02:20:06.6227707Z"
+}
