@@ -1,0 +1,172 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-certification",
+    "certification_id":  "PROXTEL-FINANCE-AREA-CERTIFICATION-V1",
+    "area":  "finance",
+    "version":  "1.0.0",
+    "status":  "CERTIFIED",
+    "activation_status":  "ACTIVE-AREA-LOCAL",
+    "certification_scope":  "LOCAL-DETERMINISTIC",
+    "independent_provider_review":  {
+                                        "performed":  false,
+                                        "status":  "NOT-PERFORMED",
+                                        "reason":  "No provider/model execution required for deterministic local certification."
+                                    },
+    "parent_commit":  "c54d26ca210397bdfa4b9b7a9361a95b4c0b6fab",
+    "architecture":  {
+                         "orchestrator":  "proxtel-finance-orchestrator",
+                         "subagent_count":  5,
+                         "domain_skill_count":  5,
+                         "workflow":  "finance-delivery",
+                         "new_tools":  0,
+                         "new_mcp_servers":  0,
+                         "development_delegation":  true,
+                         "crm_sales_coordination":  true
+                     },
+    "evidence_files":  [
+                           {
+                               "path":  "agents/finance/proxtel-finance-orchestrator/agent.json",
+                               "sha256":  "C73BBA1BEFC8EA82FC9F84E4C22E6F415FEE5D7FE692A1C5909F5DC11F781E04"
+                           },
+                           {
+                               "path":  "agents/finance/proxtel-finance-orchestrator/AGENT.md",
+                               "sha256":  "21EC58169A3D25488F4AC79F26DD1120729FBBC77E6C5E3CC69D1C415E624F3A"
+                           },
+                           {
+                               "path":  "agents/finance/subagents/billing-revenue-specialist/subagent.json",
+                               "sha256":  "8740618DE279E682B8E6FE2A380CC472F64140E8A640F7540CFEE46B61F67679"
+                           },
+                           {
+                               "path":  "agents/finance/subagents/billing-revenue-specialist/SUBAGENT.md",
+                               "sha256":  "4186BF29396CDAA8025E079235AF0B0AA96D854E964E70F3110AAB5CDB30D618"
+                           },
+                           {
+                               "path":  "agents/finance/subagents/budget-forecast-specialist/subagent.json",
+                               "sha256":  "29FC46A460E36D5FE23858075F47DC1EB7777F59709A70CDF54F99D30ABC66A2"
+                           },
+                           {
+                               "path":  "agents/finance/subagents/budget-forecast-specialist/SUBAGENT.md",
+                               "sha256":  "8487AE798015906CDB09038BADB95CC1552F7E04AF417472AC7350B174854F44"
+                           },
+                           {
+                               "path":  "agents/finance/subagents/finance-domain-analyst/subagent.json",
+                               "sha256":  "BF10E63C91B1BC0525400140E8254A638175A0EF510ABE4651EC4AB5C8989C38"
+                           },
+                           {
+                               "path":  "agents/finance/subagents/finance-domain-analyst/SUBAGENT.md",
+                               "sha256":  "9A8F2075A65FB80DDBFEACC2ADEA3E05CF30CFFC96606779BC4A78C65AA0653C"
+                           },
+                           {
+                               "path":  "agents/finance/subagents/finance-qa-compliance-reviewer/subagent.json",
+                               "sha256":  "B21CC5FDB4FEACB7EC08EFBA384B22E2DC16DB00D64D4537F7EB6A2AEC4A5CDF"
+                           },
+                           {
+                               "path":  "agents/finance/subagents/finance-qa-compliance-reviewer/SUBAGENT.md",
+                               "sha256":  "007CB6FD3E5EC9845FF370470E36AD06DC79A0A048B0F2A941A82E823E26F135"
+                           },
+                           {
+                               "path":  "agents/finance/subagents/financial-controls-specialist/subagent.json",
+                               "sha256":  "049FD72F5F3935677C7A0A66E3DF20FB148BDA3472C51FF7F1C84F794A8D9F14"
+                           },
+                           {
+                               "path":  "agents/finance/subagents/financial-controls-specialist/SUBAGENT.md",
+                               "sha256":  "604F23FC885A17FDB9BF255E6A04F621F2F1FFD8F5B597C64C96A399825095DF"
+                           },
+                           {
+                               "path":  "config/finance/activation.json",
+                               "sha256":  "E797E38A48EACBAD369958705440A58D95D1E6AFD2D06ADFD1E68CB474A93893"
+                           },
+                           {
+                               "path":  "config/finance/area.json",
+                               "sha256":  "939A1D42449A3284DDF2E604A63A04494B772BED950DF66ED28ECF5C4C60B7FA"
+                           },
+                           {
+                               "path":  "config/finance/capability-map.json",
+                               "sha256":  "A7943D3B8BA322A0258BCD5537F9E6D14E83341221D505C31D9A1A9C8D781AFC"
+                           },
+                           {
+                               "path":  "config/finance/runtime-bindings.json",
+                               "sha256":  "9C9DE249033758113C220854152F09C5A900528D5C954CAAF386A618A31B55FB"
+                           },
+                           {
+                               "path":  "config/finance/skill-bundle.json",
+                               "sha256":  "FC7E8A7A69E551DE1BEBFEEA9BE9A1D24FA461E967B5185E92F63EC10039E76F"
+                           },
+                           {
+                               "path":  "docs/finance/architecture.md",
+                               "sha256":  "F38C85521346C919649C51B47730F85407636A4CA7E141D0ACC83FFF4C84A8B1"
+                           },
+                           {
+                               "path":  "docs/finance/operating-model.md",
+                               "sha256":  "02BECCE176C0D35A4D7639D75845A044882BC0973B48F789926E179002B56001"
+                           },
+                           {
+                               "path":  "skills/finance/billing-revenue-governor/skill.json",
+                               "sha256":  "4483D3DB1EADC19823FE7E645783C531A82F5EBBA97A9F7F070ABCEFC82387FA"
+                           },
+                           {
+                               "path":  "skills/finance/billing-revenue-governor/SKILL.md",
+                               "sha256":  "8AC78D190C85B4554257CEF1AF0B8D5CEFD9A5B09F26A5A8CCB3B3A30ADF4C03"
+                           },
+                           {
+                               "path":  "skills/finance/budget-forecast-designer/skill.json",
+                               "sha256":  "790D7C60B3DD8FCCB55C4BF6D9F0C7CAF8BC09C8627A7C733F81DF911314D47A"
+                           },
+                           {
+                               "path":  "skills/finance/budget-forecast-designer/SKILL.md",
+                               "sha256":  "C8430586A7A842971774A7AA457B0710A3B345543D3C2B77E96ABE051043DF01"
+                           },
+                           {
+                               "path":  "skills/finance/finance-release-auditor/skill.json",
+                               "sha256":  "7708116BC47240A764ED829451AF5C299FA12F604DADA0821B63B24821210A3D"
+                           },
+                           {
+                               "path":  "skills/finance/finance-release-auditor/SKILL.md",
+                               "sha256":  "D0BC42B259978B9A93B492DD5CFACE1C0D9E901501C18592E98546599A2DFC9C"
+                           },
+                           {
+                               "path":  "skills/finance/finance-requirements-auditor/skill.json",
+                               "sha256":  "A529B3B1061E4C41826BACAAC24A22FE7741CF834A2C1617B7467725C1741027"
+                           },
+                           {
+                               "path":  "skills/finance/finance-requirements-auditor/SKILL.md",
+                               "sha256":  "E1DB55B291654487C1C4C9BB34FF5A74C0E9686552DF510556F99754615A30AB"
+                           },
+                           {
+                               "path":  "skills/finance/financial-controls-planner/skill.json",
+                               "sha256":  "B2CAC046E4A753AF5FCB1131B6FBBA37261503746F75D7972E386D69598B03E9"
+                           },
+                           {
+                               "path":  "skills/finance/financial-controls-planner/SKILL.md",
+                               "sha256":  "78CC5BDB96F248C7DA1FC4871AA6234BC5901AE9404922C4F10A766754F19F01"
+                           },
+                           {
+                               "path":  "standards/finance/finance-standard.md",
+                               "sha256":  "5310791DE293ED3268BD23261CCF3A838CEFCC67C22361EE6CEDA84EE3912470"
+                           },
+                           {
+                               "path":  "tests/finance/area-contract/cases.json",
+                               "sha256":  "B94444CF67E2511B79FDD21D9832AE362E02383EBDCC4D2DE46061510BB510A3"
+                           },
+                           {
+                               "path":  "tests/finance/area-contract/run-finance-area-tests.ps1",
+                               "sha256":  "A89595007758390208F1CC472CBCA79B3B663E403ECC47E896CDCB0A5595DC4E"
+                           },
+                           {
+                               "path":  "workflows/finance/delivery/workflow.json",
+                               "sha256":  "5CACBC28C6FB30CD0A54B75C5E4ED3D22F58D9A2D25370DF0E0AAA76483FB69E"
+                           },
+                           {
+                               "path":  "workflows/finance/delivery/WORKFLOW.md",
+                               "sha256":  "EA6AC818282EF4449DCB0521CC9A16421B35C4ACD143E172B0DED51F0310186C"
+                           }
+                       ],
+    "git":  {
+                "branch":  "core-v2",
+                "head":  "c54d26ca210397bdfa4b9b7a9361a95b4c0b6fab",
+                "git_add_executed":  false,
+                "commit_executed":  false,
+                "push_executed":  false
+            },
+    "certified_utc":  "2026-09-25T01:25:33.8584089Z"
+}

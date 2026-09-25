@@ -1,0 +1,33 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill",
+    "id":  "budget-forecast-designer",
+    "display_name":  "Budget and Forecast Designer",
+    "area":  "finance",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "description":  "Design budgets, forecasts, scenarios, assumptions, variance semantics and planning acceptance criteria.",
+    "dependencies":  {
+                         "direct_scripts":  [
+
+                                            ],
+                         "direct_packages":  [
+
+                                             ],
+                         "silent_installation_allowed":  false
+                     },
+    "safety":  {
+                   "source_grounded_first":  true,
+                   "read_only_discovery_first":  true,
+                   "autonomous_financial_transactions":  false,
+                   "unsupported_financial_claims_forbidden":  true,
+                   "production_mutation_default":  false,
+                   "automatic_git_operations":  false
+               },
+    "lifecycle":  {
+                      "current":  "approved",
+                      "certification_required_before_activation":  true,
+                      "global_registry_promotion":  "area-local-activation"
+                  }
+}

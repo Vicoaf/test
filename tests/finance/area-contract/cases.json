@@ -1,0 +1,24 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-finance-area-test-cases",
+    "expected":  {
+                     "area_lifecycle":  "certified",
+                     "agent_status":  "approved",
+                     "workflow_status":  "approved",
+                     "subagents":  [
+                                       "finance-domain-analyst",
+                                       "budget-forecast-specialist",
+                                       "billing-revenue-specialist",
+                                       "financial-controls-specialist",
+                                       "finance-qa-compliance-reviewer"
+                                   ],
+                     "skills":  [
+                                    "finance-requirements-auditor",
+                                    "budget-forecast-designer",
+                                    "billing-revenue-governor",
+                                    "financial-controls-planner",
+                                    "finance-release-auditor"
+                                ],
+                     "parent_commit":  "c54d26ca210397bdfa4b9b7a9361a95b4c0b6fab"
+                 }
+}

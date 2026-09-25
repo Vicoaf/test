@@ -1,0 +1,85 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-workflow",
+    "id":  "finance-delivery",
+    "display_name":  "PROXTEL Finance Delivery Workflow",
+    "area":  "finance",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "steps":  [
+                  {
+                      "order":  1,
+                      "id":  "intake",
+                      "owner":  "proxtel-finance-orchestrator"
+                  },
+                  {
+                      "order":  2,
+                      "id":  "finance-domain-discovery",
+                      "owner":  "finance-domain-analyst"
+                  },
+                  {
+                      "order":  3,
+                      "id":  "source-and-control-map",
+                      "owner":  "finance-domain-analyst"
+                  },
+                  {
+                      "order":  4,
+                      "id":  "budget-forecast-design",
+                      "owner":  "budget-forecast-specialist"
+                  },
+                  {
+                      "order":  5,
+                      "id":  "billing-revenue-design",
+                      "owner":  "billing-revenue-specialist"
+                  },
+                  {
+                      "order":  6,
+                      "id":  "financial-controls-design",
+                      "owner":  "financial-controls-specialist"
+                  },
+                  {
+                      "order":  7,
+                      "id":  "crm-sales-coordination",
+                      "owner":  "proxtel-finance-orchestrator"
+                  },
+                  {
+                      "order":  8,
+                      "id":  "documentation-coordination",
+                      "owner":  "proxtel-finance-orchestrator"
+                  },
+                  {
+                      "order":  9,
+                      "id":  "development-handoff",
+                      "owner":  "proxtel-finance-orchestrator"
+                  },
+                  {
+                      "order":  10,
+                      "id":  "technical-validation",
+                      "owner":  "proxtel-development-orchestrator"
+                  },
+                  {
+                      "order":  11,
+                      "id":  "finance-quality-review",
+                      "owner":  "finance-qa-compliance-reviewer"
+                  },
+                  {
+                      "order":  12,
+                      "id":  "release-gate",
+                      "owner":  "proxtel-finance-orchestrator"
+                  }
+              ],
+    "final_decisions":  [
+                            "READY",
+                            "CHANGES-REQUIRED",
+                            "BLOCKED",
+                            "DEFERRED"
+                        ],
+    "safety":  {
+                   "source_grounded_first":  true,
+                   "autonomous_financial_transactions_forbidden":  true,
+                   "automatic_commit_forbidden":  true,
+                   "automatic_push_forbidden":  true,
+                   "automatic_deploy_forbidden":  true
+               }
+}

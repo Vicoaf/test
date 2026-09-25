@@ -1,0 +1,69 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-finance-runtime-bindings",
+    "id":  "finance-runtime-bindings",
+    "version":  "1.0.0",
+    "status":  "certified",
+    "provider_neutral":  true,
+    "orchestrator":  {
+                         "id":  "proxtel-finance-orchestrator",
+                         "source":  "agents/finance/proxtel-finance-orchestrator/agent.json"
+                     },
+    "workflow":  {
+                     "id":  "finance-delivery",
+                     "source":  "workflows/finance/delivery/workflow.json"
+                 },
+    "bindings":  [
+                     {
+                         "lane":  "finance-domain-analysis",
+                         "executor":  "finance-domain-analyst",
+                         "preferred_provider":  "claude"
+                     },
+                     {
+                         "lane":  "budget-forecast",
+                         "executor":  "budget-forecast-specialist",
+                         "preferred_provider":  "claude"
+                     },
+                     {
+                         "lane":  "billing-revenue",
+                         "executor":  "billing-revenue-specialist",
+                         "preferred_provider":  "claude"
+                     },
+                     {
+                         "lane":  "financial-controls",
+                         "executor":  "financial-controls-specialist",
+                         "preferred_provider":  "claude"
+                     },
+                     {
+                         "lane":  "finance-quality",
+                         "executor":  "finance-qa-compliance-reviewer",
+                         "preferred_provider":  "antigravity"
+                     },
+                     {
+                         "lane":  "crm-sales-coordination",
+                         "executor":  "proxtel-finance-orchestrator",
+                         "preferred_provider":  "task-determined"
+                     },
+                     {
+                         "lane":  "software-implementation",
+                         "executor":  "proxtel-development-orchestrator",
+                         "preferred_provider":  "task-determined"
+                     }
+                 ],
+    "tool_policy":  {
+                        "reuse":  "tools/registry/development-tools.json",
+                        "finance_specific_tools":  [
+
+                                                   ],
+                        "automatic_tool_execution":  false,
+                        "add_new_tool_only_if_gap_is_proven":  true
+                    },
+    "mcp_policy":  {
+                       "reuse":  "config/development-mcp-profile.json",
+                       "finance_specific_servers":  [
+
+                                                    ],
+                       "automatic_approval":  false,
+                       "add_new_mcp_only_if_gap_is_proven":  true
+                   }
+}

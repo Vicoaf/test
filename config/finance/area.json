@@ -1,0 +1,73 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-area-contract",
+    "id":  "finance",
+    "display_name":  "PROXTEL Finance Area",
+    "version":  "1.0.0",
+    "lifecycle_status":  "certified",
+    "provider_neutral":  true,
+    "parent_commit":  "c54d26ca210397bdfa4b9b7a9361a95b4c0b6fab",
+    "mission":  "Govern source-grounded finance requirements, budgeting, forecasting, billing, revenue, reconciliation, controls and financial-domain quality without performing autonomous financial transactions.",
+    "boundaries":  {
+                       "owns":  [
+                                    "finance requirements",
+                                    "budget and forecast semantics",
+                                    "billing and revenue semantics",
+                                    "reconciliation requirements",
+                                    "financial controls",
+                                    "finance-domain quality validation"
+                                ],
+                       "delegates_to_development":  [
+                                                        "repository implementation",
+                                                        "software changes",
+                                                        "technical validation"
+                                                    ],
+                       "coordinates_with":  [
+                                                "crm",
+                                                "sales",
+                                                "documentation",
+                                                "customer-service"
+                                            ],
+                       "does_not_own":  [
+                                            "autonomous financial transactions",
+                                            "bank account access",
+                                            "unverified accounting facts",
+                                            "unsupported tax or legal conclusions"
+                                        ]
+                   },
+    "safety":  {
+                   "source_grounded_first":  true,
+                   "read_only_discovery_first":  true,
+                   "local_first":  true,
+                   "pii_minimization":  true,
+                   "secrets_in_repository_forbidden":  true,
+                   "unsupported_financial_claims_forbidden":  true,
+                   "autonomous_financial_transactions":  false,
+                   "production_mutation_default":  false,
+                   "database_mutation_default":  false,
+                   "automatic_dependency_installation":  false,
+                   "automatic_git_add":  false,
+                   "automatic_commit":  false,
+                   "automatic_push":  false,
+                   "automatic_deploy":  false
+               },
+    "reuse":  {
+                  "development":  "inherit",
+                  "crm":  "coordinate",
+                  "sales":  "coordinate",
+                  "documentation":  "coordinate",
+                  "customer_service":  "coordinate-when-applicable"
+              },
+    "certification":  {
+                          "status":  "certified",
+                          "scope":  "local-deterministic",
+                          "artifact":  "tests/finance/certification/area-finance-certification-v1.json",
+                          "independent_provider_review":  "not-performed"
+                      },
+    "activation":  {
+                       "status":  "active",
+                       "scope":  "finance-area-local",
+                       "authority":  "config/finance/activation.json",
+                       "global_agency_manifest":  "not-yet-promoted"
+                   }
+}

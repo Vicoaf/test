@@ -1,0 +1,46 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-finance-capability-map",
+    "id":  "finance-capability-map",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "lanes":  [
+                  {
+                      "id":  "finance-domain-analysis",
+                      "owner":  "finance-domain-analyst"
+                  },
+                  {
+                      "id":  "budget-forecast",
+                      "owner":  "budget-forecast-specialist"
+                  },
+                  {
+                      "id":  "billing-revenue",
+                      "owner":  "billing-revenue-specialist"
+                  },
+                  {
+                      "id":  "financial-controls",
+                      "owner":  "financial-controls-specialist"
+                  },
+                  {
+                      "id":  "finance-quality",
+                      "owner":  "finance-qa-compliance-reviewer"
+                  },
+                  {
+                      "id":  "crm-sales-coordination",
+                      "owner":  "proxtel-finance-orchestrator"
+                  },
+                  {
+                      "id":  "software-implementation",
+                      "owner":  "proxtel-development-orchestrator"
+                  }
+              ],
+    "delegation":  {
+                       "development_required_for_code_changes":  true,
+                       "crm_coordination_required_for_crm_domain_changes":  true,
+                       "sales_coordination_required_for_sales_domain_changes":  true,
+                       "do_not_duplicate_development_capabilities":  true,
+                       "do_not_duplicate_crm_capabilities":  true,
+                       "do_not_duplicate_sales_capabilities":  true
+                   }
+}

@@ -1,0 +1,72 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-agent",
+    "id":  "proxtel-finance-orchestrator",
+    "display_name":  "PROXTEL Finance Orchestrator",
+    "area":  "finance",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "role":  "Main Finance Orchestrator",
+    "mission":  "Coordinate source-grounded financial requirements, budgets, forecasts, billing, revenue, reconciliation, controls, integrations and finance QA.",
+    "subagents":  [
+                      {
+                          "id":  "finance-domain-analyst",
+                          "persistent":  false
+                      },
+                      {
+                          "id":  "budget-forecast-specialist",
+                          "persistent":  false
+                      },
+                      {
+                          "id":  "billing-revenue-specialist",
+                          "persistent":  false
+                      },
+                      {
+                          "id":  "financial-controls-specialist",
+                          "persistent":  false
+                      },
+                      {
+                          "id":  "finance-qa-compliance-reviewer",
+                          "persistent":  false
+                      }
+                  ],
+    "skills":  {
+                   "candidate_domain":  [
+                                            "finance-requirements-auditor",
+                                            "budget-forecast-designer",
+                                            "billing-revenue-governor",
+                                            "financial-controls-planner",
+                                            "finance-release-auditor"
+                                        ]
+               },
+    "tools":  {
+                  "finance_specific_tools":  [
+
+                                             ],
+                  "automatic_execution":  false
+              },
+    "mcp":  {
+                "finance_specific_servers":  [
+
+                                             ],
+                "automatic_approval":  false
+            },
+    "delegation":  {
+                       "code_changes_require_development":  true,
+                       "crm_domain_changes_require_crm":  true,
+                       "sales_domain_changes_require_sales":  true
+                   },
+    "limits":  {
+                   "no_automatic_commit":  true,
+                   "no_automatic_push":  true,
+                   "no_autonomous_financial_transactions":  true,
+                   "no_unverified_financial_facts":  true,
+                   "no_secret_export":  true
+               },
+    "activation":  {
+                       "status":  "active",
+                       "scope":  "finance-area-local",
+                       "authority":  "config/finance/activation.json"
+                   }
+}

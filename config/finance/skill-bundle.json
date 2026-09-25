@@ -1,0 +1,32 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-finance-skill-bundle",
+    "id":  "finance-area-skill-bundle",
+    "version":  "1.0.0",
+    "status":  "active",
+    "domain_skills":  [
+                          "finance-requirements-auditor",
+                          "budget-forecast-designer",
+                          "billing-revenue-governor",
+                          "financial-controls-planner",
+                          "finance-release-auditor"
+                      ],
+    "inherited_development_skills":  [
+                                         "auditor-web"
+                                     ],
+    "crm_coordination":  [
+                             "crm-requirements-auditor",
+                             "crm-integration-planner"
+                         ],
+    "sales_coordination":  [
+                               "sales-requirements-auditor"
+                           ],
+    "documentation_coordination":  [
+                                       "documentation-requirements-auditor"
+                                   ],
+    "activation":  {
+                       "automatic_activation":  false,
+                       "certification_required_before_activation":  true,
+                       "scope":  "finance-area-local-after-certification"
+                   }
+}

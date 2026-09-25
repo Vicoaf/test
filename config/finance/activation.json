@@ -1,0 +1,28 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-finance-area-activation",
+    "id":  "finance-area-activation",
+    "area":  "finance",
+    "version":  "1.0.0",
+    "status":  "active",
+    "scope":  "finance-area-local",
+    "parent_commit":  "c54d26ca210397bdfa4b9b7a9361a95b4c0b6fab",
+    "dependencies":  {
+                         "development":  "inherit",
+                         "crm":  "coordinate",
+                         "sales":  "coordinate",
+                         "documentation":  "coordinate",
+                         "customer_service":  "coordinate-when-applicable",
+                         "new_tools":  0,
+                         "new_mcp_servers":  0
+                     },
+    "execution":  {
+                      "automatic_tool_execution":  false,
+                      "automatic_financial_transactions":  false,
+                      "automatic_dependency_installation":  false,
+                      "automatic_git_add":  false,
+                      "automatic_commit":  false,
+                      "automatic_push":  false,
+                      "automatic_deploy":  false
+                  }
+}

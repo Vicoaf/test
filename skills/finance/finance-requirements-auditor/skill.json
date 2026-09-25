@@ -1,0 +1,33 @@
+{
+    "schema_version":  "1.0",
+    "kind":  "proxtel-skill",
+    "id":  "finance-requirements-auditor",
+    "display_name":  "Finance Requirements Auditor",
+    "area":  "finance",
+    "version":  "1.0.0",
+    "status":  "approved",
+    "provider_neutral":  true,
+    "description":  "Audit financial actors, data sources, reporting requirements, controls, accounting boundaries and evidence before implementation.",
+    "dependencies":  {
+                         "direct_scripts":  [
+
+                                            ],
+                         "direct_packages":  [
+
+                                             ],
+                         "silent_installation_allowed":  false
+                     },
+    "safety":  {
+                   "source_grounded_first":  true,
+                   "read_only_discovery_first":  true,
+                   "autonomous_financial_transactions":  false,
+                   "unsupported_financial_claims_forbidden":  true,
+                   "production_mutation_default":  false,
+                   "automatic_git_operations":  false
+               },
+    "lifecycle":  {
+                      "current":  "approved",
+                      "certification_required_before_activation":  true,
+                      "global_registry_promotion":  "area-local-activation"
+                  }
+}
